@@ -1,0 +1,930 @@
+#!/bin/bash
+
+# ==============================================================================
+# Script: manager-srt.sh
+# Version: 3.0.0
+# Description: Gerenciador avançado de legendas e arquivos de mídia
+# Author: Narayan/Tales
+# Last Update: 2024-11-25
+# ==============================================================================
+
+VERSION="3.0.0"
+SCRIPT_NAME="$(basename "$0")"
+
+# ==============================================================================
+# Cores para output
+# ==============================================================================
+
+readonly RED='\033[0;31m'
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly BLUE='\033[0;34m'
+readonly MAGENTA='\033[0;35m'
+readonly CYAN='\033[0;36m'
+readonly WHITE='\033[1;37m'
+readonly GRAY='\033[0;90m'
+readonly NC='\033[0m' # No Color
+readonly BOLD='\033[1m'
+readonly DIM='\033[2m'
+readonly UNDERLINE='\033[4m'
+
+# ==============================================================================
+# Variáveis de configuração
+# ==============================================================================
+
+# Flags de operação
+DRY_RUN=false
+INTERACTIVE=true
+VERBOSE=false
+QUIET=false
+CREATE_BACKUP=false
+ENABLE_LOG=false
+SKIP_CONFIRM=false
+
+# Flags de operações específicas
+DO_RENAME_POR2=true
+DO_RENAME_NO_LANG=true
+DO_REMOVE_UNWANTED=true
+DO_REMOVE_METADATA=true
+
+# Configurações
+BACKUP_DIR=""
+LOG_FILE=""
+WORK_DIR="."
+MIN_PT_WORDS=5
+
+# Contadores
+declare -i count_renamed=0
+declare -i count_deleted=0
+declare -i count_dirs_deleted=0
+declare -i count_por2_renamed=0
+declare -i count_no_lang_renamed=0
+declare -i total_found_por2=0
+declare -i total_found_no_lang=0
+declare -i total_found_unwanted=0
+declare -i total_found_metadata=0
+
+# Arrays para preview
+declare -a preview_por2_files=()
+declare -a preview_no_lang_files=()
+declare -a preview_unwanted_files=()
+declare -a preview_metadata_dirs=()
+
+# ==============================================================================
+# Funções de output
+# ==============================================================================
+
+print_header() {
+    if [ "$QUIET" = false ]; then
+        echo -e "${BOLD}${CYAN}"
+        echo "╔════════════════════════════════════════════════════════════════════════╗"
+        echo "║  GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${VERSION}                  ║"
+        echo "╚════════════════════════════════════════════════════════════════════════╝"
+        echo -e "${NC}"
+    fi
+}
+
+print_separator() {
+    if [ "$QUIET" = false ]; then
+        echo -e "${BLUE}────────────────────────────────────────────────────────────────────────${NC}"
+    fi
+}
+
+print_double_separator() {
+    if [ "$QUIET" = false ]; then
+        echo -e "${BLUE}════════════════════════════════════════════════════════════════════════${NC}"
+    fi
+}
+
+log_info() {
+    [ "$QUIET" = false ] && echo -e "${CYAN}[INFO]${NC} $1"
+}
+
+log_success() {
+    [ "$QUIET" = false ] && echo -e "${GREEN}[✓]${NC} $1"
+}
+
+log_warning() {
+    echo -e "${YELLOW}[⚠]${NC} $1"
+}
+
+log_error() {
+    echo -e "${RED}[✗]${NC} $1" >&2
+}
+
+log_action() {
+    [ "$QUIET" = false ] && echo -e "${MAGENTA}[→]${NC} $1"
+}
+
+log_debug() {
+    [ "$VERBOSE" = true ] && echo -e "${GRAY}[DEBUG]${NC} $1"
+}
+
+log_dry_run() {
+    echo -e "${YELLOW}[DRY-RUN]${NC} $1"
+}
+
+write_log() {
+    if [ "$ENABLE_LOG" = true ] && [ -n "$LOG_FILE" ]; then
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE"
+    fi
+}
+
+# ==============================================================================
+# Função de ajuda
+# ==============================================================================
+
+show_help() {
+    cat << EOF
+${BOLD}${CYAN}GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${VERSION}${NC}
+
+${BOLD}USO:${NC}
+    ${SCRIPT_NAME} [OPÇÕES]
+
+${BOLD}DESCRIÇÃO:${NC}
+    Script para gerenciar automaticamente legendas e arquivos de mídia.
+    Renomeia legendas, remove arquivos indesejados e organiza diretórios.
+
+${BOLD}OPÇÕES GERAIS:${NC}
+    ${GREEN}-h, --help${NC}              Exibe esta mensagem de ajuda
+    ${GREEN}-v, --version${NC}           Exibe a versão do script
+    ${GREEN}-d, --dry-run${NC}           Modo preview (mostra o que será feito sem executar)
+    ${GREEN}-y, --yes${NC}               Pula todas as confirmações
+    ${GREEN}-i, --interactive${NC}       Modo interativo (pergunta antes de cada ação)
+    ${GREEN}-q, --quiet${NC}             Modo silencioso (mínimo de output)
+    ${GREEN}-V, --verbose${NC}           Modo verboso (máximo de detalhes)
+    ${GREEN}-w, --workdir DIR${NC}       Define diretório de trabalho (padrão: atual)
+
+${BOLD}OPÇÕES DE OPERAÇÃO:${NC}
+    ${GREEN}--no-rename-por2${NC}        Não renomeia arquivos .por2.srt
+    ${GREEN}--no-rename-no-lang${NC}     Não renomeia legendas sem idioma
+    ${GREEN}--no-remove-unwanted${NC}    Não remove arquivos indesejados
+    ${GREEN}--no-remove-metadata${NC}    Não remove diretórios metadata
+    ${GREEN}--only-rename-por2${NC}      Executa APENAS renomeação de .por2.srt
+    ${GREEN}--only-rename-no-lang${NC}   Executa APENAS renomeação de legendas sem idioma
+    ${GREEN}--only-remove-unwanted${NC}  Executa APENAS remoção de arquivos indesejados
+    ${GREEN}--only-remove-metadata${NC}  Executa APENAS remoção de diretórios metadata
+
+${BOLD}OPÇÕES AVANÇADAS:${NC}
+    ${GREEN}-b, --backup DIR${NC}        Cria backup antes de qualquer alteração
+    ${GREEN}-l, --log FILE${NC}          Salva log das operações em arquivo
+    ${GREEN}--min-pt-words N${NC}        Mínimo de palavras PT para detecção (padrão: 5)
+
+${BOLD}OPERAÇÕES REALIZADAS:${NC}
+    ${CYAN}1.${NC} Renomeia arquivos ${YELLOW}.por2.srt${NC} para ${YELLOW}.por.srt${NC}
+    ${CYAN}2.${NC} Detecta e renomeia legendas sem idioma para ${YELLOW}.por.srt${NC}
+    ${CYAN}3.${NC} Remove legendas em outros idiomas (spa, eng, etc)
+    ${CYAN}4.${NC} Remove imagens e arquivos NFO
+    ${CYAN}5.${NC} Remove diretórios 'metadata'
+
+${BOLD}EXEMPLOS:${NC}
+    ${GRAY}# Modo preview (ver o que será feito)${NC}
+    ${SCRIPT_NAME} --dry-run
+
+    ${GRAY}# Executar sem confirmações${NC}
+    ${SCRIPT_NAME} --yes
+
+    ${GRAY}# Apenas renomear .por2.srt${NC}
+    ${SCRIPT_NAME} --only-rename-por2
+
+    ${GRAY}# Criar backup e gerar log${NC}
+    ${SCRIPT_NAME} --backup /tmp/backup --log /tmp/manager.log
+
+    ${GRAY}# Modo silencioso sem confirmação${NC}
+    ${SCRIPT_NAME} --quiet --yes
+
+    ${GRAY}# Executar em outro diretório${NC}
+    ${SCRIPT_NAME} --workdir /media/filmes
+
+${BOLD}IDIOMAS REMOVIDOS:${NC}
+    ara, chi, cze, dan, dut, eng, fil, fin, fre, ger, gre, heb, hrv,
+    hun, ind, ita, jpn, kor, may, nob, pol, rum, rus, spa, swe, tha,
+    tur, ukr, vie, hin, nor, tam, tel, slo, bul, lav, lit, slv, glg,
+    cat, baq
+
+${BOLD}ARQUIVOS REMOVIDOS:${NC}
+    Legendas em outros idiomas, imagens (jpg, png, gif), arquivos NFO
+
+${BOLD}DETECÇÃO DE PORTUGUÊS:${NC}
+    O script analisa as primeiras 100 linhas da legenda procurando por
+    palavras comuns em português. Se encontrar pelo menos ${MIN_PT_WORDS} palavras,
+    considera o arquivo como português.
+
+${BOLD}AUTOR:${NC}
+    Narayan/Tales
+
+${BOLD}REPOSITÓRIO:${NC}
+    https://github.com/seu-usuario/manager-srt
+
+EOF
+}
+
+show_version() {
+    echo -e "${BOLD}${CYAN}manager-srt${NC} versão ${GREEN}${VERSION}${NC}"
+    echo "Copyright (C) 2024 Narayan/Tales"
+    echo "Licença: GPL v3+"
+}
+
+# ==============================================================================
+# Função para detectar se um arquivo SRT é português
+# ==============================================================================
+
+is_portuguese_subtitle() {
+    local file="$1"
+    
+    # Palavras comuns em português para detecção
+    local pt_words=("que" "não" "para" "com" "uma" "mais" "muito" "está" "você" "seu" "sua" "ele" "ela" "são" "mas" "por" "até" "também" "bem" "foi" "ser" "vai" "pode" "ainda" "onde" "quando" "como" "porque" "sem" "sobre" "está" "todo" "tinha" "foram" "fazer")
+    
+    # Lê as primeiras 100 linhas do arquivo
+    local content=$(head -n 100 "$file" 2>/dev/null | tr '[:upper:]' '[:lower:]')
+    
+    if [ -z "$content" ]; then
+        log_debug "Arquivo vazio ou ilegível: $file"
+        return 1
+    fi
+    
+    # Conta quantas palavras portuguesas foram encontradas
+    local matches=0
+    for word in "${pt_words[@]}"; do
+        if echo "$content" | grep -qw "$word"; then
+            ((matches++))
+        fi
+        
+        # Se encontrar o mínimo de palavras portuguesas, considera como português
+        if [ $matches -ge $MIN_PT_WORDS ]; then
+            log_debug "Detectadas $matches palavras PT em: $(basename "$file")"
+            return 0
+        fi
+    done
+    
+    log_debug "Apenas $matches palavras PT encontradas em: $(basename "$file")"
+    return 1
+}
+
+# ==============================================================================
+# Função para criar backup
+# ==============================================================================
+
+create_backup() {
+    if [ "$CREATE_BACKUP" = true ] && [ -n "$BACKUP_DIR" ]; then
+        log_info "Criando backup em: ${YELLOW}${BACKUP_DIR}${NC}"
+        
+        local timestamp=$(date +%Y%m%d_%H%M%S)
+        local backup_path="${BACKUP_DIR}/backup_${timestamp}"
+        
+        mkdir -p "$backup_path" || {
+            log_error "Falha ao criar diretório de backup!"
+            return 1
+        }
+        
+        # Copia arquivos que serão modificados/removidos
+        find "$WORK_DIR" -type f \( -name "*.srt" -o -name "*.jpg" -o -name "*.png" -o -name "*.nfo" \) \
+            -exec cp --parents {} "$backup_path" \; 2>/dev/null
+        
+        log_success "Backup criado em: ${GREEN}${backup_path}${NC}"
+        write_log "Backup criado em: ${backup_path}"
+        return 0
+    fi
+    return 0
+}
+
+# ==============================================================================
+# Função para escanear e coletar informações (preview)
+# ==============================================================================
+
+scan_files() {
+    log_info "Escaneando diretório: ${YELLOW}${WORK_DIR}${NC}"
+    print_separator
+    
+    # Escanear arquivos .por2.srt
+    if [ "$DO_RENAME_POR2" = true ]; then
+        log_info "🔍 Procurando arquivos ${YELLOW}.por2.srt${NC}..."
+        while IFS= read -r -d '' file; do
+            preview_por2_files+=("$file")
+            ((total_found_por2++))
+        done < <(find "$WORK_DIR" -type f -name "*.por2.srt" -print0)
+        
+        if [ $total_found_por2 -gt 0 ]; then
+            echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_por2}${NC} arquivos"
+        else
+            echo -e "   ${GRAY}○${NC} Nenhum arquivo encontrado"
+        fi
+    fi
+    
+    # Escanear legendas sem idioma
+    if [ "$DO_RENAME_NO_LANG" = true ]; then
+        log_info "🔍 Procurando legendas sem idioma..."
+        while IFS= read -r -d '' file; do
+            local basename=$(basename "$file")
+            
+            # Verifica se já tem código de idioma
+            if [[ "$basename" =~ \.[a-z]{3}\.srt$ ]] || [[ "$basename" =~ \.[a-z]{3}[0-9]\.srt$ ]]; then
+                continue
+            fi
+            
+            # Verifica se termina com .srt e não tem idioma
+            if [[ "$basename" =~ \.srt$ ]] && ! [[ "$basename" =~ \.[a-z]{3}\.srt$ ]]; then
+                if is_portuguese_subtitle "$file"; then
+                    preview_no_lang_files+=("$file")
+                    ((total_found_no_lang++))
+                fi
+            fi
+        done < <(find "$WORK_DIR" -type f -name "*.srt" ! -name "*.forced.srt" -print0)
+        
+        if [ $total_found_no_lang -gt 0 ]; then
+            echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_no_lang}${NC} arquivos"
+        else
+            echo -e "   ${GRAY}○${NC} Nenhum arquivo encontrado"
+        fi
+    fi
+    
+    # Escanear arquivos indesejados
+    if [ "$DO_REMOVE_UNWANTED" = true ]; then
+        log_info "🔍 Procurando arquivos indesejados..."
+        
+        local patterns=(
+            "*.ara.srt" "*.eng.srt" "*.eng2.srt"
+            "*.chi.srt" "*.cze.srt" "*.cze2.srt" "*.dan.srt" "*.dut.srt"
+            "*.fil.srt" "*.fin.srt" "*.fre.srt" "*.ger.srt" "*.gre.srt"
+            "*.heb.srt" "*.hrv.srt" "*.hun.srt" "*.ind.srt" "*.ita.srt"
+            "*.jpn.srt" "*.kor.srt" "*.may.srt" "*.nob.srt" "*.pol.srt"
+            "*.rum.srt" "*.rus.srt" "*.spa.srt" "*.spa2.srt" "*.swe.srt" "*.tha.srt"
+            "*.tur.srt" "*.ukr.srt" "*.vie.srt" "*.hin.srt" "*.nor.srt"
+            "*.tam.srt" "*.tel.srt" "*.slo.srt" "*.bul.srt" "*.lav.srt"
+            "*.lit.srt" "*.slv.srt" "*.glg.srt" "*.cat.srt" "*.baq.srt"
+            "*.jpg" "*.jpeg" "*.png" "*.gif" "*.bmp" "*.nfo"
+        )
+        
+        for pattern in "${patterns[@]}"; do
+            while IFS= read -r -d '' file; do
+                preview_unwanted_files+=("$file")
+                ((total_found_unwanted++))
+            done < <(find "$WORK_DIR" -type f -name "$pattern" -print0)
+        done
+        
+        if [ $total_found_unwanted -gt 0 ]; then
+            echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_unwanted}${NC} arquivos"
+        else
+            echo -e "   ${GRAY}○${NC} Nenhum arquivo encontrado"
+        fi
+    fi
+    
+    # Escanear diretórios metadata
+    if [ "$DO_REMOVE_METADATA" = true ]; then
+        log_info "🔍 Procurando diretórios 'metadata'..."
+        while IFS= read -r -d '' dir; do
+            preview_metadata_dirs+=("$dir")
+            ((total_found_metadata++))
+        done < <(find "$WORK_DIR" -type d -name "metadata" -print0)
+        
+        if [ $total_found_metadata -gt 0 ]; then
+            echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_metadata}${NC} diretórios"
+        else
+            echo -e "   ${GRAY}○${NC} Nenhum diretório encontrado"
+        fi
+    fi
+    
+    print_separator
+}
+
+# ==============================================================================
+# Função para exibir preview detalhado
+# ==============================================================================
+
+show_preview() {
+    echo ""
+    print_double_separator
+    echo -e "${BOLD}${YELLOW}📋 PREVIEW DAS OPERAÇÕES${NC}"
+    print_double_separator
+    echo ""
+    
+    local total_operations=$((total_found_por2 + total_found_no_lang + total_found_unwanted + total_found_metadata))
+    
+    if [ $total_operations -eq 0 ]; then
+        echo -e "${GREEN}✓ Nenhuma operação necessária. Tudo está organizado!${NC}"
+        echo ""
+        return 0
+    fi
+    
+    # Preview: Renomear .por2.srt
+    if [ ${#preview_por2_files[@]} -gt 0 ]; then
+        echo -e "${BOLD}${CYAN}1. Renomear arquivos .por2.srt → .por.srt${NC} (${total_found_por2} arquivos)"
+        echo ""
+        
+        local count=0
+        for file in "${preview_por2_files[@]}"; do
+            local newname="${file%.por2.srt}.por.srt"
+            echo -e "   ${MAGENTA}→${NC} ${DIM}$(basename "$file")${NC}"
+            echo -e "      ${GREEN}→ $(basename "$newname")${NC}"
+            
+            ((count++))
+            if [ $count -ge 5 ] && [ ${#preview_por2_files[@]} -gt 5 ]; then
+                local remaining=$((${#preview_por2_files[@]} - count))
+                echo -e "   ${GRAY}... e mais ${remaining} arquivos${NC}"
+                break
+            fi
+        done
+        echo ""
+    fi
+    
+    # Preview: Renomear sem idioma
+    if [ ${#preview_no_lang_files[@]} -gt 0 ]; then
+        echo -e "${BOLD}${CYAN}2. Adicionar .por.srt a legendas sem idioma${NC} (${total_found_no_lang} arquivos)"
+        echo ""
+        
+        local count=0
+        for file in "${preview_no_lang_files[@]}"; do
+            local basename=$(basename "$file")
+            local newname="${basename%.srt}.por.srt"
+            echo -e "   ${MAGENTA}→${NC} ${DIM}$basename${NC}"
+            echo -e "      ${GREEN}→ $newname${NC}"
+            
+            ((count++))
+            if [ $count -ge 5 ] && [ ${#preview_no_lang_files[@]} -gt 5 ]; then
+                local remaining=$((${#preview_no_lang_files[@]} - count))
+                echo -e "   ${GRAY}... e mais ${remaining} arquivos${NC}"
+                break
+            fi
+        done
+        echo ""
+    fi
+    
+    # Preview: Remover indesejados
+    if [ ${#preview_unwanted_files[@]} -gt 0 ]; then
+        echo -e "${BOLD}${CYAN}3. Remover arquivos indesejados${NC} (${total_found_unwanted} arquivos)"
+        echo ""
+        
+        # Agrupa por tipo
+        declare -A file_types
+        for file in "${preview_unwanted_files[@]}"; do
+            local ext="${file##*.}"
+            file_types[$ext]=$((${file_types[$ext]:-0} + 1))
+        done
+        
+        for ext in "${!file_types[@]}"; do
+            echo -e "   ${RED}✗${NC} ${file_types[$ext]} arquivo(s) ${YELLOW}.${ext}${NC}"
+        done
+        
+        if [ "$VERBOSE" = true ]; then
+            echo ""
+            local count=0
+            for file in "${preview_unwanted_files[@]}"; do
+                echo -e "   ${RED}✗${NC} ${DIM}$(basename "$file")${NC}"
+                ((count++))
+                [ $count -ge 10 ] && break
+            done
+            if [ ${#preview_unwanted_files[@]} -gt 10 ]; then
+                local remaining=$((${#preview_unwanted_files[@]} - 10))
+                echo -e "   ${GRAY}... e mais ${remaining} arquivos${NC}"
+            fi
+        fi
+        echo ""
+    fi
+    
+    # Preview: Remover metadata
+    if [ ${#preview_metadata_dirs[@]} -gt 0 ]; then
+        echo -e "${BOLD}${CYAN}4. Remover diretórios 'metadata'${NC} (${total_found_metadata} diretórios)"
+        echo ""
+        
+        local count=0
+        for dir in "${preview_metadata_dirs[@]}"; do
+            echo -e "   ${RED}✗${NC} ${DIM}${dir}${NC}"
+            
+            ((count++))
+            if [ $count -ge 5 ] && [ ${#preview_metadata_dirs[@]} -gt 5 ]; then
+                local remaining=$((${#preview_metadata_dirs[@]} - count))
+                echo -e "   ${GRAY}... e mais ${remaining} diretórios${NC}"
+                break
+            fi
+        done
+        echo ""
+    fi
+    
+    print_double_separator
+    echo -e "${BOLD}${WHITE}📊 RESUMO:${NC}"
+    echo ""
+    echo -e "  ${CYAN}Arquivos .por2.srt a renomear:${NC}      ${BOLD}${total_found_por2}${NC}"
+    echo -e "  ${CYAN}Legendas sem idioma a renomear:${NC}     ${BOLD}${total_found_no_lang}${NC}"
+    echo -e "  ${CYAN}Arquivos a remover:${NC}                 ${BOLD}${total_found_unwanted}${NC}"
+    echo -e "  ${CYAN}Diretórios a remover:${NC}               ${BOLD}${total_found_metadata}${NC}"
+    echo -e "  ${WHITE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "  ${BOLD}${GREEN}Total de operações:${NC}                 ${BOLD}${total_operations}${NC}"
+    echo ""
+    print_double_separator
+}
+
+# ==============================================================================
+# Função para renomear .por2.srt para .por.srt
+# ==============================================================================
+
+rename_por2_to_por() {
+    if [ "$DO_RENAME_POR2" = false ]; then
+        return 0
+    fi
+    
+    log_info "Renomeando arquivos ${YELLOW}.por2.srt${NC}..."
+    
+    for file in "${preview_por2_files[@]}"; do
+        local newname="${file%.por2.srt}.por.srt"
+        
+        if [ -f "$newname" ]; then
+            log_warning "Arquivo ${YELLOW}$(basename "$newname")${NC} já existe. Pulando..."
+            write_log "SKIP: $(basename "$file") - destino já existe"
+        else
+            if [ "$DRY_RUN" = true ]; then
+                log_dry_run "Renomearia: $(basename "$file") → $(basename "$newname")"
+            else
+                mv "$file" "$newname" && {
+                    log_success "Renomeado: ${GREEN}$(basename "$newname")${NC}"
+                    write_log "RENAMED: $(basename "$file") → $(basename "$newname")"
+                    ((count_por2_renamed++))
+                } || {
+                    log_error "Falha ao renomear: $(basename "$file")"
+                    write_log "ERROR: Failed to rename $(basename "$file")"
+                }
+            fi
+        fi
+    done
+    
+    if [ $count_por2_renamed -eq 0 ] && [ "$DRY_RUN" = false ]; then
+        log_info "Nenhum arquivo .por2.srt foi renomeado."
+    fi
+}
+
+# ==============================================================================
+# Função para renomear legendas sem idioma
+# ==============================================================================
+
+rename_no_language_subtitles() {
+    if [ "$DO_RENAME_NO_LANG" = false ]; then
+        return 0
+    fi
+    
+    log_info "Renomeando legendas sem identificação de idioma..."
+    
+    for file in "${preview_no_lang_files[@]}"; do
+        local basename=$(basename "$file")
+        local dirname=$(dirname "$file")
+        local newname="${basename%.srt}.por.srt"
+        local fullnewpath="$dirname/$newname"
+        
+        if [ -f "$fullnewpath" ]; then
+            log_warning "Arquivo ${YELLOW}$newname${NC} já existe. Pulando..."
+            write_log "SKIP: $basename - destino já existe"
+        else
+            if [ "$DRY_RUN" = true ]; then
+                log_dry_run "Renomearia: $basename → $newname"
+            else
+                mv "$file" "$fullnewpath" && {
+                    log_success "Detectado PT e renomeado: ${GREEN}$newname${NC}"
+                    write_log "RENAMED: $basename → $newname"
+                    ((count_no_lang_renamed++))
+                } || {
+                    log_error "Falha ao renomear: $basename"
+                    write_log "ERROR: Failed to rename $basename"
+                }
+            fi
+        fi
+    done
+    
+    if [ $count_no_lang_renamed -eq 0 ] && [ "$DRY_RUN" = false ]; then
+        log_info "Nenhuma legenda sem idioma foi renomeada."
+    fi
+}
+
+# ==============================================================================
+# Função para remover arquivos indesejados
+# ==============================================================================
+
+remove_unwanted_files() {
+    if [ "$DO_REMOVE_UNWANTED" = false ]; then
+        return 0
+    fi
+    
+    log_info "Removendo arquivos indesejados..."
+    
+    for file in "${preview_unwanted_files[@]}"; do
+        if [ "$DRY_RUN" = true ]; then
+            log_dry_run "Removeria: $(basename "$file")"
+        else
+            rm "$file" && {
+                log_action "Removido: ${RED}$(basename "$file")${NC}"
+                write_log "DELETED: $(basename "$file")"
+                ((count_deleted++))
+            } || {
+                log_error "Falha ao remover: $(basename "$file")"
+                write_log "ERROR: Failed to delete $(basename "$file")"
+            }
+        fi
+    done
+    
+    if [ $count_deleted -eq 0 ] && [ "$DRY_RUN" = false ]; then
+        log_info "Nenhum arquivo indesejado foi removido."
+    fi
+}
+
+# ==============================================================================
+# Função para remover diretórios metadata
+# ==============================================================================
+
+remove_metadata_dirs() {
+    if [ "$DO_REMOVE_METADATA" = false ]; then
+        return 0
+    fi
+    
+    log_info "Removendo diretórios 'metadata'..."
+    
+    for dir in "${preview_metadata_dirs[@]}"; do
+        if [ "$DRY_RUN" = true ]; then
+            log_dry_run "Removeria: $dir"
+        else
+            rm -rf "$dir" && {
+                log_action "Diretório removido: ${RED}$dir${NC}"
+                write_log "DELETED DIR: $dir"
+                ((count_dirs_deleted++))
+            } || {
+                log_error "Falha ao remover: $dir"
+                write_log "ERROR: Failed to delete dir $dir"
+            }
+        fi
+    done
+    
+    if [ $count_dirs_deleted -eq 0 ] && [ "$DRY_RUN" = false ]; then
+        log_info "Nenhum diretório 'metadata' foi removido."
+    fi
+}
+
+# ==============================================================================
+# Função para exibir resumo final
+# ==============================================================================
+
+print_summary() {
+    print_separator
+    echo -e "${BOLD}${WHITE}📊 RESUMO DA OPERAÇÃO:${NC}"
+    echo ""
+    
+    if [ "$DRY_RUN" = true ]; then
+        echo -e "  ${YELLOW}⚠ MODO DRY-RUN - Nenhuma alteração foi feita${NC}"
+        echo ""
+    fi
+    
+    echo -e "  ${CYAN}Arquivos .por2.srt renomeados:${NC}     ${BOLD}$count_por2_renamed${NC}"
+    echo -e "  ${CYAN}Legendas sem idioma renomeadas:${NC}    ${BOLD}$count_no_lang_renamed${NC}"
+    echo -e "  ${CYAN}Arquivos removidos:${NC}                ${BOLD}$count_deleted${NC}"
+    echo -e "  ${CYAN}Diretórios removidos:${NC}              ${BOLD}$count_dirs_deleted${NC}"
+    echo ""
+    
+    local total=$((count_por2_renamed + count_no_lang_renamed + count_deleted + count_dirs_deleted))
+    
+    if [ $total -eq 0 ]; then
+        if [ "$DRY_RUN" = false ]; then
+            echo -e "  ${GREEN}✓ Nenhuma ação foi necessária. Tudo está organizado!${NC}"
+        else
+            echo -e "  ${YELLOW}✓ Nenhuma ação seria necessária.${NC}"
+        fi
+    else
+        if [ "$DRY_RUN" = false ]; then
+            echo -e "  ${GREEN}✓ Total de operações realizadas: ${BOLD}$total${NC}"
+        else
+            echo -e "  ${YELLOW}✓ Total de operações que seriam realizadas: ${BOLD}$total${NC}"
+        fi
+    fi
+    
+    echo ""
+    print_separator
+}
+
+# ==============================================================================
+# Função de confirmação
+# ==============================================================================
+
+confirm_execution() {
+    if [ "$SKIP_CONFIRM" = true ]; then
+        return 0
+    fi
+    
+    echo ""
+    local total_operations=$((total_found_por2 + total_found_no_lang + total_found_unwanted + total_found_metadata))
+    
+    if [ $total_operations -eq 0 ]; then
+        return 1
+    fi
+    
+    if [ "$INTERACTIVE" = true ]; then
+        echo -e -n "${BOLD}${YELLOW}Deseja executar estas operações? [s/N]: ${NC}"
+        read -n 1 -r
+        echo ""
+        
+        if [[ ! $REPLY =~ ^[SsYy]$ ]]; then
+            log_warning "Operação cancelada pelo usuário."
+            return 1
+        fi
+    fi
+    
+    return 0
+}
+
+# ==============================================================================
+# Processamento de argumentos
+# ==============================================================================
+
+parse_arguments() {
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -h|--help)
+                show_help
+                exit 0
+                ;;
+            -v|--version)
+                show_version
+                exit 0
+                ;;
+            -d|--dry-run)
+                DRY_RUN=true
+                SKIP_CONFIRM=true
+                shift
+                ;;
+            -y|--yes)
+                SKIP_CONFIRM=true
+                INTERACTIVE=false
+                shift
+                ;;
+            -i|--interactive)
+                INTERACTIVE=true
+                shift
+                ;;
+            -q|--quiet)
+                QUIET=true
+                shift
+                ;;
+            -V|--verbose)
+                VERBOSE=true
+                shift
+                ;;
+            -w|--workdir)
+                WORK_DIR="$2"
+                shift 2
+                ;;
+            -b|--backup)
+                CREATE_BACKUP=true
+                BACKUP_DIR="$2"
+                shift 2
+                ;;
+            -l|--log)
+                ENABLE_LOG=true
+                LOG_FILE="$2"
+                shift 2
+                ;;
+            --min-pt-words)
+                MIN_PT_WORDS="$2"
+                shift 2
+                ;;
+            --no-rename-por2)
+                DO_RENAME_POR2=false
+                shift
+                ;;
+            --no-rename-no-lang)
+                DO_RENAME_NO_LANG=false
+                shift
+                ;;
+            --no-remove-unwanted)
+                DO_REMOVE_UNWANTED=false
+                shift
+                ;;
+            --no-remove-metadata)
+                DO_REMOVE_METADATA=false
+                shift
+                ;;
+            --only-rename-por2)
+                DO_RENAME_POR2=true
+                DO_RENAME_NO_LANG=false
+                DO_REMOVE_UNWANTED=false
+                DO_REMOVE_METADATA=false
+                shift
+                ;;
+            --only-rename-no-lang)
+                DO_RENAME_POR2=false
+                DO_RENAME_NO_LANG=true
+                DO_REMOVE_UNWANTED=false
+                DO_REMOVE_METADATA=false
+                shift
+                ;;
+            --only-remove-unwanted)
+                DO_RENAME_POR2=false
+                DO_RENAME_NO_LANG=false
+                DO_REMOVE_UNWANTED=true
+                DO_REMOVE_METADATA=false
+                shift
+                ;;
+            --only-remove-metadata)
+                DO_RENAME_POR2=false
+                DO_RENAME_NO_LANG=false
+                DO_REMOVE_UNWANTED=false
+                DO_REMOVE_METADATA=true
+                shift
+                ;;
+            *)
+                log_error "Opção desconhecida: $1"
+                echo "Use --help para ver as opções disponíveis."
+                exit 1
+                ;;
+        esac
+    done
+}
+
+# ==============================================================================
+# Função principal
+# ==============================================================================
+
+main() {
+    # Parse argumentos
+    parse_arguments "$@"
+    
+    # Exibe header
+    print_header
+    
+    # Valida diretório de trabalho
+    if [ ! -d "$WORK_DIR" ]; then
+        log_error "Diretório não existe: ${WORK_DIR}"
+        exit 1
+    fi
+    
+    # Converte para caminho absoluto
+    WORK_DIR=$(cd "$WORK_DIR" && pwd)
+    
+    log_info "Diretório de trabalho: ${YELLOW}${WORK_DIR}${NC}"
+    
+    if [ "$DRY_RUN" = true ]; then
+        log_warning "MODO DRY-RUN ATIVADO - Nenhuma alteração será feita"
+    fi
+    
+    echo ""
+    
+    # Cria backup se necessário
+    if [ "$CREATE_BACKUP" = true ]; then
+        create_backup || {
+            log_error "Falha ao criar backup. Abortando."
+            exit 1
+        }
+        echo ""
+    fi
+    
+    # Inicializa log
+    if [ "$ENABLE_LOG" = true ]; then
+        write_log "=== INÍCIO DA OPERAÇÃO ==="
+        write_log "Diretório: $WORK_DIR"
+        write_log "Modo dry-run: $DRY_RUN"
+    fi
+    
+    # Escaneia arquivos
+    scan_files
+    
+    # Exibe preview
+    show_preview
+    
+    # Confirma execução
+    if ! confirm_execution; then
+        exit 0
+    fi
+    
+    # Se não for dry-run, executa as operações
+    if [ "$DRY_RUN" = false ]; then
+        echo ""
+        print_double_separator
+        echo -e "${BOLD}${GREEN}🚀 EXECUTANDO OPERAÇÕES${NC}"
+        print_double_separator
+        echo ""
+        
+        rename_por2_to_por
+        echo ""
+        
+        rename_no_language_subtitles
+        echo ""
+        
+        remove_unwanted_files
+        echo ""
+        
+        remove_metadata_dirs
+        echo ""
+    fi
+    
+    # Exibe resumo
+    print_summary
+    
+    if [ "$DRY_RUN" = false ]; then
+        log_success "Operação concluída com sucesso!"
+    else
+        log_info "Preview concluído. Use sem --dry-run para executar."
+    fi
+    
+    # Finaliza log
+    if [ "$ENABLE_LOG" = true ]; then
+        write_log "=== FIM DA OPERAÇÃO ==="
+    fi
+}
+
+# ==============================================================================
+# Execução
+# ==============================================================================
+
+main "$@"
