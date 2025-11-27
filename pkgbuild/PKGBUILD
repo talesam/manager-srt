@@ -3,7 +3,7 @@
 pkgname=manager-srt
 pkgdesc="Manage SRT files"
 # Uncomment and edit the following lines as needed
-#depends=('')
+depends=('fd')
 #makedepends=('')
 #optdepends=('')
 #conflicts=('')
