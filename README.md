@@ -1,9 +1,9 @@
-# 🎬 Manager-SRT v3.0.0
+# 🎬 Manager-SRT v1.0.3
 
 **Gerenciador Profissional de Legendas e Arquivos de Mídia**
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/talesam/manager-srt)
-[![License](https://img.shields.io/badge/license-GPL%20v3-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)](https://github.com/talesam/manager-srt)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Bash](https://img.shields.io/badge/bash-4.0%2B-orange.svg)](https://www.gnu.org/software/bash/)
 
 Script Bash avançado para organizar automaticamente legendas e arquivos de mídia em bibliotecas de filmes e séries.
@@ -77,7 +77,7 @@ sudo cp manager-srt /usr/local/bin/
 
 ```bash
 manager-srt --version
-# Saída: manager-srt versão 3.0.0
+# Saída: manager-srt versão 1.0.3
 ```
 
 ## 📖 Uso
@@ -227,7 +227,7 @@ manager-srt --backup /backup/$(date +%Y%m%d) --log /var/log/manager.log
 
 ```
 ╔════════════════════════════════════════════════════════════════════════╗
-║  GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v3.0.0                    ║
+║  GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v1.0.3                    ║
 ╚════════════════════════════════════════════════════════════════════════╝
 
 [INFO] Diretório de trabalho: /media/filmes/Matrix
@@ -366,7 +366,7 @@ manager-srt/
 ├── MELHORIAS.md          # Documentação de melhorias v2 → v3
 ├── EXEMPLOS.sh           # Scripts de exemplo
 ├── CHEATSHEET.txt        # Referência rápida
-└── LICENSE               # Licença GPL v3
+└── LICENSE               # Licença MIT
 ```
 
 ## 🔧 Requisitos
@@ -392,7 +392,7 @@ Contribuições são bem-vindas! Por favor:
 
 ## 📝 Changelog
 
-### v3.0.0 (2024-11-25)
+### v1.0.3 (2024-11-26)
 - ✨ Sistema `--help` completo e colorido
 - ✨ Modo preview/dry-run detalhado
 - ✨ 20+ opções de linha de comando
@@ -422,20 +422,7 @@ Encontrou um bug? Por favor abra uma [issue](https://github.com/talesam/manager-
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **GNU General Public License v3.0** - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 👤 Autor
-
-**Narayan/Tales**
-
-- GitHub: [@talesam](https://github.com/talesam)
-- Email: seu-email@exemplo.com
-
-## ⭐ Agradecimentos
-
-- Comunidade Bash pela linguagem incrível
-- Usuários que reportaram bugs e sugeriram melhorias
-- Contribuidores do projeto
+Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 🎯 Roadmap
 

@@ -8,7 +8,7 @@
 # Last Update: 2024-11-25
 # ==============================================================================
 
-VERSION="3.0.0"
+VERSION="1.0.3"
 SCRIPT_NAME="$(basename "$0")"
 
 # ==============================================================================
@@ -78,7 +78,7 @@ print_header() {
     if [ "$QUIET" = false ]; then
         echo -e "${BOLD}${CYAN}"
         echo "╔════════════════════════════════════════════════════════════════════════╗"
-        echo "║  GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${VERSION}                  ║"
+        echo "║         GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${VERSION}             ║"
         echo "╚════════════════════════════════════════════════════════════════════════╝"
         echo -e "${NC}"
     fi
@@ -223,7 +223,7 @@ EOF
 show_version() {
     echo -e "${BOLD}${CYAN}manager-srt${NC} versão ${GREEN}${VERSION}${NC}"
     echo "Copyright (C) 2025 Narayan/Tales"
-    echo "Licença: GPL v3+"
+    echo "Licença: MIT"
 }
 
 # ==============================================================================
@@ -318,6 +318,11 @@ scan_files() {
         while IFS= read -r -d '' file; do
             local basename=$(basename "$file")
             
+            # Pular arquivos .por2.srt (serão processados separadamente)
+            if [[ "$basename" =~ \.por2\.srt$ ]]; then
+                continue
+            fi
+            
             # Verifica se já tem código de idioma
             if [[ "$basename" =~ \.[a-z]{3}\.srt$ ]] || [[ "$basename" =~ \.[a-z]{3}[0-9]\.srt$ ]]; then
                 continue
@@ -343,8 +348,11 @@ scan_files() {
     if [ "$DO_REMOVE_UNWANTED" = true ]; then
         log_info "🔍 Procurando arquivos indesejados..."
         
+        # Array associativo para evitar duplicatas
+        declare -A seen_files
+        
         local patterns=(
-            "*.ara.srt" "*.eng.srt" "*.eng2.srt"
+            "*.ara.srt"
             "*.chi.srt" "*.cze.srt" "*.cze2.srt" "*.dan.srt" "*.dut.srt"
             "*.fil.srt" "*.fin.srt" "*.fre.srt" "*.ger.srt" "*.gre.srt"
             "*.heb.srt" "*.hrv.srt" "*.hun.srt" "*.ind.srt" "*.ita.srt"
@@ -358,8 +366,12 @@ scan_files() {
         
         for pattern in "${patterns[@]}"; do
             while IFS= read -r -d '' file; do
-                preview_unwanted_files+=("$file")
-                ((total_found_unwanted++))
+                # Evita duplicatas
+                if [ -z "${seen_files[$file]}" ]; then
+                    preview_unwanted_files+=("$file")
+                    seen_files[$file]=1
+                    ((total_found_unwanted++))
+                fi
             done < <(find "$WORK_DIR" -type f -name "$pattern" -print0)
         done
         
