@@ -1,10 +1,10 @@
-# 🎬 Manager-SRT v1.1.5
+# 🎬 Manager-SRT
 
 **Gerenciador Profissional de Legendas e Arquivos de Mídia**
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)](https://github.com/talesam/manager-srt)
+[![Version](https://img.shields.io/badge/version-1.1.5-blue.svg)](https://github.com/talesam/manager-srt)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Bash](https://img.shields.io/badge/bash-4.0%2B-orange.svg)](https://www.gnu.org/software/bash/)
 
