@@ -7,7 +7,7 @@
 # Last Update: 2024-11-25
 # ==============================================================================
 
-VERSION="1.0.4"
+VERSION="1.1.5"
 SCRIPT_NAME="$(basename "$0")"
 
 # ==============================================================================
@@ -278,8 +278,8 @@ create_backup() {
         }
         
         # Copia arquivos que serão modificados/removidos
-        find "$WORK_DIR" -type f \( -name "*.srt" -o -name "*.jpg" -o -name "*.png" -o -name "*.nfo" \) \
-            -exec cp --parents {} "$backup_path" \; 2>/dev/null
+        fd -u -t f -e srt -e jpg -e png -e nfo . "$WORK_DIR" \
+            -x cp --parents {} "$backup_path" 2>/dev/null
         
         log_success "Backup criado em: ${GREEN}${backup_path}${NC}"
         write_log "Backup criado em: ${backup_path}"
@@ -302,7 +302,7 @@ scan_files() {
         while IFS= read -r -d '' file; do
             preview_por2_files+=("$file")
             ((total_found_por2++))
-        done < <(find "$WORK_DIR" -type f -name "*.por2.srt" -print0)
+        done < <(fd -u -t f -g "*.por2.srt" "$WORK_DIR" -0)
         
         if [ $total_found_por2 -gt 0 ]; then
             echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_por2}${NC} arquivos"
@@ -334,7 +334,7 @@ scan_files() {
                     ((total_found_no_lang++))
                 fi
             fi
-        done < <(find "$WORK_DIR" -type f -name "*.srt" ! -name "*.forced.srt" -print0)
+        done < <(fd -u -t f -g "*.srt" -E "*.forced.srt" "$WORK_DIR" -0)
         
         if [ $total_found_no_lang -gt 0 ]; then
             echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_no_lang}${NC} arquivos"
@@ -373,7 +373,7 @@ scan_files() {
                     seen_files[$file]=1
                     ((total_found_unwanted++))
                 fi
-            done < <(find "$WORK_DIR" -type f -name "$pattern" -print0)
+            done < <(fd -u -t f -g "$pattern" "$WORK_DIR" -0)
         done
         
         if [ $total_found_unwanted -gt 0 ]; then
@@ -389,7 +389,7 @@ scan_files() {
         while IFS= read -r -d '' dir; do
             preview_metadata_dirs+=("$dir")
             ((total_found_metadata++))
-        done < <(find "$WORK_DIR" -type d -name "metadata" -print0)
+        done < <(fd -u -t d -g "metadata" "$WORK_DIR" -0)
         
         if [ $total_found_metadata -gt 0 ]; then
             echo -e "   ${GREEN}✓${NC} Encontrados: ${BOLD}${total_found_metadata}${NC} diretórios"
@@ -551,7 +551,7 @@ rename_por2_to_por() {
                 mv "$file" "$newname" && {
                     log_success "Renomeado: ${GREEN}$(basename "$newname")${NC}"
                     write_log "RENAMED: $(basename "$file") → $(basename "$newname")"
-                    ((count_por2_renamed++))
+                    ((++count_por2_renamed))
                 } || {
                     log_error "Falha ao renomear: $(basename "$file")"
                     write_log "ERROR: Failed to rename $(basename "$file")"
@@ -592,7 +592,7 @@ rename_no_language_subtitles() {
                 mv "$file" "$fullnewpath" && {
                     log_success "Detectado PT e renomeado: ${GREEN}$newname${NC}"
                     write_log "RENAMED: $basename → $newname"
-                    ((count_no_lang_renamed++))
+                    ((++count_no_lang_renamed))
                 } || {
                     log_error "Falha ao renomear: $basename"
                     write_log "ERROR: Failed to rename $basename"
@@ -624,7 +624,7 @@ remove_unwanted_files() {
             rm "$file" && {
                 log_action "Removido: ${RED}$(basename "$file")${NC}"
                 write_log "DELETED: $(basename "$file")"
-                ((count_deleted++))
+                ((++count_deleted))
             } || {
                 log_error "Falha ao remover: $(basename "$file")"
                 write_log "ERROR: Failed to delete $(basename "$file")"
@@ -655,7 +655,7 @@ remove_metadata_dirs() {
             rm -rf "$dir" && {
                 log_action "Diretório removido: ${RED}$dir${NC}"
                 write_log "DELETED DIR: $dir"
-                ((count_dirs_deleted++))
+                ((++count_dirs_deleted))
             } || {
                 log_error "Falha ao remover: $dir"
                 write_log "ERROR: Failed to delete dir $dir"

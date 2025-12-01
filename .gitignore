@@ -1,3 +1,8 @@
+# Gemini Agent control files
+GEMINI.md
+.gemini_memory
+.gemini_scratchpad
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
