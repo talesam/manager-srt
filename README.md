@@ -1,10 +1,14 @@
-# 🎬 Manager-SRT v1.0.4
+# 🎬 Manager-SRT v1.1.5
 
 **Gerenciador Profissional de Legendas e Arquivos de Mídia**
+
+<div align="center">
 
 [![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)](https://github.com/talesam/manager-srt)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Bash](https://img.shields.io/badge/bash-4.0%2B-orange.svg)](https://www.gnu.org/software/bash/)
+
+</div>
 
 Script Bash avançado para organizar automaticamente legendas e arquivos de mídia em bibliotecas de filmes e séries.
 
