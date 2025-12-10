@@ -7,7 +7,7 @@
 # Last Update: 2024-11-25
 # ==============================================================================
 
-VERSION="1.1.5"
+APP_VERSION="1.1.6"
 SCRIPT_NAME="$(basename "$0")"
 
 # ==============================================================================
@@ -77,7 +77,7 @@ print_header() {
     if [ "$QUIET" = false ]; then
         echo -e "${BOLD}${CYAN}"
         echo "╔════════════════════════════════════════════════════════════════════════╗"
-        echo "║         GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${VERSION}             ║"
+        echo "║         GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${APP_VERSION}             ║"
         echo "╚════════════════════════════════════════════════════════════════════════╝"
         echo -e "${NC}"
     fi
@@ -135,7 +135,7 @@ write_log() {
 
 show_help() {
     echo -e "$(cat << EOF
-${BOLD}${CYAN}GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${VERSION}${NC}
+${BOLD}${CYAN}GERENCIADOR DE LEGENDAS E ARQUIVOS DE MÍDIA v${APP_VERSION}${NC}
 
 ${BOLD}USO:${NC}
     ${SCRIPT_NAME} [OPÇÕES]
@@ -172,7 +172,7 @@ ${BOLD}OPÇÕES AVANÇADAS:${NC}
 ${BOLD}OPERAÇÕES REALIZADAS:${NC}
     ${CYAN}1.${NC} Renomeia arquivos ${YELLOW}.por2.srt${NC} para ${YELLOW}.por.srt${NC}
     ${CYAN}2.${NC} Detecta e renomeia legendas sem idioma para ${YELLOW}.por.srt${NC}
-    ${CYAN}3.${NC} Remove legendas em outros idiomas (spa, eng, etc)
+    ${CYAN}3.${NC} Remove legendas em outros idiomas (spa, ita, etc)
     ${CYAN}4.${NC} Remove imagens e arquivos NFO
     ${CYAN}5.${NC} Remove diretórios 'metadata'
 
@@ -196,7 +196,7 @@ ${BOLD}EXEMPLOS:${NC}
     ${SCRIPT_NAME} --workdir /media/filmes
 
 ${BOLD}IDIOMAS REMOVIDOS:${NC}
-    ara, chi, cze, dan, dut, eng, fil, fin, fre, ger, gre, heb, hrv,
+    ara, chi, cze, dan, dut, fil, fin, fre, ger, gre, heb, hrv,
     hun, ind, ita, jpn, kor, may, nob, pol, rum, rus, spa, swe, tha,
     tur, ukr, vie, hin, nor, tam, tel, slo, bul, lav, lit, slv, glg,
     cat, baq
@@ -220,7 +220,7 @@ EOF
 }
 
 show_version() {
-    echo -e "${BOLD}${CYAN}manager-srt${NC} versão ${GREEN}${VERSION}${NC}"
+    echo -e "${BOLD}${CYAN}manager-srt${NC} versão ${GREEN}${APP_VERSION}${NC}"
     echo "Copyright (C) 2025 Narayan/Tales"
     echo "Licença: MIT"
 }
@@ -353,7 +353,7 @@ scan_files() {
         local patterns=(
             # Legendas em outros idiomas (captura .eng.srt, .eng2.srt, .eng.forced.srt, etc.)
             "*.ara*.srt" "*.chi*.srt" "*.cze*.srt" "*.dan*.srt" "*.dut*.srt"
-            "*.eng*.srt" "*.fil*.srt" "*.fin*.srt" "*.fre*.srt" "*.ger*.srt"
+            "*.fil*.srt" "*.fin*.srt" "*.fre*.srt" "*.ger*.srt"
             "*.gre*.srt" "*.heb*.srt" "*.hrv*.srt" "*.hun*.srt" "*.ind*.srt"
             "*.ita*.srt" "*.jpn*.srt" "*.kor*.srt" "*.may*.srt" "*.nob*.srt"
             "*.pol*.srt" "*.rum*.srt" "*.rus*.srt" "*.spa*.srt" "*.swe*.srt"
