@@ -1,7 +1,8 @@
-# Gemini Agent control files
+# AI Agent control files
 GEMINI.md
 .gemini_memory
 .gemini_scratchpad
+CLAUDE.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
