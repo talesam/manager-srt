@@ -23,6 +23,7 @@ from gi.repository import Gtk, Adw, GLib
 from typing import Optional, Callable, List
 
 from ...utils.i18n import _
+from ...utils.config import get_config
 from ...core.renamer import RenameOperation
 
 
@@ -261,18 +262,60 @@ class OperationsListView(Gtk.Box):
         self.status_label.set_hexpand(True)
         self.status_bar.append(self.status_label)
 
+        # Simulação (dry-run): deixa conferir o que será feito SEM tocar nos
+        # arquivos. Fica ao lado do botão Aplicar, que é onde a dúvida aparece.
+        self.dry_run_label = Gtk.Label(label=_("Simulation"))
+        self.dry_run_label.set_tooltip_text(
+            _("Preview every change without touching any file")
+        )
+        self.status_bar.append(self.dry_run_label)
+
+        self.dry_run_switch = Gtk.Switch()
+        self.dry_run_switch.set_valign(Gtk.Align.CENTER)
+        self.dry_run_switch.set_tooltip_text(
+            _("Preview every change without touching any file")
+        )
+        self.dry_run_switch.set_active(bool(get_config().dry_run))
+        self.dry_run_switch.connect("notify::active", self._on_dry_run_toggled)
+        self.status_bar.append(self.dry_run_switch)
+
         # Apply button
         self.apply_button = Gtk.Button()
-        apply_content = Adw.ButtonContent()
-        apply_content.set_icon_name("emblem-ok-symbolic")
-        apply_content.set_label(_("Apply"))
-        self.apply_button.set_child(apply_content)
+        self.apply_content = Adw.ButtonContent()
+        self.apply_content.set_icon_name("emblem-ok-symbolic")
+        self.apply_content.set_label(_("Apply"))
+        self.apply_button.set_child(self.apply_content)
         self.apply_button.add_css_class("suggested-action")
         self.apply_button.set_sensitive(False)
         self.apply_button.connect("clicked", self._on_apply_clicked)
         self.status_bar.append(self.apply_button)
 
         self.append(self.status_bar)
+        self._refresh_apply_button()
+
+    def _on_dry_run_toggled(self, switch, _param):
+        """Liga/desliga o modo simulação (lembrado entre sessões)."""
+        ativo = switch.get_active()
+        get_config().dry_run = ativo
+        self._refresh_apply_button()
+        try:
+            from ...utils.config_manager import ConfigManager
+            ConfigManager().set('gui_dry_run', ativo)
+        except Exception as e:  # preferência é conveniência, nunca quebra o app
+            import logging
+            logging.getLogger(__name__).debug("Não foi possível salvar gui_dry_run: %s", e)
+
+    def _refresh_apply_button(self):
+        """Deixa explícito no botão se vai simular ou aplicar de verdade."""
+        dry = bool(get_config().dry_run)
+        self.apply_content.set_label(_("Simulate") if dry else _("Apply"))
+        self.apply_content.set_icon_name(
+            "view-reveal-symbolic" if dry else "emblem-ok-symbolic"
+        )
+        if dry:
+            self.apply_button.remove_css_class("suggested-action")
+        else:
+            self.apply_button.add_css_class("suggested-action")
 
     def _on_apply_clicked(self, button):
         """Handle apply button click"""

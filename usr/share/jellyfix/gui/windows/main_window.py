@@ -512,11 +512,19 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         # Store operations in handler
         self.operations_handler.operations = operations
 
+        # Em simulação não há o que confirmar: nada é tocado no disco.
+        if self.operations_handler.config.dry_run:
+            self.logger.info("Simulating operations (dry-run)")
+            self.operations_handler.execute_operations(
+                complete_callback=self.on_execution_complete
+            )
+            return
+
         # Show confirmation dialog
         dialog = Adw.MessageDialog(
             transient_for=self,
             heading=_("Apply Operations?"),
-            body=_("This will rename {} files. Continue?").format(len(operations)),
+            body=self._describe_operations(operations),
         )
         dialog.add_response("cancel", _("Cancel"))
         dialog.add_response("apply", _("Apply"))
@@ -529,6 +537,32 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
 
         dialog.connect("response", on_response)
         dialog.present()
+
+    def _describe_operations(self, operations) -> str:
+        """Resumo honesto do que vai acontecer, por tipo de operação.
+
+        "Isso vai renomear N arquivos" escondia as EXCLUSÕES no meio do lote —
+        que é justamente o que o usuário precisa ver antes de confirmar.
+        """
+        counts = {}
+        for op in operations:
+            counts[op.operation_type] = counts.get(op.operation_type, 0) + 1
+
+        rotulos = [
+            ("rename", _("renamed: {}")),
+            ("move", _("moved: {}")),
+            ("move_rename", _("moved and renamed: {}")),
+            ("delete", _("DELETED: {}")),
+        ]
+        linhas = [texto.format(counts[tipo]) for tipo, texto in rotulos if counts.get(tipo)]
+
+        resumo = "\n".join(f"• {linha}" for linha in linhas)
+        total = _("{} operations").format(len(operations))
+
+        if counts.get("delete"):
+            aviso = _("Deletions cannot be undone.")
+            return f"{total}\n\n{resumo}\n\n⚠ {aviso}"
+        return f"{total}\n\n{resumo}"
 
     def on_process_files(self, widget=None):
         """
@@ -544,11 +578,19 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             self.logger.warning("No operations to process. Scan library first.")
             return
 
+        # Em simulação segue direto, sem confirmação: nada é tocado.
+        if self.operations_handler.config.dry_run:
+            self.logger.info("Simulating operations (dry-run)")
+            self.operations_handler.execute_operations(
+                complete_callback=self.on_execution_complete
+            )
+            return
+
         # Show confirmation dialog
         dialog = Adw.MessageDialog(
             transient_for=self,
             heading=_("Execute Operations?"),
-            body=_("This will rename {} files. Continue?").format(len(self.operations_handler.operations)),
+            body=self._describe_operations(self.operations_handler.operations),
         )
         dialog.add_response("cancel", _("Cancel"))
         dialog.add_response("execute", _("Execute"))
@@ -572,7 +614,17 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         """
         if dry_run:
             self.logger.info(f"Dry-run complete: {len(results)} operations previewed")
-            toast_msg = _("Dry-run: {} operations previewed").format(len(results))
+            # Janela dedicada: mostra arquivo por arquivo o que sai e o que
+            # entra, com as mesmas cores do modo CLI. A lista principal
+            # continua carregada para aplicar de verdade em seguida.
+            from .simulation_window import SimulationWindow
+
+            SimulationWindow(
+                parent=self,
+                operations=results,
+                work_dir=self.operations_handler.current_directory,
+            ).present()
+            return
         else:
             self.logger.success(f"Execution complete: {len(results)} operations")
             toast_msg = _("{} operations completed").format(len(results))

@@ -189,3 +189,72 @@ row.row-selected:hover {
     background-color: alpha(@card_bg_color, 0.7);
     border-radius: 12px;
 }
+/* ===== Janela de simulação (dry-run) ===== */
+/* Mesmo código de cores do modo CLI: renomear=accent, mover=sucesso,
+   mover+renomear=alerta, excluir=erro. */
+.sim-chip {
+    border-radius: 999px;
+    padding: 3px 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.sim-tag {
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.sim-row {
+    border-radius: 10px;
+    padding: 10px 12px;
+    border-left: 4px solid transparent;
+    background-color: alpha(@window_fg_color, 0.04);
+}
+
+.sim-rename.sim-row   { border-left-color: @accent_bg_color; }
+.sim-move.sim-row     { border-left-color: @success_bg_color; }
+.sim-move-rename.sim-row { border-left-color: @warning_bg_color; }
+.sim-delete.sim-row   {
+    border-left-color: @error_bg_color;
+    background-color: alpha(@error_bg_color, 0.10);
+}
+
+.sim-rename.sim-chip, .sim-rename.sim-tag {
+    background-color: alpha(@accent_bg_color, 0.20);
+    color: @accent_color;
+}
+.sim-move.sim-chip, .sim-move.sim-tag {
+    background-color: alpha(@success_bg_color, 0.20);
+    color: @success_color;
+}
+.sim-move-rename.sim-chip, .sim-move-rename.sim-tag {
+    background-color: alpha(@warning_bg_color, 0.20);
+    color: @warning_color;
+}
+.sim-delete.sim-chip, .sim-delete.sim-tag {
+    background-color: alpha(@error_bg_color, 0.20);
+    color: @error_color;
+}
+
+/* O que sai / o que entra */
+.sim-source {
+    opacity: 0.75;
+    font-size: 0.9em;
+}
+.sim-source-deleted {
+    color: @error_color;
+    font-size: 0.9em;
+    text-decoration: line-through;
+}
+.sim-destination {
+    color: @success_color;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.sim-delete-warning {
+    color: @error_color;
+    font-size: 0.85em;
+    font-weight: 600;
+}

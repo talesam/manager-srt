@@ -17,6 +17,7 @@ Implements a 3-level search strategy:
 """
 
 import os
+import time
 from pathlib import Path
 from typing import List, Dict, Optional, Set, Any, Tuple
 from dataclasses import dataclass
@@ -164,6 +165,10 @@ class SubtitleManager:
         self.logger = get_logger()
         self.config = get_config()
 
+        # Cota consultada no máximo uma vez por execução (evita bater na API a
+        # cada legenda que falha).
+        self._quota_cache: Optional[Dict[str, Any]] = None
+
         if not HAS_SUBLIMINAL:
             self.logger.warning("Subliminal library not found. Subtitle downloading disabled.")
         else:
@@ -205,6 +210,46 @@ class SubtitleManager:
             else:
                 langs.add(Language(lang))
         return langs
+
+    @staticmethod
+    def _subtitle_release_name(sub: Any) -> str:
+        """Nome do lançamento da legenda, tolerante à versão do subliminal.
+
+        O subliminal 2.5.0 expõe ``release``/``file_name``/``info`` nos objetos
+        do opensubtitles.com; os nomes antigos (``release_info``, ``releases``,
+        ``movie_name``) não existem mais. Procurando só pelos antigos, TODAS as
+        legendas apareciam como "Unknown release" na busca manual — o usuário
+        escolhia às cegas, sem saber qual batia com o vídeo dele.
+        """
+        for attr in ('release', 'file_name', 'info', 'release_info', 'movie_full_name'):
+            value = getattr(sub, attr, None)
+            if value:
+                return str(value)
+
+        releases = getattr(sub, 'releases', None) or []
+        if releases and releases[0]:
+            return str(releases[0])
+
+        for attr in ('movie_name', 'series_title', 'series', 'movie_title'):
+            value = getattr(sub, attr, None)
+            if value:
+                return str(value)
+
+        return ""
+
+    @staticmethod
+    def _subtitle_flag(sub: Any, attr: str, keywords: tuple) -> bool:
+        """Lê um marcador da legenda, preferindo o booleano do provedor.
+
+        Adivinhar pelo texto do lançamento só entra em cena quando o provedor
+        não informa o campo — o opensubtitles.com informa.
+        """
+        value = getattr(sub, attr, None)
+        if isinstance(value, bool):
+            return value
+
+        release = SubtitleManager._subtitle_release_name(sub).lower()
+        return any(k in release for k in keywords)
 
     def _language_country_code(self, language: Any) -> str:
         """Return a language object's country code (BR/PT/etc.), if present."""
@@ -288,17 +333,26 @@ class SubtitleManager:
             apikey = (getattr(self.config, 'opensubtitles_apikey', '') or '') or default_key
             timeout = int(getattr(self.config, 'subtitle_timeout', 15) or 15)
 
-            r = requests.post(
-                "https://api.opensubtitles.com/api/v1/login",
-                json={'username': username, 'password': password},
-                headers={
-                    'Api-Key': apikey,
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                    'User-Agent': user_agent,
-                },
-                timeout=timeout,
-            )
+            headers = {
+                'Api-Key': apikey,
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'User-Agent': user_agent,
+            }
+
+            # A API aceita 1 login por segundo por IP e responde 429 acima
+            # disso. Sem tratar, testar duas vezes seguidas devolvia um erro
+            # de "limite" que parecia (erradamente) senha errada.
+            for tentativa in range(3):
+                r = requests.post(
+                    "https://api.opensubtitles.com/api/v1/login",
+                    json={'username': username, 'password': password},
+                    headers=headers, timeout=timeout,
+                )
+                if r.status_code != 429:
+                    break
+                if tentativa < 2:
+                    time.sleep(2)
 
             if r.status_code == 200:
                 return True, _("Login OK — subtitles can be downloaded")
@@ -308,12 +362,96 @@ class SubtitleManager:
                 api_msg = r.json().get('message', '') or r.reason
             except Exception:
                 api_msg = r.reason
+
+            if r.status_code == 429:
+                return False, _(
+                    "opensubtitles.com is rate limiting logins (1 per second per IP). "
+                    "Wait a few seconds and test again."
+                )
+
+            if r.status_code == 401:
+                return False, _(
+                    "Username or password rejected by opensubtitles.com. "
+                    "Use the USERNAME (not the e-mail), check for a trailing space, "
+                    "and confirm the account e-mail was verified — a brand new "
+                    "account only works in the API after confirming the e-mail."
+                )
+
             if '@' in username and r.status_code == 400:
                 api_msg = _("Use your username, not your e-mail address.")
             return False, api_msg
 
         except Exception as e:
             return False, str(e)
+
+    def get_opensubtitles_quota(self) -> Optional[Dict[str, Any]]:
+        """Consulta a cota diária de downloads da conta opensubtitles.com.
+
+        Contas gratuitas têm um limite baixo (20 downloads/dia). Ao estourar,
+        a busca continua funcionando e o download passa a falhar — subliminal
+        engole o erro e o jellyfix só dizia "Failed to download subtitle
+        content", sem pista nenhuma do motivo real.
+
+        Returns:
+            dict com ``remaining``, ``allowed``, ``used`` e ``reset_in``,
+            ou None se não der para consultar. Nunca lança.
+        """
+        if self._quota_cache is not None:
+            return self._quota_cache
+
+        username = getattr(self.config, 'opensubtitles_username', '') or ''
+        password = getattr(self.config, 'opensubtitles_password', '') or ''
+        if not (username and password):
+            return None
+
+        try:
+            import requests
+            try:
+                from subliminal.providers.opensubtitlescom import (
+                    OPENSUBTITLESCOM_API_KEY, OpenSubtitlesComProvider,
+                )
+                default_key, user_agent = OPENSUBTITLESCOM_API_KEY, OpenSubtitlesComProvider.user_agent
+            except Exception:
+                default_key, user_agent = 'mij33pjc3kOlup1qOKxnWWxvle2kFbMH', 'Subliminal'
+
+            apikey = (getattr(self.config, 'opensubtitles_apikey', '') or '') or default_key
+            timeout = int(getattr(self.config, 'subtitle_timeout', 15) or 15)
+            headers = {
+                'Api-Key': apikey,
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'User-Agent': user_agent,
+            }
+
+            login = requests.post(
+                'https://api.opensubtitles.com/api/v1/login',
+                json={'username': username, 'password': password},
+                headers=headers, timeout=timeout,
+            )
+            if login.status_code != 200:
+                return None
+
+            headers['Authorization'] = f"Bearer {login.json().get('token')}"
+            info = requests.get(
+                'https://api.opensubtitles.com/api/v1/infos/user',
+                headers=headers, timeout=timeout,
+            )
+            if info.status_code != 200:
+                return None
+
+            data = info.json().get('data', {})
+            self._quota_cache = {
+                'remaining': data.get('remaining_downloads'),
+                'allowed': data.get('allowed_downloads'),
+                'used': data.get('downloads_count'),
+                'reset_in': data.get('reset_time'),
+                'vip': data.get('vip'),
+            }
+            return self._quota_cache
+
+        except Exception as e:
+            self.logger.debug(f"Não foi possível consultar a cota do OpenSubtitles: {e}")
+            return None
 
     def _download_failure_hint(self, provider: str) -> str:
         """Return a helpful hint when a content download yields nothing.
@@ -322,14 +460,37 @@ class SubtitleManager:
         anonymous). Without credentials, subliminal swallows the AuthenticationError
         and we just get empty content — so surface an actionable message instead.
         """
-        if provider == 'opensubtitlescom' and not self._has_opensubtitles_login():
+        if provider != 'opensubtitlescom':
+            return ""
+
+        if not self._has_opensubtitles_login():
             return _(
                 "opensubtitles.com requires a free account to download subtitles. "
                 "Set opensubtitles_username/opensubtitles_password in "
                 "~/.jellyfix/config.json (or the OPENSUBTITLES_USERNAME/"
                 "OPENSUBTITLES_PASSWORD environment variables)."
             )
-        return ""
+
+        # Com login configurado, a causa mais comum é a cota diária estourada.
+        quota = self.get_opensubtitles_quota()
+        if quota and quota.get('remaining') == 0:
+            return _(
+                "opensubtitles.com daily download limit reached "
+                "(%(used)s of %(allowed)s used). The subtitle WAS found, only the "
+                "download was refused. Quota resets in %(reset)s."
+            ) % {
+                'used': quota.get('used'),
+                'allowed': quota.get('allowed'),
+                'reset': quota.get('reset_in') or _("less than 24 hours"),
+            }
+
+        if quota and quota.get('remaining') is not None:
+            return _(
+                "Download refused by opensubtitles.com (%(remaining)s of %(allowed)s "
+                "downloads left today)."
+            ) % {'remaining': quota.get('remaining'), 'allowed': quota.get('allowed')}
+
+        return _("Download refused by opensubtitles.com. Check the login in Settings.")
 
     def download_subtitles(self, video_path: Path, languages: Optional[List[str]] = None, 
                            providers: Optional[List[str]] = None,
@@ -650,12 +811,13 @@ class SubtitleManager:
                 provider = getattr(sub, 'provider_name', 'unknown')
                 
                 # Get subtitle release info for validation
-                release_info = getattr(sub, 'release_info', '') or ''
-                if not release_info:
-                    releases = getattr(sub, 'releases', None) or []
-                    if releases:
-                        release_info = releases[0] or ''
-                movie_name = getattr(sub, 'movie_name', '') or getattr(sub, 'series', '') or ''
+                release_info = self._subtitle_release_name(sub)
+                movie_name = (
+                    getattr(sub, 'series_title', '')
+                    or getattr(sub, 'movie_name', '')
+                    or getattr(sub, 'series', '')
+                    or ''
+                )
                 sub_year = getattr(sub, 'year', None)
                 
                 # Simplified validation - be very permissive
@@ -805,12 +967,7 @@ class SubtitleManager:
         Detect if Portuguese subtitle is pt-BR or pt-PT.
         Returns 'por-br' or 'por-pt' for prioritization.
         """
-        release_info = getattr(sub, 'release_info', '') or ''
-        if not release_info:
-            releases = getattr(sub, 'releases', None) or []
-            if releases:
-                release_info = releases[0] or ''
-        release_info = release_info.lower()
+        release_info = self._subtitle_release_name(sub).lower()
 
         country = self._language_country_code(getattr(sub, 'language', None))
         if country == 'BR':
@@ -850,12 +1007,8 @@ class SubtitleManager:
         base_name = LANGUAGE_NAMES.get(lang_code, lang_code.upper())
         
         # Get release info for country detection
-        release_info = (
-            getattr(sub, 'release_info', '') or ''
-        ).lower()
-        if not release_info and hasattr(sub, 'releases') and sub.releases:
-            release_info = (sub.releases[0] or '').lower()
-        
+        release_info = self._subtitle_release_name(sub).lower()
+
         country = ""
         
         # Detect Portuguese variant
@@ -986,23 +1139,19 @@ class SubtitleManager:
                 provider = getattr(sub, 'provider_name', 'unknown')
                 
                 # Get release name (clean it up)
-                release = getattr(sub, 'release_info', '') or ''
-                if not release and hasattr(sub, 'releases') and sub.releases:
-                    release = sub.releases[0] if sub.releases else ''
-                if not release:
-                    # Try movie_name as fallback
-                    release = getattr(sub, 'movie_name', '') or getattr(sub, 'series', '') or ''
-                if not release:
-                    release = _("Unknown release")
-                
+                release = self._subtitle_release_name(sub) or _("Unknown release")
+
                 # Get language info
                 lang_code = self._subtitle_language_code(sub)
                 lang_name, lang_country = self._get_language_display_info(sub)
-                
-                # Detect forced/hearing impaired from release info
-                release_lower = release.lower() if release else ''
-                is_forced = any(x in release_lower for x in ['forced', 'forçada', 'forçado'])
-                is_hi = any(x in release_lower for x in ['sdh', 'hi ', 'hearing', 'cc', 'closed caption'])
+
+                # Marcadores: usa o booleano do provedor quando existir
+                is_forced = self._subtitle_flag(
+                    sub, 'foreign_only', ('forced', 'forçada', 'forçado')
+                )
+                is_hi = self._subtitle_flag(
+                    sub, 'hearing_impaired', ('sdh', 'hi ', 'hearing', 'cc', 'closed caption')
+                )
                 
                 # Get file size if available
                 file_size = getattr(sub, 'size', 0) or 0
@@ -1113,7 +1262,17 @@ class SubtitleManager:
                     subliminal_download([sub], provider_configs=provider_configs)
                 
                 if not sub.content:
-                    self.logger.warning(f"Failed to download subtitle content for {sub}")
+                    # Diz POR QUE falhou (cota estourada é de longe o motivo
+                    # mais comum, e antes ficava invisível).
+                    hint = self._download_failure_hint(
+                        str(getattr(sub, 'provider_name', '') or '')
+                    )
+                    if hint:
+                        self.logger.error(
+                            _("Failed to download subtitle content. %s") % hint
+                        )
+                    else:
+                        self.logger.warning(f"Failed to download subtitle content for {sub}")
                     continue
                 
                 # Keep 3-letter codes, preserving pt-PT as Jellyfix's por-pt.

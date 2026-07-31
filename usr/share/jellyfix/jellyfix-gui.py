@@ -43,7 +43,7 @@ def main():
     # Don't specify boolean options here - let them load from saved config
     config = Config(
         work_dir=Path.cwd(),  # Start with current directory, will be changed via GUI
-        dry_run=False,  # Execute operations for real when Apply is clicked
+        dry_run=False,  # padrão; o interruptor "Simulação" da janela sobrescreve
         interactive=False,  # GUI handles interaction via SearchDialog, not CLI prompts
         verbose=False,
         quiet=False,
@@ -51,6 +51,13 @@ def main():
         auto_confirm=False
     )
     config.load_persistent_settings()
+
+    # O modo simulação é lembrado entre sessões: quem liga por precaução espera
+    # continuar protegido na próxima abertura.
+    from jellyfix.utils.config_manager import ConfigManager
+    saved_dry_run = ConfigManager().get('gui_dry_run')
+    if saved_dry_run is not None:
+        config.dry_run = bool(saved_dry_run)
     # Note: Other settings (rename_por2, remove_non_media, etc.) are loaded
     # from ~/.jellyfix/config.json by load_persistent_settings()
 
