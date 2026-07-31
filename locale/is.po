@@ -16,100 +16,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n%10!=1 || n%100==11);\n"
 "X-Generator: attranslate\n"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:103
 msgid "Organize Folder with Jellyfix"
 msgstr "Skipta möppu með Jellyfix"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:105
 #, python-brace-format
 msgid "Organize {0} Folders with Jellyfix"
 msgstr "Skipta {0} möppum með Jellyfix"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 150
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:150
 msgid "Organize 1 Video and 1 Subtitle"
 msgstr "Skipta 1 vídeó og 1 undirskrift"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 152
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:152
 #, python-brace-format
 msgid "Organize 1 Video and {0} Subtitles"
 msgstr "Skipta 1 vídeó og {0} undirskriftir"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 154
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:154
 #, python-brace-format
 msgid "Organize {0} Videos and 1 Subtitle"
 msgstr "Skipta {0} vídeóum og 1 undirskrift"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 156
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:156
 #, python-brace-format
 msgid "Organize {0} Videos and {1} Subtitles"
 msgstr "Skipta {0} vídeóum og {1} textaskjölum"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 160
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:160
 msgid "Organize Video"
 msgstr "Skipta vídeó"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 162
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:162
 #, python-brace-format
 msgid "Organize {0} Videos"
 msgstr "Skipta {0} Myndböndum"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 166
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:166
 msgid "Organize Subtitle"
 msgstr "Skipta undirtexta"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 168
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:168
 #, python-brace-format
 msgid "Organize {0} Subtitles"
 msgstr "Skipta {0} undirskriftum"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 228
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:228
 msgid "No valid local files selected"
 msgstr "Engin giltandi staðbundin skrár valdar"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 229
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:229
 msgid "Could not get the path for the selected files."
 msgstr "Gat ekki slóðina fyrir valda skrárnar."
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 244
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:244
 msgid "Application Not Found"
 msgstr "Forrit fannst ekki"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 245
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:245
 #, python-brace-format
 msgid "Could not find '{0}'. Is Jellyfix installed?"
 msgstr "Gat ekki '{0}'. Er Jellyfix uppsett?"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 250
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:250
 msgid "Application Launch Error"
 msgstr "Aðgangsveita Villa"
-
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 251
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:251
 #, python-brace-format
 msgid "Failed to start Jellyfix: {0}"
 msgstr "Ekki tókst að hefja Jellyfix: {0}"
-
 # File: usr/share/jellyfix/cli/app.py, line: 54
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/app.py:63
 msgid "Operation cancelled by user"
 msgstr "Aðgerð aflýst af notanda"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 552
@@ -119,24 +101,20 @@ msgstr "Aðgerð aflýst af notanda"
 #, python-format
 msgid "Unexpected error: %s"
 msgstr "Óvænt villa: %s"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 45
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:44
 msgid "Error: No working directory specified"
 msgstr "Villa: Engin vinnsluskrá tilgreind"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 46
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:45
 msgid "Use: --workdir /path/to/directory"
 msgstr "Notkun: --workdir /leið/að/skráningu"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 51
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:50
 #, python-format
 msgid "Error: Directory does not exist: %s"
 msgstr "Villa: Skjalasafn er ekki til: %s"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 121
@@ -150,7 +128,6 @@ msgstr "Villa: Skjalasafn er ekki til: %s"
 #, python-format
 msgid "Scanning: %s"
 msgstr "Skönnun: %s"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 148
@@ -161,7 +138,6 @@ msgstr "Skönnun: %s"
 #, python-format
 msgid "Found: %d videos, %d subtitles"
 msgstr "Fundið: %d myndbönd, %d undirskriftir"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 153
@@ -172,24 +148,20 @@ msgstr "Fundið: %d myndbönd, %d undirskriftir"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:69
 msgid "Planning operations..."
 msgstr "Skipulagning aðgerða..."
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:74
 #, python-format
 msgid "%d operations planned"
 msgstr "%d aðgerðir áætlaðar"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 78
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:77
 msgid "Nothing to do"
 msgstr "Ekkert að gera"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 85
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:129
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:86
 msgid "DRY-RUN mode: No changes will be made"
 msgstr "DRY-RUN stilling: Engar breytingar verða gerðar"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 87
@@ -198,73 +170,61 @@ msgstr "DRY-RUN stilling: Engar breytingar verða gerðar"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:87
 msgid "Use --execute to apply changes"
 msgstr "Notaðu --execute til að beita breytingum"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 91
 #. Execute operations
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:91
 #, python-format
 msgid "Executing %d operations..."
 msgstr "Framkvæma %d aðgerðir..."
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 95
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:96
 msgid "Execution completed:"
 msgstr "Framkvæmd lokið:"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 97
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:98
 #, python-format
 msgid "  Renamed: %d"
 msgstr "Endurnefnd: %d"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 99
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:100
 #, python-format
 msgid "  Moved: %d"
 msgstr "Fært: %d"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:102
 #, python-format
 msgid "  Deleted: %d"
 msgstr "Eytt: %d"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:104
 #, python-format
 msgid "  Cleaned folders: %d"
 msgstr "Hreinsaðar möppur: %d"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:106
 #, python-format
 msgid "  Failed: %d"
 msgstr "Mistók: %d"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 107
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:108
 #, python-format
 msgid "  Skipped: %d"
 msgstr "Sleppað: %d"
-
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 120
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:120
 msgid "Operations:"
 msgstr "Aðgerðir:"
-
 # File: usr/share/jellyfix/cli/display.py, line: 131
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:133
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:122
 msgid "No operations needed. Everything is already organized!"
 msgstr "Engin aðgerðir nauðsynlegar. Allt er þegar skipulagt!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 167
 #. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:136
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:342
 msgid "Execute these operations?"
 msgstr "Viltu framkvæma þessar aðgerðir?"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 173
 # File: usr/share/jellyfix/cli/interactive.py, line: 450
 # File: usr/share/jellyfix/cli/interactive.py, line: 478
@@ -275,193 +235,158 @@ msgstr "Viltu framkvæma þessar aðgerðir?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:734
 msgid "Operation cancelled"
 msgstr "Aðgerð aflýst"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 177
 #. Execute
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:349
 msgid "Executing operations..."
 msgstr "Að framkvæma aðgerðir..."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 99
 # File: usr/share/jellyfix/cli/interactive.py, line: 421
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:161
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:653
 msgid "What would you like to do?"
 msgstr "Hvað viltu gera?"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:163
 msgid "📂 Scan library"
 msgstr "📂 Skoða bókasafn"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 102
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:164
 msgid "🔧 Settings"
 msgstr "🔧 Stillingar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:165
 msgid "🚀 Process files"
 msgstr "🚀 Vinn skráar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 109
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:166
 msgid "📥 Download subtitles"
 msgstr "📥 Sækja undirskriftir"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 104
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:167
 msgid "ℹ️  Help"
 msgstr "ℹ️  Hjálp"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:168
 msgid "❌ Exit"
 msgstr "❌ Útgangur"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 108
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:171
 msgid "(Use arrow keys to navigate)"
 msgstr "(Nota: Notaðu örvatakkana til að fletta)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:181
 msgid "Subliminal library not found!"
 msgstr "Subliminal bókasafn fannst ekki!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 125
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:182
 msgid "Please install 'subliminal' to use this feature."
 msgstr "Vinsamlegast settu upp 'subliminal' til að nota þessa eiginleika."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 135
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:192
 #, python-format
 msgid "Scanning for videos: %s"
 msgstr "Skoðun á myndböndum: %s"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 142
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:199
 msgid "No videos found!"
 msgstr "Engin myndir fundust!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 160
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:217
 msgid "Select videos to download subtitles for:"
 msgstr "Veldu myndbönd til að hlaða niður texta fyrir:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 163
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:220
 msgid "(SPACE to select, ENTER to confirm)"
 msgstr "(RÚN til að velja, ENTER til að staðfesta)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
 #. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
 msgid "Selected:"
 msgstr "Valið:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
 msgid "videos"
 msgstr "myndbönd"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 172
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:229
 msgid "Start download?"
 msgstr "Byrjaðu að hlaða niður?"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 193
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:261
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:367
 msgid "Downloading..."
 msgstr "Sæki niður..."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 196
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:264
 #, python-brace-format
 msgid "Downloading for: {}"
 msgstr "Sæki fyrir: {}"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 210
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:286
 #, python-brace-format
 msgid "Downloaded {} subtitles for {} videos"
 msgstr "Niðurhalað {} undirskriftum fyrir {} myndbönd"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 212
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:288
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:337
 msgid "No subtitles found"
 msgstr "Engin undirskriftir fundust ekki"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 158
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:334
 msgid "No operations needed"
 msgstr "Engin aðgerðir nauðsynlegar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 202
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:375
 msgid "📂 Directory Browser"
 msgstr "📂 Skjalasafn"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 203
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:376
 msgid "Current:"
 msgstr "Núverandi:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 211
 #. Add option to select current
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:383
 msgid "✓ Select this directory"
 msgstr "✓ Veldu þessa skráarsafn"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:387
 msgid "⬆️  .. (go back)"
 msgstr "⬆️  .. (fara aftur)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 229
 #. Add manual path entry
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:395
 msgid "⌨️  Type path manually"
 msgstr "⌨️  Sláðu inn leiðina handvirkt"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 235
 #. Add cancel option
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:398
 msgid "❌ Cancel"
 msgstr "❌ Hætta við"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 241
 #. Ask
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:401
 msgid "Select directory:"
 msgstr "Veldu skráarsafn:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 253
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:410
 msgid "Enter full directory path:"
 msgstr "Sláðu inn fullan skráarslóð:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 255
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:411
 msgid "Path:"
 msgstr "Slóð:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 265
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:418
 msgid "Directory not found!"
 msgstr "Skráarsafn fannst ekki!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 272
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:425
 msgid "Permission denied"
 msgstr "Aðgangur hafnaður"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 281
@@ -470,12 +395,10 @@ msgstr "Aðgangur hafnaður"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:151
 msgid "Settings"
 msgstr "Stillingar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 287
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:437
 msgid "What would you like to configure?"
 msgstr "Hvað viltu stilla?"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 381
 # File: usr/share/jellyfix/cli/interactive.py, line: 392
 # File: usr/share/jellyfix/cli/interactive.py, line: 404
@@ -484,7 +407,6 @@ msgstr "Hvað viltu stilla?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:462
 msgid "Subtitle Options"
 msgstr "Undirskriftarvalkostir"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 382
 # File: usr/share/jellyfix/cli/interactive.py, line: 394
 # File: usr/share/jellyfix/cli/interactive.py, line: 468
@@ -493,7 +415,6 @@ msgstr "Undirskriftarvalkostir"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:526
 msgid "Metadata Options"
 msgstr "Metagagnir Valkostir"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 383
 # File: usr/share/jellyfix/cli/interactive.py, line: 396
 # File: usr/share/jellyfix/cli/interactive.py, line: 500
@@ -502,7 +423,6 @@ msgstr "Metagagnir Valkostir"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:558
 msgid "File Organization"
 msgstr "Skráaskipulag"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 300
 # File: usr/share/jellyfix/cli/interactive.py, line: 306
 # File: usr/share/jellyfix/cli/interactive.py, line: 428
@@ -519,7 +439,6 @@ msgstr "Skráaskipulag"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:669
 msgid "Back"
 msgstr "Til baka"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 303
 # File: usr/share/jellyfix/cli/interactive.py, line: 431
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:445
@@ -529,59 +448,48 @@ msgstr "Til baka"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:666
 msgid "(Use ↑↓ and ENTER to select)"
 msgstr "(Nota: Vinsamlegast notaðu ↑↓ og ENTER til að velja)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 284
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:464
 msgid "none"
 msgstr "none"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 409
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:467
 msgid "Subtitle settings:"
 msgstr "Undirtakstillingar:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 289
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:470
 msgid "Rename language variants (lang2→lang, lang3→lang)"
 msgstr "Endurnefna tungumálavarianta (lang2→lang, lang3→lang)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 290
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:472
 msgid "Remove duplicate variants (lang2, lang3)"
 msgstr "Fjarlægðu tvítekna afbrigði (lang2, lang3)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 291
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:473
 msgid "Add language code to subtitles"
 msgstr "Bæta tungumálakóða við texta"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 292
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:474
 msgid "Remove foreign subtitles"
 msgstr "Fjarlægja erlend undirskriftir"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 293
 # File: usr/share/jellyfix/cli/interactive.py, line: 398
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:475
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:625
 msgid "Kept languages:"
 msgstr "Geymdar tungumál:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 301
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:476
 msgid "Fix Mirabel files (.pt-BR.hi → .por)"
 msgstr "Laga Mirabel skrár (.pt-BR.hi → .por)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 298
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:477
 msgid "Min Portuguese words:"
 msgstr "Min portúguesa orð:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 310
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:486
 msgid "Rename language variants"
 msgstr "Endurnefna tungumálavarianta"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 313
 # File: usr/share/jellyfix/cli/interactive.py, line: 318
 # File: usr/share/jellyfix/cli/interactive.py, line: 323
@@ -604,27 +512,22 @@ msgstr "Endurnefna tungumálavarianta"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:596
 msgid "Setting saved"
 msgstr "Stilling vistu"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 315
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:490
 msgid "Remove duplicate variants"
 msgstr "Fjarlægja tvítekna afbrigði"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 320
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:494
 msgid "Add language code"
 msgstr "Bæta við tungumálakóða"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 325
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:498
 msgid "Remove foreign"
 msgstr "Fjarlægja útlending"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 330
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:502
 msgid "Kept languages"
 msgstr "Haldið tungumál"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 192
@@ -632,137 +535,111 @@ msgstr "Haldið tungumál"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:504
 msgid "Fix Mirabel files"
 msgstr "Laga Mirabel skrár"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 353
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:508
 msgid "Min Portuguese words"
 msgstr "Min pörtuğalsk orð"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 355
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:510
 msgid "Minimum number of Portuguese words:"
 msgstr "Lágmarksfjöldi portúgalskra orða:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 363
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:516
 msgid "Setting saved to ~/.jellyfix/config.json"
 msgstr "Stilling vistað í ~/.jellyfix/config.json"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 365
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:518
 msgid "Invalid value!"
 msgstr "Ógild gildi!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 471
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:529
 msgid "Metadata settings:"
 msgstr "Eiginleika stillingar:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 295
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:531
 msgid "Fetch metadata (TMDB/TVDB)"
 msgstr "Sækja metagögn (TMDB/TVDB)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 296
 # File: usr/share/jellyfix/cli/interactive.py, line: 344
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:532
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:546
 msgid "Ask when multiple TMDB results"
 msgstr "Spyrja þegar margar TMDB niðurstöður eru."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 299
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:533
 msgid "Configure APIs (TMDB/TVDB)"
 msgstr "Stillir API (TMDB/TVDB)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 338
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:542
 msgid "Fetch metadata"
 msgstr "Sækja metagögn"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 492
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:550
 msgid "Configure APIs"
 msgstr "Stilla API."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 503
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:561
 msgid "File organization settings:"
 msgstr "Skilgreiningar á skráarskipulagi:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 294
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:563
 msgid "Organize in folders (Season XX)"
 msgstr "Skipta í möppur (Seasons XX)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 296
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:564
 msgid "Add quality tags (1080p, 720p, etc)"
 msgstr "Bæta við gæðamerkjum (1080p, 720p, o.s.frv.)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 297
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:565
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:585
 msgid "Use ffprobe for quality detection"
 msgstr "Notaðu ffprobe til gæðagreiningar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 299
 # File: usr/share/jellyfix/cli/interactive.py, line: 360
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:566
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:589
 msgid "Rename NFO files to match video"
 msgstr "Endurnefndu NFO skrár til að passa við vídeó"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 300
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:568
 msgid "Remove non-media files (keep only videos/subtitles)"
 msgstr "Fjarlægðu ekki-media skrár (halda aðeins vídeóum/undirtitlum)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 333
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:577
 msgid "Organize in folders"
 msgstr "Skipta í möppur"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 343
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:581
 msgid "Add quality tags"
 msgstr "Bæta við gæðamerkjum"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 366
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:593
 msgid "Remove non-media files"
 msgstr "Fjarlægðu ekki-media skrár"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 375
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:602
 msgid "Language Selection"
 msgstr "Tungumálaval"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 376
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:603
 msgid "Select languages to KEEP (will NOT be removed)"
 msgstr "Veldu tungumál til AÐ HALDA (verða EKKI fjarlægð)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 377
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:604
 msgid "Use SPACE to check/uncheck, ENTER to confirm"
 msgstr "Notaðu SPACE til að haka/afhaka, ENTER til að staðfesta"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 390
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:617
 msgid "Select languages to KEEP:"
 msgstr "Veldu tungumál til að HALDA:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 393
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:620
 msgid "(SPACE = check/uncheck, ENTER = confirm)"
 msgstr "(SPACE = haka/óhuga, ENTER = staðfesta)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 402
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:629
 msgid "Saved to ~/.jellyfix/config.json"
 msgstr "Vistað í ~/.jellyfix/config.json"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 411
@@ -772,24 +649,20 @@ msgstr "Vistað í ~/.jellyfix/config.json"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:38
 msgid "API Configuration"
 msgstr "API stilling"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 415
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:642
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:645
 msgid "Configured"
 msgstr "Sérstakur"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 415
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:642
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:646
 msgid "Not configured"
 msgstr "Ekki stillt"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 418
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:650
 msgid "Config file:"
 msgstr "Stillingaskrá:"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 423
@@ -801,59 +674,50 @@ msgstr "Stillingaskrá:"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:246
 msgid "Configure TMDB API Key"
 msgstr "Stillir TMDB API lykil"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 424
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:656
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:710
 msgid "View current key (TMDB)"
 msgstr "Skoða núverandi lykil (TMDB)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 425
 # File: usr/share/jellyfix/cli/interactive.py, line: 482
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:657
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:738
 msgid "Test TMDB connection"
 msgstr "Prófa TMDB tengingu"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 426
 # File: usr/share/jellyfix/cli/interactive.py, line: 466
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:658
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:722
 msgid "Remove TMDB key"
 msgstr "Fjarlægðu TMDB lykilinn"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 427
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:659
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:741
 msgid "How to get TMDB key"
 msgstr "Hvernig á að fá TMDB lykil"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 660
 # File: usr/share/jellyfix/cli/interactive.py, line: 672
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:660
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:672
 msgid "Configure OpenSubtitles login"
 msgstr "Stilltu OpenSubtitles innskráningu"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 661
 # File: usr/share/jellyfix/cli/interactive.py, line: 675
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:661
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:675
 msgid "Test OpenSubtitles login"
 msgstr "Prófaðu OpenSubtitles innskráningu"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 662
 # File: usr/share/jellyfix/cli/interactive.py, line: 678
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:662
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:678
 msgid "Remove OpenSubtitles login"
 msgstr "Fjarlægðu OpenSubtitles innskráningu"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 680
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:680
 msgid "Remove stored OpenSubtitles login?"
 msgstr "Fjarlægja geymt OpenSubtitles innskráningu?"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 688
@@ -862,63 +726,51 @@ msgstr "Fjarlægja geymt OpenSubtitles innskráningu?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:358
 msgid "OpenSubtitles login removed"
 msgstr "OpenSubtitles innskráning fjarlægð"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 438
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:694
 msgid "Enter your TMDB API key:"
 msgstr "Sláðu inn TMDB API lykilinn þinn:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 447
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:703
 msgid "TMDB key saved to:"
 msgstr "TMDB lykill vistaður á:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 460
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:716
 msgid "File:"
 msgstr "Skrá:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 462
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:718
 msgid "No key configured"
 msgstr "Engin ekki stillt"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 468
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:724
 msgid "Are you sure you want to remove the TMDB key?"
 msgstr "Ertu viss um að þú viljir fjarlægja TMDB lykilinn?"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 476
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:732
 msgid "TMDB key removed"
 msgstr "TMDB lykill fjarlægður"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 746
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:746
 msgid "OpenSubtitles login (needed to download subtitles)."
 msgstr ""
 "OpenSubtitles innskráning (nauðsynleg til að hlaða niður undirtextum)."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 747
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:747
 msgid "Create a free account at https://www.opensubtitles.com/newuser"
 msgstr "Búðu til ókeypis reikning á https://www.opensubtitles.com/newuser"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 748
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:748
 msgid "Use your USERNAME, not your e-mail address."
 msgstr "Notaðu notendanafn þitt, ekki netfangið þitt."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 750
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:750
 msgid "Username (not e-mail):"
 msgstr "Notendanafn (ekki tölvupóstur):"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 753
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:753
 msgid "Password:"
 msgstr "Lykilorð:"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 762
@@ -927,7 +779,6 @@ msgstr "Lykilorð:"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:329
 msgid "OpenSubtitles login saved"
 msgstr "OpenSubtitles innskráning vistuð"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
@@ -940,22 +791,18 @@ msgstr "OpenSubtitles innskráning vistuð"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:331
 msgid "Username and password are both required"
 msgstr "Notendanafn og lykilorð eru bæði nauðsynleg."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 772
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:772
 msgid "Testing OpenSubtitles login..."
 msgstr "Prófun OpenSubtitles innskriftar..."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 776
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:776
 msgid "No OpenSubtitles login configured!"
 msgstr "Engin OpenSubtitles ekki stillt!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 777
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:777
 msgid "Configure it first using 'Configure OpenSubtitles login'"
 msgstr "Stilltu það fyrst með 'Stilltu OpenSubtitles innskráningu'"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 787
@@ -965,123 +812,100 @@ msgstr "Stilltu það fyrst með 'Stilltu OpenSubtitles innskráningu'"
 #, python-format
 msgid "Login failed: %s"
 msgstr "Innskráning mistókst: %s"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 492
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:795
 msgid "Testing TMDB connection..."
 msgstr "Prófun TMDB tengingar..."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 497
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:800
 msgid "No API key configured!"
 msgstr "Engin API ekki stillt!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 498
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:801
 msgid "Configure a key first using 'Configure TMDB API Key'"
 msgstr "Stilltu fyrst lykil með því að nota 'Stilltu TMDB API lykil'"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 504
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:807
 #, python-format
 msgid "Invalid key! Has %d characters, should have 32."
 msgstr "Ógildur lykill! Hefur %d stafi, ætti að hafa 32."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 505
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:808
 msgid "You may have copied the Token instead of the API Key!"
 msgstr "Þú gætir hafa afritað Token-ið í staðinn fyrir API lykilinn!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 506
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:809
 msgid "See 'How to get TMDB key' for details"
 msgstr "Sjá 'Hvernig á að fá TMDB lykil' fyrir nánari upplýsingar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 514
 #. Test with a simple search
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:817
 msgid "Making test request..."
 msgstr "Gerð prófunarbeiðni..."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 523
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:826
 msgid "Connection successful!"
 msgstr "Tengistengsl hefur verið stofnað!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 524
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:827
 msgid "Valid and working API key"
 msgstr "Gildandi og virkt API lykill"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 525
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:828
 #, python-format
 msgid "Test search returned %d results"
 msgstr "Prófaleitning skilaði %d niðurstöðum"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 529
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:832
 msgid "Example:"
 msgstr "Dæmi:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 532
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:835
 msgid "Invalid API key!"
 msgstr "Ógild API lykill!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 533
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:836
 msgid "The key was rejected by TMDB."
 msgstr "Lyklinum var hafnað af TMDB."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 534
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:837
 msgid "Possible causes:"
 msgstr "Mögulegar orsakir:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 535
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:838
 msgid "You copied the Reading Token instead of the API Key"
 msgstr "Þú afritaðir lestrartáknið í staðinn fyrir API lykilinn."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 536
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:839
 msgid "The key is incorrect or has been revoked"
 msgstr "Lyklinn er rangur eða hefur verið afturkallaður."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 537
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:840
 msgid "You copied only part of the key"
 msgstr "Þú kopieraðir aðeins hluta af lykli."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 538
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:841
 msgid "See 'How to get TMDB key' for detailed instructions"
 msgstr "Sjá 'Hvernig á að fá TMDB lykil' fyrir ítarlegar leiðbeiningar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 541
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:844
 #, python-format
 msgid "Request error: HTTP %d"
 msgstr "Beiðni villa: HTTP %d"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 544
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:847
 msgid "Timeout: Server did not respond in time"
 msgstr "Tími útrunninn: Þjónn svaraði ekki á réttum tíma"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 545
 # File: usr/share/jellyfix/cli/interactive.py, line: 549
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:848
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:852
 msgid "Check your internet connection"
 msgstr "Athugaðu internettengingu þína"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 548
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:851
 msgid "Connection error"
 msgstr "Tengingarvilla"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 560
@@ -1092,143 +916,115 @@ msgstr "Tengingarvilla"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:510
 msgid "How to Get TMDB API Key"
 msgstr "Hvernig á að fá TMDB API lykil"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 562
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:865
 msgid "Access:"
 msgstr "Aðgangur:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 565
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:868
 msgid "Login or create a FREE account"
 msgstr "Innskráðu þig eða búa til ÓKEYPIS reikning"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 567
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:870
 msgid "Fill in your details"
 msgstr "Fylltu út upplýsingarnar þínar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 568
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:871
 msgid "Confirm email"
 msgstr "Staðfesta tölvupóst"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 570
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:873
 msgid "Request an API key:"
 msgstr "Óskaðu eftir API lykli:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 571
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:874
 msgid "Access"
 msgstr "Aðgangur"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 572
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:875
 msgid "Click 'Request an API Key'"
 msgstr "Smelltu á 'Sækja API lykil'"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 573
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:876
 msgid "Choose 'Developer' (personal use)"
 msgstr "Veldu 'Forritara' (persónuleg notkun)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 574
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:877
 msgid "Fill in"
 msgstr "Fylltu út"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 578
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:881
 msgid "Accept terms of use"
 msgstr "Samþykkja notkunarskilmála"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 580
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:883
 msgid "IMPORTANT - Which key to copy:"
 msgstr "Mikilvægt - Hvaða lykil á að afrita:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 581
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:884
 msgid "You will see TWO keys on the page:"
 msgstr "Þú munt sjá TVÖ lykla á síðunni:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 582
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:885
 msgid "API Read Access Token (long, starts with eyJ...)"
 msgstr "API Lestursaðgangstákn (langt, byrjar á eyJ...)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 583
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:886
 msgid "API Key (v3 auth) ← COPY THIS ONE!"
 msgstr "API lykill (v3 auðkenning) ← AFYRIÐA ÞESSA!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 585
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:888
 msgid ""
 "The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
 msgstr "Rétt lykillinn hefur 32 tákn (dæmi: 611bc23b57add08a67b2e64ecb850be8)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 587
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:890
 msgid "Configure in jellyfix:"
 msgstr "Stillir í jellyfix:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 588
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:891
 msgid "Return to menu and choose 'Configure TMDB API Key'"
 msgstr "Fara aftur í valmyndina og veldu 'Stilltu TMDB API lykil'"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 589
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:892
 msgid "Paste the API Key (32 characters)"
 msgstr "Límdu API lykilinn (32 stafir)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 590
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:893
 msgid "Use 'Test connection' to verify"
 msgstr "Notaðu 'Prófaðu tengingu' til að staðfesta"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 592
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:895
 msgid "The key is free and does not expire!"
 msgstr "Lyklinn er frjáls og rennur ekki út!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 593
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:896
 msgid "Allows up to 40 requests per 10 seconds"
 msgstr "Leyfir allt að 40 beiðnum á 10 sekúndum"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 594
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:897
 msgid "Enough to organize thousands of files!"
 msgstr "Nóg mikið til að skipuleggja þúsundir skráa!"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 597
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:900
 msgid "How to Get TMDB Key"
 msgstr "Hvernig á að fá TMDB lykil"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 604
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:907
 msgid "Help - jellyfix v"
 msgstr "Aðstoð - jellyfix v"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 606
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:909
 msgid "What jellyfix does:"
 msgstr "Hvað jellyfix gerir:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 608
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:911
 msgid "Renames files"
 msgstr "Endurnefnir skrár"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 608
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:911
 msgid "to Jellyfin standard"
 msgstr "að Jellyfin staðli"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 609
@@ -1237,171 +1033,138 @@ msgstr "að Jellyfin staðli"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:912
 msgid "Movies"
 msgstr "Kvikmyndir"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 609
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:912
 msgid "Movie Name (YYYY).mkv"
 msgstr "Mynd Nafn (YYYY).mkv"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 610
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:913
 msgid "Series"
 msgstr "Sería"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 837
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:913
 msgid "Series Name - S01E01.mkv"
 msgstr "Sería Nafn - S01E01.mkv"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 612
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:915
 msgid "Organizes subtitles"
 msgstr "Skipar undirtexta"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 612
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:915
 msgid "(ALL languages)"
 msgstr "(ALL languages)"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 613
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:916
 msgid "Renames variants"
 msgstr "Endurnefnir afbrigði"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 614
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:917
 msgid "Adds language code"
 msgstr "Bætir tungumálakóða við"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 615
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:918
 msgid "Removes foreign subtitles"
 msgstr "Fjarlægir erlend undirskriftir"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 615
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:918
 msgid "keeps por and eng by default"
 msgstr "heldur por og eng að sjálfgefið"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 616
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:919
 msgid "Option to remove duplicates"
 msgstr "Valkostur til að fjarlægja tvítekningar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 616
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:919
 msgid "when eng exists"
 msgstr "þegar eng er til staðar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 617
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:920
 msgid "NEVER"
 msgstr "ALDREI"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 617
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:920
 msgid "removes .forced.srt"
 msgstr "fjarlægir .forced.srt"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 619
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:922
 msgid "Folder structure"
 msgstr "Möppustrúktúr"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 620
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:923
 msgid "Creates folders Season 01, Season 02, etc"
 msgstr "Býr til möppur Vetrar 01, Vetrar 02, o.s.frv."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 621
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:924
 msgid "Moves episodes to correct folders"
 msgstr "Færir þætti í réttar möppur"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 623
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:926
 msgid "Fetches metadata"
 msgstr "Sækir metagögn"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 624
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:927
 msgid "Searches year and IDs via TMDB/TVDB"
 msgstr "Leitar ár og auðkenni í gegnum TMDB/TVDB"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 625
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:928
 msgid "Adds IDs to folders [tmdbid-12345]"
 msgstr "Bætir ID-um við möppur [tmdbid-12345]"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 627
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:930
 msgid "Quality detection"
 msgstr "Gæðagreining"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 628
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:931
 msgid "Adds quality tags (1080p, 720p, etc) to filenames"
 msgstr "Bætir við gæðamerkjum (1080p, 720p, o.s.frv.) við skráarnafn."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 629
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:932
 msgid "Option to use ffprobe for accurate detection"
 msgstr "Valkostur til að nota ffprobe fyrir nákvæma greiningu"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 631
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:934
 msgid "Dry-Run Mode:"
 msgstr "Þurrkeyrsláta:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 632
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:935
 msgid "By default, jellyfix shows what will be done WITHOUT changing files."
 msgstr ""
 "Að sjálfsögðu sýnir jellyfix hvað verður gert ANNAÐ EN að breyta skrám."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 633
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:936
 msgid "You can review changes before applying."
 msgstr "Þú getur skoðað breytingar áður en þú beitir þeim."
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 635
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:938
 msgid "Tip:"
 msgstr "Tipp:"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 635
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:938
 msgid "Configure your TMDB key"
 msgstr "Stilltu TMDB lykilinn þinn"
-
 # File: usr/share/jellyfix/cli/display.py, line: 64
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:64
 msgid "Scan Results"
 msgstr "Skannaniðurstöður"
-
 # File: usr/share/jellyfix/cli/display.py, line: 71
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:71
 msgid "Category"
 msgstr "Flokkur"
-
 # File: usr/share/jellyfix/cli/display.py, line: 72
 # File: usr/share/jellyfix/cli/display.py, line: 253
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:72
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:368
 msgid "Count"
 msgstr "Fjöldi"
-
 # File: usr/share/jellyfix/cli/display.py, line: 75
 #. Video files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:75
 msgid "Video files"
 msgstr "Videofailar"
-
 # File: usr/share/jellyfix/cli/display.py, line: 77
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:77
 msgid "Episodes"
 msgstr "Þættir"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 80
@@ -1411,102 +1174,83 @@ msgstr "Þættir"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:57
 msgid "Subtitles"
 msgstr "Undirtitlar"
-
 # File: usr/share/jellyfix/cli/display.py, line: 81
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:81
 msgid "Variants"
 msgstr "Vörur"
-
 # File: usr/share/jellyfix/cli/display.py, line: 82
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:82
 msgid "No language"
 msgstr "Engin ekki tungumál"
-
 # File: usr/share/jellyfix/cli/display.py, line: 83
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:83
 msgid "Foreign"
 msgstr "Erfðaskilnaðarkóði"
-
 # File: usr/share/jellyfix/cli/display.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:84
 msgid "With language"
 msgstr "Með tungumáli"
-
 # File: usr/share/jellyfix/cli/display.py, line: 87
 #. Images
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:87
 msgid "Images"
 msgstr "Myndir"
-
 # File: usr/share/jellyfix/cli/display.py, line: 90
 #. NFO files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:90
 msgid "NFO files"
 msgstr "NFO skrár"
-
 # File: usr/share/jellyfix/cli/display.py, line: 93
 #. Other files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:93
 msgid "Other"
 msgstr "Önnur"
-
 # File: usr/share/jellyfix/cli/display.py, line: 100
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:100
 msgid "Suggested actions:"
 msgstr "Sniðnar aðgerðir:"
-
 # File: usr/share/jellyfix/cli/display.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:103
 msgid "subtitle variants (.lang2, .lang3) can be processed"
 msgstr "undirtektarafbrigði (.lang2, .lang3) má vinna úr"
-
 # File: usr/share/jellyfix/cli/display.py, line: 106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:106
 msgid "subtitles without language code"
 msgstr "undirtitlar án tungumálakóða"
-
 # File: usr/share/jellyfix/cli/display.py, line: 109
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:109
 msgid "foreign subtitles can be removed"
 msgstr "erlendir texti má fjarlægja"
-
 # File: usr/share/jellyfix/cli/display.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:113
 msgid "Suggestions"
 msgstr "Tillögur"
-
 # File: usr/share/jellyfix/cli/display.py, line: 137
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:139
 #, python-brace-format
 msgid "Operation Preview ({} files)"
 msgstr "Aðgerð Forskoðun ({} skrár)"
-
 # File: usr/share/jellyfix/cli/display.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:262
 #, python-brace-format
 msgid "and {} more groups"
 msgstr "og {} fleiri hópar"
-
 # File: usr/share/jellyfix/cli/display.py, line: 189
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:276
 msgid "Move + Rename:"
 msgstr "Færa + Endurnefna:"
-
 # File: usr/share/jellyfix/cli/display.py, line: 194
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:280
 msgid "Move:"
 msgstr "Færa:"
-
 # File: usr/share/jellyfix/cli/display.py, line: 199
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:282
 msgid "Rename:"
 msgstr "Endurnefna:"
-
 # File: usr/share/jellyfix/cli/display.py, line: 204
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:284
 msgid "Remove:"
 msgstr "Fjarlægja:"
-
 # File: usr/share/jellyfix/cli/display.py, line: 208
 # File: usr/share/jellyfix/cli/display.py, line: 225
 #. Create summary
@@ -1514,12 +1258,10 @@ msgstr "Fjarlægja:"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:340
 msgid "Summary"
 msgstr "Yfirlit"
-
 # File: usr/share/jellyfix/cli/display.py, line: 230
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:345
 msgid "Move + Rename"
 msgstr "Færa + Endurnefna"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 231
@@ -1529,7 +1271,6 @@ msgstr "Færa + Endurnefna"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:194
 msgid "Move"
 msgstr "Færa"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 232
@@ -1539,7 +1280,6 @@ msgstr "Færa"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:186
 msgid "Rename"
 msgstr "Endurnefna"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 233
@@ -1549,57 +1289,46 @@ msgstr "Endurnefna"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:202
 msgid "Delete"
 msgstr "Eyða"
-
 # File: usr/share/jellyfix/cli/display.py, line: 251
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:366
 msgid "✅ Execution Results"
 msgstr "✅ Útkomur framkvæmdar"
-
 # File: usr/share/jellyfix/cli/display.py, line: 252
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:367
 msgid "Action"
 msgstr "Aðgerð"
-
 # File: usr/share/jellyfix/cli/display.py, line: 256
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:371
 msgid "Renamed"
 msgstr "Endurnefndur"
-
 # File: usr/share/jellyfix/cli/display.py, line: 258
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:373
 msgid "Moved"
 msgstr "Fært"
-
 # File: usr/share/jellyfix/cli/display.py, line: 260
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:375
 msgid "Deleted"
 msgstr "Eytt."
-
 # File: usr/share/jellyfix/cli/display.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:377
 msgid "Cleaned folders"
 msgstr "Hreinsaðar möppur"
-
 # File: usr/share/jellyfix/cli/display.py, line: 264
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:379
 msgid "Failed"
 msgstr "Misheppnað"
-
 # File: usr/share/jellyfix/cli/display.py, line: 266
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:381
 msgid "Skipped"
 msgstr "Sleppað"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
 msgstr "Innskráning OK — hægt er að hlaða niður textum"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 270
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
 msgid "Use your username, not your e-mail address."
 msgstr "Notaðu notendanafn þitt, ekki netfangið þitt."
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
 msgid ""
@@ -1611,98 +1340,82 @@ msgstr ""
 "Stilltu opensubtitles_username/opensubtitles_password í "
 "~/.jellyfix/config.json (eða OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD "
 "umhverfisbreytunum)."
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
 #, python-format
 msgid "Searching subtitles for: %s (Languages: %s)"
 msgstr "Leita að textum fyrir: %s (Tungumál: %s)"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 183
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:397
 #, python-format
 msgid "Level 1 (hash) found: %s"
 msgstr "Stig 1 (hash) fundin: %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 187
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:401
 #, python-format
 msgid "Missing languages: %s - trying TMDB title search"
 msgstr "Vantar tungumál: %s - reyni að leita að titli á TMDB"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:422
 #, python-format
 msgid "Level 2 (TMDB) found: %s"
 msgstr "Stig 2 (TMDB) fundin: %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 211
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:425
 #, python-format
 msgid "Still missing: %s (try manual search)"
 msgstr "Vantar ennþá: %s (reyndu handvirka leit)"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 91
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:428
 #, python-format
 msgid "No subtitles found for: %s"
 msgstr "Engar undirtextar fundust fyrir: %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 268
 #. Phase 1: Batch hash search — single pool for all videos
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:472
 #, python-format
 msgid "Batch Level 1: scanning %d videos by hash..."
 msgstr "Batch Level 1: skannar %d myndbönd með hash..."
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 299
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:510
 #, python-format
 msgid "Level 1 (hash) found: %s for %s"
 msgstr "Stig 1 (hash) fundið: %s fyrir %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 313
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:524
 #, python-format
 msgid "Batch Level 2: title search for %d videos..."
 msgstr "Batch Level 2: titilsókn fyrir %d myndböndum..."
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 331
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:542
 #, python-format
 msgid "Level 2 (TMDB) found: %s for %s"
 msgstr "Stig 2 (TMDB) fundin: %s fyrir %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 525
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:567
 #, python-format
 msgid "Level 3 (fallback %s) found: %s for %s"
 msgstr "Stig 3 (varafall %s) fundin: %s fyrir %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 238
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:599
 #, python-format
 msgid "Found %d subtitles by hash for: %s"
 msgstr "Fundin %d undirskriftir með hash fyrir: %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 344
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:702
 #, python-format
 msgid "Found %d validated subtitles by title for: %s"
 msgstr "Fundin %d staðfestar undirskriftir eftir titli fyrir: %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 601
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:959
 #, python-format
 msgid "Manual search: %s"
 msgstr "Handvirkni leita: %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 923
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:975
 #, python-format
 msgid "No results from primary providers, trying: %s"
 msgstr "Engin niðurstöður frá aðalveitum, reyni: %s"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
@@ -1712,53 +1425,44 @@ msgstr "Engin niðurstöður frá aðalveitum, reyni: %s"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
 msgid "Unknown release"
 msgstr "Óþekkt útgáfa"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1031
 #, python-format
 msgid "Found %d subtitles in manual search"
 msgstr "Fundin %d undirskriftir í handvirkri leit"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
 #, python-format
 msgid "Failed to download subtitle content. %s"
 msgstr "Ekki tókst að sækja textaefni. %s"
-
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1086
 #, python-format
 msgid "Downloaded subtitle: %s"
 msgstr "Niðurhalað undirskrift: %s"
-
 # File: usr/share/jellyfix/core/image_manager.py, line: 101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:102
 #, python-format
 msgid "Downloaded image: %s"
 msgstr "Niðurhalað mynd: %s"
-
 # File: usr/share/jellyfix/core/image_manager.py, line: 106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:107
 #, python-format
 msgid "Failed to download image: %s"
 msgstr "Ekki tókst að hlaða niður mynd: %s"
-
 # File: usr/share/jellyfix/core/image_manager.py, line: 110
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:111
 #, python-format
 msgid "Unexpected error downloading image: %s"
 msgstr "Óvænt villa við að hlaða niður mynd: %s"
-
 # File: usr/share/jellyfix/core/image_manager.py, line: 216
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:217
 msgid "Clearing image cache..."
 msgstr "Tæma myndaskyndiminni..."
-
 # File: usr/share/jellyfix/core/image_manager.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "Myndaskynding hreinsaður"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 46
@@ -1769,12 +1473,10 @@ msgstr "Myndaskynding hreinsaður"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:105
 msgid "Jellyfix"
 msgstr "Jellyfix"
-
 # File: usr/share/jellyfix/gui/app.py, line: 131
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/app.py:151
 msgid "translator-credits"
 msgstr "þýðandaskuldir"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 182
@@ -1784,12 +1486,10 @@ msgstr "þýðandaskuldir"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
 msgid "Preferences"
 msgstr "Valmyndir"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 183
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:177
 msgid "Configure API Keys"
 msgstr "Stillir API lykla"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 149
@@ -1798,42 +1498,35 @@ msgstr "Stillir API lykla"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:182
 msgid "Help"
 msgstr "Aðstoð"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 189
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:183
 msgid "About Jellyfix"
 msgstr "Um Jellyfix"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 193
 #. Quit
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:187
 msgid "Quit"
 msgstr "Hætta"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
 #. Show scanning toast
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:255
 msgid "Scanning directory..."
 msgstr "Skoðun skráarsafns..."
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
 #. Show generating operations toast
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:367
 msgid "Generating operations..."
 msgstr "Að búa til aðgerðir..."
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 301
 #. Show success toast
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:392
 #, python-brace-format
 msgid "{} operations ready"
 msgstr "{} aðgerðir tilbúnar"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:518
 msgid "Apply Operations?"
 msgstr "Beita aðgerðir?"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 327
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 367
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:519
@@ -1841,7 +1534,6 @@ msgstr "Beita aðgerðir?"
 #, python-brace-format
 msgid "This will rename {} files. Continue?"
 msgstr "Þetta mun endurnefna {} skrár. Halda áfram?"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 188
@@ -1857,7 +1549,6 @@ msgstr "Þetta mun endurnefna {} skrár. Halda áfram?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:233
 msgid "Cancel"
 msgstr "Hætta við"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 330
@@ -1867,34 +1558,28 @@ msgstr "Hætta við"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:237
 msgid "Apply"
 msgstr "Beita"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:550
 msgid "Execute Operations?"
 msgstr "Framkvæma aðgerðir?"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:554
 msgid "Execute"
 msgstr "Framkvæma"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 395
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:575
 #, python-brace-format
 msgid "Dry-run: {} operations previewed"
 msgstr "Þurrkeyrsla: {} aðgerðir skoðaðar"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 398
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:578
 #, python-brace-format
 msgid "{} operations completed"
 msgstr "{} aðgerðir lokið"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 751
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:803
 msgid "Feature Unavailable"
 msgstr "Fyrirkomulag ófáanlegt"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 752
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:804
 msgid ""
@@ -1903,7 +1588,6 @@ msgid ""
 msgstr ""
 "„subliminal“ bókasafnið er ekki uppsett. Vinsamlegast settu það upp til að "
 "nota þessa eiginleika."
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
@@ -1928,19 +1612,16 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1171
 msgid "OK"
 msgstr "Í lagi"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 775
 #. Status Label
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:828
 msgid "Preparing..."
 msgstr "Undirbúningur..."
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 863
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1023
 #, python-brace-format
 msgid "Searching subtitles ({}/{})"
 msgstr "Leita að undirskriftum ({}/{})"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 80
@@ -1949,7 +1630,6 @@ msgstr "Leita að undirskriftum ({}/{})"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
 msgid "subtitle"
 msgstr "texti"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 80
@@ -1957,18 +1637,15 @@ msgstr "texti"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
 msgid "subtitles"
 msgstr "textar"
-
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
 msgid "video"
 msgstr "myndband"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 992
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1086
 msgid "No Subtitles Found"
 msgstr "Engin texta ekki fundin"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 993
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1087
 msgid ""
@@ -1977,13 +1654,11 @@ msgid ""
 msgstr ""
 "Gat ekki neinar undirskriftir sjálfkrafa.  \n"
 "Reyndu handvirka leit?"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 997
 #. Some languages missing
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1091
 msgid "Partial Success"
 msgstr "Partíllar árangur"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1005
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1099
 #, python-brace-format
@@ -1997,7 +1672,6 @@ msgstr ""
 "\n"
 "Tungumál sem vantar: {}\n"
 "Prófa handvirka leit?"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1009
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1104
 #, python-brace-format
@@ -2007,28 +1681,23 @@ msgid ""
 msgstr ""
 "Náð í {} {} fyrir {} af {} {}.\n"
 "Prófa handvirka leit fyrir það sem vantar?"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 884
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1109
 msgid "Download Complete"
 msgstr "Niðurhal Lokið"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1015
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1110
 #, python-brace-format
 msgid "Downloaded {} {} for {} {} (all languages)."
 msgstr "Náð í {} {} fyrir {} {} (öll tungumál)."
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1026
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1123
 msgid "Manual Search"
 msgstr "Handvirk Leita"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 913
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1168
 msgid "Batch Error"
 msgstr "Batch villa"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 914
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1169
 #, python-brace-format
@@ -2038,40 +1707,33 @@ msgid ""
 msgstr ""
 "Villa kom upp í batch niðurhal:  \n"
 "{}"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1225
 #, python-brace-format
 msgid "Subtitle downloaded: {}"
 msgstr "Undirritun niðurhalað: {}"
-
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1332
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1399
 #, python-brace-format
 msgid "Updated: {title} ({year}) - applied to {count} episodes"
 msgstr "Uppfært: {title} ({year}) - beitt á {count} þætti"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 34
 #. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:34
 msgid "Jellyfix Help"
 msgstr "Jellyfix Hjálp"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 69
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:69
 msgid "Version"
 msgstr "Útgáfa"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:75
 msgid "Intelligent Jellyfin Library Organizer"
 msgstr "Intelligent Jellyfin bókasafn skipuleggjandi"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:86
 msgid "What Jellyfix Does"
 msgstr "Hvað Jellyfix gerir"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:88
 msgid ""
@@ -2092,12 +1754,10 @@ msgstr ""
 "• <b>Sækir lýsigögn</b> frá TMDB/TVDB\n"
 "• <b>Greinir og bætir við gæðamerkingum</b> (1080p, 720p, o.s.frv.)\n"
 "• <b>Bætir við veitukenni</b> í möppuheiti ([tmdbid-12345])"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 96
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:102
 msgid "Examples"
 msgstr "Dæmi"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 104
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:104
 msgid ""
@@ -2128,12 +1788,10 @@ msgstr ""
 "  • Bætir við tungumálakóðum: subtitle.srt → Mynd Nafn.por.srt\n"
 "  • Fjarlægir erlenda tungumál (heldur aðeins stilltum tungumálum)\n"
 "  • <b>ALDREI</b> fjarlægir .forced.srt skrár"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:123
 msgid "How to Use"
 msgstr "Hvernig á að nota"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:125
 msgid ""
@@ -2178,7 +1836,6 @@ msgstr ""
 "   Skrám verður endurnefnt og raðað\n"
 "\n"
 "<b>Ábending:</b> Farðu alltaf yfir forskoðunina áður en þú framkvæmir!"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 137
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:153
 msgid ""
@@ -2197,12 +1854,10 @@ msgstr ""
 "• <b>Lýsigögn:</b> Virkja/afvirkja TMDB-sókn\n"
 "• <b>Gæðamerkingar:</b> Bæta við upplausnarmerkingum í skráarheiti\n"
 "• <b>ffprobe:</b> Nota ffprobe fyrir nákvæma gæðagreiningu"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 148
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:166
 msgid "Important Notes"
 msgstr "Mikilvægar athugasemdir"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 148
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:168
 msgid ""
@@ -2229,288 +1884,232 @@ msgstr ""
 "\n"
 "🌍 <b>Sérsníddu viðhaldin tungumál</b>\n"
 "Stilltu hvaða textatungumál á að halda í kjörstillingum."
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 167
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:187
 msgid "Links"
 msgstr "Hlekkir"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 172
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:192
 msgid "Homepage"
 msgstr "Heimasíða"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 178
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:198
 msgid "Report Issues"
 msgstr "Skýra vandamál"
-
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 184
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:204
 msgid "Get TMDB API Key"
 msgstr "Sækja TMDB API lykil"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 130
 #. Dialog properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
 msgid "Search Title"
 msgstr "Leita titils"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 159
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:159
 msgid "Enter movie or series name..."
 msgstr "Sláðu inn nafn kvikmyndar eða þáttar..."
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 163
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:163
 msgid "Search"
 msgstr "Leita"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 176
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:176
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:241
 msgid "Movie"
 msgstr "Kvikmynd"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 181
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:181
 msgid "TV Series"
 msgstr "Sjónvarpssería"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 258
 #. Update status
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:260
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:308
 msgid "Searching..."
 msgstr "Leita..."
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 269
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:271
 msgid "TMDB not configured"
 msgstr "TMDB ekki stillt"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 309
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:320
 msgid "No results found"
 msgstr "Engin niðurstöður fundust"
-
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 312
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:323
 msgid "results"
 msgstr "niðurstöður"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 350
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:333
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:350
 #, python-brace-format
 msgid "Error: {}"
 msgstr "Villa: {}"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 60
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:63
 msgid "Subtitle Handling"
 msgstr "Undirskriftar meðferð"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 61
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:64
 msgid "Configure how subtitles are processed"
 msgstr "Stillir hvernig undirskriftir eru unnar"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 66
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:69
 msgid "Rename Language Variants"
 msgstr "Endurnefna tungumálavarianta"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 67
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:70
 msgid "Rename .por2.srt, .eng2.srt to .por.srt, .eng.srt"
 msgstr "Endurnefna .por2.srt, .eng2.srt í .por.srt, .eng.srt"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:78
 msgid "Remove Duplicate Variants"
 msgstr "Fjarlægja tvítekna afbrigði"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 76
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:79
 msgid "Remove .lang2, .lang3 files after renaming"
 msgstr "Fjarlægðu .lang2, .lang3 skrár eftir að hafa endurnefnt."
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:87
 msgid "Add Language Codes"
 msgstr "Bæta við tungumálakóðum"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 85
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:88
 msgid "Add language codes to subtitles without them"
 msgstr "Bættu tungumálakóðum við undirtexta án þeirra"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 93
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:96
 msgid "Remove Foreign Subtitles"
 msgstr "Fjarlægja erlenda undirskriftir"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 94
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:97
 msgid "Remove subtitles not in kept languages list"
 msgstr "Fjarlægðu texta ekki í varðveittum tungumálalista"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 102
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:105
 msgid "Minimum Portuguese Words"
 msgstr "Minimum portugalsk orð"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:106
 msgid "Min words to detect Portuguese subtitles"
 msgstr "Min orð til að greina portúgalskar undirskriftir"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 112
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:115
 msgid "Kept Languages"
 msgstr "Geymdar Tungumál"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:116
 msgid "Subtitles in these languages will be kept"
 msgstr "Undirskriftir á þessum tungumálum verða varðveittar"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 134
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:137
 msgid "Video"
 msgstr "Vefmyndband"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 140
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:143
 msgid "Video Handling"
 msgstr "Vöru meðhöndlun"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 141
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:144
 msgid "Configure how videos are processed"
 msgstr "Stillir hvernig myndbönd eru unnin"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:149
 msgid "Organize in Folders"
 msgstr "Skipta í möppur"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 147
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:150
 msgid "Organize TV episodes in Season folders"
 msgstr "Skipta sjónvarpsþáttum í árstíðarmöppur"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 155
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:158
 msgid "Add Quality Tags"
 msgstr "Bæta við gæðamerkjum"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 156
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:159
 msgid "Add resolution tags (1080p, 720p, etc) to filenames"
 msgstr "Bættu við upplausnartöggum (1080p, 720p, o.s.frv.) við skráarnafn."
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 164
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:167
 msgid "Use ffprobe for Detection"
 msgstr "Notaðu ffprobe til að greina"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 165
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:168
 msgid "More accurate but slower quality detection"
 msgstr "Nákvæmara en hægara gæðagreining"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 177
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:180
 msgid "Metadata"
 msgstr "Metagögn"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 183
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:186
 msgid "Metadata Fetching"
 msgstr "Fyrirspurn um metagögn"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 184
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:187
 msgid "Configure metadata from TMDB"
 msgstr "Stillir aðgerðir frá TMDB"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 189
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:192
 msgid "Fetch Metadata"
 msgstr "Sækja metagögn"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 190
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:193
 msgid "Download metadata and posters from TMDB"
 msgstr "Sækja gögn og plakat frá TMDB"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 202
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:205
 msgid "General"
 msgstr "Almennt"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:211
 msgid "Application"
 msgstr "Forrit"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 209
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:212
 msgid "General application settings"
 msgstr "Almennar forritstillingar"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 217
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:217
 msgid "Keep Recent Libraries"
 msgstr "Halda nýlegar bókasöfn"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:218
 msgid "Remember recently scanned libraries between sessions"
 msgstr "Munduð nýlega skannaðar bókasöfn milli lota"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 228
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:228
 msgid "File Cleanup"
 msgstr "Skjal hreinsun"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 229
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:229
 msgid "Configure which files to remove"
 msgstr "Stillir hvaða skrár á að fjarlægja"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 234
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:234
 msgid "Remove Non-Media Files"
 msgstr "Fjarlægja ekki fjölmiðlafaila"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 235
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:235
 msgid "Remove all files that are not .srt or .mp4"
 msgstr "Fjarlægðu öll skrár sem eru ekki .srt eða .mp4"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 243
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:243
 msgid "Fix Mirabel Files"
 msgstr "Laga Mirabel skrár"
-
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 244
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:244
 msgid "Rename .pt-BR.hi.srt, .br.hi.srt to .por.srt"
 msgstr "Endurnefna .pt-BR.hi.srt, .br.hi.srt í .por.srt"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 63
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:63
 msgid "TMDB Configuration"
 msgstr "TMDB Stillingar"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 64
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:64
 msgid "Configure The Movie Database API key"
 msgstr "Stilltu API lykilinn fyrir Movie Database"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 200
 #. Update status
@@ -2518,7 +2117,6 @@ msgstr "Stilltu API lykilinn fyrir Movie Database"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:273
 msgid "✓ Configured"
 msgstr "✓ Stillt viðeigandi"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 289
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
@@ -2527,22 +2125,18 @@ msgstr "✓ Stillt viðeigandi"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
 msgid "✗ Not configured"
 msgstr "✗ Ekki stillt"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 71
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:71
 msgid "TMDB API Key"
 msgstr "TMDB API lykill"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 79
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:79
 msgid "Config file"
 msgstr "Stillingaskrá"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:88
 msgid "OpenSubtitles Login"
 msgstr "OpenSubtitles Innihald"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 89
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
 msgid ""
@@ -2551,7 +2145,6 @@ msgid ""
 msgstr ""
 "Þú þarft ókeypis opensubtitles.com reikning til að hlaða niður textum (leit "
 "virkar án þess)."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
@@ -2559,56 +2152,46 @@ msgstr ""
 #, python-format
 msgid "✓ Configured (%s)"
 msgstr "✓ Stillt (%s)"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
 msgid "Account"
 msgstr "Reikningur"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
 msgid "Configure OpenSubtitles Login"
 msgstr "Stillir OpenSubtitles innskráningu"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
 msgid "Enter your username and password"
 msgstr "Sláðu inn notendanafn og lykilorð þitt"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
 msgid "Configure"
 msgstr "Sniðganga"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
 msgid "Test OpenSubtitles Login"
 msgstr "Prófaðu OpenSubtitles Inngang"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
 msgid "Verify your credentials actually work"
 msgstr "Staðfestu að auðkenni þín virki í raun."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
 msgid "Test"
 msgstr "Próf"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
 msgid "Remove OpenSubtitles Login"
 msgstr "Fjarlægja OpenSubtitles innskráningu"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
 msgid "Delete stored credentials"
 msgstr "Eyða geymdum auðkennum"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
@@ -2617,94 +2200,76 @@ msgstr "Eyða geymdum auðkennum"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:469
 msgid "Remove"
 msgstr "Fjarlægja"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 135
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:135
 msgid "Create a free account"
 msgstr "Búðu til ókeypis reikning"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 138
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:138
 msgid "Open"
 msgstr "Opna"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:147
 msgid "Actions"
 msgstr "Aðgerðir"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:153
 msgid "Enter your TMDB API key"
 msgstr "Sláðu inn TMDB API lykilinn þinn"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 107
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:166
 msgid "View Current Key"
 msgstr "Skoða núverandi lykil"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 108
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:167
 msgid "Show masked API key"
 msgstr "Sýna dulda API lykil"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 111
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:170
 msgid "View"
 msgstr "Skoða"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 120
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:179
 msgid "Test TMDB Connection"
 msgstr "Prófa TMDB tengingu"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 121
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:180
 msgid "Verify API key is working"
 msgstr "Staðfesta að API lykillinn virki"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 133
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:192
 msgid "Remove TMDB Key"
 msgstr "Fjarlægðu TMDB lykilinn"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 134
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:193
 msgid "Delete stored API key"
 msgstr "Eyða geymdum API lykli"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 155
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:214
 msgid "Step-by-step tutorial"
 msgstr "Skref-fyrir-skref leiðbeiningar"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 158
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
 msgid "Tutorial"
 msgstr "Kennsluefni"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
 msgid "Enter your TMDB API key below"
 msgstr "Sláðu inn TMDB API lykilinn þinn hér að neðan"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 184
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:252
 msgid "Paste API key here"
 msgstr "Límdu API lykil hér"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 189
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:257
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:312
 msgid "Save"
 msgstr "Vista"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 203
 #. Show toast
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:276
 msgid "API key saved successfully"
 msgstr "API lykill vistaður með góðum árangri"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
 msgid ""
@@ -2713,28 +2278,23 @@ msgid ""
 msgstr ""
 "Sláðu inn notendanafn og lykilorð þitt á opensubtitles.com.  \n"
 "⚠ Notaðu NOTENDANAFN þitt, ekki netfangið þitt."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
 msgid "Username (not e-mail)"
 msgstr "Notendanafn (ekki tölvupóstur)"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:299
 msgid "Password"
 msgstr "Lykilorð"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
 #. Toggle password visibility
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:306
 msgid "Show password"
 msgstr "Sýna lykilorð"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
 msgid "Remove OpenSubtitles Login?"
 msgstr "Fjarlægja OpenSubtitles innskráningu?"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
 msgid ""
@@ -2743,87 +2303,71 @@ msgid ""
 msgstr ""
 "Þetta mun eyða skráðri auðkennum þínum. Þú munt ekki geta hlaðið niður frá "
 "opensubtitles.com fyrr en þú stillir það aftur."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
 msgid "Configure your login first"
 msgstr "Stilltu fyrst innskráningu þína"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
 msgid "Testing login…"
 msgstr "Prófun innskráningar…"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
 #, python-format
 msgid "✓ Login OK (%s)"
 msgstr "✓ Innskráning OK (%s)"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
 msgid "Current TMDB API Key"
 msgstr "Núverandi TMDB API lykill"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
 msgid "Masked key"
 msgstr "Falið lykill"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
 msgid "Full key stored in"
 msgstr "Heildarlykill geymdur í"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 226
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 241
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:402
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:417
 msgid "No API Key"
 msgstr "Engin ekki API lykill"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 227
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:403
 msgid "No TMDB API key configured yet"
 msgstr "Engin TMDB API lykils ekki ennþá stillt."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 242
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
 msgid "Please configure TMDB API key first"
 msgstr "Vinsamlegast stilltu TMDB API lykilinn fyrst"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:432
 msgid "✓ Connection Successful"
 msgstr "✓ Tengslum var lokið með árangri"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
 msgid "⚠ Connection Failed"
 msgstr "⚠ Tengslumistök"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 263
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:449
 msgid "Could not fetch data from TMDB. Please check your API key."
 msgstr ""
 "Gat ekki að sækja gögn frá TMDB. Vinsamlegast athugaðu API lykilinn þinn."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 268
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:454
 msgid "✗ Connection Error"
 msgstr "✗ Tengingarvilla"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 269
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
 #, python-brace-format
 msgid "Error testing connection: {}"
 msgstr "Villa villa tengja: {}"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 279
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
 msgid "Remove API Key?"
 msgstr "Fjarlægja API lykil?"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 280
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:466
 msgid ""
@@ -2832,13 +2376,11 @@ msgid ""
 msgstr ""
 "Þetta mun eyða TMDB API lykli þínum sem geymdur er. Þú þarft að stilla hann "
 "aftur."
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
 #. Show toast
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
 msgid "API key removed"
 msgstr "API lykill fjarlægður"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 302
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:492
 msgid ""
@@ -2873,93 +2415,76 @@ msgstr ""
 "• Sækja plakat og bakgrunnsmyndir\n"
 "• Fá nákvæm titla og útgáfudagsetningar\n"
 "• Skipuleggja bókasafnið þitt með TMDB ID-um"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 165
 #. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
 msgid "Search Subtitles"
 msgstr "Leita að textum"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 189
 #. Download button in header
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
 msgid "Download"
 msgstr "Sækja"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:208
 msgid "Enter movie or show title..."
 msgstr "Sláðu inn titil á kvikmynd eða sýningu..."
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 216
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:216
 msgid "Season"
 msgstr "Tímabil"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 221
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 246
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:221
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:246
 msgid "Episode"
 msgstr "Þáttur"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 267
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:267
 msgid "Search for Subtitles"
 msgstr "Leita að undirskriftum"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 268
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:268
 msgid "Enter a title and click search"
 msgstr "Sláðu inn titil og smelltu á leita"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 338
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:338
 msgid "No Results"
 msgstr "Engin niðurstöður"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 339
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:339
 msgid "Try a different search term"
 msgstr "Reyndu annað leitarorð"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 342
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:342
 #, python-brace-format
 msgid "Found {} subtitles"
 msgstr "Fundin {} undirskriftir"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 386
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:387
 #, python-brace-format
 msgid "Downloaded: {}"
 msgstr "Niðurhalað: {}"
-
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 395
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:396
 msgid "Download failed"
 msgstr "Niðurhal mistókst"
-
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 68
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:73
 msgid "Select Directory to Scan"
 msgstr "Veldu skráningu til að skanna"
-
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 160
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:174
 msgid "Scan Failed"
 msgstr "Skönnun misheppnaðist"
-
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 229
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:248
 msgid "Operation Generation Failed"
 msgstr "Aðgerðarsköpun mistókst"
-
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 428
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:405
 msgid "Execution Failed"
 msgstr "Aðgerð mistókst"
-
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 132
@@ -2967,185 +2492,149 @@ msgstr "Aðgerð mistókst"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:151
 msgid "Operations"
 msgstr "Aðgerðir"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 131
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:166
 msgid "Search..."
 msgstr "Leita..."
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 141
 #. All button (neutro)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:178
 msgid "All"
 msgstr "Allt"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 196
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:215
 msgid "Download Subtitles for All"
 msgstr "Sækja undirskriftir fyrir alla"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 198
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:217
 msgid "Search and download subtitles for all listed videos"
 msgstr "Leitaðu að og hlaðið niður textum fyrir öll skráð myndbönd"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 180
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:237
 msgid "No Operations"
 msgstr "Engin ekki framkvæmdir"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 181
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
 msgid "Scan a directory to generate operations"
 msgstr "Skoða skráarsafn til að búa til aðgerðir"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 304
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:452
 msgid "rename"
 msgstr "endurnefna"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 306
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:454
 msgid "move"
 msgstr "fara"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 308
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:456
 msgid "delete"
 msgstr "eyða"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:459
 #, python-brace-format
 msgid "Showing {} of {} operations"
 msgstr "Sýnir {} af {} aðgerðum"
-
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 313
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:461
 #, python-brace-format
 msgid "Total: {} operations"
 msgstr "Heildar: {} aðgerðir"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 65
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:65
 msgid "No Selection"
 msgstr "Engin valin."
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 66
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:66
 msgid "Select an item to preview"
 msgstr "Veldu hlut til að forsýna"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:111
 msgid "Search title"
 msgstr "Leita titils"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 110
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:114
 msgid "Wrong title? Click to search manually"
 msgstr "Rangt titill? Smelltu til að leita handvirkt"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 121
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:123
 msgid "Download Subtitles"
 msgstr "Sækja undirskriftir"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 125
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:126
 msgid "Search and download subtitles automatically"
 msgstr "Leitaðu að og hlaðið niður undirskriftum sjálfkrafa"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 115
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:154
 msgid "From:"
 msgstr "Frá:"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 147
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:186
 msgid "To:"
 msgstr "Til:"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 215
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:267
 msgid "MOVE"
 msgstr "FÆRÐAST"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:270
 msgid "DELETE"
 msgstr "Eyða"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 225
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:277
 msgid "MOVE + RENAME"
 msgstr "FÆRÐA + NAFNBREYTA"
-
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 228
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:280
 msgid "RENAME"
 msgstr "UMSKRÁNA"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 79
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:83
 msgid "Welcome to Jellyfix"
 msgstr "Velkomin í Jellyfix"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 107
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:111
 msgid "Drop a folder here"
 msgstr "Dreifðu möppu hér"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 108
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:112
 msgid "or click the button below"
 msgstr "eða smelltu á hnappinn hér að neðan"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 115
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:119
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:128
 msgid "Add Library"
 msgstr "Bæta við bókasafni"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:150
 msgid "Recent Libraries"
 msgstr "Nýlegar bókasöfn"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 179
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:183
 msgid "Clear recent libraries"
 msgstr "Hreinsa nýlegar bókasöfn"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 202
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:206
 msgid "weeks ago"
 msgstr "vikur síðan"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 204
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:208
 msgid "days ago"
 msgstr "dögum síðan"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 206
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:210
 msgid "hours ago"
 msgstr "klukkustundum síðan"
-
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:212
 msgid "Just now"
 msgstr "Rétt í þessu"
-
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:439
 msgid "TMDB API key is working correctly!"
 msgstr "TMDB API-lykillinn virkar rétt!"
-
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:441
 msgid "Test search returned:"
 msgstr "Prófleit skilaði:"
-
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 257
 #, python-brace-format
 #~ msgid ""
