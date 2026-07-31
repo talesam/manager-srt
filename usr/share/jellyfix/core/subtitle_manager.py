@@ -40,7 +40,43 @@ _CACHE_CONFIGURED = False
 _OSCOM_LANGUAGES_PATCHED = False
 
 
-def _configure_subliminal_cache() -> None:
+def _cache_dir() -> Path:
+    return Path.home() / ".jellyfix" / "cache"
+
+
+def invalidate_subliminal_token_cache(reason: str = "") -> bool:
+    """Apaga o cache de tokens do subliminal.
+
+    O token de sessão do opensubtitles.com fica guardado em disco para
+    sobreviver entre execuções. Quando ele deixa de valer — troca de conta,
+    expiração, sessão revogada — o subliminal **reusa o token velho** e o
+    download volta vazio, sem erro nenhum: a legenda é encontrada e nunca é
+    gravada. Apagar o cache força um login novo.
+
+    Returns:
+        True se algum arquivo foi removido.
+    """
+    removidos = False
+    base = _cache_dir()
+    for nome in ("subliminal.dbm", "subliminal.dbm.db",
+                 "subliminal.dbm.dogpile.lock", "subliminal.dbm.rw.lock"):
+        alvo = base / nome
+        try:
+            if alvo.exists():
+                alvo.unlink()
+                removidos = True
+        except OSError:
+            pass
+
+    if removidos and reason:
+        try:
+            get_logger().info(_("Subtitle session cache cleared (%s)") % reason)
+        except Exception:
+            pass
+    return removidos
+
+
+def _configure_subliminal_cache(username: str = "") -> None:
     """Configure subliminal's dogpile cache region — required for downloads.
 
     Subliminal caches provider auth tokens (notably opensubtitles.com's session
@@ -49,6 +85,10 @@ def _configure_subliminal_cache() -> None:
     silently fails — subtitles are found but never written. We set it up once,
     persisting to ~/.jellyfix/cache so the token survives between runs, and fall
     back to an in-memory region if the on-disk backend can't be created.
+
+    O cache é descartado quando o USUÁRIO configurado muda: o token guardado
+    pertence a uma conta específica e, reusado com outra, faz todo download
+    voltar vazio (a busca funciona, o arquivo nunca chega).
     """
     global _CACHE_CONFIGURED
     if not HAS_SUBLIMINAL or _CACHE_CONFIGURED:
@@ -58,9 +98,28 @@ def _configure_subliminal_cache() -> None:
         if getattr(region, 'is_configured', False):
             _CACHE_CONFIGURED = True
             return
-        cache_dir = Path.home() / ".jellyfix" / "cache"
+
+        cache_dir = _cache_dir()
         try:
             cache_dir.mkdir(parents=True, exist_ok=True)
+
+            # Conta mudou desde a última execução? Token antigo não vale mais.
+            marcador = cache_dir / "oscom_user"
+            anterior = ""
+            try:
+                anterior = marcador.read_text(encoding="utf-8").strip()
+            except OSError:
+                pass
+            if username and anterior and anterior != username:
+                invalidate_subliminal_token_cache(
+                    reason=f"{anterior} → {username}"
+                )
+            if username and anterior != username:
+                try:
+                    marcador.write_text(username, encoding="utf-8")
+                except OSError:
+                    pass
+
             region.configure(
                 'dogpile.cache.dbm',
                 arguments={'filename': str(cache_dir / "subliminal.dbm")},
@@ -168,12 +227,16 @@ class SubtitleManager:
         # Cota consultada no máximo uma vez por execução (evita bater na API a
         # cada legenda que falha).
         self._quota_cache: Optional[Dict[str, Any]] = None
+        # A sessão só é descartada uma vez por execução
+        self._token_reset_done = False
 
         if not HAS_SUBLIMINAL:
             self.logger.warning("Subliminal library not found. Subtitle downloading disabled.")
         else:
             _patch_opensubtitlescom_languages()
-            _configure_subliminal_cache()
+            _configure_subliminal_cache(
+                getattr(self.config, 'opensubtitles_username', '') or ''
+            )
 
     def is_available(self) -> bool:
         """Check if subtitle downloading is available (libraries installed)"""
@@ -210,6 +273,19 @@ class SubtitleManager:
             else:
                 langs.add(Language(lang))
         return langs
+
+    @staticmethod
+    def _words(text: str) -> set:
+        """Palavras de um título, com pontuação virando SEPARADOR.
+
+        Removê-la (em vez de trocar por espaço) grudava as palavras:
+        "Dr.STONE" virava "drstone", que não tem NENHUMA palavra em comum com
+        "dr stone" — e a legenda certa era descartada como "filme diferente".
+        """
+        if not text:
+            return set()
+        limpo = ''.join(c if (c.isalnum() or c.isspace()) else ' ' for c in text.lower())
+        return {p for p in limpo.split() if p}
 
     @staticmethod
     def _subtitle_release_name(sub: Any) -> str:
@@ -452,6 +528,43 @@ class SubtitleManager:
         except Exception as e:
             self.logger.debug(f"Não foi possível consultar a cota do OpenSubtitles: {e}")
             return None
+
+    def _retry_after_token_reset(self, sub: Any, provider_configs: Dict) -> bool:
+        """Descarta a sessão guardada e tenta baixar de novo (uma vez).
+
+        Só faz sentido quando AINDA HÁ cota: aí o conteúdo vazio não é limite
+        diário, e sim token inválido guardado em disco.
+        """
+        if getattr(sub, 'provider_name', '') != 'opensubtitlescom':
+            return False
+        if self._token_reset_done:
+            return False
+
+        cota = self.get_opensubtitles_quota()
+        if cota and cota.get('remaining') == 0:
+            return False  # é limite mesmo, não adianta relogar
+
+        self._token_reset_done = True
+
+        # Invalida os valores da região em vez de apagar o arquivo: uma região
+        # dogpile já configurada NÃO aceita reconfiguração, então remover o
+        # .dbm só deixaria a região apontando para um arquivo que não existe.
+        try:
+            from subliminal.cache import region
+            region.invalidate(hard=True)
+            self.logger.info(_("Subtitle session cache cleared (stale session)"))
+        except Exception as e:
+            self.logger.debug(f"Não foi possível invalidar a sessão: {e}")
+            return False
+
+        try:
+            from subliminal import download_subtitles as subliminal_download
+            subliminal_download([sub], provider_configs=provider_configs)
+        except Exception as e:
+            self.logger.debug(f"Nova tentativa após limpar a sessão falhou: {e}")
+            return False
+
+        return bool(sub.content)
 
     def _download_failure_hint(self, provider: str) -> str:
         """Return a helpful hint when a content download yields nothing.
@@ -801,9 +914,8 @@ class SubtitleManager:
             # Flatten results and validate each subtitle
             # Note: list_subtitles returns a list of subtitles, not a dict
             validated_subs = []
-            title_lower = title.lower().strip()
-            title_clean = ''.join(c for c in title_lower if c.isalnum() or c.isspace())
-            
+            title_words = self._words(title)
+
             self.logger.debug(f"Level 2: Received {len(all_subtitles)} subtitles from providers")
             
             for sub in all_subtitles:
@@ -832,10 +944,8 @@ class SubtitleManager:
                 
                 # Check if it's clearly a different movie (if movie_name is present)
                 if is_valid and movie_name:
-                    movie_name_clean = ''.join(c for c in movie_name.lower() if c.isalnum() or c.isspace())
                     # Only reject if names are completely different
-                    title_words = set(title_clean.split())
-                    movie_words = set(movie_name_clean.split())
+                    movie_words = self._words(movie_name)
                     common_words = title_words & movie_words
                     # Reject only if NO words in common
                     if len(common_words) == 0 and len(title_words) > 0 and len(movie_words) > 0:
@@ -883,15 +993,14 @@ class SubtitleManager:
         Returns True if the subtitle is likely for the correct content.
         Uses relaxed matching - accepts when we can't definitively reject.
         """
-        title_lower = title.lower().strip()
-        # Remove special characters for matching
-        title_clean = ''.join(c for c in title_lower if c.isalnum() or c.isspace())
-        
+        # Pontuação vira separador (ver _words): "Dr.STONE" precisa casar
+        # com "Dr. STONE".
+        title_clean = ' '.join(sorted(self._words(title)))
+
         # If we have a movie name from the subtitle, check it
         if sub_movie_name:
-            sub_name_lower = sub_movie_name.lower().strip()
-            sub_name_clean = ''.join(c for c in sub_name_lower if c.isalnum() or c.isspace())
-            
+            sub_name_clean = ' '.join(sorted(self._words(sub_movie_name)))
+
             # Direct match or partial match
             if title_clean in sub_name_clean or sub_name_clean in title_clean:
                 # Year must match if both are available (within 1 year tolerance)
@@ -908,8 +1017,7 @@ class SubtitleManager:
         
         # Fallback: Check release info for title words
         if release_info:
-            release_lower = release_info.lower()
-            release_clean = ''.join(c for c in release_lower if c.isalnum() or c.isspace())
+            release_clean = ' '.join(sorted(self._words(release_info)))
             
             # Check if significant title words appear in release info
             title_words = [w for w in title_clean.split() if len(w) > 2]
@@ -1260,7 +1368,14 @@ class SubtitleManager:
                 # Download subtitle content if not already downloaded
                 if not sub.content:
                     subliminal_download([sub], provider_configs=provider_configs)
-                
+
+                if not sub.content:
+                    # Conteúdo vazio SEM erro é a assinatura de token velho.
+                    # Se ainda há cota, o problema não é limite: descarta a
+                    # sessão guardada e tenta uma vez mais com login novo.
+                    if self._retry_after_token_reset(sub, provider_configs):
+                        pass
+
                 if not sub.content:
                     # Diz POR QUE falhou (cota estourada é de longe o motivo
                     # mais comum, e antes ficava invisível).
