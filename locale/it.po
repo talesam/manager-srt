@@ -2607,6 +2607,12 @@ msgstr "Cancellazione della cache delle immagini..."
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "Cache immagine svuotato"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 73
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle session cache cleared (%s)"
+msgstr "Cache della sessione dei sottotitoli svuotato (%s)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2633,6 +2639,11 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
 msgid "Use your username, not your e-mail address."
 msgstr "Usa il tuo nome utente, non il tuo indirizzo e-mail."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
+#: NEEDS WORK
+msgid "Subtitle session cache cleared (stale session)"
+msgstr "Cache della sessione dei sottotitoli svuotato (sessione obsoleta)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
 msgid ""

@@ -2600,6 +2600,12 @@ msgstr "이미지 캐시 지우는 중..."
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "이미지 캐시가 지워졌습니다."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 73
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle session cache cleared (%s)"
+msgstr "자막 세션 캐시가 지워졌습니다 (%s)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2623,6 +2629,11 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
 msgid "Use your username, not your e-mail address."
 msgstr "사용자 이름을 사용하세요, 이메일 주소가 아닙니다."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
+#: NEEDS WORK
+msgid "Subtitle session cache cleared (stale session)"
+msgstr "자막 세션 캐시가 지워졌습니다 (오래된 세션)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
 msgid ""

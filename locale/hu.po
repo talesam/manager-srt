@@ -2605,6 +2605,12 @@ msgstr "Kép gyorsítótár törlése..."
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "Kép gyorsítótár törölve"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 73
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle session cache cleared (%s)"
+msgstr "A felirat session cache törölve (%s)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2631,6 +2637,11 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
 msgid "Use your username, not your e-mail address."
 msgstr "Használja a felhasználónevét, ne az e-mail címét."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
+#: NEEDS WORK
+msgid "Subtitle session cache cleared (stale session)"
+msgstr "A felirat session gyorsítótára törölve (elavult session)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
 msgid ""

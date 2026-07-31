@@ -2606,6 +2606,12 @@ msgstr "清除图像缓存..."
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "图像缓存已清除"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 73
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle session cache cleared (%s)"
+msgstr "字幕会话缓存已清除 (%s)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2627,6 +2633,11 @@ msgstr "用户名或密码被 opensubtitles.com 拒绝。请使用用户名（�
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
 msgid "Use your username, not your e-mail address."
 msgstr "使用您的用户名，而不是您的电子邮件地址。"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
+#: NEEDS WORK
+msgid "Subtitle session cache cleared (stale session)"
+msgstr "字幕会话缓存已清除（过期会话）"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
 msgid ""

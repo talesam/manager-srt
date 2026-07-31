@@ -2610,6 +2610,12 @@ msgstr "Καθαρισμός κρυφής μνήμης εικόνας..."
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "Η μνήμη cache εικόνας εκκαθαρίστηκε"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 73
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle session cache cleared (%s)"
+msgstr "Η προσωρινή μνήμη συνεδρίας υποτίτλων εκκαθαρίστηκε (%s)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2637,6 +2643,11 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
 msgid "Use your username, not your e-mail address."
 msgstr "Χρησιμοποιήστε το όνομα χρήστη σας, όχι τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
+#: NEEDS WORK
+msgid "Subtitle session cache cleared (stale session)"
+msgstr "Η προσωρινή μνήμη συνεδρίας υπότιτλων εκκαθαρίστηκε (παλιά συνεδρία)"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
 msgid ""
