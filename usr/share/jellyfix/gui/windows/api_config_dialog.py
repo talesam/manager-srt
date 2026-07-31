@@ -430,7 +430,17 @@ class APIConfigDialog(Adw.Window):
                 dialog = Adw.MessageDialog(
                     transient_for=self,
                     heading=_("✓ Connection Successful"),
-                    body=_("TMDB API key is working correctly!\n\nTest search returned: {}").format(result.title)
+                    # O placeholder fica FORA da string traduzível: o fluxo de
+                    # tradução automática descartava o "{}" no msgstr e o
+                    # msgfmt rejeitava o arquivo inteiro ("a format
+                    # specification for argument '0' doesn't exist in
+                    # 'msgstr'"), invalidando o .mo de 18 idiomas.
+                    body=(
+                        _("TMDB API key is working correctly!")
+                        + "\n\n"
+                        + _("Test search returned:")
+                        + f" {result.title}"
+                    ),
                 )
             else:
                 dialog = Adw.MessageDialog(
