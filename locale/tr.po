@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the jellyfix package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -120,11 +120,11 @@ msgstr "Hata: Dizin mevcut değil: %s"
 # File: usr/share/jellyfix/cli/interactive.py, line: 121
 # File: usr/share/jellyfix/cli/interactive.py, line: 141
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 59
-#. Scan library
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:300
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:320
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:58
+#. Scan library
 #, python-format
 msgid "Scanning: %s"
 msgstr "Tarama: %s"
@@ -142,10 +142,10 @@ msgstr "Bulundu: %d video, %d altyazı"
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 153
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 70
-#. Plan operations
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:329
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:69
+#. Plan operations
 msgid "Planning operations..."
 msgstr "Planlama işlemleri..."
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 75
@@ -171,8 +171,8 @@ msgstr "KURU-ÇALIŞMA modu: Değişiklik yapılmayacak"
 msgid "Use --execute to apply changes"
 msgstr "--execute kullanarak değişiklikleri uygulayın"
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 91
-#. Execute operations
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:91
+#. Execute operations
 #, python-format
 msgid "Executing %d operations..."
 msgstr "%d işlem gerçekleştiriliyor..."
@@ -220,9 +220,9 @@ msgstr "İşlemler:"
 msgid "No operations needed. Everything is already organized!"
 msgstr "Hiçbir işlem gerekli değil. Her şey zaten düzenli!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 167
-#. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:136
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:342
+#. Confirm
 msgid "Execute these operations?"
 msgstr "Bu işlemleri gerçekleştirsin mi?"
 # File: usr/share/jellyfix/cli/interactive.py, line: 173
@@ -236,9 +236,9 @@ msgstr "Bu işlemleri gerçekleştirsin mi?"
 msgid "Operation cancelled"
 msgstr "İşlem iptal edildi"
 # File: usr/share/jellyfix/cli/interactive.py, line: 177
-#. Execute
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:349
+#. Execute
 msgid "Executing operations..."
 msgstr "İşlemler yürütülüyor..."
 # File: usr/share/jellyfix/cli/interactive.py, line: 99
@@ -301,8 +301,8 @@ msgstr "Altyazı indirmek için videoları seçin:"
 msgid "(SPACE to select, ENTER to confirm)"
 msgstr "(SPACE ile seçin, ENTER ile onaylayın)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
-#. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
+#. Confirm
 msgid "Selected:"
 msgstr "Seçili:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
@@ -348,8 +348,8 @@ msgstr "📂 Dizin Tarayıcısı"
 msgid "Current:"
 msgstr "Geçerli:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 211
-#. Add option to select current
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:383
+#. Add option to select current
 msgid "✓ Select this directory"
 msgstr "✓ Bu dizini seçin"
 # File: usr/share/jellyfix/cli/interactive.py, line: 218
@@ -357,18 +357,18 @@ msgstr "✓ Bu dizini seçin"
 msgid "⬆️  .. (go back)"
 msgstr "⬆️  .. (geri dön)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 229
-#. Add manual path entry
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:395
+#. Add manual path entry
 msgid "⌨️  Type path manually"
 msgstr "⌨️  Yolu manuel olarak yazın"
 # File: usr/share/jellyfix/cli/interactive.py, line: 235
-#. Add cancel option
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:398
+#. Add cancel option
 msgid "❌ Cancel"
 msgstr "❌ İptal"
 # File: usr/share/jellyfix/cli/interactive.py, line: 241
-#. Ask
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:401
+#. Ask
 msgid "Select directory:"
 msgstr "Klasör seçin:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 253
@@ -606,8 +606,7 @@ msgstr "NFO dosyalarını videoya uyacak şekilde yeniden adlandırın"
 # File: usr/share/jellyfix/cli/interactive.py, line: 300
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:568
 msgid "Remove non-media files (keep only videos/subtitles)"
-msgstr ""
-"Medya dosyası olmayan dosyaları kaldır (sadece videolar/altyazılar kalsın)"
+msgstr "Medya dosyası olmayan dosyaları kaldır (sadece videolar/altyazılar kalsın)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 333
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:577
 msgid "Organize in folders"
@@ -631,9 +630,7 @@ msgstr "Saklamak için dilleri seçin (silinmeyecek)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 377
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:604
 msgid "Use SPACE to check/uncheck, ENTER to confirm"
-msgstr ""
-"BOŞLUK tuşunu kullanarak işaretleyin/işaretini kaldırın, GİRİŞ tuşuna "
-"basarak onaylayın"
+msgstr "BOŞLUK tuşunu kullanarak işaretleyin/işaretini kaldırın, GİRİŞ tuşuna basarak onaylayın"
 # File: usr/share/jellyfix/cli/interactive.py, line: 390
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:617
 msgid "Select languages to KEEP:"
@@ -650,9 +647,9 @@ msgstr "~/.jellyfix/config.json dosyasına kaydedildi"
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 411
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 38
-#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:638
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:38
+#. Window properties
 msgid "API Configuration"
 msgstr "API Yapılandırması"
 # File: usr/share/jellyfix/cli/interactive.py, line: 415
@@ -763,8 +760,7 @@ msgstr "OpenSubtitles girişi (altyazıları indirmek için gereklidir)."
 # File: usr/share/jellyfix/cli/interactive.py, line: 747
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:747
 msgid "Create a free account at https://www.opensubtitles.com/newuser"
-msgstr ""
-"https://www.opensubtitles.com/newuser adresinde ücretsiz bir hesap oluşturun"
+msgstr "https://www.opensubtitles.com/newuser adresinde ücretsiz bir hesap oluşturun"
 # File: usr/share/jellyfix/cli/interactive.py, line: 748
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:748
 msgid "Use your USERNAME, not your e-mail address."
@@ -808,8 +804,7 @@ msgstr "OpenSubtitles girişi yapılandırılmamış!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 777
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:777
 msgid "Configure it first using 'Configure OpenSubtitles login'"
-msgstr ""
-"Öncelikle 'OpenSubtitles girişini yapılandırın' kullanarak yapılandırın."
+msgstr "Öncelikle 'OpenSubtitles girişini yapılandırın' kullanarak yapılandırın."
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 787
@@ -830,9 +825,7 @@ msgstr "API anahtarı yapılandırılmamış!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 498
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:801
 msgid "Configure a key first using 'Configure TMDB API Key'"
-msgstr ""
-"Öncelikle 'TMDB API Anahtarını Yapılandır' kullanarak bir anahtar "
-"yapılandırın."
+msgstr "Öncelikle 'TMDB API Anahtarını Yapılandır' kullanarak bir anahtar yapılandırın."
 # File: usr/share/jellyfix/cli/interactive.py, line: 504
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:807
 #, python-format
@@ -845,12 +838,10 @@ msgstr "Token'ı API Anahtarı yerine kopyalamış olabilirsiniz!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 506
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:809
 msgid "See 'How to get TMDB key' for details"
-msgstr ""
-"TMDB anahtarını nasıl alacağınızla ilgili ayrıntılar için 'TMDB anahtarını "
-"nasıl alacağınızı' görün."
+msgstr "TMDB anahtarını nasıl alacağınızla ilgili ayrıntılar için 'TMDB anahtarını nasıl alacağınızı' görün."
 # File: usr/share/jellyfix/cli/interactive.py, line: 514
-#. Test with a simple search
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:817
+#. Test with a simple search
 msgid "Making test request..."
 msgstr "Test isteği yapılıyor..."
 # File: usr/share/jellyfix/cli/interactive.py, line: 523
@@ -898,8 +889,8 @@ msgstr "Anahtarın sadece bir kısmını kopyaladınız."
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:841
 msgid "See 'How to get TMDB key' for detailed instructions"
 msgstr ""
-"TMDB anahtarını nasıl alacağınızla ilgili ayrıntılı talimatlar için 'TMDB "
-"anahtarını nasıl alacağınızı' görün."
+"TMDB anahtarını nasıl alacağınızla ilgili ayrıntılı talimatlar için 'TMDB anahtarını nasıl "
+"alacağınızı' görün."
 # File: usr/share/jellyfix/cli/interactive.py, line: 541
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:844
 #, python-format
@@ -987,11 +978,8 @@ msgid "API Key (v3 auth) ← COPY THIS ONE!"
 msgstr "API Anahtarı (v3 kimlik doğrulama) ← BUNU KOPYALAYIN!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 585
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:888
-msgid ""
-"The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
-msgstr ""
-"Doğru anahtar 32 karakterden oluşmaktadır (örneğin: "
-"611bc23b57add08a67b2e64ecb850be8)"
+msgid "The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
+msgstr "Doğru anahtar 32 karakterden oluşmaktadır (örneğin: 611bc23b57add08a67b2e64ecb850be8)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 587
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:890
 msgid "Configure in jellyfix:"
@@ -1143,9 +1131,7 @@ msgstr "Kuru Çalışma Modu:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 632
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:935
 msgid "By default, jellyfix shows what will be done WITHOUT changing files."
-msgstr ""
-"Varsayılan olarak, jellyfix dosyaları değiştirmeden nelerin yapılacağını "
-"gösterir."
+msgstr "Varsayılan olarak, jellyfix dosyaları değiştirmeden nelerin yapılacağını gösterir."
 # File: usr/share/jellyfix/cli/interactive.py, line: 633
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:936
 msgid "You can review changes before applying."
@@ -1173,8 +1159,8 @@ msgstr "Kategori"
 msgid "Count"
 msgstr "Sayım"
 # File: usr/share/jellyfix/cli/display.py, line: 75
-#. Video files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:75
+#. Video files
 msgid "Video files"
 msgstr "Video dosyaları"
 # File: usr/share/jellyfix/cli/display.py, line: 77
@@ -1185,9 +1171,9 @@ msgstr "Bölümler"
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 80
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#. Subtitles with breakdown
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:80
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:57
+#. Subtitles with breakdown
 msgid "Subtitles"
 msgstr "Altyazılar"
 # File: usr/share/jellyfix/cli/display.py, line: 81
@@ -1207,18 +1193,18 @@ msgstr "Yabancı"
 msgid "With language"
 msgstr "Dil ile"
 # File: usr/share/jellyfix/cli/display.py, line: 87
-#. Images
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:87
+#. Images
 msgid "Images"
 msgstr "Görüntüler"
 # File: usr/share/jellyfix/cli/display.py, line: 90
-#. NFO files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:90
+#. NFO files
 msgid "NFO files"
 msgstr "NFO dosyaları"
 # File: usr/share/jellyfix/cli/display.py, line: 93
-#. Other files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:93
+#. Other files
 msgid "Other"
 msgstr "Diğer"
 # File: usr/share/jellyfix/cli/display.py, line: 100
@@ -1269,9 +1255,9 @@ msgid "Remove:"
 msgstr "Kaldır:"
 # File: usr/share/jellyfix/cli/display.py, line: 208
 # File: usr/share/jellyfix/cli/display.py, line: 225
-#. Create summary
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:286
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:340
+#. Create summary
 msgid "Summary"
 msgstr "Özet"
 # File: usr/share/jellyfix/cli/display.py, line: 230
@@ -1282,27 +1268,27 @@ msgstr "Taşı + Yeniden Adlandır"
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 231
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 153
-#. Move (success)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:346
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:194
+#. Move (success)
 msgid "Move"
 msgstr "Hareket Ettir"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 232
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 147
-#. Rename (accent)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:347
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:186
+#. Rename (accent)
 msgid "Rename"
 msgstr "Yeniden Adlandır"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 233
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 159
-#. Delete (destructive)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:348
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:202
+#. Delete (destructive)
 msgid "Delete"
 msgstr "Silmek"
 # File: usr/share/jellyfix/cli/display.py, line: 251
@@ -1337,157 +1323,14 @@ msgstr "Başarısız"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:381
 msgid "Skipped"
 msgstr "Atlanmış"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
-msgid "Login OK — subtitles can be downloaded"
-msgstr "Giriş Başarılı — altyazılar indirilebilir"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 270
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
-msgid "Use your username, not your e-mail address."
-msgstr "Kullanıcı adınızı kullanın, e-posta adresinizi değil."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
-msgid ""
-"opensubtitles.com requires a free account to download subtitles. Set "
-"opensubtitles_username/opensubtitles_password in ~/.jellyfix/config.json (or"
-" the OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD environment variables)."
-msgstr ""
-"opensubtitles.com, altyazıları indirmek için ücretsiz bir hesap gerektirir. "
-"~/.jellyfix/config.json dosyasında "
-"opensubtitles_username/opensubtitles_password ayarlarını yapın (veya "
-"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD ortam değişkenlerini "
-"kullanın)."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
-#, python-format
-msgid "Searching subtitles for: %s (Languages: %s)"
-msgstr "Altyazılar aranıyor: %s (Diller: %s)"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 183
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:397
-#, python-format
-msgid "Level 1 (hash) found: %s"
-msgstr "Seviye 1 (hash) bulundu: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 187
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:401
-#, python-format
-msgid "Missing languages: %s - trying TMDB title search"
-msgstr "Eksik diller: %s - TMDB başlık araması yapılıyor"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 208
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:422
-#, python-format
-msgid "Level 2 (TMDB) found: %s"
-msgstr "Seviye 2 (TMDB) bulundu: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:425
-#, python-format
-msgid "Still missing: %s (try manual search)"
-msgstr "Hala eksik: %s (manuel arama yapmayı deneyin)"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 91
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:428
-#, python-format
-msgid "No subtitles found for: %s"
-msgstr "Alt yazı bulunamadı: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 268
-#. Phase 1: Batch hash search — single pool for all videos
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:472
-#, python-format
-msgid "Batch Level 1: scanning %d videos by hash..."
-msgstr "Toplu Seviye 1: %d videoyu hash ile tarıyor..."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 299
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:510
-#, python-format
-msgid "Level 1 (hash) found: %s for %s"
-msgstr "Seviye 1 (hash) bulundu: %s için %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 313
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:524
-#, python-format
-msgid "Batch Level 2: title search for %d videos..."
-msgstr "Toplu Seviye 2: %d video için başlık araması..."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 331
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:542
-#, python-format
-msgid "Level 2 (TMDB) found: %s for %s"
-msgstr "Seviye 2 (TMDB) bulundu: %s için %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 525
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:567
-#, python-format
-msgid "Level 3 (fallback %s) found: %s for %s"
-msgstr "Seviye 3 (yedek %s) bulundu: %s için %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 238
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:599
-#, python-format
-msgid "Found %d subtitles by hash for: %s"
-msgstr "Hash ile bulundu: %d altyazı için: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 344
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:702
-#, python-format
-msgid "Found %d validated subtitles by title for: %s"
-msgstr "Bulundu: %d onaylı altyazı başlığa göre: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 601
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:959
-#, python-format
-msgid "Manual search: %s"
-msgstr "Manuel arama: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 923
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:975
-#, python-format
-msgid "No results from primary providers, trying: %s"
-msgstr "Birincil sağlayıcılardan sonuç bulunamadı, deniyor: %s"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 79
-#. Release name (cleaned up)
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:996
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
-msgid "Unknown release"
-msgstr "Bilinmeyen sürüm"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1031
-#, python-format
-msgid "Found %d subtitles in manual search"
-msgstr "Manuel aramada %d altyazı bulundu"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
-#, python-format
-msgid "Failed to download subtitle content. %s"
-msgstr "Altyazı içeriği indirilemedi. %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1086
-#, python-format
-msgid "Downloaded subtitle: %s"
-msgstr "İndirilen altyazı: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 101
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:102
-#, python-format
-msgid "Downloaded image: %s"
-msgstr "İndirilen resim: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 106
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:107
-#, python-format
-msgid "Failed to download image: %s"
-msgstr "Görüntü indirilemedi: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 110
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:111
-#, python-format
-msgid "Unexpected error downloading image: %s"
-msgstr "Beklenmedik hata, görüntü indirilirken: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 216
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:217
-msgid "Clearing image cache..."
-msgstr "Görüntü önbelleğini temizliyor..."
-# File: usr/share/jellyfix/core/image_manager.py, line: 218
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
-msgid "Image cache cleared"
-msgstr "Görüntü önbelleği temizlendi"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 46
 # File: usr/share/jellyfix/gui/app.py, line: 122
-#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/app.py:142
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:55
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:105
+#. Window properties
 msgid "Jellyfix"
 msgstr "Jellyfix"
 # File: usr/share/jellyfix/gui/app.py, line: 131
@@ -1496,17 +1339,224 @@ msgid "translator-credits"
 msgstr "çevirmen-kredileri"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 182
-# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 44
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 79
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:996
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
+#. Release name (cleaned up)
+msgid "Unknown release"
+msgstr "Bilinmeyen sürüm"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 165
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
 #. Window properties
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
-msgid "Preferences"
-msgstr "Tercihler"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 183
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:177
-msgid "Configure API Keys"
-msgstr "API Anahtarlarını Yapılandırın"
+msgid "Search Subtitles"
+msgstr "Altyazıları Ara"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 189
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
+#. Download button in header
+msgid "Download"
+msgstr "İndir"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 208
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:208
+msgid "Enter movie or show title..."
+msgstr "Film veya dizi başlığını girin..."
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 216
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:216
+msgid "Season"
+msgstr "Sezon"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 221
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 246
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:221
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:246
+msgid "Episode"
+msgstr "Bölüm"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 176
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:176
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:241
+msgid "Movie"
+msgstr "Film"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 267
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:267
+msgid "Search for Subtitles"
+msgstr "Altyazı Ara"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:268
+msgid "Enter a title and click search"
+msgstr "Bir başlık girin ve arama butonuna tıklayın"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 258
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:260
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:308
+#. Update status
+msgid "Searching..."
+msgstr "Arama yapılıyor..."
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 338
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:338
+msgid "No Results"
+msgstr "Sonuç Yok"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 339
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:339
+msgid "Try a different search term"
+msgstr "Farklı bir arama terimi deneyin"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 342
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:342
+#, python-brace-format
+msgid "Found {} subtitles"
+msgstr "{} altyazı bulundu"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 350
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:333
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:350
+#, python-brace-format
+msgid "Error: {}"
+msgstr "Hata: {}"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 386
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:387
+#, python-brace-format
+msgid "Downloaded: {}"
+msgstr "İndirildi: {}"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 395
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:396
+msgid "Download failed"
+msgstr "İndirme başarısız oldu"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 63
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:63
+msgid "TMDB Configuration"
+msgstr "TMDB Yapılandırması"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 64
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:64
+msgid "Configure The Movie Database API key"
+msgstr "Film Veritabanı API anahtarını yapılandırın"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 200
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:273
+#. Update status
+msgid "✓ Configured"
+msgstr "✓ Yapılandırıldı"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 289
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:357
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
+msgid "✗ Not configured"
+msgstr "✗ Yapılandırılmadı"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 71
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:71
+msgid "TMDB API Key"
+msgstr "TMDB API Anahtarı"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 79
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:79
+msgid "Config file"
+msgstr "Yapılandırma dosyası"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:88
+msgid "OpenSubtitles Login"
+msgstr "OpenSubtitles Girişi"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 89
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
+msgid "A free opensubtitles.com account is required to download subtitles (searching works without it)"
+msgstr ""
+"Ücretsiz bir opensubtitles.com hesabı, altyazıları indirmek için gereklidir (arama işlemi bununla "
+"çalışır)."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
+#, python-format
+msgid "✓ Configured (%s)"
+msgstr "✓ Yapılandırıldı (%s)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
+msgid "Account"
+msgstr "Hesap"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
+msgid "Configure OpenSubtitles Login"
+msgstr "OpenSubtitles Girişini Yapılandırın"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
+msgid "Enter your username and password"
+msgstr "Kullanıcı adınızı ve şifrenizi girin"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
+msgid "Configure"
+msgstr "Yapılandırmak"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
+msgid "Test OpenSubtitles Login"
+msgstr "Test OpenSubtitles Girişi"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
+msgid "Verify your credentials actually work"
+msgstr "Kimlik bilgilerinizi gerçekten çalıştığını doğrulayın"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
+msgid "Test"
+msgstr "Test"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
+msgid "Remove OpenSubtitles Login"
+msgstr "OpenSubtitles Girişini Kaldır"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
+msgid "Delete stored credentials"
+msgstr "Kaydedilen kimlik bilgilerini sil"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:196
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:345
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:469
+msgid "Remove"
+msgstr "Kaldır"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 135
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:135
+msgid "Create a free account"
+msgstr "Ücretsiz bir hesap oluştur"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 138
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:138
+msgid "Open"
+msgstr "Açık"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:147
+msgid "Actions"
+msgstr "Eylemler"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:153
+msgid "Enter your TMDB API key"
+msgstr "TMDB API anahtarınızı girin"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 107
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:166
+msgid "View Current Key"
+msgstr "Mevcut Anahtarı Görüntüle"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 108
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:167
+msgid "Show masked API key"
+msgstr "Maskelenmiş API anahtarını göster"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 111
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:170
+msgid "View"
+msgstr "Görüntüle"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 120
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:179
+msgid "Test TMDB Connection"
+msgstr "TMDB Bağlantısını Test Et"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 121
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:180
+msgid "Verify API key is working"
+msgstr "API anahtarının çalıştığını doğrula"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 133
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:192
+msgid "Remove TMDB Key"
+msgstr "TMDB Anahtarını Kaldır"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 134
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:193
+msgid "Delete stored API key"
+msgstr "Saklanan API anahtarını sil"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 149
@@ -1515,42 +1565,22 @@ msgstr "API Anahtarlarını Yapılandırın"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:182
 msgid "Help"
 msgstr "Yardım"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:183
-msgid "About Jellyfix"
-msgstr "Jellyfix Hakkında"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 193
-#. Quit
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:187
-msgid "Quit"
-msgstr "Çıkış"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
-#. Show scanning toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:255
-msgid "Scanning directory..."
-msgstr "Dizin taranıyor..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
-#. Show generating operations toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:367
-msgid "Generating operations..."
-msgstr "İşlemler üretiliyor..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 301
-#. Show success toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:392
-#, python-brace-format
-msgid "{} operations ready"
-msgstr "{} işlemler hazır"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:518
-msgid "Apply Operations?"
-msgstr "İşlemleri Uygula?"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 327
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 367
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:519
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:551
-#, python-brace-format
-msgid "This will rename {} files. Continue?"
-msgstr "Bu, {} dosyasını yeniden adlandıracaktır. Devam edilsin mi?"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 155
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:214
+msgid "Step-by-step tutorial"
+msgstr "Adım adım öğretici"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 158
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
+msgid "Tutorial"
+msgstr "Eğitim"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
+msgid "Enter your TMDB API key below"
+msgstr "Aşağıya TMDB API anahtarınızı girin"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 184
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:252
+msgid "Paste API key here"
+msgstr "API anahtarını buraya yapıştırın"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 188
@@ -1566,45 +1596,84 @@ msgstr "Bu, {} dosyasını yeniden adlandıracaktır. Devam edilsin mi?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:233
 msgid "Cancel"
 msgstr "İptal"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 330
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:522
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:237
-msgid "Apply"
-msgstr "Uygula"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:550
-msgid "Execute Operations?"
-msgstr "İşlemleri Yürüt?"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:554
-msgid "Execute"
-msgstr "Çalıştır"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 395
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:575
-#, python-brace-format
-msgid "Dry-run: {} operations previewed"
-msgstr "Kuru çalıştırma: {} işlem önizlendi"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 398
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:578
-#, python-brace-format
-msgid "{} operations completed"
-msgstr "{} işlemler tamamlandı"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 751
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:803
-msgid "Feature Unavailable"
-msgstr "Özellik Kullanılamıyor"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 752
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:804
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 189
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:257
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:312
+msgid "Save"
+msgstr "Kaydet"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 203
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:276
+#. Show toast
+msgid "API key saved successfully"
+msgstr "API anahtarı başarıyla kaydedildi"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
 msgid ""
-"The 'subliminal' library is not installed.\n"
-"Please install it to use this feature."
+"Enter your opensubtitles.com username and password.\n"
+"⚠ Use your USERNAME, not your e-mail address."
 msgstr ""
-"'subliminal' kütüphanesi yüklü değil. Bu özelliği kullanmak için lütfen "
-"yükleyin."
+"opensubtitles.com kullanıcı adınızı ve şifrenizi girin.  \n"
+"⚠ E-POSTA adresinizi değil, KULLANICI ADINIZI kullanın."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
+msgid "Username (not e-mail)"
+msgstr "Kullanıcı Adı (e-posta değil)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:299
+msgid "Password"
+msgstr "Şifre"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:306
+#. Toggle password visibility
+msgid "Show password"
+msgstr "Şifreyi göster"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
+msgid "Remove OpenSubtitles Login?"
+msgstr "OpenSubtitles Girişini Kaldır?"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
+msgid ""
+"This will delete your stored credentials. You will not be able to download from opensubtitles.com "
+"until you configure it again."
+msgstr ""
+"Bu, kaydedilmiş kimlik bilgilerinizi silecektir. Yeniden yapılandırana kadar opensubtitles.com'dan "
+"indirme yapamayacaksınız."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
+msgid "Configure your login first"
+msgstr "Öncelikle girişinizi yapılandırın"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
+msgid "Testing login…"
+msgstr "Giriş testi…"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
+#, python-format
+msgid "✓ Login OK (%s)"
+msgstr "✓ Giriş Başarılı (%s)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
+msgid "Current TMDB API Key"
+msgstr "Geçerli TMDB API Anahtarı"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
+msgid "Masked key"
+msgstr "Maskelenmiş anahtar"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
+msgid "Full key stored in"
+msgstr "Tam anahtar depolandı"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 226
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 241
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:402
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:417
+msgid "No API Key"
+msgstr "API Anahtarı Yok"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 227
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:403
+msgid "No TMDB API key configured yet"
+msgstr "Henüz TMDB API anahtarı yapılandırılmamış."
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
@@ -1629,114 +1698,161 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1171
 msgid "OK"
 msgstr "Tamam"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 775
-#. Status Label
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:828
-msgid "Preparing..."
-msgstr "Hazırlanıyor..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 863
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1023
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 242
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
+msgid "Please configure TMDB API key first"
+msgstr "Lütfen önce TMDB API anahtarını yapılandırın."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:432
+msgid "✓ Connection Successful"
+msgstr "✓ Bağlantı Başarılı"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 439
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:439
+msgid "TMDB API key is working correctly!"
+msgstr "TMDB API anahtarı doğru çalışıyor!"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 441
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:441
+msgid "Test search returned:"
+msgstr "Test araması sonucu:"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 262
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
+msgid "⚠ Connection Failed"
+msgstr "⚠ Bağlantı Başarısız"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 263
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:449
+msgid "Could not fetch data from TMDB. Please check your API key."
+msgstr "TMDB'den veri alınamadı. Lütfen API anahtarınızı kontrol edin."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:454
+msgid "✗ Connection Error"
+msgstr "✗ Bağlantı Hatası"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 269
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
 #, python-brace-format
-msgid "Searching subtitles ({}/{})"
-msgstr "Altyazılar aranıyor ({}/{})"
+msgid "Error testing connection: {}"
+msgstr "Bağlantı testi hatası: {}"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 279
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
+msgid "Remove API Key?"
+msgstr "API Anahtarını Kaldır?"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 280
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:466
+msgid "This will delete your stored TMDB API key. You will need to configure it again."
+msgstr "Bu, kaydedilmiş TMDB API anahtarınızı silecektir. Yeniden yapılandırmanız gerekecek."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
+#. Show toast
+msgid "API key removed"
+msgstr "API anahtarı kaldırıldı"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 302
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:492
+msgid ""
+"How to Get TMDB API Key:\n"
+"\n"
+"1. Go to https://www.themoviedb.org/signup\n"
+"2. Create a free account\n"
+"3. Go to Settings → API\n"
+"4. Request an API key (choose \"Developer\" option)\n"
+"5. Fill in the required information\n"
+"6. Copy the API Key (v3 auth)\n"
+"7. Paste it in Jellyfix\n"
+"\n"
+"The API key is free and allows you to:\n"
+"• Fetch movie and TV show metadata\n"
+"• Download posters and backdrops\n"
+"• Get accurate titles and release dates\n"
+"• Organize your library with TMDB IDs"
+msgstr ""
+"TMDB API Anahtarı Nasıl Alınır:\n"
+"\n"
+"1. https://www.themoviedb.org/signup adresine gidin\n"
+"2. Ücretsiz bir hesap oluşturun\n"
+"3. Ayarlar → API'ye gidin\n"
+"4. Bir API anahtarı talep edin ( \"Geliştirici\" seçeneğini seçin)\n"
+"5. Gerekli bilgileri doldurun\n"
+"6. API Anahtarını kopyalayın (v3 kimlik doğrulama)\n"
+"7. Jellyfix'e yapıştırın\n"
+"\n"
+"API anahtarı ücretsizdir ve şunları yapmanıza olanak tanır:\n"
+"• Film ve TV şovu meta verilerini alın\n"
+"• Afişleri ve arka planları indirin\n"
+"• Doğru başlıklar ve çıkış tarihleri alın\n"
+"• Kütüphanenizi TMDB Kimlikleri ile düzenleyin"
+# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 228
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:280
+msgid "RENAME"
+msgstr "YENİDEN ADLANDIR"
+# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 215
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:267
+msgid "MOVE"
+msgstr "TAŞIYOR"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 37
+#: NEEDS WORK
+msgid "MOVE+RENAME"
+msgstr "TAŞI + YENİ AD VER"
+# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 218
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:270
+msgid "DELETE"
+msgstr "SİL"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 51
+#: NEEDS WORK
+msgid "Simulation — nothing will be changed"
+msgstr "Simülasyon — hiçbir şey değişmeyecek"
+# 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/display.py, line: 80
-# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#. Determine message and options based on results
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
-msgid "subtitle"
-msgstr "altyazı"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 58
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 267
+#: NEEDS WORK
+msgid "Simulation"
+msgstr "Simülasyon"
 # 
-# File: usr/share/jellyfix/cli/display.py, line: 80
-# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
-msgid "subtitles"
-msgstr "altyazılar"
-# File: usr/share/jellyfix/cli/interactive.py, line: 170
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
-msgid "video"
-msgstr "video"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 992
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1086
-msgid "No Subtitles Found"
-msgstr "Altyazı Bulunamadı"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 993
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1087
-msgid ""
-"Could not find any subtitles automatically.\n"
-"Try manual search?"
-msgstr ""
-"Otomatik olarak hiçbir altyazı bulunamadı.  \n"
-"Manuel arama yapmayı dener misiniz?"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 997
-#. Some languages missing
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1091
-msgid "Partial Success"
-msgstr "Kısmi Başarı"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1005
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1099
-#, python-brace-format
-msgid ""
-"Downloaded {} {}.\n"
-"\n"
-"Missing languages: {}\n"
-"Try manual search?"
-msgstr ""
-"{} {} indirildi.\n"
-"\n"
-"Eksik diller: {}\n"
-"Manuel arama yapmayı dener misiniz?"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1009
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1104
-#, python-brace-format
-msgid ""
-"Downloaded {} {} for {} of {} {}.\n"
-"Try manual search for missing?"
-msgstr ""
-"{} {}, {} {} içinden {} için indirildi.\n"
-"Eksikler için manuel arama yapmayı dener misiniz?"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 884
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1109
-msgid "Download Complete"
-msgstr "İndirme Tamamlandı"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1015
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1110
-#, python-brace-format
-msgid "Downloaded {} {} for {} {} (all languages)."
-msgstr "{} {}, {} {} (tüm diller) için indirildi."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1026
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1123
-msgid "Manual Search"
-msgstr "Manuel Arama"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 913
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1168
-msgid "Batch Error"
-msgstr "Toplu Hata"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 914
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1169
-#, python-brace-format
-msgid ""
-"An error occurred during batch download:\n"
-"{}"
-msgstr ""
-"Toplu indirme sırasında bir hata oluştu:\n"
-"{}"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1146
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1225
-#, python-brace-format
-msgid "Subtitle downloaded: {}"
-msgstr "Altyazı indirildi: {}"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1332
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1399
-#, python-brace-format
-msgid "Updated: {title} ({year}) - applied to {count} episodes"
-msgstr "Güncellendi: {title} ({year}) - {count} bölüme uygulandı"
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 59
+#: NEEDS WORK
+msgid "Preview only — no file is touched"
+msgstr "Sadece önizleme — hiçbir dosya etkilenmez"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 93
+#: NEEDS WORK
+msgid "Nothing was changed on disk."
+msgstr "Diskte hiçbir şey değiştirilmedi."
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 94
+#: NEEDS WORK
+msgid "Turn off Simulation to apply for real."
+msgstr "Simülasyonu kapatın, gerçek uygulamak için."
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 101
+#: NEEDS WORK
+msgid "Close"
+msgstr "Kapat"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 132
+#: NEEDS WORK
+msgid "operations"
+msgstr "işlemler"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 141
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:178
+#. All button (neutro)
+msgid "All"
+msgstr "Tümü"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 212
+#: NEEDS WORK
+msgid "Nothing in this category"
+msgstr "Bu kategoride hiçbir şey yok."
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 258
+#: NEEDS WORK
+msgid "This file will be permanently deleted"
+msgstr "Bu dosya kalıcı olarak silinecektir."
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 34
-#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:34
+#. Window properties
 msgid "Jellyfix Help"
 msgstr "Jellyfix Yardım"
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 69
@@ -1917,52 +2033,220 @@ msgstr "Hata Bildir"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:204
 msgid "Get TMDB API Key"
 msgstr "TMDB API Anahtarını Al"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 130
-#. Dialog properties
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
-msgid "Search Title"
-msgstr "Arama Başlığı"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 159
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:159
-msgid "Enter movie or series name..."
-msgstr "Film veya dizi adını girin..."
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 163
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:163
-msgid "Search"
-msgstr "Araştırma"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:241
-msgid "Movie"
-msgstr "Film"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 181
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:181
-msgid "TV Series"
-msgstr "TV Dizisi"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 258
-#. Update status
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:260
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:308
-msgid "Searching..."
-msgstr "Arama yapılıyor..."
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 269
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:271
-msgid "TMDB not configured"
-msgstr "TMDB yapılandırılmamış"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 309
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:320
-msgid "No results found"
-msgstr "Sonuç bulunamadı"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 312
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:323
-msgid "results"
-msgstr "sonuçlar"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 350
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:333
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:350
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 182
+# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 44
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:176
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
+#. Window properties
+msgid "Preferences"
+msgstr "Tercihler"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 183
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:177
+msgid "Configure API Keys"
+msgstr "API Anahtarlarını Yapılandırın"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 189
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:183
+msgid "About Jellyfix"
+msgstr "Jellyfix Hakkında"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 193
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:187
+#. Quit
+msgid "Quit"
+msgstr "Çıkış"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:255
+#. Show scanning toast
+msgid "Scanning directory..."
+msgstr "Dizin taranıyor..."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:367
+#. Show generating operations toast
+msgid "Generating operations..."
+msgstr "İşlemler üretiliyor..."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 301
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:392
+#. Show success toast
 #, python-brace-format
-msgid "Error: {}"
-msgstr "Hata: {}"
+msgid "{} operations ready"
+msgstr "{} işlemler hazır"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:518
+msgid "Apply Operations?"
+msgstr "İşlemleri Uygula?"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 330
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 211
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:522
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:237
+msgid "Apply"
+msgstr "Uygula"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 552
+#: NEEDS WORK
+#, python-brace-format
+msgid "renamed: {}"
+msgstr "yeniden adlandırıldı: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 553
+#: NEEDS WORK
+#, python-brace-format
+msgid "moved: {}"
+msgstr "taşındı: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 554
+#: NEEDS WORK
+#, python-brace-format
+msgid "moved and renamed: {}"
+msgstr "taşındı ve yeniden adlandırıldı: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 555
+#: NEEDS WORK
+#, python-brace-format
+msgid "DELETED: {}"
+msgstr "DELETED: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 560
+#: NEEDS WORK
+#, python-brace-format
+msgid "{} operations"
+msgstr "{} işlemleri"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 563
+#: NEEDS WORK
+msgid "Deletions cannot be undone."
+msgstr "Silme işlemleri geri alınamaz."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:550
+msgid "Execute Operations?"
+msgstr "İşlemleri Yürüt?"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:554
+msgid "Execute"
+msgstr "Çalıştır"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 398
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:578
+#, python-brace-format
+msgid "{} operations completed"
+msgstr "{} işlemler tamamlandı"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 751
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:803
+msgid "Feature Unavailable"
+msgstr "Özellik Kullanılamıyor"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 752
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:804
+msgid ""
+"The 'subliminal' library is not installed.\n"
+"Please install it to use this feature."
+msgstr "'subliminal' kütüphanesi yüklü değil. Bu özelliği kullanmak için lütfen yükleyin."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 775
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:828
+#. Status Label
+msgid "Preparing..."
+msgstr "Hazırlanıyor..."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 863
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1023
+#, python-brace-format
+msgid "Searching subtitles ({}/{})"
+msgstr "Altyazılar aranıyor ({}/{})"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/cli/display.py, line: 80
+# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
+#. Determine message and options based on results
+msgid "subtitle"
+msgstr "altyazı"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/cli/display.py, line: 80
+# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
+msgid "subtitles"
+msgstr "altyazılar"
+# File: usr/share/jellyfix/cli/interactive.py, line: 170
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
+msgid "video"
+msgstr "video"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 992
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1086
+msgid "No Subtitles Found"
+msgstr "Altyazı Bulunamadı"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 993
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1087
+msgid ""
+"Could not find any subtitles automatically.\n"
+"Try manual search?"
+msgstr ""
+"Otomatik olarak hiçbir altyazı bulunamadı.  \n"
+"Manuel arama yapmayı dener misiniz?"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 997
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1091
+#. Some languages missing
+msgid "Partial Success"
+msgstr "Kısmi Başarı"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1005
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1099
+#, python-brace-format
+msgid ""
+"Downloaded {} {}.\n"
+"\n"
+"Missing languages: {}\n"
+"Try manual search?"
+msgstr ""
+"{} {} indirildi.\n"
+"\n"
+"Eksik diller: {}\n"
+"Manuel arama yapmayı dener misiniz?"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1009
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1104
+#, python-brace-format
+msgid ""
+"Downloaded {} {} for {} of {} {}.\n"
+"Try manual search for missing?"
+msgstr ""
+"{} {}, {} {} içinden {} için indirildi.\n"
+"Eksikler için manuel arama yapmayı dener misiniz?"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 884
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1109
+msgid "Download Complete"
+msgstr "İndirme Tamamlandı"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1015
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1110
+#, python-brace-format
+msgid "Downloaded {} {} for {} {} (all languages)."
+msgstr "{} {}, {} {} (tüm diller) için indirildi."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1026
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1123
+msgid "Manual Search"
+msgstr "Manuel Arama"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 913
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1168
+msgid "Batch Error"
+msgstr "Toplu Hata"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 914
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1169
+#, python-brace-format
+msgid ""
+"An error occurred during batch download:\n"
+"{}"
+msgstr ""
+"Toplu indirme sırasında bir hata oluştu:\n"
+"{}"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1146
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1225
+#, python-brace-format
+msgid "Subtitle downloaded: {}"
+msgstr "Altyazı indirildi: {}"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1332
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1399
+#, python-brace-format
+msgid "Updated: {title} ({year}) - applied to {count} episodes"
+msgstr "Güncellendi: {title} ({year}) - {count} bölüme uygulandı"
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 60
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:63
 msgid "Subtitle Handling"
@@ -1978,9 +2262,7 @@ msgstr "Dil Varyantlarını Yeniden Adlandır"
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 67
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:70
 msgid "Rename .por2.srt, .eng2.srt to .por.srt, .eng.srt"
-msgstr ""
-".por2.srt, .eng2.srt' dosyalarını '.por.srt, .eng.srt' olarak yeniden "
-"adlandırın."
+msgstr ".por2.srt, .eng2.srt' dosyalarını '.por.srt, .eng.srt' olarak yeniden adlandırın."
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:78
 msgid "Remove Duplicate Variants"
@@ -2120,374 +2402,36 @@ msgstr "Mirabel Dosyalarını Düzelt"
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 244
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:244
 msgid "Rename .pt-BR.hi.srt, .br.hi.srt to .por.srt"
-msgstr ""
-".pt-BR.hi.srt, .br.hi.srt' dosyasını .por.srt olarak yeniden adlandırın."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 63
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:63
-msgid "TMDB Configuration"
-msgstr "TMDB Yapılandırması"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 64
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:64
-msgid "Configure The Movie Database API key"
-msgstr "Film Veritabanı API anahtarını yapılandırın"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 200
-#. Update status
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:273
-msgid "✓ Configured"
-msgstr "✓ Yapılandırıldı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 289
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:357
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
-msgid "✗ Not configured"
-msgstr "✗ Yapılandırılmadı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 71
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:71
-msgid "TMDB API Key"
-msgstr "TMDB API Anahtarı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 79
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:79
-msgid "Config file"
-msgstr "Yapılandırma dosyası"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:88
-msgid "OpenSubtitles Login"
-msgstr "OpenSubtitles Girişi"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 89
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
-msgid ""
-"A free opensubtitles.com account is required to download subtitles "
-"(searching works without it)"
-msgstr ""
-"Ücretsiz bir opensubtitles.com hesabı, altyazıları indirmek için gereklidir "
-"(arama işlemi bununla çalışır)."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
-#, python-format
-msgid "✓ Configured (%s)"
-msgstr "✓ Yapılandırıldı (%s)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
-msgid "Account"
-msgstr "Hesap"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
-msgid "Configure OpenSubtitles Login"
-msgstr "OpenSubtitles Girişini Yapılandırın"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
-msgid "Enter your username and password"
-msgstr "Kullanıcı adınızı ve şifrenizi girin"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
-msgid "Configure"
-msgstr "Yapılandırmak"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
-msgid "Test OpenSubtitles Login"
-msgstr "Test OpenSubtitles Girişi"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
-msgid "Verify your credentials actually work"
-msgstr "Kimlik bilgilerinizi gerçekten çalıştığını doğrulayın"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
-msgid "Test"
-msgstr "Test"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
-msgid "Remove OpenSubtitles Login"
-msgstr "OpenSubtitles Girişini Kaldır"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
-msgid "Delete stored credentials"
-msgstr "Kaydedilen kimlik bilgilerini sil"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:196
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:345
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:469
-msgid "Remove"
-msgstr "Kaldır"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 135
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:135
-msgid "Create a free account"
-msgstr "Ücretsiz bir hesap oluştur"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 138
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:138
-msgid "Open"
-msgstr "Açık"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:147
-msgid "Actions"
-msgstr "Eylemler"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:153
-msgid "Enter your TMDB API key"
-msgstr "TMDB API anahtarınızı girin"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 107
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:166
-msgid "View Current Key"
-msgstr "Mevcut Anahtarı Görüntüle"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 108
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:167
-msgid "Show masked API key"
-msgstr "Maskelenmiş API anahtarını göster"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 111
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:170
-msgid "View"
-msgstr "Görüntüle"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 120
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:179
-msgid "Test TMDB Connection"
-msgstr "TMDB Bağlantısını Test Et"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 121
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:180
-msgid "Verify API key is working"
-msgstr "API anahtarının çalıştığını doğrula"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 133
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:192
-msgid "Remove TMDB Key"
-msgstr "TMDB Anahtarını Kaldır"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 134
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:193
-msgid "Delete stored API key"
-msgstr "Saklanan API anahtarını sil"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 155
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:214
-msgid "Step-by-step tutorial"
-msgstr "Adım adım öğretici"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 158
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
-msgid "Tutorial"
-msgstr "Eğitim"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
-msgid "Enter your TMDB API key below"
-msgstr "Aşağıya TMDB API anahtarınızı girin"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 184
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:252
-msgid "Paste API key here"
-msgstr "API anahtarını buraya yapıştırın"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:257
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:312
-msgid "Save"
-msgstr "Kaydet"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 203
-#. Show toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:276
-msgid "API key saved successfully"
-msgstr "API anahtarı başarıyla kaydedildi"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
-msgid ""
-"Enter your opensubtitles.com username and password.\n"
-"⚠ Use your USERNAME, not your e-mail address."
-msgstr ""
-"opensubtitles.com kullanıcı adınızı ve şifrenizi girin.  \n"
-"⚠ E-POSTA adresinizi değil, KULLANICI ADINIZI kullanın."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
-msgid "Username (not e-mail)"
-msgstr "Kullanıcı Adı (e-posta değil)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:299
-msgid "Password"
-msgstr "Şifre"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
-#. Toggle password visibility
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:306
-msgid "Show password"
-msgstr "Şifreyi göster"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
-msgid "Remove OpenSubtitles Login?"
-msgstr "OpenSubtitles Girişini Kaldır?"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
-msgid ""
-"This will delete your stored credentials. You will not be able to download "
-"from opensubtitles.com until you configure it again."
-msgstr ""
-"Bu, kaydedilmiş kimlik bilgilerinizi silecektir. Yeniden yapılandırana kadar"
-" opensubtitles.com'dan indirme yapamayacaksınız."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
-msgid "Configure your login first"
-msgstr "Öncelikle girişinizi yapılandırın"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
-msgid "Testing login…"
-msgstr "Giriş testi…"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
-#, python-format
-msgid "✓ Login OK (%s)"
-msgstr "✓ Giriş Başarılı (%s)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
-msgid "Current TMDB API Key"
-msgstr "Geçerli TMDB API Anahtarı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
-msgid "Masked key"
-msgstr "Maskelenmiş anahtar"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
-msgid "Full key stored in"
-msgstr "Tam anahtar depolandı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 226
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 241
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:402
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:417
-msgid "No API Key"
-msgstr "API Anahtarı Yok"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 227
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:403
-msgid "No TMDB API key configured yet"
-msgstr "Henüz TMDB API anahtarı yapılandırılmamış."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 242
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
-msgid "Please configure TMDB API key first"
-msgstr "Lütfen önce TMDB API anahtarını yapılandırın."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:432
-msgid "✓ Connection Successful"
-msgstr "✓ Bağlantı Başarılı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 262
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
-msgid "⚠ Connection Failed"
-msgstr "⚠ Bağlantı Başarısız"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 263
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:449
-msgid "Could not fetch data from TMDB. Please check your API key."
-msgstr "TMDB'den veri alınamadı. Lütfen API anahtarınızı kontrol edin."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:454
-msgid "✗ Connection Error"
-msgstr "✗ Bağlantı Hatası"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 269
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
-#, python-brace-format
-msgid "Error testing connection: {}"
-msgstr "Bağlantı testi hatası: {}"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 279
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
-msgid "Remove API Key?"
-msgstr "API Anahtarını Kaldır?"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 280
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:466
-msgid ""
-"This will delete your stored TMDB API key. You will need to configure it "
-"again."
-msgstr ""
-"Bu, kaydedilmiş TMDB API anahtarınızı silecektir. Yeniden yapılandırmanız "
-"gerekecek."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
-#. Show toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
-msgid "API key removed"
-msgstr "API anahtarı kaldırıldı"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 302
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:492
-msgid ""
-"How to Get TMDB API Key:\n"
-"\n"
-"1. Go to https://www.themoviedb.org/signup\n"
-"2. Create a free account\n"
-"3. Go to Settings → API\n"
-"4. Request an API key (choose \"Developer\" option)\n"
-"5. Fill in the required information\n"
-"6. Copy the API Key (v3 auth)\n"
-"7. Paste it in Jellyfix\n"
-"\n"
-"The API key is free and allows you to:\n"
-"• Fetch movie and TV show metadata\n"
-"• Download posters and backdrops\n"
-"• Get accurate titles and release dates\n"
-"• Organize your library with TMDB IDs"
-msgstr ""
-"TMDB API Anahtarı Nasıl Alınır:\n"
-"\n"
-"1. https://www.themoviedb.org/signup adresine gidin\n"
-"2. Ücretsiz bir hesap oluşturun\n"
-"3. Ayarlar → API'ye gidin\n"
-"4. Bir API anahtarı talep edin ( \"Geliştirici\" seçeneğini seçin)\n"
-"5. Gerekli bilgileri doldurun\n"
-"6. API Anahtarını kopyalayın (v3 kimlik doğrulama)\n"
-"7. Jellyfix'e yapıştırın\n"
-"\n"
-"API anahtarı ücretsizdir ve şunları yapmanıza olanak tanır:\n"
-"• Film ve TV şovu meta verilerini alın\n"
-"• Afişleri ve arka planları indirin\n"
-"• Doğru başlıklar ve çıkış tarihleri alın\n"
-"• Kütüphanenizi TMDB Kimlikleri ile düzenleyin"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 165
-#. Window properties
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
-msgid "Search Subtitles"
-msgstr "Altyazıları Ara"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 189
-#. Download button in header
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
-msgid "Download"
-msgstr "İndir"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 208
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:208
-msgid "Enter movie or show title..."
-msgstr "Film veya dizi başlığını girin..."
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 216
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:216
-msgid "Season"
-msgstr "Sezon"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 221
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 246
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:246
-msgid "Episode"
-msgstr "Bölüm"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 267
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:267
-msgid "Search for Subtitles"
-msgstr "Altyazı Ara"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:268
-msgid "Enter a title and click search"
-msgstr "Bir başlık girin ve arama butonuna tıklayın"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 338
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:338
-msgid "No Results"
-msgstr "Sonuç Yok"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 339
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:339
-msgid "Try a different search term"
-msgstr "Farklı bir arama terimi deneyin"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 342
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:342
-#, python-brace-format
-msgid "Found {} subtitles"
-msgstr "{} altyazı bulundu"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 386
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:387
-#, python-brace-format
-msgid "Downloaded: {}"
-msgstr "İndirildi: {}"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 395
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:396
-msgid "Download failed"
-msgstr "İndirme başarısız oldu"
+msgstr ".pt-BR.hi.srt, .br.hi.srt' dosyasını .por.srt olarak yeniden adlandırın."
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 130
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
+#. Dialog properties
+msgid "Search Title"
+msgstr "Arama Başlığı"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 159
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:159
+msgid "Enter movie or series name..."
+msgstr "Film veya dizi adını girin..."
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 163
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:163
+msgid "Search"
+msgstr "Araştırma"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 181
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:181
+msgid "TV Series"
+msgstr "TV Dizisi"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 269
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:271
+msgid "TMDB not configured"
+msgstr "TMDB yapılandırılmamış"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 309
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:320
+msgid "No results found"
+msgstr "Sonuç bulunamadı"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 312
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:323
+msgid "results"
+msgstr "sonuçlar"
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 68
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:73
 msgid "Select Directory to Scan"
@@ -2504,60 +2448,6 @@ msgstr "İşlem Üretimi Başarısız oldu"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:405
 msgid "Execution Failed"
 msgstr "İşlem Başarısız"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 132
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 116
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:151
-msgid "Operations"
-msgstr "İşlemler"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 131
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:166
-msgid "Search..."
-msgstr "Ara..."
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 141
-#. All button (neutro)
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:178
-msgid "All"
-msgstr "Tümü"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 196
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:215
-msgid "Download Subtitles for All"
-msgstr "Tüm Alt Yazıları İndir"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 198
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:217
-msgid "Search and download subtitles for all listed videos"
-msgstr "Tüm listelenen videolar için altyazıları arayın ve indirin"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 180
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:237
-msgid "No Operations"
-msgstr "Hiçbir İşlem"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 181
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
-msgid "Scan a directory to generate operations"
-msgstr "Bir dizini tarayarak işlemler oluşturun"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 304
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:452
-msgid "rename"
-msgstr "yeniden adlandır"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 306
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:454
-msgid "move"
-msgstr "taşınmak"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 308
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:456
-msgid "delete"
-msgstr "silmek"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:459
-#, python-brace-format
-msgid "Showing {} of {} operations"
-msgstr "{} işleminin {} gösteriliyor"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 313
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:461
-#, python-brace-format
-msgid "Total: {} operations"
-msgstr "Toplam: {} işlem"
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 65
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:65
 msgid "No Selection"
@@ -2590,22 +2480,70 @@ msgstr "Den:"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:186
 msgid "To:"
 msgstr "A:"
-# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 215
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:267
-msgid "MOVE"
-msgstr "TAŞIYOR"
-# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 218
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:270
-msgid "DELETE"
-msgstr "SİL"
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 225
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:277
 msgid "MOVE + RENAME"
 msgstr "TAŞI + YENİ AD VER"
-# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 228
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:280
-msgid "RENAME"
-msgstr "YENİDEN ADLANDIR"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 132
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 116
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:151
+msgid "Operations"
+msgstr "İşlemler"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 131
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:166
+msgid "Search..."
+msgstr "Ara..."
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 196
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:215
+msgid "Download Subtitles for All"
+msgstr "Tüm Alt Yazıları İndir"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 198
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:217
+msgid "Search and download subtitles for all listed videos"
+msgstr "Tüm listelenen videolar için altyazıları arayın ve indirin"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 180
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:237
+msgid "No Operations"
+msgstr "Hiçbir İşlem"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 181
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
+msgid "Scan a directory to generate operations"
+msgstr "Bir dizini tarayarak işlemler oluşturun"
+# 
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 269
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 276
+#: NEEDS WORK
+msgid "Preview every change without touching any file"
+msgstr "Herhangi bir dosyaya dokunmadan her değişikliği önizleyin."
+# 
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
+#: NEEDS WORK
+msgid "Simulate"
+msgstr "Simüle et"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 304
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:452
+msgid "rename"
+msgstr "yeniden adlandır"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 306
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:454
+msgid "move"
+msgstr "taşınmak"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 308
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:456
+msgid "delete"
+msgstr "silmek"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:459
+#, python-brace-format
+msgid "Showing {} of {} operations"
+msgstr "{} işleminin {} gösteriliyor"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 313
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:461
+#, python-brace-format
+msgid "Total: {} operations"
+msgstr "Toplam: {} işlem"
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 79
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:83
 msgid "Welcome to Jellyfix"
@@ -2648,19 +2586,179 @@ msgstr "saatler önce"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:212
 msgid "Just now"
 msgstr "Şu anda"
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:439
-msgid "TMDB API key is working correctly!"
-msgstr "TMDB API anahtarı doğru çalışıyor!"
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:441
-msgid "Test search returned:"
-msgstr "Test araması sonucu:"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 257
-#, python-brace-format
-#~ msgid ""
-#~ "TMDB API key is working correctly!\n"
-#~ "\n"
-#~ "Test search returned: {}"
-#~ msgstr ""
-#~ "TMDB API anahtarı doğru bir şekilde çalışıyor! \n"
-#~ "\n"
-#~ "Test araması döndü: {}"
+# File: usr/share/jellyfix/core/image_manager.py, line: 101
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:102
+#, python-format
+msgid "Downloaded image: %s"
+msgstr "İndirilen resim: %s"
+# File: usr/share/jellyfix/core/image_manager.py, line: 106
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:107
+#, python-format
+msgid "Failed to download image: %s"
+msgstr "Görüntü indirilemedi: %s"
+# File: usr/share/jellyfix/core/image_manager.py, line: 110
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:111
+#, python-format
+msgid "Unexpected error downloading image: %s"
+msgstr "Beklenmedik hata, görüntü indirilirken: %s"
+# File: usr/share/jellyfix/core/image_manager.py, line: 216
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:217
+msgid "Clearing image cache..."
+msgstr "Görüntü önbelleğini temizliyor..."
+# File: usr/share/jellyfix/core/image_manager.py, line: 218
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
+msgid "Image cache cleared"
+msgstr "Görüntü önbelleği temizlendi"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
+msgid "Login OK — subtitles can be downloaded"
+msgstr "Giriş Başarılı — altyazılar indirilebilir"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 368
+#: NEEDS WORK
+msgid "opensubtitles.com is rate limiting logins (1 per second per IP). Wait a few seconds and test again."
+msgstr ""
+"opensubtitles.com girişleri hız sınırlaması uyguluyor (IP başına saniyede 1). Birkaç saniye "
+"bekleyin ve tekrar deneyin."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 374
+#: NEEDS WORK
+msgid ""
+"Username or password rejected by opensubtitles.com. Use the USERNAME (not the e-mail), check for a "
+"trailing space, and confirm the account e-mail was verified — a brand new account only works in the "
+"API after confirming the e-mail."
+msgstr ""
+"opensubtitles.com tarafından kullanıcı adı veya şifre reddedildi. KULLANICI ADINI (e-posta değil) "
+"kullanın, sonundaki boşluğu kontrol edin ve hesap e-posta adresinin doğrulandığını onaylayın — yeni "
+"bir hesap yalnızca e-posta doğrulandıktan sonra API'de çalışır."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 270
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
+msgid "Use your username, not your e-mail address."
+msgstr "Kullanıcı adınızı kullanın, e-posta adresinizi değil."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
+msgid ""
+"opensubtitles.com requires a free account to download subtitles. Set "
+"opensubtitles_username/opensubtitles_password in ~/.jellyfix/config.json (or the "
+"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD environment variables)."
+msgstr ""
+"opensubtitles.com, altyazıları indirmek için ücretsiz bir hesap gerektirir. ~/.jellyfix/config.json "
+"dosyasında opensubtitles_username/opensubtitles_password ayarlarını yapın (veya "
+"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD ortam değişkenlerini kullanın)."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 478
+#: NEEDS WORK
+#, python-format
+msgid ""
+"opensubtitles.com daily download limit reached (%(used)s of %(allowed)s used). The subtitle WAS "
+"found, only the download was refused. Quota resets in %(reset)s."
+msgstr ""
+"opensubtitles.com günlük indirme limiti aşıldı (%(used)s / %(allowed)s kullanıldı). Altyazı "
+"BULUNDU, yalnızca indirme reddedildi. Kota %(reset)s içinde sıfırlanacak."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 484
+#: NEEDS WORK
+msgid "less than 24 hours"
+msgstr "24 saatten az"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 489
+#: NEEDS WORK
+#, python-format
+msgid "Download refused by opensubtitles.com (%(remaining)s of %(allowed)s downloads left today)."
+msgstr "opensubtitles.com tarafından indirme reddedildi (%(allowed)s indirmeden %(remaining)s kaldı)."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 493
+#: NEEDS WORK
+msgid "Download refused by opensubtitles.com. Check the login in Settings."
+msgstr "opensubtitles.com tarafından indirme reddedildi. Ayarlardaki girişi kontrol edin."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
+#, python-format
+msgid "Searching subtitles for: %s (Languages: %s)"
+msgstr "Altyazılar aranıyor: %s (Diller: %s)"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 183
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:397
+#, python-format
+msgid "Level 1 (hash) found: %s"
+msgstr "Seviye 1 (hash) bulundu: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 187
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:401
+#, python-format
+msgid "Missing languages: %s - trying TMDB title search"
+msgstr "Eksik diller: %s - TMDB başlık araması yapılıyor"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 208
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:422
+#, python-format
+msgid "Level 2 (TMDB) found: %s"
+msgstr "Seviye 2 (TMDB) bulundu: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 211
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:425
+#, python-format
+msgid "Still missing: %s (try manual search)"
+msgstr "Hala eksik: %s (manuel arama yapmayı deneyin)"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 91
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:428
+#, python-format
+msgid "No subtitles found for: %s"
+msgstr "Alt yazı bulunamadı: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:472
+#. Phase 1: Batch hash search — single pool for all videos
+#, python-format
+msgid "Batch Level 1: scanning %d videos by hash..."
+msgstr "Toplu Seviye 1: %d videoyu hash ile tarıyor..."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 299
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:510
+#, python-format
+msgid "Level 1 (hash) found: %s for %s"
+msgstr "Seviye 1 (hash) bulundu: %s için %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 313
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:524
+#, python-format
+msgid "Batch Level 2: title search for %d videos..."
+msgstr "Toplu Seviye 2: %d video için başlık araması..."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 331
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:542
+#, python-format
+msgid "Level 2 (TMDB) found: %s for %s"
+msgstr "Seviye 2 (TMDB) bulundu: %s için %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 525
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:567
+#, python-format
+msgid "Level 3 (fallback %s) found: %s for %s"
+msgstr "Seviye 3 (yedek %s) bulundu: %s için %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 238
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:599
+#, python-format
+msgid "Found %d subtitles by hash for: %s"
+msgstr "Hash ile bulundu: %d altyazı için: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 344
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:702
+#, python-format
+msgid "Found %d validated subtitles by title for: %s"
+msgstr "Bulundu: %d onaylı altyazı başlığa göre: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 601
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:959
+#, python-format
+msgid "Manual search: %s"
+msgstr "Manuel arama: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 923
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:975
+#, python-format
+msgid "No results from primary providers, trying: %s"
+msgstr "Birincil sağlayıcılardan sonuç bulunamadı, deniyor: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1031
+#, python-format
+msgid "Found %d subtitles in manual search"
+msgstr "Manuel aramada %d altyazı bulundu"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
+#, python-format
+msgid "Failed to download subtitle content. %s"
+msgstr "Altyazı içeriği indirilemedi. %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1086
+#, python-format
+msgid "Downloaded subtitle: %s"
+msgstr "İndirilen altyazı: %s"

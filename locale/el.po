@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the jellyfix package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -120,11 +120,11 @@ msgstr "Σφάλμα: Ο φάκελος δεν υπάρχει: %s"
 # File: usr/share/jellyfix/cli/interactive.py, line: 121
 # File: usr/share/jellyfix/cli/interactive.py, line: 141
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 59
-#. Scan library
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:300
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:320
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:58
+#. Scan library
 #, python-format
 msgid "Scanning: %s"
 msgstr "Σάρωση: %s"
@@ -142,10 +142,10 @@ msgstr "Βρέθηκαν: %d βίντεο, %d υπότιτλοι"
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 153
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 70
-#. Plan operations
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:329
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:69
+#. Plan operations
 msgid "Planning operations..."
 msgstr "Σχεδίαση λειτουργιών..."
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 75
@@ -171,8 +171,8 @@ msgstr "Λειτουργία DRY-RUN: Δεν θα γίνουν αλλαγές"
 msgid "Use --execute to apply changes"
 msgstr "Χρησιμοποιήστε --execute για να εφαρμόσετε τις αλλαγές"
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 91
-#. Execute operations
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:91
+#. Execute operations
 #, python-format
 msgid "Executing %d operations..."
 msgstr "Εκτελώντας %d λειτουργίες..."
@@ -220,9 +220,9 @@ msgstr "Λειτουργίες:"
 msgid "No operations needed. Everything is already organized!"
 msgstr "Δεν απαιτούνται ενέργειες. Όλα είναι ήδη οργανωμένα!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 167
-#. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:136
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:342
+#. Confirm
 msgid "Execute these operations?"
 msgstr "Εκτελέστε αυτές τις ενέργειες;"
 # File: usr/share/jellyfix/cli/interactive.py, line: 173
@@ -236,9 +236,9 @@ msgstr "Εκτελέστε αυτές τις ενέργειες;"
 msgid "Operation cancelled"
 msgstr "Η λειτουργία ακυρώθηκε"
 # File: usr/share/jellyfix/cli/interactive.py, line: 177
-#. Execute
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:349
+#. Execute
 msgid "Executing operations..."
 msgstr "Εκτέλεση λειτουργιών..."
 # File: usr/share/jellyfix/cli/interactive.py, line: 99
@@ -282,9 +282,7 @@ msgstr "Η βιβλιοθήκη Subliminal δεν βρέθηκε!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 125
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:182
 msgid "Please install 'subliminal' to use this feature."
-msgstr ""
-"Παρακαλώ εγκαταστήστε το 'subliminal' για να χρησιμοποιήσετε αυτή τη "
-"δυνατότητα."
+msgstr "Παρακαλώ εγκαταστήστε το 'subliminal' για να χρησιμοποιήσετε αυτή τη δυνατότητα."
 # File: usr/share/jellyfix/cli/interactive.py, line: 135
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:192
 #, python-format
@@ -303,8 +301,8 @@ msgstr "Επιλέξτε βίντεο για λήψη υποτίτλων:"
 msgid "(SPACE to select, ENTER to confirm)"
 msgstr "(ΔΙΑΣΤΗΜΑ για επιλογή, ΕΙΣΑΓΩΓΗ για επιβεβαίωση)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
-#. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
+#. Confirm
 msgid "Selected:"
 msgstr "Επιλεγμένο:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
@@ -350,8 +348,8 @@ msgstr "📂 Περιηγητής Καταλόγων"
 msgid "Current:"
 msgstr "Τρέχων:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 211
-#. Add option to select current
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:383
+#. Add option to select current
 msgid "✓ Select this directory"
 msgstr "✓ Επιλέξτε αυτόν τον φάκελο"
 # File: usr/share/jellyfix/cli/interactive.py, line: 218
@@ -359,18 +357,18 @@ msgstr "✓ Επιλέξτε αυτόν τον φάκελο"
 msgid "⬆️  .. (go back)"
 msgstr "⬆️  .. (πήγαινε πίσω)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 229
-#. Add manual path entry
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:395
+#. Add manual path entry
 msgid "⌨️  Type path manually"
 msgstr "⌨️  Πληκτρολογήστε τη διαδρομή χειροκίνητα"
 # File: usr/share/jellyfix/cli/interactive.py, line: 235
-#. Add cancel option
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:398
+#. Add cancel option
 msgid "❌ Cancel"
 msgstr "❌ Ακύρωση"
 # File: usr/share/jellyfix/cli/interactive.py, line: 241
-#. Ask
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:401
+#. Ask
 msgid "Select directory:"
 msgstr "Επιλέξτε φάκελο:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 253
@@ -629,9 +627,7 @@ msgstr "Επιλέξτε γλώσσες για ΔΙΑΤΗΡΗΣΗ (δεν θα �
 # File: usr/share/jellyfix/cli/interactive.py, line: 377
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:604
 msgid "Use SPACE to check/uncheck, ENTER to confirm"
-msgstr ""
-"Χρησιμοποιήστε το SPACE για να επιλέξετε/αποεπιλέξετε, ENTER για να "
-"επιβεβαιώσετε"
+msgstr "Χρησιμοποιήστε το SPACE για να επιλέξετε/αποεπιλέξετε, ENTER για να επιβεβαιώσετε"
 # File: usr/share/jellyfix/cli/interactive.py, line: 390
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:617
 msgid "Select languages to KEEP:"
@@ -648,9 +644,9 @@ msgstr "Αποθηκεύτηκε στο ~/.jellyfix/config.json"
 # 
 # File: usr/share/jellyfix/cli/interactive.py, line: 411
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 38
-#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:638
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:38
+#. Window properties
 msgid "API Configuration"
 msgstr "Διαμόρφωση API"
 # File: usr/share/jellyfix/cli/interactive.py, line: 415
@@ -761,15 +757,11 @@ msgstr "Σύνδεση OpenSubtitles (απαραίτητη για τη λήψη 
 # File: usr/share/jellyfix/cli/interactive.py, line: 747
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:747
 msgid "Create a free account at https://www.opensubtitles.com/newuser"
-msgstr ""
-"Δημιουργήστε έναν δωρεάν λογαριασμό στο "
-"https://www.opensubtitles.com/newuser"
+msgstr "Δημιουργήστε έναν δωρεάν λογαριασμό στο https://www.opensubtitles.com/newuser"
 # File: usr/share/jellyfix/cli/interactive.py, line: 748
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:748
 msgid "Use your USERNAME, not your e-mail address."
-msgstr ""
-"Χρησιμοποιήστε το ΟΝΟΜΑ ΧΡΗΣΤΗ σας, όχι τη διεύθυνση ηλεκτρονικού "
-"ταχυδρομείου σας."
+msgstr "Χρησιμοποιήστε το ΟΝΟΜΑ ΧΡΗΣΤΗ σας, όχι τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας."
 # File: usr/share/jellyfix/cli/interactive.py, line: 750
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:750
 msgid "Username (not e-mail):"
@@ -845,8 +837,8 @@ msgstr "Μπορεί να έχετε αντιγράψει το Token αντί γ
 msgid "See 'How to get TMDB key' for details"
 msgstr "Δείτε 'Πώς να αποκτήσετε το κλειδί TMDB' για λεπτομέρειες"
 # File: usr/share/jellyfix/cli/interactive.py, line: 514
-#. Test with a simple search
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:817
+#. Test with a simple search
 msgid "Making test request..."
 msgstr "Δημιουργία δοκιμαστικού αιτήματος..."
 # File: usr/share/jellyfix/cli/interactive.py, line: 523
@@ -981,10 +973,8 @@ msgid "API Key (v3 auth) ← COPY THIS ONE!"
 msgstr "Κλειδί API (αυθεντικοποίηση v3) ← ΑΝΤΙΓΡΑΨΤΕ ΑΥΤΟ!"
 # File: usr/share/jellyfix/cli/interactive.py, line: 585
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:888
-msgid ""
-"The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
-msgstr ""
-"Το σωστό κλειδί έχει 32 χαρακτήρες (π.χ.: 611bc23b57add08a67b2e64ecb850be8)"
+msgid "The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
+msgstr "Το σωστό κλειδί έχει 32 χαρακτήρες (π.χ.: 611bc23b57add08a67b2e64ecb850be8)"
 # File: usr/share/jellyfix/cli/interactive.py, line: 587
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:890
 msgid "Configure in jellyfix:"
@@ -1139,8 +1129,7 @@ msgstr "Λειτουργία Δοκιμής χωρίς Εκτέλεση:"
 # File: usr/share/jellyfix/cli/interactive.py, line: 632
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:935
 msgid "By default, jellyfix shows what will be done WITHOUT changing files."
-msgstr ""
-"Από προεπιλογή, το jellyfix δείχνει τι θα γίνει ΧΩΡΙΣ να αλλάξει αρχεία."
+msgstr "Από προεπιλογή, το jellyfix δείχνει τι θα γίνει ΧΩΡΙΣ να αλλάξει αρχεία."
 # File: usr/share/jellyfix/cli/interactive.py, line: 633
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:936
 msgid "You can review changes before applying."
@@ -1168,8 +1157,8 @@ msgstr "Κατηγορία"
 msgid "Count"
 msgstr "Μετρήστε"
 # File: usr/share/jellyfix/cli/display.py, line: 75
-#. Video files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:75
+#. Video files
 msgid "Video files"
 msgstr "Αρχεία βίντεο"
 # File: usr/share/jellyfix/cli/display.py, line: 77
@@ -1180,9 +1169,9 @@ msgstr "Επεισόδια"
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 80
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#. Subtitles with breakdown
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:80
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:57
+#. Subtitles with breakdown
 msgid "Subtitles"
 msgstr "Υπότιτλοι"
 # File: usr/share/jellyfix/cli/display.py, line: 81
@@ -1202,18 +1191,18 @@ msgstr "Ξένος"
 msgid "With language"
 msgstr "Με γλώσσα"
 # File: usr/share/jellyfix/cli/display.py, line: 87
-#. Images
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:87
+#. Images
 msgid "Images"
 msgstr "Εικόνες"
 # File: usr/share/jellyfix/cli/display.py, line: 90
-#. NFO files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:90
+#. NFO files
 msgid "NFO files"
 msgstr "Αρχεία NFO"
 # File: usr/share/jellyfix/cli/display.py, line: 93
-#. Other files
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:93
+#. Other files
 msgid "Other"
 msgstr "Άλλο"
 # File: usr/share/jellyfix/cli/display.py, line: 100
@@ -1264,9 +1253,9 @@ msgid "Remove:"
 msgstr "Αφαίρεση:"
 # File: usr/share/jellyfix/cli/display.py, line: 208
 # File: usr/share/jellyfix/cli/display.py, line: 225
-#. Create summary
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:286
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:340
+#. Create summary
 msgid "Summary"
 msgstr "Περίληψη"
 # File: usr/share/jellyfix/cli/display.py, line: 230
@@ -1277,27 +1266,27 @@ msgstr "Μετακίνηση + Μετονομασία"
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 231
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 153
-#. Move (success)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:346
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:194
+#. Move (success)
 msgid "Move"
 msgstr "Μετακίνηση"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 232
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 147
-#. Rename (accent)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:347
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:186
+#. Rename (accent)
 msgid "Rename"
 msgstr "Μετονομασία"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/cli/display.py, line: 233
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 159
-#. Delete (destructive)
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:348
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:202
+#. Delete (destructive)
 msgid "Delete"
 msgstr "Διαγραφή"
 # File: usr/share/jellyfix/cli/display.py, line: 251
@@ -1332,158 +1321,14 @@ msgstr "Απέτυχε"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:381
 msgid "Skipped"
 msgstr "Παραλείφθηκε"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
-msgid "Login OK — subtitles can be downloaded"
-msgstr "Είσοδος OK — οι υπότιτλοι μπορούν να κατεβούν"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 270
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
-msgid "Use your username, not your e-mail address."
-msgstr ""
-"Χρησιμοποιήστε το όνομα χρήστη σας, όχι τη διεύθυνση ηλεκτρονικού "
-"ταχυδρομείου σας."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
-msgid ""
-"opensubtitles.com requires a free account to download subtitles. Set "
-"opensubtitles_username/opensubtitles_password in ~/.jellyfix/config.json (or"
-" the OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD environment variables)."
-msgstr ""
-"Το opensubtitles.com απαιτεί έναν δωρεάν λογαριασμό για να κατεβάσετε "
-"υπότιτλους. Ρυθμίστε το opensubtitles_username/opensubtitles_password στο "
-"~/.jellyfix/config.json (ή τις μεταβλητές περιβάλλοντος "
-"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD)."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
-#, python-format
-msgid "Searching subtitles for: %s (Languages: %s)"
-msgstr "Αναζητώντας υπότιτλους για: %s (Γλώσσες: %s)"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 183
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:397
-#, python-format
-msgid "Level 1 (hash) found: %s"
-msgstr "Επίπεδο 1 (hash) βρέθηκε: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 187
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:401
-#, python-format
-msgid "Missing languages: %s - trying TMDB title search"
-msgstr "Λείπουν γλώσσες: %s - προσπαθώντας αναζήτηση τίτλου TMDB"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 208
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:422
-#, python-format
-msgid "Level 2 (TMDB) found: %s"
-msgstr "Επίπεδο 2 (TMDB) βρέθηκε: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:425
-#, python-format
-msgid "Still missing: %s (try manual search)"
-msgstr "Ακόμα λείπει: %s (δοκιμάστε χειροκίνητη αναζήτηση)"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 91
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:428
-#, python-format
-msgid "No subtitles found for: %s"
-msgstr "Δεν βρέθηκαν υπότιτλοι για: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 268
-#. Phase 1: Batch hash search — single pool for all videos
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:472
-#, python-format
-msgid "Batch Level 1: scanning %d videos by hash..."
-msgstr "Μαζικό Επίπεδο 1: σάρωση %d βίντεο με βάση το hash..."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 299
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:510
-#, python-format
-msgid "Level 1 (hash) found: %s for %s"
-msgstr "Επίπεδο 1 (hash) βρέθηκε: %s για %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 313
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:524
-#, python-format
-msgid "Batch Level 2: title search for %d videos..."
-msgstr "Μαζική Επίπεδο 2: αναζήτηση τίτλου για %d βίντεο..."
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 331
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:542
-#, python-format
-msgid "Level 2 (TMDB) found: %s for %s"
-msgstr "Επίπεδο 2 (TMDB) βρέθηκε: %s για %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 525
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:567
-#, python-format
-msgid "Level 3 (fallback %s) found: %s for %s"
-msgstr "Επίπεδο 3 (εναλλακτική %s) βρέθηκε: %s για %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 238
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:599
-#, python-format
-msgid "Found %d subtitles by hash for: %s"
-msgstr "Βρέθηκαν %d υπότιτλοι με βάση το hash για: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 344
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:702
-#, python-format
-msgid "Found %d validated subtitles by title for: %s"
-msgstr "Βρέθηκαν %d επικυρωμένοι υπότιτλοι κατά τίτλο για: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 601
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:959
-#, python-format
-msgid "Manual search: %s"
-msgstr "Χειροκίνητη αναζήτηση: %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 923
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:975
-#, python-format
-msgid "No results from primary providers, trying: %s"
-msgstr "Δεν υπάρχουν αποτελέσματα από τους κύριους παρόχους, προσπαθώντας: %s"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 79
-#. Release name (cleaned up)
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:996
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
-msgid "Unknown release"
-msgstr "Άγνωστη έκδοση"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1031
-#, python-format
-msgid "Found %d subtitles in manual search"
-msgstr "Βρέθηκαν %d υπότιτλοι στην αυτόματη αναζήτηση"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
-#, python-format
-msgid "Failed to download subtitle content. %s"
-msgstr "Αποτυχία λήψης περιεχομένου υπότιτλων. %s"
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1086
-#, python-format
-msgid "Downloaded subtitle: %s"
-msgstr "Ληφθείσα υπότιτλος: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 101
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:102
-#, python-format
-msgid "Downloaded image: %s"
-msgstr "Ληφθείσα εικόνα: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 106
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:107
-#, python-format
-msgid "Failed to download image: %s"
-msgstr "Αποτυχία λήψης εικόνας: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 110
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:111
-#, python-format
-msgid "Unexpected error downloading image: %s"
-msgstr "Αναπάντεχο σφάλμα κατά τη λήψη εικόνας: %s"
-# File: usr/share/jellyfix/core/image_manager.py, line: 216
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:217
-msgid "Clearing image cache..."
-msgstr "Καθαρισμός κρυφής μνήμης εικόνας..."
-# File: usr/share/jellyfix/core/image_manager.py, line: 218
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
-msgid "Image cache cleared"
-msgstr "Η μνήμη cache εικόνας εκκαθαρίστηκε"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 46
 # File: usr/share/jellyfix/gui/app.py, line: 122
-#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/app.py:142
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:55
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:105
+#. Window properties
 msgid "Jellyfix"
 msgstr "Jellyfix"
 # File: usr/share/jellyfix/gui/app.py, line: 131
@@ -1492,17 +1337,224 @@ msgid "translator-credits"
 msgstr "πιστώσεις μεταφραστή"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 182
-# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 44
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 79
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:996
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
+#. Release name (cleaned up)
+msgid "Unknown release"
+msgstr "Άγνωστη έκδοση"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 165
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
 #. Window properties
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
-msgid "Preferences"
-msgstr "Προτιμήσεις"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 183
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:177
-msgid "Configure API Keys"
-msgstr "Ρυθμίστε τα κλειδιά API"
+msgid "Search Subtitles"
+msgstr "Αναζήτηση Υποτίτλων"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 189
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
+#. Download button in header
+msgid "Download"
+msgstr "Λήψη"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 208
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:208
+msgid "Enter movie or show title..."
+msgstr "Εισάγετε τον τίτλο ταινίας ή εκπομπής..."
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 216
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:216
+msgid "Season"
+msgstr "Σεζόν"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 221
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 246
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:221
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:246
+msgid "Episode"
+msgstr "Επεισόδιο"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 176
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:176
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:241
+msgid "Movie"
+msgstr "Ταινία"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 267
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:267
+msgid "Search for Subtitles"
+msgstr "Αναζήτηση Υποτίτλων"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:268
+msgid "Enter a title and click search"
+msgstr "Εισάγετε έναν τίτλο και κάντε κλικ στην αναζήτηση"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 258
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:260
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:308
+#. Update status
+msgid "Searching..."
+msgstr "Αναζήτηση..."
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 338
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:338
+msgid "No Results"
+msgstr "Δεν βρέθηκαν αποτελέσματα"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 339
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:339
+msgid "Try a different search term"
+msgstr "Δοκιμάστε έναν διαφορετικό όρο αναζήτησης"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 342
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:342
+#, python-brace-format
+msgid "Found {} subtitles"
+msgstr "Βρέθηκαν {} υπότιτλοι"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 350
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:333
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:350
+#, python-brace-format
+msgid "Error: {}"
+msgstr "Σφάλμα: {}"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 386
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:387
+#, python-brace-format
+msgid "Downloaded: {}"
+msgstr "Λήφθηκε: {}"
+# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 395
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:396
+msgid "Download failed"
+msgstr "Η λήψη απέτυχε"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 63
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:63
+msgid "TMDB Configuration"
+msgstr "Ρυθμίσεις TMDB"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 64
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:64
+msgid "Configure The Movie Database API key"
+msgstr "Ρυθμίστε το κλειδί API της Βάσης Δεδομένων Ταινιών"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 200
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:273
+#. Update status
+msgid "✓ Configured"
+msgstr "✓ Ρυθμισμένο"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 289
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:357
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
+msgid "✗ Not configured"
+msgstr "✗ Μη ρυθμισμένο"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 71
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:71
+msgid "TMDB API Key"
+msgstr "Κλειδί API TMDB"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 79
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:79
+msgid "Config file"
+msgstr "Αρχείο ρυθμίσεων"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:88
+msgid "OpenSubtitles Login"
+msgstr "Σύνδεση OpenSubtitles"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 89
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
+msgid "A free opensubtitles.com account is required to download subtitles (searching works without it)"
+msgstr ""
+"Απαιτείται ένας δωρεάν λογαριασμός opensubtitles.com για να κατεβάσετε υπότιτλους (η αναζήτηση "
+"λειτουργεί χωρίς αυτόν)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
+#, python-format
+msgid "✓ Configured (%s)"
+msgstr "✓ Ρυθμισμένο (%s)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
+msgid "Account"
+msgstr "Λογαριασμός"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
+msgid "Configure OpenSubtitles Login"
+msgstr "Ρύθμιση Σύνδεσης OpenSubtitles"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
+msgid "Enter your username and password"
+msgstr "Εισάγετε το όνομα χρήστη και τον κωδικό πρόσβασης"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
+msgid "Configure"
+msgstr "Ρύθμιση"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
+msgid "Test OpenSubtitles Login"
+msgstr "Δοκιμή Σύνδεσης OpenSubtitles"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
+msgid "Verify your credentials actually work"
+msgstr "Επιβεβαιώστε ότι τα διαπιστευτήριά σας λειτουργούν πραγματικά"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
+msgid "Test"
+msgstr "Δοκιμή"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
+msgid "Remove OpenSubtitles Login"
+msgstr "Αφαίρεση Σύνδεσης OpenSubtitles"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
+msgid "Delete stored credentials"
+msgstr "Διαγραφή αποθηκευμένων διαπιστευτηρίων"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:196
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:345
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:469
+msgid "Remove"
+msgstr "Αφαίρεση"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 135
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:135
+msgid "Create a free account"
+msgstr "Δημιουργήστε έναν δωρεάν λογαριασμό"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 138
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:138
+msgid "Open"
+msgstr "Άνοιγμα"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:147
+msgid "Actions"
+msgstr "Ενέργειες"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:153
+msgid "Enter your TMDB API key"
+msgstr "Εισάγετε το κλειδί API του TMDB σας"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 107
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:166
+msgid "View Current Key"
+msgstr "Προβολή Τρέχοντος Κλειδιού"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 108
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:167
+msgid "Show masked API key"
+msgstr "Εμφάνιση κρυμμένου κλειδιού API"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 111
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:170
+msgid "View"
+msgstr "Προβολή"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 120
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:179
+msgid "Test TMDB Connection"
+msgstr "Δοκιμή σύνδεσης TMDB"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 121
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:180
+msgid "Verify API key is working"
+msgstr "Επιβεβαιώστε ότι το API key λειτουργεί"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 133
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:192
+msgid "Remove TMDB Key"
+msgstr "Αφαίρεση κλειδιού TMDB"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 134
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:193
+msgid "Delete stored API key"
+msgstr "Διαγραφή αποθηκευμένου κλειδιού API"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 149
@@ -1511,42 +1563,22 @@ msgstr "Ρυθμίστε τα κλειδιά API"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:182
 msgid "Help"
 msgstr "Βοήθεια"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:183
-msgid "About Jellyfix"
-msgstr "Σχετικά με το Jellyfix"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 193
-#. Quit
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:187
-msgid "Quit"
-msgstr "Έξοδος"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
-#. Show scanning toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:255
-msgid "Scanning directory..."
-msgstr "Σάρωση καταλόγου..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
-#. Show generating operations toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:367
-msgid "Generating operations..."
-msgstr "Δημιουργία λειτουργιών..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 301
-#. Show success toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:392
-#, python-brace-format
-msgid "{} operations ready"
-msgstr "{} λειτουργίες έτοιμες"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:518
-msgid "Apply Operations?"
-msgstr "Εφαρμογή Λειτουργιών;"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 327
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 367
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:519
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:551
-#, python-brace-format
-msgid "This will rename {} files. Continue?"
-msgstr "Αυτό θα μετονομάσει {} αρχεία. Συνεχίσετε;"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 155
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:214
+msgid "Step-by-step tutorial"
+msgstr "Βήμα-προς-βήμα οδηγός"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 158
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
+msgid "Tutorial"
+msgstr "Οδηγός"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
+msgid "Enter your TMDB API key below"
+msgstr "Εισάγετε το κλειδί API TMDB παρακάτω"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 184
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:252
+msgid "Paste API key here"
+msgstr "Επικολλήστε το κλειδί API εδώ"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 188
@@ -1562,45 +1594,84 @@ msgstr "Αυτό θα μετονομάσει {} αρχεία. Συνεχίσετ
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:233
 msgid "Cancel"
 msgstr "Ακύρωση"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 330
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:522
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:237
-msgid "Apply"
-msgstr "Εφαρμογή"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:550
-msgid "Execute Operations?"
-msgstr "Εκτέλεση Λειτουργιών;"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:554
-msgid "Execute"
-msgstr "Εκτέλεση"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 395
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:575
-#, python-brace-format
-msgid "Dry-run: {} operations previewed"
-msgstr "Προσομοίωση: {} λειτουργίες προεπισκοπημένες"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 398
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:578
-#, python-brace-format
-msgid "{} operations completed"
-msgstr "{} λειτουργίες ολοκληρώθηκαν"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 751
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:803
-msgid "Feature Unavailable"
-msgstr "Η δυνατότητα δεν είναι διαθέσιμη"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 752
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:804
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 189
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:257
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:312
+msgid "Save"
+msgstr "Αποθήκευση"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 203
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:276
+#. Show toast
+msgid "API key saved successfully"
+msgstr "Το κλειδί API αποθηκεύτηκε με επιτυχία"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
 msgid ""
-"The 'subliminal' library is not installed.\n"
-"Please install it to use this feature."
+"Enter your opensubtitles.com username and password.\n"
+"⚠ Use your USERNAME, not your e-mail address."
 msgstr ""
-"Η βιβλιοθήκη 'subliminal' δεν είναι εγκατεστημένη. Παρακαλώ εγκαταστήστε την"
-" για να χρησιμοποιήσετε αυτή τη δυνατότητα."
+"Εισάγετε το όνομα χρήστη και τον κωδικό πρόσβασης σας στο opensubtitles.com.  \n"
+"⚠ Χρησιμοποιήστε το ΟΝΟΜΑ ΧΡΗΣΤΗ σας, όχι τη διεύθυνση email σας."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
+msgid "Username (not e-mail)"
+msgstr "Όνομα χρήστη (όχι email)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:299
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:306
+#. Toggle password visibility
+msgid "Show password"
+msgstr "Εμφάνιση κωδικού πρόσβασης"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
+msgid "Remove OpenSubtitles Login?"
+msgstr "Αφαίρεση σύνδεσης OpenSubtitles;"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
+msgid ""
+"This will delete your stored credentials. You will not be able to download from opensubtitles.com "
+"until you configure it again."
+msgstr ""
+"Αυτό θα διαγράψει τα αποθηκευμένα διαπιστευτήριά σας. Δεν θα μπορείτε να κατεβάσετε από το "
+"opensubtitles.com μέχρι να το ρυθμίσετε ξανά."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
+msgid "Configure your login first"
+msgstr "Ρυθμίστε πρώτα την είσοδό σας"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
+msgid "Testing login…"
+msgstr "Δοκιμή σύνδεσης…"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
+#, python-format
+msgid "✓ Login OK (%s)"
+msgstr "✓ Σύνδεση OK (%s)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
+msgid "Current TMDB API Key"
+msgstr "Τρέχων κωδικός API TMDB"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
+msgid "Masked key"
+msgstr "Μασκαρισμένο κλειδί"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
+msgid "Full key stored in"
+msgstr "Πλήρης κλειδί αποθηκευμένο σε"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 226
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 241
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:402
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:417
+msgid "No API Key"
+msgstr "Κανένα API Key"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 227
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:403
+msgid "No TMDB API key configured yet"
+msgstr "Δεν έχει ρυθμιστεί ακόμη κλειδί API TMDB"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
@@ -1625,114 +1696,161 @@ msgstr ""
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1171
 msgid "OK"
 msgstr "Εντάξει"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 775
-#. Status Label
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:828
-msgid "Preparing..."
-msgstr "Ετοιμασία..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 863
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1023
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 242
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
+msgid "Please configure TMDB API key first"
+msgstr "Παρακαλώ ρυθμίστε πρώτα το κλειδί API του TMDB."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:432
+msgid "✓ Connection Successful"
+msgstr "✓ Η σύνδεση ήταν επιτυχής"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 439
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:439
+msgid "TMDB API key is working correctly!"
+msgstr "Το κλειδί API TMDB λειτουργεί σωστά!"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 441
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:441
+msgid "Test search returned:"
+msgstr "Η δοκιμαστική αναζήτηση επέστρεψε:"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 262
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
+msgid "⚠ Connection Failed"
+msgstr "⚠ Αποτυχία Σύνδεσης"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 263
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:449
+msgid "Could not fetch data from TMDB. Please check your API key."
+msgstr "Δεν ήταν δυνατή η λήψη δεδομένων από το TMDB. Παρακαλώ ελέγξτε το API key σας."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:454
+msgid "✗ Connection Error"
+msgstr "✗ Σφάλμα Σύνδεσης"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 269
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
 #, python-brace-format
-msgid "Searching subtitles ({}/{})"
-msgstr "Αναζητώντας υπότιτλους ({}/{})"
+msgid "Error testing connection: {}"
+msgstr "Σφάλμα κατά τη δοκιμή σύνδεσης: {}"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 279
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
+msgid "Remove API Key?"
+msgstr "Αφαίρεση κλειδιού API;"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 280
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:466
+msgid "This will delete your stored TMDB API key. You will need to configure it again."
+msgstr "Αυτό θα διαγράψει το αποθηκευμένο κλειδί API TMDB σας. Θα χρειαστεί να το ρυθμίσετε ξανά."
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
+#. Show toast
+msgid "API key removed"
+msgstr "Κλειδί API αφαιρεθέν"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 302
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:492
+msgid ""
+"How to Get TMDB API Key:\n"
+"\n"
+"1. Go to https://www.themoviedb.org/signup\n"
+"2. Create a free account\n"
+"3. Go to Settings → API\n"
+"4. Request an API key (choose \"Developer\" option)\n"
+"5. Fill in the required information\n"
+"6. Copy the API Key (v3 auth)\n"
+"7. Paste it in Jellyfix\n"
+"\n"
+"The API key is free and allows you to:\n"
+"• Fetch movie and TV show metadata\n"
+"• Download posters and backdrops\n"
+"• Get accurate titles and release dates\n"
+"• Organize your library with TMDB IDs"
+msgstr ""
+"Πώς να αποκτήσετε το κλειδί API του TMDB:\n"
+"\n"
+"1. Μεταβείτε στο https://www.themoviedb.org/signup\n"
+"2. Δημιουργήστε έναν δωρεάν λογαριασμό\n"
+"3. Μεταβείτε στις Ρυθμίσεις → API\n"
+"4. Ζητήστε ένα κλειδί API (επιλέξτε την επιλογή \"Προγραμματιστής\")\n"
+"5. Συμπληρώστε τις απαιτούμενες πληροφορίες\n"
+"6. Αντιγράψτε το κλειδί API (v3 auth)\n"
+"7. Επικολλήστε το στο Jellyfix\n"
+"\n"
+"Το κλειδί API είναι δωρεάν και σας επιτρέπει να:\n"
+"• Ανακτήσετε μεταδεδομένα ταινιών και τηλεοπτικών εκπομπών\n"
+"• Κατεβάσετε αφίσες και φόντα\n"
+"• Λάβετε ακριβείς τίτλους και ημερομηνίες κυκλοφορίας\n"
+"• Οργανώσετε τη βιβλιοθήκη σας με ταυτότητες TMDB"
+# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 228
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:280
+msgid "RENAME"
+msgstr "Μετονομασία"
+# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 215
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:267
+msgid "MOVE"
+msgstr "ΜΕΤΑΚΙΝΗΣΗ"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 37
+#: NEEDS WORK
+msgid "MOVE+RENAME"
+msgstr "ΜΕΤΑΚΙΝΗΣΗ+ΜΕΤΟΝΟΜΑΣΙΑ"
+# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 218
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:270
+msgid "DELETE"
+msgstr "ΔΙΑΓΡΑΦΗ"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 51
+#: NEEDS WORK
+msgid "Simulation — nothing will be changed"
+msgstr "Προσομοίωση — τίποτα δεν θα αλλάξει"
+# 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/display.py, line: 80
-# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#. Determine message and options based on results
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
-msgid "subtitle"
-msgstr "υπότιτλος"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 58
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 267
+#: NEEDS WORK
+msgid "Simulation"
+msgstr "Προσομοίωση"
 # 
-# File: usr/share/jellyfix/cli/display.py, line: 80
-# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
-msgid "subtitles"
-msgstr "υπότιτλοι"
-# File: usr/share/jellyfix/cli/interactive.py, line: 170
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
-msgid "video"
-msgstr "βίντεο"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 992
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1086
-msgid "No Subtitles Found"
-msgstr "Δεν βρέθηκαν υπότιτλοι"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 993
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1087
-msgid ""
-"Could not find any subtitles automatically.\n"
-"Try manual search?"
-msgstr ""
-"Δεν βρέθηκαν αυτόματα υπότιτλοι.  \n"
-"Δοκιμάστε αναζήτηση χειροκίνητα;"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 997
-#. Some languages missing
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1091
-msgid "Partial Success"
-msgstr "Μερική Επιτυχία"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1005
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1099
-#, python-brace-format
-msgid ""
-"Downloaded {} {}.\n"
-"\n"
-"Missing languages: {}\n"
-"Try manual search?"
-msgstr ""
-"Λήφθηκε {} {}.\n"
-"\n"
-"Γλώσσες που λείπουν: {}\n"
-"Δοκιμή χειροκίνητης αναζήτησης;"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1009
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1104
-#, python-brace-format
-msgid ""
-"Downloaded {} {} for {} of {} {}.\n"
-"Try manual search for missing?"
-msgstr ""
-"Λήφθηκε {} {} για {} από {} {}.\n"
-"Δοκιμή χειροκίνητης αναζήτησης για τα υπόλοιπα;"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 884
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1109
-msgid "Download Complete"
-msgstr "Η λήψη ολοκληρώθηκε"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1015
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1110
-#, python-brace-format
-msgid "Downloaded {} {} for {} {} (all languages)."
-msgstr "Λήφθηκε {} {} για {} {} (όλες οι γλώσσες)."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1026
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1123
-msgid "Manual Search"
-msgstr "Χειροκίνητη Αναζήτηση"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 913
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1168
-msgid "Batch Error"
-msgstr "Σφάλμα Παρτίδας"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 914
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1169
-#, python-brace-format
-msgid ""
-"An error occurred during batch download:\n"
-"{}"
-msgstr ""
-"Παρουσιάστηκε σφάλμα κατά τη διάρκεια της μαζικής λήψης:  \n"
-"{}"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1146
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1225
-#, python-brace-format
-msgid "Subtitle downloaded: {}"
-msgstr "Υπότιτλος κατεβασμένος: {}"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1332
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1399
-#, python-brace-format
-msgid "Updated: {title} ({year}) - applied to {count} episodes"
-msgstr "Ενημερωμένο: {title} ({year}) - εφαρμόστηκε σε {count} επεισόδια"
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 59
+#: NEEDS WORK
+msgid "Preview only — no file is touched"
+msgstr "Μόνο προεπισκόπηση — κανένα αρχείο δεν επηρεάζεται"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 93
+#: NEEDS WORK
+msgid "Nothing was changed on disk."
+msgstr "Δεν άλλαξε τίποτα στον δίσκο."
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 94
+#: NEEDS WORK
+msgid "Turn off Simulation to apply for real."
+msgstr "Απενεργοποιήστε την Προσομοίωση για να εφαρμοστεί στην πραγματικότητα."
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 101
+#: NEEDS WORK
+msgid "Close"
+msgstr "Κλείσιμο"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 132
+#: NEEDS WORK
+msgid "operations"
+msgstr "λειτουργίες"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 141
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:178
+#. All button (neutro)
+msgid "All"
+msgstr "Όλα"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 212
+#: NEEDS WORK
+msgid "Nothing in this category"
+msgstr "Τίποτα σε αυτή την κατηγορία"
+# 
+# File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 258
+#: NEEDS WORK
+msgid "This file will be permanently deleted"
+msgstr "Αυτό το αρχείο θα διαγραφεί μόνιμα"
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 34
-#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:34
+#. Window properties
 msgid "Jellyfix Help"
 msgstr "Jellyfix Βοήθεια"
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 69
@@ -1759,7 +1877,8 @@ msgid ""
 "• <b>Detects and adds quality tags</b> (1080p, 720p, etc)\n"
 "• <b>Adds provider IDs</b> to folder names ([tmdbid-12345])"
 msgstr ""
-"Το Jellyfix οργανώνει αυτόματα τη βιβλιοθήκη πολυμέσων σας ακολουθώντας τις συμβάσεις ονοματοδοσίας του Jellyfin:\n"
+"Το Jellyfix οργανώνει αυτόματα τη βιβλιοθήκη πολυμέσων σας ακολουθώντας τις συμβάσεις ονοματοδοσίας "
+"του Jellyfin:\n"
 "\n"
 "• <b>Μετονομάζει αρχεία</b> στην τυπική μορφή Jellyfin\n"
 "• <b>Οργανώνει επεισόδια</b> σε φακέλους Seasons\n"
@@ -1913,52 +2032,222 @@ msgstr "Αναφορά Προβλημάτων"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:204
 msgid "Get TMDB API Key"
 msgstr "Αποκτήστε το κλειδί API του TMDB"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 130
-#. Dialog properties
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
-msgid "Search Title"
-msgstr "Αναζήτηση Τίτλου"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 159
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:159
-msgid "Enter movie or series name..."
-msgstr "Εισάγετε το όνομα ταινίας ή σειράς..."
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 163
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:163
-msgid "Search"
-msgstr "Αναζήτηση"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:241
-msgid "Movie"
-msgstr "Ταινία"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 181
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:181
-msgid "TV Series"
-msgstr "Τηλεοπτική Σειρά"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 258
-#. Update status
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:260
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:308
-msgid "Searching..."
-msgstr "Αναζήτηση..."
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 269
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:271
-msgid "TMDB not configured"
-msgstr "Η TMDB δεν είναι ρυθμισμένη"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 309
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:320
-msgid "No results found"
-msgstr "Δεν βρέθηκαν αποτελέσματα"
-# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 312
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:323
-msgid "results"
-msgstr "αποτελέσματα"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 350
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:333
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:350
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 182
+# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 44
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:176
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
+#. Window properties
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 183
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:177
+msgid "Configure API Keys"
+msgstr "Ρυθμίστε τα κλειδιά API"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 189
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:183
+msgid "About Jellyfix"
+msgstr "Σχετικά με το Jellyfix"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 193
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:187
+#. Quit
+msgid "Quit"
+msgstr "Έξοδος"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:255
+#. Show scanning toast
+msgid "Scanning directory..."
+msgstr "Σάρωση καταλόγου..."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:367
+#. Show generating operations toast
+msgid "Generating operations..."
+msgstr "Δημιουργία λειτουργιών..."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 301
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:392
+#. Show success toast
 #, python-brace-format
-msgid "Error: {}"
-msgstr "Σφάλμα: {}"
+msgid "{} operations ready"
+msgstr "{} λειτουργίες έτοιμες"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:518
+msgid "Apply Operations?"
+msgstr "Εφαρμογή Λειτουργιών;"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 330
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 211
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:522
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:237
+msgid "Apply"
+msgstr "Εφαρμογή"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 552
+#: NEEDS WORK
+#, python-brace-format
+msgid "renamed: {}"
+msgstr "μετονομασμένο: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 553
+#: NEEDS WORK
+#, python-brace-format
+msgid "moved: {}"
+msgstr "μετακινήθηκε: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 554
+#: NEEDS WORK
+#, python-brace-format
+msgid "moved and renamed: {}"
+msgstr "μετακινήθηκε και μετονομάστηκε: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 555
+#: NEEDS WORK
+#, python-brace-format
+msgid "DELETED: {}"
+msgstr "ΔΙΑΓΡΑΦΗ: {}"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 560
+#: NEEDS WORK
+#, python-brace-format
+msgid "{} operations"
+msgstr "{} λειτουργίες"
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 563
+#: NEEDS WORK
+msgid "Deletions cannot be undone."
+msgstr "Οι διαγραφές δεν μπορούν να αναιρεθούν."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:550
+msgid "Execute Operations?"
+msgstr "Εκτέλεση Λειτουργιών;"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:554
+msgid "Execute"
+msgstr "Εκτέλεση"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 398
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:578
+#, python-brace-format
+msgid "{} operations completed"
+msgstr "{} λειτουργίες ολοκληρώθηκαν"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 751
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:803
+msgid "Feature Unavailable"
+msgstr "Η δυνατότητα δεν είναι διαθέσιμη"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 752
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:804
+msgid ""
+"The 'subliminal' library is not installed.\n"
+"Please install it to use this feature."
+msgstr ""
+"Η βιβλιοθήκη 'subliminal' δεν είναι εγκατεστημένη. Παρακαλώ εγκαταστήστε την για να χρησιμοποιήσετε "
+"αυτή τη δυνατότητα."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 775
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:828
+#. Status Label
+msgid "Preparing..."
+msgstr "Ετοιμασία..."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 863
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1023
+#, python-brace-format
+msgid "Searching subtitles ({}/{})"
+msgstr "Αναζητώντας υπότιτλους ({}/{})"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/cli/display.py, line: 80
+# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
+#. Determine message and options based on results
+msgid "subtitle"
+msgstr "υπότιτλος"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/cli/display.py, line: 80
+# File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
+msgid "subtitles"
+msgstr "υπότιτλοι"
+# File: usr/share/jellyfix/cli/interactive.py, line: 170
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
+msgid "video"
+msgstr "βίντεο"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 992
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1086
+msgid "No Subtitles Found"
+msgstr "Δεν βρέθηκαν υπότιτλοι"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 993
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1087
+msgid ""
+"Could not find any subtitles automatically.\n"
+"Try manual search?"
+msgstr ""
+"Δεν βρέθηκαν αυτόματα υπότιτλοι.  \n"
+"Δοκιμάστε αναζήτηση χειροκίνητα;"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 997
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1091
+#. Some languages missing
+msgid "Partial Success"
+msgstr "Μερική Επιτυχία"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1005
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1099
+#, python-brace-format
+msgid ""
+"Downloaded {} {}.\n"
+"\n"
+"Missing languages: {}\n"
+"Try manual search?"
+msgstr ""
+"Λήφθηκε {} {}.\n"
+"\n"
+"Γλώσσες που λείπουν: {}\n"
+"Δοκιμή χειροκίνητης αναζήτησης;"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1009
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1104
+#, python-brace-format
+msgid ""
+"Downloaded {} {} for {} of {} {}.\n"
+"Try manual search for missing?"
+msgstr ""
+"Λήφθηκε {} {} για {} από {} {}.\n"
+"Δοκιμή χειροκίνητης αναζήτησης για τα υπόλοιπα;"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 884
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1109
+msgid "Download Complete"
+msgstr "Η λήψη ολοκληρώθηκε"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1015
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1110
+#, python-brace-format
+msgid "Downloaded {} {} for {} {} (all languages)."
+msgstr "Λήφθηκε {} {} για {} {} (όλες οι γλώσσες)."
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1026
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1123
+msgid "Manual Search"
+msgstr "Χειροκίνητη Αναζήτηση"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 913
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1168
+msgid "Batch Error"
+msgstr "Σφάλμα Παρτίδας"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 914
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1169
+#, python-brace-format
+msgid ""
+"An error occurred during batch download:\n"
+"{}"
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά τη διάρκεια της μαζικής λήψης:  \n"
+"{}"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1146
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1225
+#, python-brace-format
+msgid "Subtitle downloaded: {}"
+msgstr "Υπότιτλος κατεβασμένος: {}"
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1332
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1399
+#, python-brace-format
+msgid "Updated: {title} ({year}) - applied to {count} episodes"
+msgstr "Ενημερωμένο: {title} ({year}) - εφαρμόστηκε σε {count} επεισόδια"
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 60
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:63
 msgid "Subtitle Handling"
@@ -2115,374 +2404,35 @@ msgstr "Διόρθωση Αρχείων Mirabel"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:244
 msgid "Rename .pt-BR.hi.srt, .br.hi.srt to .por.srt"
 msgstr "Μετονομάστε .pt-BR.hi.srt, .br.hi.srt σε .por.srt"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 63
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:63
-msgid "TMDB Configuration"
-msgstr "Ρυθμίσεις TMDB"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 64
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:64
-msgid "Configure The Movie Database API key"
-msgstr "Ρυθμίστε το κλειδί API της Βάσης Δεδομένων Ταινιών"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 200
-#. Update status
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:273
-msgid "✓ Configured"
-msgstr "✓ Ρυθμισμένο"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 289
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:357
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
-msgid "✗ Not configured"
-msgstr "✗ Μη ρυθμισμένο"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 71
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:71
-msgid "TMDB API Key"
-msgstr "Κλειδί API TMDB"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 79
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:79
-msgid "Config file"
-msgstr "Αρχείο ρυθμίσεων"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:88
-msgid "OpenSubtitles Login"
-msgstr "Σύνδεση OpenSubtitles"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 89
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
-msgid ""
-"A free opensubtitles.com account is required to download subtitles "
-"(searching works without it)"
-msgstr ""
-"Απαιτείται ένας δωρεάν λογαριασμός opensubtitles.com για να κατεβάσετε "
-"υπότιτλους (η αναζήτηση λειτουργεί χωρίς αυτόν)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
-#, python-format
-msgid "✓ Configured (%s)"
-msgstr "✓ Ρυθμισμένο (%s)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
-msgid "Account"
-msgstr "Λογαριασμός"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
-msgid "Configure OpenSubtitles Login"
-msgstr "Ρύθμιση Σύνδεσης OpenSubtitles"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
-msgid "Enter your username and password"
-msgstr "Εισάγετε το όνομα χρήστη και τον κωδικό πρόσβασης"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
-msgid "Configure"
-msgstr "Ρύθμιση"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
-msgid "Test OpenSubtitles Login"
-msgstr "Δοκιμή Σύνδεσης OpenSubtitles"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
-msgid "Verify your credentials actually work"
-msgstr "Επιβεβαιώστε ότι τα διαπιστευτήριά σας λειτουργούν πραγματικά"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
-msgid "Test"
-msgstr "Δοκιμή"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
-msgid "Remove OpenSubtitles Login"
-msgstr "Αφαίρεση Σύνδεσης OpenSubtitles"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
-msgid "Delete stored credentials"
-msgstr "Διαγραφή αποθηκευμένων διαπιστευτηρίων"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:196
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:345
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:469
-msgid "Remove"
-msgstr "Αφαίρεση"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 135
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:135
-msgid "Create a free account"
-msgstr "Δημιουργήστε έναν δωρεάν λογαριασμό"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 138
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:138
-msgid "Open"
-msgstr "Άνοιγμα"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:147
-msgid "Actions"
-msgstr "Ενέργειες"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:153
-msgid "Enter your TMDB API key"
-msgstr "Εισάγετε το κλειδί API του TMDB σας"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 107
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:166
-msgid "View Current Key"
-msgstr "Προβολή Τρέχοντος Κλειδιού"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 108
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:167
-msgid "Show masked API key"
-msgstr "Εμφάνιση κρυμμένου κλειδιού API"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 111
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:170
-msgid "View"
-msgstr "Προβολή"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 120
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:179
-msgid "Test TMDB Connection"
-msgstr "Δοκιμή σύνδεσης TMDB"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 121
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:180
-msgid "Verify API key is working"
-msgstr "Επιβεβαιώστε ότι το API key λειτουργεί"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 133
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:192
-msgid "Remove TMDB Key"
-msgstr "Αφαίρεση κλειδιού TMDB"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 134
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:193
-msgid "Delete stored API key"
-msgstr "Διαγραφή αποθηκευμένου κλειδιού API"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 155
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:214
-msgid "Step-by-step tutorial"
-msgstr "Βήμα-προς-βήμα οδηγός"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 158
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
-msgid "Tutorial"
-msgstr "Οδηγός"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
-msgid "Enter your TMDB API key below"
-msgstr "Εισάγετε το κλειδί API TMDB παρακάτω"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 184
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:252
-msgid "Paste API key here"
-msgstr "Επικολλήστε το κλειδί API εδώ"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:257
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:312
-msgid "Save"
-msgstr "Αποθήκευση"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 203
-#. Show toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:276
-msgid "API key saved successfully"
-msgstr "Το κλειδί API αποθηκεύτηκε με επιτυχία"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
-msgid ""
-"Enter your opensubtitles.com username and password.\n"
-"⚠ Use your USERNAME, not your e-mail address."
-msgstr ""
-"Εισάγετε το όνομα χρήστη και τον κωδικό πρόσβασης σας στο opensubtitles.com.  \n"
-"⚠ Χρησιμοποιήστε το ΟΝΟΜΑ ΧΡΗΣΤΗ σας, όχι τη διεύθυνση email σας."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
-msgid "Username (not e-mail)"
-msgstr "Όνομα χρήστη (όχι email)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:299
-msgid "Password"
-msgstr "Κωδικός πρόσβασης"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
-#. Toggle password visibility
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:306
-msgid "Show password"
-msgstr "Εμφάνιση κωδικού πρόσβασης"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
-msgid "Remove OpenSubtitles Login?"
-msgstr "Αφαίρεση σύνδεσης OpenSubtitles;"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
-msgid ""
-"This will delete your stored credentials. You will not be able to download "
-"from opensubtitles.com until you configure it again."
-msgstr ""
-"Αυτό θα διαγράψει τα αποθηκευμένα διαπιστευτήριά σας. Δεν θα μπορείτε να "
-"κατεβάσετε από το opensubtitles.com μέχρι να το ρυθμίσετε ξανά."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
-msgid "Configure your login first"
-msgstr "Ρυθμίστε πρώτα την είσοδό σας"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
-msgid "Testing login…"
-msgstr "Δοκιμή σύνδεσης…"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
-#, python-format
-msgid "✓ Login OK (%s)"
-msgstr "✓ Σύνδεση OK (%s)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
-msgid "Current TMDB API Key"
-msgstr "Τρέχων κωδικός API TMDB"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
-msgid "Masked key"
-msgstr "Μασκαρισμένο κλειδί"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
-msgid "Full key stored in"
-msgstr "Πλήρης κλειδί αποθηκευμένο σε"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 226
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 241
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:402
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:417
-msgid "No API Key"
-msgstr "Κανένα API Key"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 227
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:403
-msgid "No TMDB API key configured yet"
-msgstr "Δεν έχει ρυθμιστεί ακόμη κλειδί API TMDB"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 242
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
-msgid "Please configure TMDB API key first"
-msgstr "Παρακαλώ ρυθμίστε πρώτα το κλειδί API του TMDB."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:432
-msgid "✓ Connection Successful"
-msgstr "✓ Η σύνδεση ήταν επιτυχής"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 262
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
-msgid "⚠ Connection Failed"
-msgstr "⚠ Αποτυχία Σύνδεσης"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 263
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:449
-msgid "Could not fetch data from TMDB. Please check your API key."
-msgstr ""
-"Δεν ήταν δυνατή η λήψη δεδομένων από το TMDB. Παρακαλώ ελέγξτε το API key "
-"σας."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:454
-msgid "✗ Connection Error"
-msgstr "✗ Σφάλμα Σύνδεσης"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 269
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
-#, python-brace-format
-msgid "Error testing connection: {}"
-msgstr "Σφάλμα κατά τη δοκιμή σύνδεσης: {}"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 279
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
-msgid "Remove API Key?"
-msgstr "Αφαίρεση κλειδιού API;"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 280
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:466
-msgid ""
-"This will delete your stored TMDB API key. You will need to configure it "
-"again."
-msgstr ""
-"Αυτό θα διαγράψει το αποθηκευμένο κλειδί API TMDB σας. Θα χρειαστεί να το "
-"ρυθμίσετε ξανά."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
-#. Show toast
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
-msgid "API key removed"
-msgstr "Κλειδί API αφαιρεθέν"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 302
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:492
-msgid ""
-"How to Get TMDB API Key:\n"
-"\n"
-"1. Go to https://www.themoviedb.org/signup\n"
-"2. Create a free account\n"
-"3. Go to Settings → API\n"
-"4. Request an API key (choose \"Developer\" option)\n"
-"5. Fill in the required information\n"
-"6. Copy the API Key (v3 auth)\n"
-"7. Paste it in Jellyfix\n"
-"\n"
-"The API key is free and allows you to:\n"
-"• Fetch movie and TV show metadata\n"
-"• Download posters and backdrops\n"
-"• Get accurate titles and release dates\n"
-"• Organize your library with TMDB IDs"
-msgstr ""
-"Πώς να αποκτήσετε το κλειδί API του TMDB:\n"
-"\n"
-"1. Μεταβείτε στο https://www.themoviedb.org/signup\n"
-"2. Δημιουργήστε έναν δωρεάν λογαριασμό\n"
-"3. Μεταβείτε στις Ρυθμίσεις → API\n"
-"4. Ζητήστε ένα κλειδί API (επιλέξτε την επιλογή \"Προγραμματιστής\")\n"
-"5. Συμπληρώστε τις απαιτούμενες πληροφορίες\n"
-"6. Αντιγράψτε το κλειδί API (v3 auth)\n"
-"7. Επικολλήστε το στο Jellyfix\n"
-"\n"
-"Το κλειδί API είναι δωρεάν και σας επιτρέπει να:\n"
-"• Ανακτήσετε μεταδεδομένα ταινιών και τηλεοπτικών εκπομπών\n"
-"• Κατεβάσετε αφίσες και φόντα\n"
-"• Λάβετε ακριβείς τίτλους και ημερομηνίες κυκλοφορίας\n"
-"• Οργανώσετε τη βιβλιοθήκη σας με ταυτότητες TMDB"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 165
-#. Window properties
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
-msgid "Search Subtitles"
-msgstr "Αναζήτηση Υποτίτλων"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 189
-#. Download button in header
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
-msgid "Download"
-msgstr "Λήψη"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 208
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:208
-msgid "Enter movie or show title..."
-msgstr "Εισάγετε τον τίτλο ταινίας ή εκπομπής..."
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 216
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:216
-msgid "Season"
-msgstr "Σεζόν"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 221
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 246
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:246
-msgid "Episode"
-msgstr "Επεισόδιο"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 267
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:267
-msgid "Search for Subtitles"
-msgstr "Αναζήτηση Υποτίτλων"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:268
-msgid "Enter a title and click search"
-msgstr "Εισάγετε έναν τίτλο και κάντε κλικ στην αναζήτηση"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 338
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:338
-msgid "No Results"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 130
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
+#. Dialog properties
+msgid "Search Title"
+msgstr "Αναζήτηση Τίτλου"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 159
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:159
+msgid "Enter movie or series name..."
+msgstr "Εισάγετε το όνομα ταινίας ή σειράς..."
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 163
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:163
+msgid "Search"
+msgstr "Αναζήτηση"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 181
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:181
+msgid "TV Series"
+msgstr "Τηλεοπτική Σειρά"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 269
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:271
+msgid "TMDB not configured"
+msgstr "Η TMDB δεν είναι ρυθμισμένη"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 309
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:320
+msgid "No results found"
 msgstr "Δεν βρέθηκαν αποτελέσματα"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 339
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:339
-msgid "Try a different search term"
-msgstr "Δοκιμάστε έναν διαφορετικό όρο αναζήτησης"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 342
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:342
-#, python-brace-format
-msgid "Found {} subtitles"
-msgstr "Βρέθηκαν {} υπότιτλοι"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 386
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:387
-#, python-brace-format
-msgid "Downloaded: {}"
-msgstr "Λήφθηκε: {}"
-# File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 395
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:396
-msgid "Download failed"
-msgstr "Η λήψη απέτυχε"
+# File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 312
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:323
+msgid "results"
+msgstr "αποτελέσματα"
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 68
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:73
 msgid "Select Directory to Scan"
@@ -2499,60 +2449,6 @@ msgstr "Αποτυχία Δημιουργίας Λειτουργίας"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:405
 msgid "Execution Failed"
 msgstr "Αποτυχία Εκτέλεσης"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 132
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 116
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:151
-msgid "Operations"
-msgstr "Λειτουργίες"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 131
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:166
-msgid "Search..."
-msgstr "Αναζήτηση..."
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 141
-#. All button (neutro)
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:178
-msgid "All"
-msgstr "Όλα"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 196
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:215
-msgid "Download Subtitles for All"
-msgstr "Κατεβάστε Υπότιτλους για Όλους"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 198
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:217
-msgid "Search and download subtitles for all listed videos"
-msgstr "Αναζήτηση και λήψη υποτίτλων για όλα τα καταχωρημένα βίντεο"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 180
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:237
-msgid "No Operations"
-msgstr "Καμία Λειτουργία"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 181
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
-msgid "Scan a directory to generate operations"
-msgstr "Σάρωση ενός καταλόγου για τη δημιουργία λειτουργιών"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 304
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:452
-msgid "rename"
-msgstr "μετονομασία"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 306
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:454
-msgid "move"
-msgstr "μετακίνηση"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 308
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:456
-msgid "delete"
-msgstr "διαγραφή"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:459
-#, python-brace-format
-msgid "Showing {} of {} operations"
-msgstr "Εμφάνιση {} από {} λειτουργίες"
-# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 313
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:461
-#, python-brace-format
-msgid "Total: {} operations"
-msgstr "Σύνολο: {} λειτουργίες"
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 65
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:65
 msgid "No Selection"
@@ -2585,22 +2481,70 @@ msgstr "Από:"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:186
 msgid "To:"
 msgstr "Προς:"
-# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 215
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:267
-msgid "MOVE"
-msgstr "ΜΕΤΑΚΙΝΗΣΗ"
-# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 218
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:270
-msgid "DELETE"
-msgstr "ΔΙΑΓΡΑΦΗ"
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 225
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:277
 msgid "MOVE + RENAME"
 msgstr "ΜΕΤΑΚΙΝΗΣΗ + ΜΕΤΟΝΟΜΑΣΙΑ"
-# File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 228
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:280
-msgid "RENAME"
-msgstr "Μετονομασία"
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+# 
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 132
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 116
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:151
+msgid "Operations"
+msgstr "Λειτουργίες"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 131
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:166
+msgid "Search..."
+msgstr "Αναζήτηση..."
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 196
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:215
+msgid "Download Subtitles for All"
+msgstr "Κατεβάστε Υπότιτλους για Όλους"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 198
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:217
+msgid "Search and download subtitles for all listed videos"
+msgstr "Αναζήτηση και λήψη υποτίτλων για όλα τα καταχωρημένα βίντεο"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 180
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:237
+msgid "No Operations"
+msgstr "Καμία Λειτουργία"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 181
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
+msgid "Scan a directory to generate operations"
+msgstr "Σάρωση ενός καταλόγου για τη δημιουργία λειτουργιών"
+# 
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 269
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 276
+#: NEEDS WORK
+msgid "Preview every change without touching any file"
+msgstr "Προεπισκόπηση κάθε αλλαγής χωρίς να αγγίξετε κανένα αρχείο"
+# 
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
+#: NEEDS WORK
+msgid "Simulate"
+msgstr "Προσομοίωση"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 304
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:452
+msgid "rename"
+msgstr "μετονομασία"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 306
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:454
+msgid "move"
+msgstr "μετακίνηση"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 308
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:456
+msgid "delete"
+msgstr "διαγραφή"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:459
+#, python-brace-format
+msgid "Showing {} of {} operations"
+msgstr "Εμφάνιση {} από {} λειτουργίες"
+# File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 313
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:461
+#, python-brace-format
+msgid "Total: {} operations"
+msgstr "Σύνολο: {} λειτουργίες"
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 79
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:83
 msgid "Welcome to Jellyfix"
@@ -2643,16 +2587,183 @@ msgstr "ώρες πριν"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:212
 msgid "Just now"
 msgstr "Μόλις τώρα"
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:439
-msgid "TMDB API key is working correctly!"
-msgstr "Το κλειδί API TMDB λειτουργεί σωστά!"
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:441
-msgid "Test search returned:"
-msgstr "Η δοκιμαστική αναζήτηση επέστρεψε:"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 257
-#, python-brace-format
-#~ msgid ""
-#~ "TMDB API key is working correctly!\n"
-#~ "\n"
-#~ "Test search returned: {}"
-#~ msgstr "Το κλειδί API του TMDB λειτουργεί σωστά!"
+# File: usr/share/jellyfix/core/image_manager.py, line: 101
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:102
+#, python-format
+msgid "Downloaded image: %s"
+msgstr "Ληφθείσα εικόνα: %s"
+# File: usr/share/jellyfix/core/image_manager.py, line: 106
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:107
+#, python-format
+msgid "Failed to download image: %s"
+msgstr "Αποτυχία λήψης εικόνας: %s"
+# File: usr/share/jellyfix/core/image_manager.py, line: 110
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:111
+#, python-format
+msgid "Unexpected error downloading image: %s"
+msgstr "Αναπάντεχο σφάλμα κατά τη λήψη εικόνας: %s"
+# File: usr/share/jellyfix/core/image_manager.py, line: 216
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:217
+msgid "Clearing image cache..."
+msgstr "Καθαρισμός κρυφής μνήμης εικόνας..."
+# File: usr/share/jellyfix/core/image_manager.py, line: 218
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
+msgid "Image cache cleared"
+msgstr "Η μνήμη cache εικόνας εκκαθαρίστηκε"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
+msgid "Login OK — subtitles can be downloaded"
+msgstr "Είσοδος OK — οι υπότιτλοι μπορούν να κατεβούν"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 368
+#: NEEDS WORK
+msgid "opensubtitles.com is rate limiting logins (1 per second per IP). Wait a few seconds and test again."
+msgstr ""
+"Το opensubtitles.com περιορίζει τους λογαριασμούς (1 ανά δευτερόλεπτο ανά IP). Περιμένετε μερικά "
+"δευτερόλεπτα και δοκιμάστε ξανά."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 374
+#: NEEDS WORK
+msgid ""
+"Username or password rejected by opensubtitles.com. Use the USERNAME (not the e-mail), check for a "
+"trailing space, and confirm the account e-mail was verified — a brand new account only works in the "
+"API after confirming the e-mail."
+msgstr ""
+"Το όνομα χρήστη ή ο κωδικός πρόσβασης απορρίφθηκε από το opensubtitles.com. Χρησιμοποιήστε το ΟΝΟΜΑ "
+"ΧΡΗΣΤΗ (όχι το email), ελέγξτε για κενό διάστημα στο τέλος και επιβεβαιώστε ότι το email του "
+"λογαριασμού έχει επαληθευτεί — ένας καινούργιος λογαριασμός λειτουργεί μόνο στο API μετά την "
+"επιβεβαίωση του email."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 270
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
+msgid "Use your username, not your e-mail address."
+msgstr "Χρησιμοποιήστε το όνομα χρήστη σας, όχι τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
+msgid ""
+"opensubtitles.com requires a free account to download subtitles. Set "
+"opensubtitles_username/opensubtitles_password in ~/.jellyfix/config.json (or the "
+"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD environment variables)."
+msgstr ""
+"Το opensubtitles.com απαιτεί έναν δωρεάν λογαριασμό για να κατεβάσετε υπότιτλους. Ρυθμίστε το "
+"opensubtitles_username/opensubtitles_password στο ~/.jellyfix/config.json (ή τις μεταβλητές "
+"περιβάλλοντος OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD)."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 478
+#: NEEDS WORK
+#, python-format
+msgid ""
+"opensubtitles.com daily download limit reached (%(used)s of %(allowed)s used). The subtitle WAS "
+"found, only the download was refused. Quota resets in %(reset)s."
+msgstr ""
+"Η ημερήσια όριο λήψης του opensubtitles.com έχει επιτευχθεί (%(used)s από %(allowed)s "
+"χρησιμοποιημένα). Ο υπότιτλος ΒΡΕΘΗΚΕ, μόνο η λήψη απορρίφθηκε. Η ποσόστωση επαναφέρεται σε "
+"%(reset)s."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 484
+#: NEEDS WORK
+msgid "less than 24 hours"
+msgstr "λιγότερο από 24 ώρες"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 489
+#: NEEDS WORK
+#, python-format
+msgid "Download refused by opensubtitles.com (%(remaining)s of %(allowed)s downloads left today)."
+msgstr ""
+"Η λήψη απορρίφθηκε από το opensubtitles.com (%(remaining)s από %(allowed)s λήψεις που απομένουν "
+"σήμερα)."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 493
+#: NEEDS WORK
+msgid "Download refused by opensubtitles.com. Check the login in Settings."
+msgstr "Η λήψη απορρίφθηκε από το opensubtitles.com. Ελέγξτε την είσοδο στις Ρυθμίσεις."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
+#, python-format
+msgid "Searching subtitles for: %s (Languages: %s)"
+msgstr "Αναζητώντας υπότιτλους για: %s (Γλώσσες: %s)"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 183
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:397
+#, python-format
+msgid "Level 1 (hash) found: %s"
+msgstr "Επίπεδο 1 (hash) βρέθηκε: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 187
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:401
+#, python-format
+msgid "Missing languages: %s - trying TMDB title search"
+msgstr "Λείπουν γλώσσες: %s - προσπαθώντας αναζήτηση τίτλου TMDB"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 208
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:422
+#, python-format
+msgid "Level 2 (TMDB) found: %s"
+msgstr "Επίπεδο 2 (TMDB) βρέθηκε: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 211
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:425
+#, python-format
+msgid "Still missing: %s (try manual search)"
+msgstr "Ακόμα λείπει: %s (δοκιμάστε χειροκίνητη αναζήτηση)"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 91
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:428
+#, python-format
+msgid "No subtitles found for: %s"
+msgstr "Δεν βρέθηκαν υπότιτλοι για: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 268
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:472
+#. Phase 1: Batch hash search — single pool for all videos
+#, python-format
+msgid "Batch Level 1: scanning %d videos by hash..."
+msgstr "Μαζικό Επίπεδο 1: σάρωση %d βίντεο με βάση το hash..."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 299
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:510
+#, python-format
+msgid "Level 1 (hash) found: %s for %s"
+msgstr "Επίπεδο 1 (hash) βρέθηκε: %s για %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 313
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:524
+#, python-format
+msgid "Batch Level 2: title search for %d videos..."
+msgstr "Μαζική Επίπεδο 2: αναζήτηση τίτλου για %d βίντεο..."
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 331
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:542
+#, python-format
+msgid "Level 2 (TMDB) found: %s for %s"
+msgstr "Επίπεδο 2 (TMDB) βρέθηκε: %s για %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 525
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:567
+#, python-format
+msgid "Level 3 (fallback %s) found: %s for %s"
+msgstr "Επίπεδο 3 (εναλλακτική %s) βρέθηκε: %s για %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 238
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:599
+#, python-format
+msgid "Found %d subtitles by hash for: %s"
+msgstr "Βρέθηκαν %d υπότιτλοι με βάση το hash για: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 344
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:702
+#, python-format
+msgid "Found %d validated subtitles by title for: %s"
+msgstr "Βρέθηκαν %d επικυρωμένοι υπότιτλοι κατά τίτλο για: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 601
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:959
+#, python-format
+msgid "Manual search: %s"
+msgstr "Χειροκίνητη αναζήτηση: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 923
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:975
+#, python-format
+msgid "No results from primary providers, trying: %s"
+msgstr "Δεν υπάρχουν αποτελέσματα από τους κύριους παρόχους, προσπαθώντας: %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1031
+#, python-format
+msgid "Found %d subtitles in manual search"
+msgstr "Βρέθηκαν %d υπότιτλοι στην αυτόματη αναζήτηση"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
+#, python-format
+msgid "Failed to download subtitle content. %s"
+msgstr "Αποτυχία λήψης περιεχομένου υπότιτλων. %s"
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1086
+#, python-format
+msgid "Downloaded subtitle: %s"
+msgstr "Ληφθείσα υπότιτλος: %s"
