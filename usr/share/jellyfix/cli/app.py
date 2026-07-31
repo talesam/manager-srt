@@ -44,17 +44,21 @@ def run_cli():
             cli = InteractiveCLI(config)
             if config.workdir_explicit:
                 # --workdir provided: go directly to processing
-                cli.run_direct()
+                # Propaga o código de saída (ex.: diretório inexistente = 1);
+                # antes ele era descartado e o jellyfix sempre saía com 0,
+                # quebrando scripts que checam o status.
+                return cli.run_direct() or 0
             else:
                 # No workdir: show main menu
                 cli.run()
         else:
             # Non-interactive scriptable mode
             from .non_interactive import NonInteractiveCLI
-            
+
             cli = NonInteractiveCLI(config)
-            cli.run()
-            
+            return cli.run() or 0
+
+
     except KeyboardInterrupt:
         logger.info("\n" + _("Operation cancelled by user"))
         return 1

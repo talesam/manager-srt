@@ -140,14 +140,23 @@ class Config:
         if self.log_file and isinstance(self.log_file, str):
             self.log_file = Path(self.log_file)
 
-    def load_persistent_settings(self):
+    def load_persistent_settings(self, explicit_keys=None):
         """Carrega configurações do arquivo persistente e variáveis de ambiente.
 
         Chamado separadamente de __post_init__ para evitar I/O no construtor.
-        Prioridade: valor já fornecido > arquivo JSON > variável de ambiente.
+
+        Prioridade (documentada no CLAUDE.md): argumento de linha de comando >
+        variável de ambiente > arquivo JSON > padrão.
+
+        Args:
+            explicit_keys: nomes de opções que vieram EXPLICITAMENTE da linha
+                de comando e portanto não podem ser sobrescritas pelo arquivo.
+                Sem isso, ``--no-remove-foreign`` (e as outras flags) eram
+                silenciosamente revertidas pelo valor salvo em config.json.
         """
         from .config_manager import ConfigManager
         config_mgr = ConfigManager()
+        explicit = set(explicit_keys or ())
 
         # API keys
         if not self.tmdb_api_key:
@@ -158,23 +167,34 @@ class Config:
 
         # Carrega configurações do arquivo persistente
         saved_languages = config_mgr.get('kept_languages')
-        if saved_languages:
+        if saved_languages and 'kept_languages' not in explicit:
             from .helpers import normalize_language_code
             self.kept_languages = [normalize_language_code(lang) for lang in saved_languages]
 
-        # Carrega opções booleanas
+        # Carrega opções booleanas.
+        # add_quality_tag e use_ffprobe estavam FALTANDO nesta lista: as duas
+        # interfaces (CLI e GUI) as gravavam em config.json, mas elas nunca
+        # eram lidas de volta — a preferência do usuário voltava ao padrão a
+        # cada execução.
         for key in ['rename_por2', 'rename_no_lang', 'remove_foreign_subs',
                     'remove_language_variants', 'organize_folders', 'fetch_metadata',
                     'ask_on_multiple_results', 'rename_nfo', 'remove_non_media',
-                    'fix_mirabel_files']:
+                    'fix_mirabel_files', 'add_quality_tag', 'use_ffprobe']:
+            if key in explicit:
+                continue
             saved_value = config_mgr.get(key)
             if saved_value is not None:
                 setattr(self, key, saved_value)
 
-        # Carrega min_pt_words
-        saved_min_pt = config_mgr.get('min_pt_words')
-        if saved_min_pt is not None:
-            self.min_pt_words = saved_min_pt
+        # Carrega valores numéricos ajustáveis
+        for key in ['min_pt_words', 'match_confidence_threshold',
+                    'title_similarity_threshold', 'min_subtitle_bytes',
+                    'image_download_timeout', 'max_search_results']:
+            if key in explicit:
+                continue
+            saved_value = config_mgr.get(key)
+            if saved_value is not None:
+                setattr(self, key, saved_value)
 
         # Subtitle download settings (file > env var > default)
         for key in ['subtitle_providers', 'subtitle_extra_providers',

@@ -1067,8 +1067,9 @@ class SubtitleManager:
                     self.logger.error("Failed to download subtitle content")
                 return None
 
-            # Save to file
-            lang = subtitle_result.language
+            # Save to file (por-pt vira pt-PT no disco — ver helpers)
+            from ..utils.helpers import language_code_for_filename
+            lang = language_code_for_filename(subtitle_result.language)
             subtitle_path = video_path.with_suffix(f".{lang}.srt")
             
             # Handle encoding
@@ -1117,12 +1118,16 @@ class SubtitleManager:
                 
                 # Keep 3-letter codes, preserving pt-PT as Jellyfix's por-pt.
                 lang_alpha3 = self._subtitle_language_code(sub)
-                
+
                 if lang_alpha3 not in result:
                     result[lang_alpha3] = []
-                
-                # Save directly to video_path location with 3-letter code
-                subtitle_path = video_path.with_suffix(f".{lang_alpha3}.srt")
+
+                # Save directly to video_path location with 3-letter code.
+                # language_code_for_filename() aplica a única exceção do
+                # projeto (por-pt → pt-PT), que o Jellyfin sabe resolver.
+                from ..utils.helpers import language_code_for_filename
+                file_lang = language_code_for_filename(lang_alpha3)
+                subtitle_path = video_path.with_suffix(f".{file_lang}.srt")
                 
                 # Handle encoding
                 encoding = getattr(sub, 'encoding', None) or 'utf-8'
@@ -1179,11 +1184,21 @@ class SubtitleManager:
         tmdb_match = re.search(r'\[tmdbid-(\d+)\]', path_str)
         tmdb_id = int(tmdb_match.group(1)) if tmdb_match else None
         
-        from ..utils.helpers import extract_year, normalize_spaces
+        from ..utils.helpers import (
+            SUBTITLE_EXTENSIONS, VIDEO_EXTENSIONS, extract_year, normalize_spaces,
+        )
 
         # Extract title and year from filename or folder
         # Pattern: "Title (Year)" or "Title (Year) [tmdbid-XXX]"
-        name = path.stem if path.is_file() else path.name
+        #
+        # A extensão é retirada sempre que for de mídia conhecida. Depender de
+        # is_file() falhava para caminhos que ainda não existem em disco (o
+        # destino planejado, por exemplo) e o "mp4" acabava colado no título
+        # enviado para os provedores de legenda.
+        if path.suffix.lower() in VIDEO_EXTENSIONS or path.suffix.lower() in SUBTITLE_EXTENSIONS:
+            name = path.stem
+        else:
+            name = path.stem if path.is_file() else path.name
         
         # Remove quality tags and other noise
         name = re.sub(r'\s*-\s*(2160p|1080p|720p|480p|4K|BluRay|WEB-DL|HDRip).*', '', name)

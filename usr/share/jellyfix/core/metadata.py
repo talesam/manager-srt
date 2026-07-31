@@ -229,10 +229,12 @@ class MetadataFetcher:
             cand_id = getattr(cand, "id", "?")
             cand_date = getattr(cand, "release_date", None) or getattr(cand, "first_air_date", "") or ""
             cand_year = cand_date[:4] if cand_date else "?"
+            # Série ou filme? O link precisa apontar para o endpoint certo.
+            kind = "tv" if getattr(cand, "first_air_date", None) or getattr(cand, "name", None) else "movie"
             line = (
                 f"BAIXA_CONFIANCA score={score:.2f} | busca='{query_title}' ({query_year}) "
                 f"| melhor_palpite='{cand_title}' ({cand_year}) [tmdbid-{cand_id}] "
-                f"https://www.themoviedb.org/movie/{cand_id}"
+                f"https://www.themoviedb.org/{kind}/{cand_id}"
             )
             self._low_confidence.append(line)
             from pathlib import Path
@@ -647,26 +649,32 @@ class MetadataFetcher:
                     self._interactive_choices_cache[cache_key] = None
                     return None
             else:
-                # Pega o primeiro resultado (ou busca por ano se fornecido)
-                show = None
-                if year:
-                    # Itera diretamente (sem slice, pois AsObj não suporta)
-                    count = 0
-                    for result in results:
-                        if count >= 5:  # Verifica os 5 primeiros apenas
-                            break
-                        count += 1
-                        if hasattr(result, 'first_air_date') and result.first_air_date:
-                            match = re.search(r'^(\d{4})', result.first_air_date)
-                            if match and int(match.group(1)) == year:
-                                show = result
-                                break
-
+                # ANTI-ERRO: mesma trava de confiança já usada para filmes.
+                # Antes a série pegava o PRIMEIRO resultado sem nenhuma
+                # verificação — foi assim que "Dr STONE" (que a limpeza de
+                # nome tinha reduzido a "Dr") virou "Dr. House" e arrastou a
+                # temporada inteira para a pasta errada.
+                show, score = self._best_candidate(results, clean_title, year)
                 if not show:
-                    # Pega o primeiro resultado iterando
-                    for result in results:
-                        show = result
-                        break
+                    self._failed_searches.add(cache_key)
+                    return None
+
+                threshold = getattr(self.config, "match_confidence_threshold", 0.55)
+                if score < threshold:
+                    self.logger.warning(
+                        f"✗ Baixa confiança ({score:.2f} < {threshold:.2f}) para série "
+                        f"'{clean_title}' ({year}) → melhor candidato: "
+                        f"'{getattr(show, 'name', '?')}' "
+                        f"[id {getattr(show, 'id', '?')}]. Pulando (revisar manualmente)."
+                    )
+                    self._record_low_confidence(clean_title, year, show, score)
+                    self._interactive_choices_cache[cache_key] = None
+                    return None
+
+                self.logger.debug(
+                    f"✓ Match confiável ({score:.2f}) série '{clean_title}' ({year}) → "
+                    f"'{getattr(show, 'name', '?')}' [id {getattr(show, 'id', '?')}]"
+                )
 
             if not show:
                 # Nenhum resultado iterável retornou objeto válido

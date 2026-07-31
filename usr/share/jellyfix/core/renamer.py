@@ -8,7 +8,8 @@ import shutil
 
 from ..utils.helpers import (
     clean_filename, normalize_spaces, extract_year,
-    format_season_folder,
+    format_season_folder, is_extras_path, is_portuguese_subtitle,
+    parse_subtitle_name, build_subtitle_name,
     is_video_file, is_subtitle_file, calculate_subtitle_quality, extract_quality_tag, detect_video_resolution
 )
 from ..utils.config import get_config
@@ -92,6 +93,11 @@ class Renamer:
                     continue
 
                 if file_path.name.startswith('.'):
+                    continue
+
+                # Extras do Jellyfin (trailer.mp4, behind the scenes/, ...)
+                # não são mídia principal e não podem ser reorganizados.
+                if is_extras_path(file_path):
                     continue
 
                 # Processa vídeos
@@ -651,8 +657,26 @@ class Renamer:
         year = None
         metadata = None
         if self.metadata_fetcher and self.config.fetch_metadata:
-            self.logger.info(f"🔍 Buscando série: {title}")
-            metadata = self.metadata_fetcher.search_tvshow(title, interactive=self.config.interactive)
+            # IDEMPOTÊNCIA: se a pasta da série já tem [tmdbid-N] (inclusive
+            # depois de uma correção manual do usuário), confia nesse id em vez
+            # de re-pesquisar pelo título — senão a correção era desfeita na
+            # execução seguinte.
+            pinned_id = self._extract_pinned_tmdbid(file_path)
+            if pinned_id is not None:
+                self.logger.info(f"📌 ID fixado na pasta: tmdbid-{pinned_id} (pulando busca)")
+                metadata = self.metadata_fetcher.get_tvshow_by_id(pinned_id)
+                if not metadata:
+                    self.logger.warning(f"✗ tmdbid-{pinned_id} não resolveu; caindo p/ busca por título")
+
+            if metadata is None:
+                # O ano ajuda a desempatar séries homônimas; vem do nome do
+                # arquivo ou da pasta da série.
+                search_year = extract_year(file_path.stem) or extract_year(file_path.parent.name) \
+                    or extract_year(file_path.parent.parent.name)
+                self.logger.info(f"🔍 Buscando série: {title}")
+                metadata = self.metadata_fetcher.search_tvshow(
+                    title, year=search_year, interactive=self.config.interactive
+                )
 
             if metadata:
                 # Usa título dos metadados
@@ -753,15 +777,13 @@ class Renamer:
         Returns:
             Lista de legendas que foram processadas
         """
-        from ..utils.helpers import normalize_spaces, is_portuguese_subtitle
-        import re
-
         processed_subtitles = []
 
         # Cria mapa de vídeos por base name (normalizado para matching)
         video_operations = {}
+        video_file_set = set(video_files)  # lookup O(1) — era O(n) por operação
         for op in self.operations:
-            if op.source in video_files:
+            if op.source in video_file_set:
                 # Normaliza o nome do vídeo para fazer matching
                 video_stem = op.source.stem
                 video_normalized = normalize_spaces(video_stem)
@@ -780,57 +802,25 @@ class Renamer:
             if mirabel_data:
                 # Usa informações do Mirabel
                 subtitle_base = mirabel_data['base_name']
-                lang_code = mirabel_data['target_lang']
                 lang_code_base = mirabel_data['target_lang']
-                forced_suffix = '.forced' if mirabel_data['forced'] else ''
+                is_variant = False
+                is_forced = mirabel_data['forced']
+                is_hearing_impaired = mirabel_data['hearing_impaired']
             else:
-                # Processamento normal para legendas não-Mirabel
-                # Extrai base name da legenda (remove .LANG.srt)
-                subtitle_name = subtitle_path.stem
+                # Parser único (helpers.parse_subtitle_name): conhece os flags
+                # do Jellyfin (default/forced/foreign/sdh/cc/hi) e nunca os
+                # confunde com código de idioma.
+                info = parse_subtitle_name(subtitle_path.stem)
+                subtitle_base = info['base_name']
+                lang_code_base = info['language']
+                is_variant = info['variant'] is not None
+                is_forced = info['forced']
+                is_hearing_impaired = info['hearing_impaired']
 
-                # Primeiro, detecta se tem .forced (case-insensitive) em qualquer posição
-                forced_suffix = ''
-                subtitle_name_lower = subtitle_name.lower()
-                if '.forced' in subtitle_name_lower:
-                    forced_suffix = '.forced'
-                    # Remove .forced temporariamente para facilitar o parsing
-                    # Preserva o case original para o matching
-                    forced_pos = subtitle_name_lower.rfind('.forced')
-                    subtitle_name_no_forced = subtitle_name[:forced_pos] + subtitle_name[forced_pos+7:]
-                else:
-                    subtitle_name_no_forced = subtitle_name
-
-                # Remove código de idioma se presente
-                # Padrões: .por, .eng, .pt, .en, .pt-BR, .pt_BR, .por2, etc. (agora sem .forced porque já foi removido)
-                base_match = re.match(r'(.+?)\.([a-z]{2,3}(?:[-_][A-Z]{2})?\d?)$', subtitle_name_no_forced, re.IGNORECASE)
-                if base_match:
-                    from ..utils.helpers import normalize_language_code
-                    subtitle_base = base_match.group(1)
-                    lang_code_raw = base_match.group(2).lower()  # ex: "en2", "pt-br", "por"
-
-                    # Remove dígito do código se tiver (por2 -> por, en2 -> en)
-                    lang_code_no_digit = re.sub(r'\d+$', '', lang_code_raw)
-
-                    # Normaliza o código de idioma para 3 letras (en -> eng, pt -> por, pt-BR -> por)
-                    lang_code_base = normalize_language_code(lang_code_no_digit)
-
-                    # lang_code mantém o original com dígito se tiver (usado para detectar variantes)
-                    # mas normalizado (en2 -> eng2)
-                    if lang_code_raw != lang_code_no_digit:  # tem dígito
-                        lang_code = lang_code_base + lang_code_raw[-1]  # eng + 2 = eng2
-                    else:
-                        lang_code = lang_code_base
-                else:
-                    # Não tem código de idioma explícito
-                    subtitle_base = subtitle_name_no_forced
-                    lang_code = None
-                    lang_code_base = None
-
-                    # Se é .forced sem código de idioma, detecta pelo conteúdo
-                    if forced_suffix and self.config.rename_no_lang:
-                        if is_portuguese_subtitle(subtitle_path, self.config.min_pt_words):
-                            lang_code = 'por'
-                            lang_code_base = 'por'
+                # Sem código de idioma explícito: detecta português pelo conteúdo
+                if lang_code_base is None and is_forced and self.config.rename_no_lang:
+                    if is_portuguese_subtitle(subtitle_path, self.config.min_pt_words):
+                        lang_code_base = 'por'
 
             # Procura vídeo correspondente (primeiro tenta match exato, depois normalizado)
             matching_video_op = video_operations.get(subtitle_base)
@@ -843,13 +833,10 @@ class Renamer:
             if matching_video_op:
                 # Encontrou vídeo correspondente que será movido/renomeado
 
-                # Detecta se é uma variante (tem dígito no código de idioma: por2, eng3, etc.)
-                is_variant = lang_code and lang_code != lang_code_base  # por2 != por
-
                 # VERIFICA SE É IDIOMA ESTRANGEIRO (NÃO está na lista de mantidos)
+                # .forced nunca é removida (regra do projeto).
                 is_foreign = False
-                if lang_code_base and self.config.remove_foreign_subs:
-                    # Verifica se o idioma base está na lista de mantidos
+                if lang_code_base and self.config.remove_foreign_subs and not is_forced:
                     is_foreign = lang_code_base not in self.config.kept_languages
 
                 if is_foreign:
@@ -868,9 +855,9 @@ class Renamer:
                     pass  # Será tratada depois
                 else:
                     # Legenda de idioma mantido (não é variante) - mover/renomear junto com vídeo
-                    
+
                     # Se não tem código de idioma, verifica se vai receber um
-                    if not lang_code:
+                    if not lang_code_base:
                         # Verifica se é legenda portuguesa e deve adicionar código
                         if self.config.rename_no_lang and is_portuguese_subtitle(subtitle_path, self.config.min_pt_words):
                             # Esta legenda receberia código .por — não processa aqui,
@@ -878,30 +865,40 @@ class Renamer:
                             # com .por2.srt, .por3.srt, etc. Não marca como processada
                             # para que _plan_subtitle_variants a veja.
                             continue
-                    
+
                     processed_subtitles.append(subtitle_path)
-                    
-                    # Monta novo nome da legenda baseado no novo nome do vídeo
+
+                    # Monta novo nome da legenda baseado no novo nome do vídeo,
+                    # preservando os flags do Jellyfin (sdh/forced).
                     new_video_stem = matching_video_op.destination.stem
-
-                    # Usa o código base (sem dígito) para o nome final
-                    final_lang_code = lang_code_base if lang_code_base else lang_code
-
-                    if final_lang_code:
-                        new_subtitle_name = f"{new_video_stem}.{final_lang_code}{forced_suffix}{subtitle_path.suffix}"
-                    else:
-                        new_subtitle_name = f"{new_video_stem}{subtitle_path.suffix}"
+                    new_subtitle_name = build_subtitle_name(
+                        new_video_stem,
+                        lang_code_base,
+                        subtitle_path.suffix,
+                        forced=is_forced,
+                        hearing_impaired=is_hearing_impaired,
+                    )
 
                     # Destino é na mesma pasta do novo vídeo
                     new_subtitle_path = matching_video_op.destination.parent / new_subtitle_name
 
-                    # VERIFICA CONFLITO: Se o destino já foi planejado, pula esta legenda
+                    # VERIFICA CONFLITO: se o destino já foi planejado (ex.: .hi,
+                    # .cc e .sdh normalizam para o mesmo nome), leva o arquivo
+                    # para a pasta do vídeo com o NOME ORIGINAL. Antes ele era
+                    # simplesmente ignorado e ficava órfão na pasta antiga.
                     if new_subtitle_path in self.planned_destinations:
+                        fallback_path = matching_video_op.destination.parent / subtitle_path.name
                         self.logger.warning(
                             f"Conflito de destino: {subtitle_path.name} → {new_subtitle_name} "
-                            f"(destino já em uso, ignorando)"
+                            f"(destino já em uso; mantendo nome original)"
                         )
-                        continue
+                        if (
+                            fallback_path == subtitle_path
+                            or fallback_path in self.planned_destinations
+                        ):
+                            continue
+                        new_subtitle_path = fallback_path
+                        new_subtitle_name = fallback_path.name
 
                     if new_subtitle_path != subtitle_path:
                         # Detecta tipo de operação
@@ -937,55 +934,42 @@ class Renamer:
         # Organiza legendas por diretório e base name
         from collections import defaultdict
 
-        # Agrupa: {(dir, base_name, lang_code): [lista de paths com variações]}
+        # Agrupa: {(dir, base_name, lang_code, suffix): [(num, path), ...]}
         grouped = defaultdict(list)
 
         for file_path in subtitle_files:
-            filename = file_path.name.lower()
+            info = parse_subtitle_name(file_path.stem)
 
             # Pula .forced (nunca mexe)
-            if '.forced.' in filename:
-                # Processa outras operações em .forced
+            if info['forced']:
                 self._plan_subtitle_other_operations(file_path)
                 continue
 
-            # Detecta variações: .lang2.srt, .lang3.srt (aceita 2-3 letras)
-            variant_match = re.search(r'\.([a-z]{2,3})(\d)\.srt$', filename)
-            if variant_match:
-                from ..utils.helpers import normalize_language_code
-                lang_code_raw = variant_match.group(1)
-                variant_num = int(variant_match.group(2))
-                base_name = file_path.name[:-(len(variant_match.group(0)))]
+            # Variações .lang2 / .lang3 — de QUALQUER idioma e QUALQUER
+            # extensão de legenda (antes só .srt era tratado, então variantes
+            # .ass/.vtt eram detectadas pelo scanner e nunca processadas).
+            if info['variant'] is not None and info['language']:
+                key = (file_path.parent, info['base_name'], info['language'], file_path.suffix)
+                grouped[key].append((info['variant'], file_path))
+                continue
 
-                # Normaliza o código de idioma para 3 letras
-                lang_code = normalize_language_code(lang_code_raw)
+            # .srt sem código de idioma que é português → candidata a .por.srt
+            if (
+                info['language'] is None
+                and self.config.rename_no_lang
+                and file_path.suffix.lower() == '.srt'
+                and is_portuguese_subtitle(file_path, self.config.min_pt_words)
+            ):
+                key = (file_path.parent, info['base_name'], 'por', file_path.suffix)
+                # Usa 0 como número para ter prioridade sobre variantes
+                grouped[key].append((0, file_path))
+                continue
 
-                key = (file_path.parent, base_name, lang_code)
-                grouped[key].append((variant_num, file_path))
-            else:
-                # Verifica se é .srt sem código de idioma que é português
-                # Estas são candidatas para se tornarem .por.srt
-                from ..utils.helpers import is_portuguese_subtitle
-                no_lang_match = re.match(r'^(.+)\.srt$', file_path.name, re.IGNORECASE)
-                if no_lang_match and self.config.rename_no_lang:
-                    # Verifica se não tem código de idioma explícito
-                    base_name_check = no_lang_match.group(1)
-                    has_lang = re.search(r'\.([a-z]{2,3})$', base_name_check, re.IGNORECASE)
-                    if not has_lang and is_portuguese_subtitle(file_path, self.config.min_pt_words):
-                        # É .srt português sem código → candidata para .por.srt
-                        base_name = base_name_check
-                        key = (file_path.parent, base_name, 'por')
-                        # Usa 0 como número para ter prioridade sobre variantes
-                        grouped[key].append((0, file_path))
-                    else:
-                        # Não é português ou já tem código, processa normalmente
-                        self._plan_subtitle_other_operations(file_path)
-                else:
-                    # Não é variação, processa normalmente
-                    self._plan_subtitle_other_operations(file_path)
+            # Não é variação, processa normalmente
+            self._plan_subtitle_other_operations(file_path)
 
         # Processa cada grupo de variações
-        for (parent_dir, base_name, lang_code), variants in grouped.items():
+        for (parent_dir, base_name, lang_code, suffix), variants in grouped.items():
             # Calcula qualidade de cada variação
             scored_variants = []
             for num, path in variants:
@@ -998,26 +982,25 @@ class Renamer:
 
                 # Log de debug (apenas em modo verbose)
                 self.logger.debug(
-                    f"Legenda .{lang_code}{num}.srt: "
+                    f"Legenda .{lang_code}{num}{suffix}: "
                     f"qualidade={quality:.1f}, tamanho={file_size} bytes"
                 )
 
             # Ordena por qualidade (MELHOR primeiro, depois menor número como desempate)
             scored_variants.sort(key=lambda x: (-x[0], x[1]))
 
-            # Verifica se existe .lang.srt (sem número)
-            target_name = f"{base_name}.{lang_code}.srt"
+            # Verifica se existe .lang.<ext> (sem número)
+            target_name = build_subtitle_name(base_name, lang_code, suffix)
             target_path = parent_dir / target_name
-            
+
             # Verifica se há operação de vídeo correspondente (para usar a pasta de destino)
-            from ..utils.helpers import normalize_spaces
             video_op = self.video_operations_map.get(base_name) or \
                        self.video_operations_map.get(normalize_spaces(base_name))
-            
+
             if video_op:
                 # Usa a pasta de destino do vídeo
                 new_video_stem = video_op.destination.stem
-                final_target_name = f"{new_video_stem}.{lang_code}.srt"
+                final_target_name = build_subtitle_name(new_video_stem, lang_code, suffix)
                 final_target_path = video_op.destination.parent / final_target_name
             else:
                 # Mantém na pasta original
@@ -1051,7 +1034,7 @@ class Renamer:
                             source=best_path,
                             destination=final_target_path,
                             operation_type=op_type,
-                            reason=f"Renomear .{lang_code}{best_num}.srt para .{lang_code}.srt (melhor: {best_size} bytes, qualidade {best_quality:.0f})"
+                            reason=f"Renomear .{lang_code}{best_num}{suffix} para .{lang_code}{suffix} (melhor: {best_size} bytes, qualidade {best_quality:.0f})"
                         ))
                         self.planned_destinations.add(final_target_path)
 
@@ -1062,39 +1045,84 @@ class Renamer:
                                 source=path,
                                 destination=path,
                                 operation_type='delete',
-                                reason=f"Remover variação .{lang_code}{num}.srt ({size} bytes, inferior)"
+                                reason=f"Remover variação .{lang_code}{num}{suffix} ({size} bytes, inferior)"
                             ))
+                    else:
+                        self._plan_variant_followers(
+                            scored_variants[1:], lang_code, suffix, video_op
+                        )
                 else:
                     # Todas as variações têm qualidade 0 (vazias/inválidas)
                     self.logger.warning(
-                        f"Todas as variações .{lang_code}X.srt estão vazias ou inválidas - não renomeando"
+                        f"Todas as variações .{lang_code}X{suffix} estão vazias ou inválidas - não renomeando"
                     )
+                    self._plan_variant_followers(scored_variants, lang_code, suffix, video_op)
             else:
-                # JÁ existe .lang.srt → remove TODAS as variações (se configurado)
+                # JÁ existe .lang.<ext> → remove TODAS as variações (se configurado)
                 if self.config.remove_language_variants:
                     for quality, num, path, size in scored_variants:
                         self.operations.append(RenameOperation(
                             source=path,
                             destination=path,
                             operation_type='delete',
-                            reason=f"Remover variação .{lang_code}{num}.srt (já existe .{lang_code}.srt)"
+                            reason=f"Remover variação .{lang_code}{num}{suffix} (já existe .{lang_code}{suffix})"
                         ))
+                else:
+                    # NÃO remover é o padrão — mas as variantes precisam
+                    # acompanhar o vídeo, senão ficam órfãs na pasta antiga.
+                    self._plan_variant_followers(scored_variants, lang_code, suffix, video_op)
+
+    def _plan_variant_followers(self, scored_variants, lang_code: str, suffix: str, video_op):
+        """Faz variantes que NÃO serão promovidas nem removidas seguirem o vídeo.
+
+        Sem isso, com ``remove_language_variants=False`` (o padrão) uma
+        ``.por2.srt`` simplesmente não recebia operação nenhuma: o vídeo mudava
+        de pasta e ela ficava órfã na pasta antiga — que por consequência nem
+        era removida por estar "não vazia".
+        """
+        if not video_op:
+            return  # vídeo não muda de lugar: variante pode ficar onde está
+
+        new_video_stem = video_op.destination.stem
+        target_dir = video_op.destination.parent
+
+        for _quality, num, path, _size in scored_variants:
+            new_name = f"{new_video_stem}.{lang_code}{num}{suffix}"
+            new_path = target_dir / new_name
+
+            if new_path == path or new_path in self.planned_destinations:
+                continue
+
+            folder_changed = new_path.parent != path.parent
+            name_changed = new_path.name != path.name
+            if folder_changed and name_changed:
+                op_type = 'move_rename'
+            elif folder_changed:
+                op_type = 'move'
+            else:
+                op_type = 'rename'
+
+            self.operations.append(RenameOperation(
+                source=path,
+                destination=new_path,
+                operation_type=op_type,
+                reason=f"Acompanhar vídeo (variação preservada): {path.name} → {new_name}"
+            ))
+            self.planned_destinations.add(new_path)
 
     def _plan_subtitle_other_operations(self, file_path: Path):
         """Outras operações de legendas (idiomas estrangeiros, sem idioma, etc.)"""
-        filename = file_path.name.lower()
+        info = parse_subtitle_name(file_path.stem)
+        lang_code = info['language']
 
-        # Remove legendas estrangeiras (que NÃO estão na lista de idiomas mantidos)
-        if self.config.remove_foreign_subs:
-            from ..utils.helpers import has_language_code
-
-            lang_code = has_language_code(filename)
+        # Remove legendas estrangeiras (que NÃO estão na lista de idiomas mantidos).
+        # .forced nunca é removida.
+        if self.config.remove_foreign_subs and not info['forced']:
             known_languages = set(self.config.all_languages.keys())
             if (
                 lang_code
                 and lang_code in known_languages
                 and lang_code not in self.config.kept_languages
-                and '.forced.' not in filename
             ):
                 self.operations.append(RenameOperation(
                     source=file_path,
@@ -1105,15 +1133,20 @@ class Renamer:
                 return
 
         # 3. Adiciona código de idioma a legendas sem código
-        if self.config.rename_no_lang:
-            from ..utils.helpers import has_language_code, is_portuguese_subtitle
-
-            if not has_language_code(file_path.name):
-                # Verifica se é português
-                if is_portuguese_subtitle(file_path, self.config.min_pt_words):
-                    # Adiciona .por antes da extensão
-                    new_name = f"{file_path.stem}.por{file_path.suffix}"
-                    new_path = file_path.parent / new_name
+        if self.config.rename_no_lang and lang_code is None:
+            # Verifica se é português
+            if is_portuguese_subtitle(file_path, self.config.min_pt_words):
+                # Adiciona .por preservando os flags já presentes no nome
+                new_name = build_subtitle_name(
+                    info['base_name'],
+                    'por',
+                    file_path.suffix,
+                    forced=info['forced'],
+                    hearing_impaired=info['hearing_impaired'],
+                    default=info['default'],
+                )
+                new_path = file_path.parent / new_name
+                if new_path != file_path:
                     self.operations.append(RenameOperation(
                         source=file_path,
                         destination=new_path,
@@ -1156,9 +1189,10 @@ class Renamer:
         # Cria mapa de vídeos: pasta_original -> (nova_pasta, video_stem_antigo, video_stem_novo)
         video_folder_map = {}
         video_rename_map = {}  # old_stem -> new_stem para renomear NFO
-        
+        video_file_set = set(video_files)  # lookup O(1)
+
         for op in self.operations:
-            if op.source in video_files:
+            if op.source in video_file_set:
                 old_folder = op.source.parent
                 new_folder = op.destination.parent
                 old_stem = op.source.stem
@@ -1190,6 +1224,10 @@ class Renamer:
 
                 # Ignora arquivos ocultos
                 if file_path.name.startswith('.'):
+                    continue
+
+                # Extras pertencem à pasta da mídia e não são realocados aqui
+                if is_extras_path(file_path):
                     continue
 
                 # Ignora vídeos e legendas (já foram processados)
@@ -1330,7 +1368,8 @@ class Renamer:
             'deleted': 0,
             'failed': 0,
             'skipped': 0,
-            'cleaned': 0  # Pastas vazias removidas
+            'cleaned': 0,  # Pastas vazias removidas
+            'reverted': 0,  # Operações desfeitas por rollback
         }
 
         # Rastreia pastas de origem para limpeza posterior
@@ -1406,24 +1445,30 @@ class Renamer:
                 # cannot be restored, so a delete failure only aborts the tail.
                 if operation.operation_type != "delete" and completed_ops and not dry_run:
                     self.logger.warning(f"Falha detectada, revertendo {len(completed_ops)} operações concluídas...")
-                    self._rollback(completed_ops)
-                    stats["failed"] += len(completed_ops)
+                    reverted = self._rollback(completed_ops)
+                    # Estatísticas refletem o estado FINAL: o que foi revertido
+                    # não conta como concluído (antes as reversões eram somadas
+                    # a 'failed', inflando o número, e renamed/moved eram
+                    # zerados mesmo numa reversão parcial).
+                    stats["reverted"] = reverted
                     stats["renamed"] = 0
                     stats["moved"] = 0
                 break
 
-        # Remove pastas vazias após mover arquivos
-        if not dry_run and source_folders:
-            # Collect parent folders too (climb up hierarchy)
+        # Remove pastas vazias após mover arquivos.
+        # SEMPRE limitado ao diretório de trabalho: sem essa âncora a subida na
+        # hierarquia podia chegar a pastas do sistema (ex.: /mnt/media) e
+        # removê-las caso ficassem vazias.
+        work_dir = getattr(self, 'work_dir', None)
+        if not dry_run and source_folders and work_dir:
+            work_dir = Path(work_dir).resolve()
             folders_to_check = set()
             for folder in source_folders:
-                current = folder
-                while current and current != current.parent:
+                current = folder.resolve()
+                # Só entra na lista o que está ESTRITAMENTE dentro do work_dir
+                while current != current.parent and work_dir in current.parents:
                     folders_to_check.add(current)
                     current = current.parent
-                    # Don't go above work_dir parent
-                    if self.work_dir and current == self.work_dir.parent:
-                        break
 
             for folder in sorted(folders_to_check, key=lambda p: len(str(p)), reverse=True):
                 try:
@@ -1437,12 +1482,16 @@ class Renamer:
 
         return stats
 
-    def _rollback(self, completed_ops: List[RenameOperation]):
+    def _rollback(self, completed_ops: List[RenameOperation]) -> int:
         """Reverte operações concluídas em ordem inversa.
 
         Move/rename operations are reversed (destination → source).
         Delete operations cannot be reversed and are logged as warnings.
+
+        Returns:
+            Quantidade de operações efetivamente revertidas.
         """
+        reverted = 0
         for op in reversed(completed_ops):
             try:
                 if op.operation_type == "delete":
@@ -1453,8 +1502,10 @@ class Renamer:
                     op.source.parent.mkdir(parents=True, exist_ok=True)
                     shutil.move(str(op.destination), str(op.source))
                     self.logger.action(f"Revertido: {op.destination} → {op.source}")
+                    reverted += 1
             except Exception as e:
                 self.logger.error(f"Falha ao reverter {op.destination}: {e}")
+        return reverted
 
     def _plan_mirabel_fixes(self, subtitle_files: List[Path]) -> List[Path]:
         """
@@ -1464,13 +1515,13 @@ class Renamer:
         _plan_subtitle_companion crie uma única operação direta do arquivo
         original para o destino final.
 
-        Padrões reconhecidos:
-        - .pt-BR.hi.srt → .por.srt
-        - .br.hi.srt → .por.srt
-        - .pt-BR.hi.forced.srt → .por.forced.srt
-        - .br.hi.forced.srt → .por.forced.srt
-        - .en.hi.srt → .eng.srt
-        - .en.hi.forced.srt → .eng.forced.srt
+        Padrões reconhecidos (o ``hi`` é PRESERVADO como ``.sdh``, que é o flag
+        canônico do Jellyfin para legenda de surdos — antes ele era descartado
+        e a legenda SDH virava uma legenda comum, colidindo com a original):
+        - .pt-BR.hi.srt → .por.sdh.srt
+        - .br.hi.srt → .por.sdh.srt
+        - .pt-BR.hi.forced.srt → .por.sdh.forced.srt
+        - .en.hi.srt → .eng.sdh.srt
 
         Args:
             subtitle_files: Lista de arquivos de legenda
@@ -1502,11 +1553,11 @@ class Renamer:
                     base_name = match.group(1)
                     forced = match.group(3)  # '.forced' ou None
 
-                    # Constrói novo nome para verificar se já existe
-                    if forced:
-                        new_name = f"{base_name}.{target_lang}.forced.srt"
-                    else:
-                        new_name = f"{base_name}.{target_lang}.srt"
+                    # Constrói novo nome preservando o marcador de surdez (.sdh)
+                    new_name = build_subtitle_name(
+                        base_name, target_lang, '.srt',
+                        forced=bool(forced), hearing_impaired=True,
+                    )
 
                     new_path = file_path.parent / new_name
 
@@ -1525,7 +1576,8 @@ class Renamer:
                         self.mirabel_info[file_path] = {
                             'base_name': base_name,
                             'target_lang': target_lang,
-                            'forced': bool(forced)
+                            'forced': bool(forced),
+                            'hearing_impaired': True,  # o "hi" do nome Mirabel
                         }
                         mirabel_count += 1
                         # Mantém o path ORIGINAL na lista

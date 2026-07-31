@@ -215,25 +215,28 @@ def parse_args():
                        help='Save log to file')
 
     # Subtitle options
-    parser.add_argument('--min-pt-words', type=int, default=5, metavar='N',
+    # NOTA: default=None (em vez de False/5) é o que permite distinguir
+    # "usuário passou a flag" de "usuário não disse nada". Sem isso não há como
+    # respeitar a prioridade CLI > config.json.
+    parser.add_argument('--min-pt-words', type=int, default=None, metavar='N',
                        help='Minimum Portuguese words to detect (default: 5)')
-    parser.add_argument('--no-rename-por2', action='store_true',
+    parser.add_argument('--no-rename-por2', action='store_true', default=None,
                        help='Do not rename .por2.srt → .por.srt')
-    parser.add_argument('--no-add-lang', action='store_true',
+    parser.add_argument('--no-add-lang', action='store_true', default=None,
                        help='Do not add language code to subtitles')
-    parser.add_argument('--no-remove-foreign', action='store_true',
+    parser.add_argument('--no-remove-foreign', action='store_true', default=None,
                        help='Do not remove foreign subtitles')
 
     # File cleanup
-    parser.add_argument('--remove-non-media', action='store_true',
+    parser.add_argument('--remove-non-media', action='store_true', default=None,
                        help='Remove all files that are not .srt or .mp4')
 
     # Metadata
-    parser.add_argument('--no-metadata', action='store_true',
+    parser.add_argument('--no-metadata', action='store_true', default=None,
                        help='Disable metadata fetching from TMDB')
-    parser.add_argument('--no-quality-tag', action='store_true',
+    parser.add_argument('--no-quality-tag', action='store_true', default=None,
                        help='Do not add quality tags to filenames')
-    parser.add_argument('--use-ffprobe', action='store_true',
+    parser.add_argument('--use-ffprobe', action='store_true', default=None,
                        help='Use ffprobe for quality detection')
 
     return parser.parse_args()
@@ -260,6 +263,31 @@ def main():
 
     workdir_explicit = args.workdir is not None
 
+    # Mapeia flag da CLI -> opção do Config. Só entram no Config (e na lista de
+    # "explícitas", protegidas contra o config.json) as que o usuário passou.
+    # Antes, todas eram sempre passadas e depois sobrescritas pelo arquivo:
+    # --no-remove-foreign, --no-metadata & cia. simplesmente não faziam efeito.
+    negated_flags = {
+        'rename_por2': args.no_rename_por2,
+        'rename_no_lang': args.no_add_lang,
+        'remove_foreign_subs': args.no_remove_foreign,
+        'fetch_metadata': args.no_metadata,
+        'add_quality_tag': args.no_quality_tag,
+    }
+    direct_flags = {
+        'remove_non_media': args.remove_non_media,
+        'use_ffprobe': args.use_ffprobe,
+        'min_pt_words': args.min_pt_words,
+    }
+
+    overrides = {}
+    for key, value in negated_flags.items():
+        if value is not None:
+            overrides[key] = not value
+    for key, value in direct_flags.items():
+        if value is not None:
+            overrides[key] = value
+
     # Create configuration
     config = Config(
         work_dir=Path(args.workdir).resolve() if args.workdir else Path.cwd(),
@@ -269,17 +297,10 @@ def main():
         verbose=args.verbose,
         quiet=args.quiet,
         log_file=Path(args.log) if args.log else None,
-        min_pt_words=args.min_pt_words,
-        rename_por2=not args.no_rename_por2,
-        rename_no_lang=not args.no_add_lang,
-        remove_foreign_subs=not args.no_remove_foreign,
-        remove_non_media=args.remove_non_media,
-        fetch_metadata=not args.no_metadata,
-        add_quality_tag=not args.no_quality_tag,
-        use_ffprobe=args.use_ffprobe,
         workdir_explicit=workdir_explicit,
+        **overrides,
     )
-    config.load_persistent_settings()
+    config.load_persistent_settings(explicit_keys=overrides.keys())
 
     # Set global config
     set_config(config)

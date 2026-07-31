@@ -582,6 +582,64 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         toast.set_timeout(5)  # 5 seconds
         self.toast_overlay.add_toast(toast)
 
+        # Trabalho concluído: os caminhos em memória já não existem mais no
+        # disco. Manter a lista carregada dava a impressão de que ainda havia
+        # algo pendente e permitia reaplicar operações sobre arquivos que já
+        # foram movidos. Volta para a tela inicial, pronta para um novo scan.
+        if not dry_run:
+            self._reset_to_welcome()
+
+    def _reset_to_welcome(self):
+        """Volta a janela ao estado inicial depois de organizar.
+
+        Limpa a lista de operações, o painel de pré-visualização, qualquer
+        overlay de progresso ainda aberto e o estado do handler, e mostra de
+        novo a tela de boas-vindas com as bibliotecas recentes atualizadas.
+        """
+        # Encerra qualquer diálogo/progresso de lote que tenha ficado aberto
+        bp = getattr(self, "batch_progress", None)
+        if bp:
+            try:
+                if bp.get("pulse_id"):
+                    GLib.source_remove(bp["pulse_id"])
+                if bp.get("spinner"):
+                    bp["spinner"].stop()
+                if bp.get("window"):
+                    bp["window"].close()
+            except Exception as e:
+                self.logger.debug(f"Could not close batch progress: {e}")
+            finally:
+                self.batch_progress = None
+
+        # Limpa operações e seleção
+        try:
+            self.operations_list.clear()
+        except Exception as e:
+            self.logger.debug(f"Could not clear operations list: {e}")
+
+        self.operations_handler.operations = []
+        self.operations_handler.scanned_files = []
+
+        if hasattr(self, "preview_panel"):
+            try:
+                self.preview_panel.current_operation = None
+            except Exception:
+                pass
+
+        # Limpa filtros de seleção de pastas/arquivos do scan anterior
+        self.selected_folders = []
+        self.selected_files = []
+
+        # Atualiza recentes e volta para a tela inicial
+        try:
+            self.dashboard.refresh_recent_libraries()
+        except Exception as e:
+            self.logger.debug(f"Could not refresh recent libraries: {e}")
+
+        self.content_stack.set_visible_child_name("welcome")
+
+        return False  # seguro para uso com GLib.idle_add
+
     def on_operation_selected(self, operation, index: int):
         """
         Handle operation selection.
@@ -827,13 +885,14 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
                     # Update status to show current file being processed
                     GLib.idle_add(self._update_batch_status, i, op.source.name)
                     
-                    from ...utils.helpers import parse_destination_for_search
+                    from ...utils.helpers import parse_operation_for_search
 
                     # Extract TMDB ID from path
                     tmdb_match = re.search(r'\[tmdbid-(\d+)\]', str(op.destination))
                     tmdb_id = int(tmdb_match.group(1)) if tmdb_match else None
 
-                    parsed = parse_destination_for_search(op.destination)
+                    # Título vem do arquivo de ORIGEM (ver _open_manual_subtitle_search)
+                    parsed = parse_operation_for_search(op)
                     tmdb_title = parsed['title']
                     tmdb_year = parsed['year']
                     is_episode = parsed['is_episode']
@@ -945,8 +1004,11 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
 
     def _pulse_progress(self):
         """Pulse progress bar for indeterminate status"""
-        if hasattr(self, 'batch_progress'):
-            self.batch_progress['bar'].pulse()
+        # getattr + checagem de None: o overlay pode ter sido encerrado por
+        # _reset_to_welcome(), que deixa o atributo existindo como None.
+        bp = getattr(self, 'batch_progress', None)
+        if bp and bp.get('bar'):
+            bp['bar'].pulse()
             return True
         return False
 
@@ -1127,7 +1189,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             operation: Optional RenameOperation to search for. If None, uses current selection.
         """
         from .subtitle_search_dialog import SubtitleSearchDialog
-        from ...utils.helpers import parse_destination_for_search
+        from ...utils.helpers import parse_operation_for_search
 
         # Get operation from current selection if not provided
         if operation is None:
@@ -1137,7 +1199,12 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             self.logger.warning("No operation selected for manual subtitle search")
             return
 
-        parsed = parse_destination_for_search(operation.destination)
+        # IMPORTANTE: a busca parte do ARQUIVO DE ORIGEM, não do destino.
+        # Quando o match do TMDB erra (ex.: "Dr.STONE" identificado como
+        # "Dr. House"), o destino já carrega o título errado — e a busca manual,
+        # que existe justamente para corrigir o erro, vinha pré-preenchida com
+        # ele e continuava procurando a série errada.
+        parsed = parse_operation_for_search(operation)
 
         dialog = SubtitleSearchDialog(
             parent=self,

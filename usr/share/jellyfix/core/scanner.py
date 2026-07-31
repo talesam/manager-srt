@@ -4,10 +4,11 @@ from pathlib import Path
 from typing import List
 from dataclasses import dataclass, field
 from ..utils.helpers import (
-    is_video_file, is_subtitle_file, is_image_file,
-    has_language_code, is_portuguese_subtitle
+    is_video_file, is_subtitle_file, is_image_file, is_portuguese_subtitle,
+    is_extras_path, is_jellyfin_image, parse_subtitle_name
 )
 from ..utils.config import get_config
+from ..utils.logger import get_logger
 from .detector import detect_media_type
 
 
@@ -32,6 +33,11 @@ class ScanResult:
     nfo_files: List[Path] = field(default_factory=list)
     non_media_files: List[Path] = field(default_factory=list)  # Arquivos que não são .srt ou .mp4
 
+    # Extras do Jellyfin (trailers, bastidores, samples...). Coletados só para
+    # exibição/estatística: NUNCA entram em video_files, para não serem
+    # renomeados como se fossem filmes.
+    extras_files: List[Path] = field(default_factory=list)
+
     # Estatísticas
     total_movies: int = 0
     total_episodes: int = 0
@@ -52,6 +58,7 @@ class LibraryScanner:
 
     def __init__(self):
         self.config = get_config()
+        self.logger = get_logger()
 
     def scan(self, directory: Path) -> ScanResult:
         """
@@ -69,15 +76,18 @@ class LibraryScanner:
             return result
 
         # Escaneia recursivamente (lazy — não materializa toda a árvore em memória)
-        for file_path in directory.rglob('*'):
-            if not file_path.is_file():
-                continue
-
+        for file_path in self._iter_files(directory):
             # Hidden files (starting with '.') are only collected for removal
             if file_path.name.startswith('.'):
                 if self.config.remove_non_media:
                     result.other_files.append(file_path)
                     result.non_media_files.append(file_path)
+                continue
+
+            # Extras do Jellyfin ficam de fora de QUALQUER operação: não são
+            # filmes, não são lixo e não podem sair da pasta da mídia.
+            if is_extras_path(file_path):
+                result.extras_files.append(file_path)
                 continue
 
             # Categoriza por tipo
@@ -102,7 +112,11 @@ class LibraryScanner:
             elif is_image_file(file_path):
                 result.image_files.append(file_path)
                 self._categorize_image(file_path, result)
-                # Marca imagens como non-media se configurado
+                # remove_non_media é explícito ("manter só vídeos/legendas") e
+                # vem desligado por padrão — então respeita a escolha do
+                # usuário e inclui as imagens. O que mudou foi a CLASSIFICAÇÃO
+                # em unwanted_images (ver _categorize_image), que antes
+                # marcava cover.jpg/folder.jpg como indesejados.
                 if self.config.remove_non_media:
                     result.non_media_files.append(file_path)
 
@@ -120,54 +134,70 @@ class LibraryScanner:
 
         return result
 
+    def _iter_files(self, directory: Path):
+        """Percorre a árvore devolvendo apenas arquivos, tolerando erros de I/O.
+
+        Um único diretório sem permissão (ou link simbólico quebrado) derrubava
+        o scan inteiro com OSError.
+        """
+        try:
+            entries = directory.rglob('*')
+        except OSError as e:
+            self.logger.warning(f"Não foi possível ler {directory}: {e}")
+            return
+
+        while True:
+            try:
+                file_path = next(entries)
+            except StopIteration:
+                return
+            except OSError as e:
+                self.logger.debug(f"Ignorando entrada ilegível: {e}")
+                continue
+
+            try:
+                if not file_path.is_file():
+                    continue
+            except OSError:
+                continue
+
+            yield file_path
+
     def _categorize_subtitle(self, file_path: Path, result: ScanResult):
         """Categoriza um arquivo de legenda"""
-        import re
-        filename = file_path.name.lower()
+        info = parse_subtitle_name(file_path.stem)
+        lang_code = info['language']
 
-        # Detecta variações (.lang2.srt, .lang3.srt, etc.) para QUALQUER idioma
-        # Padrão: .LANG + NUMERO + [.forced|.sdh|.default] + .extensão
-        variant_match = re.search(r'\.([a-z]{2,3})(\d)(?:\.(forced|sdh|default))?\.(srt|ass|ssa|sub|vtt)$', filename)
-        if variant_match:
+        # .forced nunca é removida nem reclassificada (regra do projeto)
+        if info['forced']:
+            result.kept_subtitles.append(file_path)
+            return
+
+        # Variações (.por2.srt, .eng3.ass) de QUALQUER idioma e extensão
+        if info['variant'] is not None:
             result.variant_subtitles.append(file_path)
             return
 
-        # Verifica se já tem código de idioma
-        lang_code = has_language_code(filename)
-
         if lang_code:
-            # lang_code já vem normalizado para 3 letras pela função has_language_code
-            # Verifica se é idioma mantido
-            is_kept = lang_code in self.config.kept_languages
-
-            if is_kept:
+            if lang_code in self.config.kept_languages:
                 result.kept_subtitles.append(file_path)
-            # Verifica se é idioma estrangeiro (NÃO está na lista de mantidos)
-            # E NÃO é .forced (nunca remover)
-            elif '.forced.' not in filename:
+            else:
                 result.foreign_subtitles.append(file_path)
         else:
-            # Sem código de idioma
-            # Tenta detectar se é português
-            if file_path.suffix.lower() == '.srt':
-                if is_portuguese_subtitle(file_path, self.config.min_pt_words):
-                    result.no_lang_subtitles.append(file_path)
-                else:
-                    # Não é português, pode ser estrangeira
-                    result.foreign_subtitles.append(file_path)
+            # Sem código de idioma: tenta detectar português pelo conteúdo
+            if file_path.suffix.lower() == '.srt' and is_portuguese_subtitle(
+                file_path, self.config.min_pt_words
+            ):
+                result.no_lang_subtitles.append(file_path)
+            else:
+                # Sem código e sem detecção: idioma DESCONHECIDO, não
+                # "estrangeiro". Marcá-la como estrangeira fazia a interface
+                # contar legendas em inglês como candidatas a remoção.
+                result.other_files.append(file_path)
 
     def _categorize_image(self, file_path: Path, result: ScanResult):
         """Categoriza um arquivo de imagem"""
-        # Imagens reconhecidas pelo Jellyfin
-        jellyfin_images = {
-            'poster', 'fanart', 'backdrop', 'logo', 'banner',
-            'thumb', 'clearart', 'clearlogo', 'landscape', 'disc'
-        }
-
-        # Verifica se é imagem reconhecida
-        stem = file_path.stem.lower()
-        if not any(img in stem for img in jellyfin_images):
-            # Imagem não reconhecida
+        if not is_jellyfin_image(file_path):
             result.unwanted_images.append(file_path)
 
 

@@ -33,6 +33,81 @@ IMAGE_EXTENSIONS = {
     '.tiff', '.ico', '.svg'
 }
 
+# ---------------------------------------------------------------------------
+# Extras do Jellyfin (doc oficial: "Extras").
+# Vídeos dentro dessas pastas, ou com esses nomes/sufixos, NÃO são filmes:
+# são material extra que pertence à pasta da mídia. Antes o jellyfix tratava
+# "trailer.mp4" e "behind the scenes/Making of.mp4" como filmes próprios e
+# os arrancava da pasta, quebrando exatamente a estrutura documentada.
+# ---------------------------------------------------------------------------
+EXTRAS_FOLDER_NAMES = frozenset({
+    'behind the scenes', 'deleted scenes', 'interviews', 'scenes', 'samples',
+    'shorts', 'featurettes', 'clips', 'other', 'extras', 'trailers',
+    'theme-music', 'backdrops',
+})
+
+# Nomes de arquivo que, sozinhos, marcam um extra.
+EXTRAS_FILE_STEMS = frozenset({'trailer', 'sample'})
+
+# Sufixos de extra. Conforme a doc, com poucas exceções NÃO contêm espaços.
+EXTRAS_SUFFIXES = (
+    '-trailer', '.trailer', '_trailer', ' trailer',
+    '-sample', '.sample', '_sample', ' sample',
+    '-scene', '-clip', '-interview', '-behindthescenes', '-deleted',
+    '-deletedscene', '-featurette', '-short', '-other', '-extra',
+)
+
+# Nomes de imagem que o Jellyfin reconhece como arte da mídia (doc oficial:
+# "Metadata Images"). Podem aparecer sozinhos (logo.png) ou como sufixo
+# (movie-logo.png). Faltavam justamente os mais comuns — cover e folder —
+# e por isso cover.jpg/folder.jpg eram classificados como "indesejados"
+# (e apagados quando remove_non_media estava ligado).
+JELLYFIN_IMAGE_NAMES = frozenset({
+    'poster', 'folder', 'cover', 'default', 'movie', 'show', 'jacket', 'thumb',
+    'backdrop', 'fanart', 'background', 'art', 'extrafanart', 'banner',
+    'logo', 'clearlogo', 'clearart', 'landscape', 'disc', 'discart', 'cdart',
+})
+
+
+def is_extras_folder(name: str) -> bool:
+    """A pasta é uma pasta de extras do Jellyfin?"""
+    return name.strip().lower() in EXTRAS_FOLDER_NAMES
+
+
+def is_extras_path(file_path: Path) -> bool:
+    """O arquivo é um extra (por pasta, nome ou sufixo)?"""
+    for parent in file_path.parents:
+        if is_extras_folder(parent.name):
+            return True
+
+    stem = file_path.stem.strip().lower()
+    if stem in EXTRAS_FILE_STEMS:
+        return True
+
+    return any(stem.endswith(suffix) for suffix in EXTRAS_SUFFIXES)
+
+
+def is_jellyfin_image(file_path: Path) -> bool:
+    """A imagem é uma arte reconhecida pelo Jellyfin?
+
+    Aceita o nome puro (``cover.jpg``), como sufixo (``movie-logo.png``,
+    ``S01E01 Some Episode-thumb.jpg``) e numerada (``backdrop-1.jpg``,
+    ``backdrop2.jpg``), como descrito na documentação.
+    """
+    stem = file_path.stem.strip().lower()
+    # Remove numeração de backdrops múltiplos: backdrop-1 / backdrop2
+    stem = re.sub(r'[-_ ]?\d+$', '', stem) or stem
+
+    if stem in JELLYFIN_IMAGE_NAMES:
+        return True
+
+    # Forma de sufixo: "<qualquer coisa><separador><nome>"
+    return any(
+        stem.endswith(sep + name)
+        for name in JELLYFIN_IMAGE_NAMES
+        for sep in ('-', '_', '.', ' ')
+    )
+
 # Pre-compiled regex patterns (avoid recompilation on every call)
 _RE_FORBIDDEN = re.compile(FORBIDDEN_CHARS)
 _RE_MULTI_SPACE = re.compile(r"\s+")
@@ -42,8 +117,15 @@ _RE_YEAR_LOOSE = re.compile(r"\s+(19\d{2}|20\d{2})(?!\))\s*")
 _RE_AUDIO_CHANNELS = re.compile(r"\b([257])\s+([01])\b")
 _RE_REPEATED_SUFFIX = re.compile(r"(-\w+)\1+")
 _RE_CONVERTED = re.compile(r"-converted", re.IGNORECASE)
-_RE_RELEASE_GROUP_HYPHEN = re.compile(r"-[A-Z0-9]{2,}\b", re.IGNORECASE)
-_RE_TRAILING_UPPERCASE = re.compile(r"\s+\b[A-Z]{2,6}\b\s*$")
+# Grupo de release colado por hífen — SOMENTE no fim do nome e somente quando o
+# token "parece" um grupo (ver _looks_like_release_group).
+#
+# O padrão antigo (r"-[A-Z0-9]{2,}\b" com IGNORECASE, em qualquer posição)
+# destruía títulos hifenizados legítimos: "Spider-Man" → "Spider",
+# "X-Men" → "X", "Ant-Man" → "Ant". O hífen NÃO é proibido pelo Jellyfin
+# (caracteres reservados: < > : " / \ | ? *) e a própria limpeza do Jellyfin
+# (NamingOptions.CleanStrings) só remove tokens de uma whitelist fechada.
+_RE_RELEASE_GROUP_HYPHEN = re.compile(r"-([A-Za-z0-9]{2,})\s*$")
 _RE_SPACE_BEFORE_PUNCT = re.compile(r"\s+([,\.!?;:])")
 _RE_TRAILING_JUNK = re.compile(r"[\s\-\.]+$")
 _RE_LEADING_JUNK = re.compile(r"^[\s\-\.]+")
@@ -101,6 +183,36 @@ _RELEASE_GROUPS = [
     "GECKOS",
 ]
 _RE_RELEASE_GROUPS = [re.compile(rf"\b{g}\b", re.IGNORECASE) for g in _RELEASE_GROUPS]
+
+def _looks_like_release_group(token: str) -> bool:
+    """Heurística: o token colado por hífen no fim é grupo de release?
+
+    Grupos de release são MAIÚSCULOS (RARBG, YTS, FGT), têm dígitos
+    (3LT0N, W4F) ou capitalização interna (BiOMA, GalaxyRG).
+    Palavras reais de título são Title case ("Man", "Men", "Marie") ou
+    minúsculas — essas NUNCA podem ser removidas.
+    """
+    if any(ch.isdigit() for ch in token):
+        return True
+    if token.isupper():
+        return True
+    # Maiúscula depois da primeira letra: BiOMA, GalaxyRG, MkvCage
+    return any(ch.isupper() for ch in token[1:])
+
+
+# ---------------------------------------------------------------------------
+# Flags de faixa externa reconhecidas pelo Jellyfin.
+# Fonte: Emby.Naming/Common/NamingOptions.cs (MediaDefaultFlags,
+# MediaForcedFlags, MediaHearingImpairedFlags) e a doc oficial
+# "External Subtitles and Audio Tracks".
+#
+# Isso NÃO é código de idioma: 'hi' e 'cc' já foram confundidos com idioma e
+# faziam legendas válidas (Movie.eng.cc.srt) serem apagadas como "estrangeiras".
+# ---------------------------------------------------------------------------
+SUBTITLE_FLAGS_DEFAULT = frozenset({"default"})
+SUBTITLE_FLAGS_FORCED = frozenset({"forced", "foreign"})
+SUBTITLE_FLAGS_HEARING_IMPAIRED = frozenset({"sdh", "cc", "hi"})
+SUBTITLE_FLAGS = SUBTITLE_FLAGS_DEFAULT | SUBTITLE_FLAGS_FORCED | SUBTITLE_FLAGS_HEARING_IMPAIRED
 
 _RE_LANG_CODE = re.compile(r"\.([a-z]{2,3}(?:[-_][a-z]{2})?)(?:\d)?(?:\.(forced|sdh|default))?\.(srt|ass|ssa|sub|vtt)$")
 _RE_LANG_SUFFIX = re.compile(r"\.[a-z]{2,3}(?:[-_][a-z]{2})?$", re.IGNORECASE)
@@ -291,6 +403,8 @@ def normalize_spaces(name: str) -> str:
     Returns:
         Nome normalizado
     """
+    original = name
+
     # Substitui pontos, underscores e hífen duplo por espaços
     name = name.replace('.', ' ').replace('_', ' ').replace('--', ' ')
 
@@ -319,18 +433,23 @@ def normalize_spaces(name: str) -> str:
     name = _RE_REPEATED_SUFFIX.sub(r"\1", name)  # Remove repetições
     name = _RE_CONVERTED.sub("", name)
 
-    # Remove grupo de release precedido por hífen (em qualquer posição)
-    # Ex: -3LT0N, -YTS, -RARBG, -converted
-    name = _RE_RELEASE_GROUP_HYPHEN.sub("", name)
+    # Remove grupo de release colado por hífen NO FIM do nome (-3LT0N, -RARBG,
+    # -BiOMA), preservando títulos hifenizados (Spider-Man, X-Men, Anne-Marie).
+    group_match = _RE_RELEASE_GROUP_HYPHEN.search(name)
+    if group_match and _looks_like_release_group(group_match.group(1)):
+        name = name[: group_match.start()]
 
     # Remove grupos de release comuns que aparecem soltos (sem hífen)
     # Ex: BRHD, YTS, YIFY, RARBG, ETRG, etc.
     for pattern in _RE_RELEASE_GROUPS:
         name = pattern.sub("", name)
 
-    # Remove palavras em MAIÚSCULAS de 2-6 letras isoladas no final (geralmente grupos de release)
-    # Mas preserva palavras conhecidas como "HD", "4K", "DC" (que já foram removidas antes)
-    name = _RE_TRAILING_UPPERCASE.sub(" ", name)
+    # NOTA: aqui existia uma heurística que removia QUALQUER palavra de 2-6
+    # letras maiúsculas no fim do nome. Ela comia palavras reais do título
+    # quando o release vinha em caixa alta: "Dr.STONE.S01E20..." virava só
+    # "Dr", e o TMDB devolvia "Dr. House". Grupos de release já são tratados
+    # pela lista explícita acima e pela regra de hífen — falso-negativo (lixo
+    # sobrando na busca) é muito mais barato que casar com a série errada.
 
     # Remove espaços múltiplos
     name = _RE_MULTI_SPACE.sub(" ", name).strip()
@@ -342,7 +461,18 @@ def normalize_spaces(name: str) -> str:
     name = _RE_TRAILING_JUNK.sub("", name)
     name = _RE_LEADING_JUNK.sub("", name)  # Remove também do início se houver
 
-    return name.strip()
+    name = name.strip()
+
+    # Rede de segurança: se a limpeza destruiu o nome, é melhor devolver o
+    # original só com separadores normalizados do que um título vazio/1 letra
+    # que casaria com qualquer coisa no TMDB.
+    if len(name) < 2:
+        fallback = _RE_MULTI_SPACE.sub(" ", original.replace(".", " ").replace("_", " ")).strip()
+        fallback = _RE_TRAILING_JUNK.sub("", fallback)
+        if len(fallback) > len(name):
+            return fallback
+
+    return name
 
 
 def extract_quality_tag(name: str) -> Optional[str]:
@@ -589,6 +719,139 @@ def normalize_language_code(lang_code: str) -> str:
     return base_code
 
 
+# Códigos ISO 639-2 aceitos como idioma de legenda. Usado para não confundir
+# um flag ("cc", "hi", "sdh") ou um pedaço do título ("sub", "the") com idioma.
+KNOWN_LANGUAGE_CODES = frozenset({
+    'ara', 'baq', 'bul', 'cat', 'chi', 'cze', 'dan', 'dut', 'eng', 'fil', 'fin',
+    'fre', 'ger', 'glg', 'gre', 'heb', 'hin', 'hrv', 'hun', 'ind', 'ita', 'jpn',
+    'kor', 'lav', 'lit', 'may', 'nob', 'nor', 'pol', 'por', 'por-pt', 'rum',
+    'rus', 'slo', 'slv', 'spa', 'swe', 'tam', 'tel', 'tha', 'tur', 'ukr', 'vie',
+})
+
+_RE_LANG_TOKEN = re.compile(r'^([a-z]{2,3})([-_][a-z]{2})?(\d)?$', re.IGNORECASE)
+
+
+def parse_subtitle_name(stem: str) -> dict:
+    """Separa o nome de uma legenda em base + idioma + variante + flags.
+
+    Fonte da verdade única para o projeto — antes existiam DOIS parsers
+    divergentes (``has_language_code`` aqui e um regex inline no renamer), e o
+    do renamer lia o flag como se fosse idioma: ``Movie.eng.cc.srt`` virava
+    idioma "cc", caía fora de ``kept_languages`` e era APAGADO. O mesmo
+    acontecia com ``.eng.hi.srt`` (virava "hin") e ``.en.sdh.srt`` ("sdh") —
+    todos nomes válidos segundo a documentação oficial do Jellyfin.
+
+    Regra do ``hi`` (doc oficial): sozinho é Hindi; junto de outro idioma é
+    marcador de surdez.
+
+    Args:
+        stem: nome do arquivo SEM a extensão (ex.: "Movie.eng.sdh").
+
+    Returns:
+        dict com ``base_name``, ``language`` (3 letras ou None), ``variant``
+        (int ou None, de .por2/.eng3), ``forced``, ``default``,
+        ``hearing_impaired`` e ``flags`` (conjunto de tokens originais).
+    """
+    parts = stem.split('.')
+    language: Optional[str] = None
+    variant: Optional[int] = None
+    flags: set = set()
+    pending_hi = False
+    cut = len(parts)
+
+    # Caminha da direita para a esquerda; parts[0] nunca é consumido, pois é
+    # sempre parte do nome base.
+    for i in range(len(parts) - 1, 0, -1):
+        token = parts[i].strip().lower()
+        if not token:
+            break
+
+        if token in SUBTITLE_FLAGS:
+            if token == 'hi':
+                pending_hi = True
+            else:
+                flags.add(token)
+            cut = i
+            continue
+
+        match = _RE_LANG_TOKEN.match(token)
+        if match and language is None:
+            candidate = match.group(1) + (match.group(2) or '')
+            code = normalize_language_code(candidate)
+            if code in KNOWN_LANGUAGE_CODES:
+                language = code
+                variant = int(match.group(3)) if match.group(3) else None
+                cut = i
+                continue
+
+        break
+
+    if pending_hi:
+        if language is None:
+            language = 'hin'  # ".hi" sozinho = Hindi
+        else:
+            flags.add('hi')
+
+    return {
+        'base_name': '.'.join(parts[:cut]),
+        'language': language,
+        'variant': variant,
+        'forced': bool(flags & SUBTITLE_FLAGS_FORCED),
+        'default': bool(flags & SUBTITLE_FLAGS_DEFAULT),
+        'hearing_impaired': bool(flags & SUBTITLE_FLAGS_HEARING_IMPAIRED),
+        'flags': flags,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Código de idioma gravado NO ARQUIVO.
+#
+# Regra geral: 3 letras (por, eng, spa...) — é o padrão do projeto e o que o
+# Jellyfin resolve via ThreeLetterISOLanguageNames, exibindo o idioma certo.
+#
+# ÚNICA exceção: Português de Portugal. O ISO 639-2 não tem código de 3 letras
+# que separe pt-PT de pt-BR (os dois são "por"), então o código interno
+# 'por-pt' não existe para o Jellyfin: FindLanguageInfo() não casa com nada e
+# a legenda entra SEM idioma (o token vira título da faixa). O servidor aceita
+# a forma com região — em iso6392.txt há a linha "por||pt-pt|Portuguese
+# (Portugal)" e o ExternalPathParser preserva nomes de cultura com '-'.
+# Portanto, só para esse caso, gravamos 'pt-PT'.
+# ---------------------------------------------------------------------------
+FILENAME_LANGUAGE_OVERRIDES = {
+    'por-pt': 'pt-PT',
+}
+
+
+def language_code_for_filename(language: Optional[str]) -> Optional[str]:
+    """Converte o código interno no token que vai para o nome do arquivo."""
+    if not language:
+        return language
+    return FILENAME_LANGUAGE_OVERRIDES.get(language.lower(), language)
+
+
+def build_subtitle_name(base_name: str, language: Optional[str], suffix: str,
+                        forced: bool = False, hearing_impaired: bool = False,
+                        default: bool = False) -> str:
+    """Monta o nome de uma legenda no padrão do Jellyfin.
+
+    Mantém o código de idioma de 3 letras (por/eng), que é o que o Jellyfin
+    resolve via ``ThreeLetterISOLanguageNames`` e exibe corretamente na
+    interface. A ordem segue o exemplo oficial ``Film.en.sdh.srt``.
+    A única exceção é pt-PT — ver ``FILENAME_LANGUAGE_OVERRIDES``.
+    """
+    name = base_name
+    language = language_code_for_filename(language)
+    if language:
+        name += f".{language}"
+    if hearing_impaired:
+        name += ".sdh"
+    if forced:
+        name += ".forced"
+    if default:
+        name += ".default"
+    return name + suffix
+
+
 def has_language_code(filename: str) -> Optional[str]:
     """
     Verifica se o nome do arquivo já tem código de idioma.
@@ -612,14 +875,13 @@ def has_language_code(filename: str) -> Optional[str]:
     #   "file.pt_BR.srt" -> "por"
     #   "The.Great.Flood.srt" -> None (não pega "gre" de Great)
 
-    # Padrão: .LANG[NUMERO][.forced|.sdh|.default].EXTENSAO
-    # Aceita 2-3 letras, com região opcional (-XX ou _XX)
-    match = _RE_LANG_CODE.search(filename.lower())
-    if match:
-        lang_code = match.group(1)
-        # Normaliza o código para 3 letras
-        return normalize_language_code(lang_code)
-    return None
+    # Delega ao parser único (que conhece TODOS os flags do Jellyfin), para
+    # que scanner e renamer nunca mais discordem sobre o mesmo arquivo.
+    name = Path(filename).name
+    suffix = Path(name).suffix.lower()
+    if suffix not in SUBTITLE_EXTENSIONS:
+        return None
+    return parse_subtitle_name(Path(name).stem)['language']
 
 
 def get_base_name(file_path: Path) -> str:
@@ -759,3 +1021,66 @@ def parse_destination_for_search(destination: Path) -> dict:
         'season': None,
         'episode': None,
     }
+
+
+def parse_source_for_search(source: Path) -> dict:
+    """Extrai título/ano/episódio a partir do arquivo ORIGINAL.
+
+    Usa o detector de mídia sobre o nome de arquivo cru, sem passar pelo
+    resultado do TMDB. É a única fonte confiável quando o match automático
+    errou — que é exatamente o momento em que o usuário abre a busca manual.
+    """
+    from ..core.detector import detect_media_type
+
+    media_info = detect_media_type(source)
+    title = normalize_spaces(media_info.title or source.stem)
+
+    return {
+        'title': title,
+        'year': media_info.year or extract_year(source.stem),
+        'is_episode': media_info.is_tvshow(),
+        'season': media_info.season,
+        'episode': media_info.episode_start,
+    }
+
+
+def parse_operation_for_search(operation) -> dict:
+    """Dados de busca para uma operação, preferindo o arquivo de origem.
+
+    O destino só é usado para completar o que o nome do arquivo não tem
+    (tipicamente o ANO, que vem da pasta ``Série (2004)``) — nunca para
+    substituir o título lido do arquivo original.
+    """
+    parsed = parse_source_for_search(operation.source)
+    dest_parsed = parse_destination_for_search(operation.destination)
+
+    if not parsed['title']:
+        parsed['title'] = dest_parsed['title']
+
+    if not parsed['is_episode'] and dest_parsed['is_episode']:
+        parsed['is_episode'] = True
+        parsed['season'] = parsed['season'] or dest_parsed['season']
+        parsed['episode'] = parsed['episode'] or dest_parsed['episode']
+
+    # O ano do destino vem da pasta criada pelo match do TMDB. Só dá para
+    # confiar nele se o título do destino de fato corresponde ao do arquivo —
+    # senão herdaríamos o ano do título ERRADO (Dr. House → 2004) e a busca
+    # continuaria envenenada.
+    if parsed['year'] is None and _titles_agree(parsed['title'], dest_parsed['title']):
+        parsed['year'] = dest_parsed['year']
+
+    return parsed
+
+
+def _titles_agree(a: str, b: str) -> bool:
+    """Dois títulos se referem à mesma obra? (comparação tolerante)"""
+    if not a or not b:
+        return False
+
+    def tokens(text: str) -> set:
+        return {t for t in re.split(r"[^0-9a-z]+", text.lower()) if t}
+
+    ta, tb = tokens(a), tokens(b)
+    if not ta or not tb:
+        return False
+    return ta <= tb or tb <= ta

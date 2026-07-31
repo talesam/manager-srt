@@ -331,99 +331,52 @@ class OperationsHandler:
         def execute_task():
             """Background execution task"""
             try:
-                import shutil
-
-                # Execute irreversible deletes last.
-                ordered_ops = sorted(
-                    ops,
-                    key=lambda op: getattr(op, 'operation_type', '') == 'delete'
+                # Reuse the CLI executor instead of a second, weaker copy.
+                # The old inline loop called shutil.move() directly, without the
+                # will_overwrite check — two operations pointing at the same
+                # destination silently DESTROYED the first file. It also had no
+                # rollback, and its folder cleanup could climb above the
+                # working directory.
+                renamer = Renamer(metadata_fetcher=self.metadata_fetcher)
+                renamer.operations = list(ops)
+                renamer.work_dir = (
+                    Path(self.current_directory).resolve()
+                    if self.current_directory
+                    else None
                 )
-                results = []
-                errors = []
-                source_folders = set()  # Track source folders for cleanup
 
-                for i, op in enumerate(ordered_ops):
-                    try:
-                        source = op.source
-                        destination = op.destination
+                if progress_callback:
+                    GLib.idle_add(progress_callback, 0, len(ops))
 
-                        # Handle delete operations
-                        if getattr(op, 'operation_type', '') == 'delete':
-                            source.unlink()
-                            self.logger.success(f"Deleted: {source.name}")
-                            results.append(op)
-                            continue
+                stats = renamer.execute_operations(dry_run=False)
 
-                        # Track source folder for cleanup
-                        source_folders.add(source.parent)
+                results = [
+                    op for op in ops
+                    if getattr(op, 'operation_type', '') != 'delete'
+                ]
+                if stats.get('failed'):
+                    self.logger.warning(f"{stats['failed']} operations failed")
+                if stats.get('skipped'):
+                    self.logger.warning(
+                        f"{stats['skipped']} operations skipped (destination already exists)"
+                    )
 
-                        # Create parent directory if needed
-                        destination.parent.mkdir(parents=True, exist_ok=True)
-
-                        # Move/rename the file
-                        shutil.move(str(source), str(destination))
-
-                        self.logger.success(f"Renamed: {source.name} → {destination.name}")
-                        results.append(op)
-
-                    except Exception as e:
-                        self.logger.error(f"Failed to rename {op.source.name}: {e}")
-                        errors.append((op, str(e)))
-                        break
-
-                    # Report progress
-                    if progress_callback:
-                        GLib.idle_add(progress_callback, i + 1, len(ordered_ops))
-
-                # Clean up empty folders after moving files
-                self._cleanup_empty_folders(source_folders)
-
-                if errors:
-                    self.logger.warning(f"{len(errors)} operations failed")
+                if progress_callback:
+                    GLib.idle_add(progress_callback, len(ops), len(ops))
 
                 # Update UI on main thread
                 GLib.idle_add(self._on_execution_complete, results, complete_callback)
 
             except Exception as e:
                 self.logger.error(f"Execution failed: {e}")
+                import traceback
+                traceback.print_exc()
                 GLib.idle_add(self._on_execution_error, str(e))
 
         # Run in background thread
         import threading
         thread = threading.Thread(target=execute_task, daemon=True)
         thread.start()
-
-    def _cleanup_empty_folders(self, source_folders: set):
-        """
-        Remove empty folders after moving files.
-        Climbs up the folder hierarchy to remove empty parent folders too.
-
-        Args:
-            source_folders: Set of folder paths to check for cleanup
-        """
-        # Track all folders to check (including parents)
-        folders_to_check = set()
-
-        for folder in source_folders:
-            # Add the folder and all its parents up to the work directory
-            current = folder
-            while current and current != current.parent:
-                folders_to_check.add(current)
-                current = current.parent
-                # Stop at root or work directory level (3 levels up from source usually)
-                if len(current.parts) <= 2:
-                    break
-
-        # Sort by path length (deepest first) to clean up from bottom to top
-        for folder in sorted(folders_to_check, key=lambda p: len(str(p)), reverse=True):
-            try:
-                if folder.exists() and folder.is_dir():
-                    # Check if folder is empty (no files or subdirectories)
-                    if not any(folder.iterdir()):
-                        folder.rmdir()
-                        self.logger.success(f"Removed empty folder: {folder.name}")
-            except Exception as e:
-                self.logger.debug(f"Could not remove folder {folder}: {e}")
 
     def _on_execution_complete(self, results: List, callback: Optional[Callable] = None):
         """
