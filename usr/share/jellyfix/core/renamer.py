@@ -291,6 +291,14 @@ class Renamer:
         new_video_folder = new_video_op.destination.parent
         if new_video_folder != video_path.parent:
             planned_sources = {op.source for op in self.operations}
+
+            # Extras do Jellyfin (trailer.mp4, behind the scenes/...) também
+            # precisam migrar na correção manual, senão ficam órfãos na pasta
+            # antiga — mesmo caso do planejamento normal. O helper já se protege
+            # sozinho contra pastas contêiner.
+            self._plan_extras_following_video(
+                video_path.parent, new_video_folder, planned_sources
+            )
             for extra_path in folder_extras:
                 if extra_path in planned_sources:
                     continue
@@ -1072,6 +1080,65 @@ class Renamer:
                     # acompanhar o vídeo, senão ficam órfãs na pasta antiga.
                     self._plan_variant_followers(scored_variants, lang_code, suffix, video_op)
 
+    def _plan_extras_following_video(self, old_folder: Path, new_folder: Path, planned_sources: set):
+        """Move os extras de uma pasta de mídia para o novo destino do vídeo.
+
+        Fonte única usada tanto pelo planejamento normal quanto pela correção
+        manual da GUI — para não existir uma segunda cópia que esquece o caso.
+        Preserva a subpasta ("behind the scenes/Making of.mp4").
+
+        Só age quando ``old_folder`` é a pasta DEDICADA de um filme. Numa pasta
+        contêiner (vários filmes soltos), varrer recursivamente arrastaria os
+        extras de um filme para dentro de outro.
+        """
+        try:
+            candidates = sorted(old_folder.rglob('*'))
+        except OSError as e:
+            self.logger.debug(f"Não foi possível listar extras em {old_folder}: {e}")
+            return
+
+        # Pasta dedicada = contém no máximo UM vídeo principal (fora extras).
+        main_videos = [
+            p for p in candidates
+            if is_video_file(p) and not is_extras_path(p)
+        ]
+        if len(main_videos) > 1:
+            self.logger.debug(
+                f"{old_folder} tem {len(main_videos)} vídeos: tratada como contêiner, "
+                f"extras não são movidos"
+            )
+            return
+
+        for extra_path in candidates:
+            try:
+                if not extra_path.is_file():
+                    continue
+            except OSError:
+                continue
+
+            if extra_path.name.startswith('.'):
+                continue
+            if not is_extras_path(extra_path):
+                continue
+            if extra_path in planned_sources:
+                continue
+
+            new_path = new_folder / extra_path.relative_to(old_folder)
+
+            if new_path == extra_path:
+                continue
+            if new_path.exists():
+                self.logger.warning(f"Extra já existe no destino, pulando: {extra_path.name}")
+                continue
+
+            self.operations.append(RenameOperation(
+                source=extra_path,
+                destination=new_path,
+                operation_type='move',
+                reason=f"Mover extra junto com o vídeo: {extra_path.name}"
+            ))
+            planned_sources.add(extra_path)
+
     def _plan_variant_followers(self, scored_variants, lang_code: str, suffix: str, video_op):
         """Faz variantes que NÃO serão promovidas nem removidas seguirem o vídeo.
 
@@ -1292,6 +1359,31 @@ class Renamer:
                 ))
                 planned_sources.add(file_path)
 
+        # Extras acompanham o vídeo, preservando a subpasta.
+        #
+        # Extras não são mídia principal (não viram filme), mas PERTENCEM à
+        # pasta da mídia: "trailer.mp4" e "behind the scenes/Making of.mp4" têm
+        # de ir junto quando o filme muda de pasta. Sem isso eles ficavam
+        # órfãos na pasta antiga — que sobrevivia como lixo por não estar vazia.
+        #
+        # IMPORTANTE: só vale quando o vídeo tinha PASTA PRÓPRIA. Para arquivos
+        # soltos na raiz da biblioteca, a "pasta de origem" é o próprio
+        # diretório de trabalho — varrê-lo recursivamente arrastaria os extras
+        # de OUTROS filmes para dentro do primeiro que aparecesse.
+        media_folder_map = {}
+        for op in self.operations:
+            if op.source not in video_file_set:
+                continue
+            old_folder, new_folder = op.source.parent, op.destination.parent
+            if old_folder == new_folder:
+                continue
+            if old_folder.resolve() == self.work_dir:
+                continue  # vídeo solto na raiz: não há pasta de mídia própria
+            media_folder_map.setdefault(old_folder, new_folder)
+
+        for old_folder, new_folder in media_folder_map.items():
+            self._plan_extras_following_video(old_folder, new_folder, planned_sources)
+
         # Processar tvshow.nfo de séries
         # Para séries, o tvshow.nfo fica na pasta raiz (ex: /Serie/tvshow.nfo)
         # Precisamos movê-lo quando a pasta da série é renomeada
@@ -1465,9 +1557,18 @@ class Renamer:
             folders_to_check = set()
             for folder in source_folders:
                 current = folder.resolve()
-                # Só entra na lista o que está ESTRITAMENTE dentro do work_dir
-                while current != current.parent and work_dir in current.parents:
+                # Sobe até o work_dir INCLUSIVE, e para por aí.
+                #
+                # O próprio work_dir precisa entrar: quando o usuário aponta o
+                # jellyfix direto para a pasta da mídia
+                # ("The.Death.of.Robin.Hood.2026.../"), os arquivos vão para uma
+                # pasta irmã e a original fica vazia — ela é justamente a que
+                # precisa sumir. Exigir "estritamente dentro" deixava esse caso
+                # de fora e a pasta vazia ficava para trás.
+                while current == work_dir or work_dir in current.parents:
                     folders_to_check.add(current)
+                    if current == work_dir:
+                        break
                     current = current.parent
 
             for folder in sorted(folders_to_check, key=lambda p: len(str(p)), reverse=True):

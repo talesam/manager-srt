@@ -20,6 +20,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "usr" / "share"))
 
+from jellyfix.core.renamer import RenameOperation  # noqa: E402
 from jellyfix.utils.config import Config, set_config  # noqa: E402
 from jellyfix.utils.helpers import (  # noqa: E402
     build_subtitle_name,
@@ -257,9 +258,12 @@ def test_extras_nao_viram_filmes(tmp_path, _config):
     assert [p.name for p in scan.video_files] == ["Best_Movie_Ever (2019).mp4"]
     assert len(scan.extras_files) == 2
 
-    touched = {op.source.name for op in Renamer().plan_operations(root, scan)}
-    assert "trailer.mp4" not in touched
-    assert "Finding the right score.mp4" not in touched
+    # Extras podem ser MOVIDOS junto com o filme, mas nunca renomeados como se
+    # fossem um filme (que era o bug: viravam "Filmes/trailer/trailer.mp4").
+    for op in Renamer().plan_operations(root, scan):
+        if op.source.name in ("trailer.mp4", "Finding the right score.mp4"):
+            assert op.operation_type == "move", "extra foi tratado como filme"
+            assert op.destination.name == op.source.name, "extra foi renomeado"
 
 
 # ---------------------------------------------------------------------------
@@ -397,3 +401,123 @@ def test_limpeza_de_pastas_nunca_sobe_acima_do_workdir(tmp_path, _config):
 
     assert outer.exists()
     assert work.exists()
+
+
+def test_pasta_de_origem_vazia_e_removida_quando_e_o_proprio_workdir(tmp_path, _config):
+    """Regressão: apontar o jellyfix para a PRÓPRIA pasta da mídia.
+
+    Os arquivos vão para uma pasta irmã e a original fica vazia. Exigir que a
+    pasta estivesse "estritamente dentro" do work_dir deixava justamente esse
+    caso de fora, e a pasta vazia ficava para trás como lixo.
+    """
+    from jellyfix.core.metadata import Metadata
+    from jellyfix.core.renamer import Renamer
+
+    container = tmp_path / "Filmes"
+    work = container / "The.Death.of.Robin.Hood.2026.1080p.AMZN.WEB-DL-SCOPE"
+    work.mkdir(parents=True)
+    video = work / "The.Death.of.Robin.Hood.2026.1080p.mp4"
+    video.write_bytes(b"x" * 10)
+
+    _config.work_dir = work
+
+    renamer = Renamer()
+    renamer.replan_for_video_with_metadata(
+        video,
+        Metadata(
+            title="A Morte de Robin Hood",
+            year=2026,
+            tmdb_id=1284465,
+            original_title="The Death of Robin Hood",
+            media_type="movie",
+        ),
+    )
+    stats = renamer.execute_operations(dry_run=False)
+
+    destino = container / "A Morte de Robin Hood (2026) [tmdbid-1284465]"
+    assert (destino / "A Morte de Robin Hood (2026) - 1080p.mp4").exists()
+    assert not work.exists(), "pasta de origem vazia ficou para trás"
+    assert stats["cleaned"] >= 1
+    # E o container acima do work_dir continua intocado
+    assert container.exists()
+
+
+def test_extras_acompanham_o_video_preservando_subpasta(tmp_path, _config):
+    """Extras pertencem à pasta da mídia e devem migrar com ela.
+
+    Protegê-los de virar filme não basta: se ficarem para trás, a pasta antiga
+    sobrevive como lixo e o Jellyfin perde os extras.
+    """
+    from jellyfix.core.metadata import Metadata
+    from jellyfix.core.renamer import Renamer
+
+    root = tmp_path / "Filmes"
+    release = root / "Interstellar.2014.1080p.BluRay.x264-SPARKS"
+    (release / "behind the scenes").mkdir(parents=True)
+    video = release / "Interstellar.2014.1080p.BluRay.x264-SPARKS.mkv"
+    video.write_bytes(b"x" * 10)
+    (release / "trailer.mp4").write_bytes(b"x" * 10)
+    (release / "behind the scenes" / "Making of.mp4").write_bytes(b"x" * 10)
+
+    _config.work_dir = root
+    renamer = Renamer()
+    renamer.replan_for_video_with_metadata(
+        video,
+        Metadata(title="Interestelar", year=2014, tmdb_id=157336,
+                 original_title="Interstellar", media_type="movie"),
+    )
+    renamer.execute_operations(dry_run=False)
+
+    destino = root / "Interestelar (2014) [tmdbid-157336]"
+    assert (destino / "trailer.mp4").exists()
+    assert (destino / "behind the scenes" / "Making of.mp4").exists()
+    assert not release.exists(), "pasta de release ficou para trás"
+
+
+def test_extras_nao_vazam_entre_filmes_soltos(tmp_path, _config):
+    """Com vídeos SOLTOS na raiz, a 'pasta de origem' é o próprio work_dir.
+
+    Varrê-lo recursivamente arrastava os extras de um filme para dentro da
+    pasta de outro.
+    """
+    from jellyfix.core.renamer import Renamer
+    from jellyfix.core.scanner import scan_library
+
+    root = tmp_path / "Filmes"
+    outro = root / "Outro.Filme.2020.1080p-GRP"
+    outro.mkdir(parents=True)
+    (outro / "Outro.Filme.2020.1080p-GRP.mkv").write_bytes(b"x" * 10)
+    (outro / "trailer.mp4").write_bytes(b"x" * 10)
+    # vídeo solto na raiz, sem pasta própria
+    (root / "Matrix.1999.1080p-RARBG.mkv").write_bytes(b"x" * 10)
+
+    _config.work_dir = root
+    ops = Renamer().plan_operations(root, scan_library(root))
+
+    trailer_ops = [op for op in ops if op.source.name == "trailer.mp4"]
+    for op in trailer_ops:
+        assert "Matrix" not in str(op.destination), "extra vazou para outro filme"
+
+
+def test_container_do_workdir_nunca_e_removido(tmp_path, _config):
+    """Mesmo esvaziando tudo, nada acima do work_dir pode ser apagado."""
+    from jellyfix.core.renamer import Renamer
+
+    outer = tmp_path / "biblioteca"
+    work = outer / "Filmes"
+    source = work / "Release"
+    source.mkdir(parents=True)
+    origem = source / "a.txt"
+    origem.write_text("x")
+    destino = tmp_path / "fora" / "a.txt"
+
+    renamer = Renamer()
+    renamer.work_dir = work
+    renamer.operations = [
+        RenameOperation(source=origem, destination=destino, operation_type="move", reason="teste")
+    ]
+    renamer.execute_operations(dry_run=False)
+
+    assert not source.exists()  # esvaziada -> removida
+    assert outer.exists()       # acima do work_dir: NUNCA é tocado
+    assert tmp_path.exists()

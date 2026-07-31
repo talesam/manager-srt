@@ -759,9 +759,7 @@ class MetadataFetcher:
         elif year_iters:
             # Ano(s) só no início: remove os anos iniciais e limpa o resto abaixo
             title = re.sub(r'^\s*(?:19\d{2}|20\d{2})\b\s*', '', title).strip()
-            year_match = None
-        else:
-            year_match = None
+
         if not chosen_year:
             # HEURÍSTICA 2: Se não tem ano, detecta onde começa a parte técnica
             # Procura pela primeira ocorrência de padrões técnicos
