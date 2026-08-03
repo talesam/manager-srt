@@ -2,134 +2,157 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the jellyfix package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-#, fuzzy
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: jellyfix\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-08-03 00:00-0300\n"
+"Last-Translator: Translation Automator <auto@translator.ai>\n"
+"Language-Team: et translators <et@li.org>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: attranslate\n"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:103
 msgid "Organize Folder with Jellyfix"
 msgstr "Korrasta kaust Jellyfixiga"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:105
 #, python-brace-format
 msgid "Organize {0} Folders with Jellyfix"
 msgstr "Korrasta {0} kaustu Jellyfixiga"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 150
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:150
 msgid "Organize 1 Video and 1 Subtitle"
 msgstr "Korrasta 1 videot ja 1 subtiitrit"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 152
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:152
 #, python-brace-format
 msgid "Organize 1 Video and {0} Subtitles"
 msgstr "Korrasta 1 videot ja {0} subtiitrit"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 154
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:154
 #, python-brace-format
 msgid "Organize {0} Videos and 1 Subtitle"
 msgstr "Korrasta {0} videot ja 1 subtiitrit"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 156
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:156
 #, python-brace-format
 msgid "Organize {0} Videos and {1} Subtitles"
 msgstr "Korrasta {0} videot ja {1} subtiitreid"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 160
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:160
 msgid "Organize Video"
 msgstr "Korrasta videot"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 162
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:162
 #, python-brace-format
 msgid "Organize {0} Videos"
 msgstr "Korrasta {0} videot"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 166
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:166
 msgid "Organize Subtitle"
 msgstr "Korrasta subtiitrid"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 168
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:168
 #, python-brace-format
 msgid "Organize {0} Subtitles"
 msgstr "Korrasta {0} Subtiitreid"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 228
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:228
 msgid "No valid local files selected"
 msgstr "Kehtivaid kohalikke faile ei ole valitud"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 229
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:229
 msgid "Could not get the path for the selected files."
 msgstr "Valitud failide teed ei saanud kätte."
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 244
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:244
 msgid "Application Not Found"
 msgstr "Rakendust ei leitud"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 245
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:245
 #, python-brace-format
 msgid "Could not find '{0}'. Is Jellyfix installed?"
 msgstr "'{0} ei leitud. Kas Jellyfix on installitud?'"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 250
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:250
 msgid "Application Launch Error"
 msgstr "Rakenduse käivitamise viga"
+
 # File: usr/share/nautilus-python/extensions/jellyfix_extension.py, line: 251
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/nautilus-python/extensions/jellyfix_extension.py:251
 #, python-brace-format
 msgid "Failed to start Jellyfix: {0}"
 msgstr "Jellyfixi käivitamine ebaõnnestus: {0}"
+
 # File: usr/share/jellyfix/cli/app.py, line: 54
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/app.py:63
 msgid "Operation cancelled by user"
 msgstr "Tegevus tühistatud kasutaja poolt"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 552
 # File: usr/share/jellyfix/cli/app.py, line: 58
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/app.py:67
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:855
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:865
 #, python-format
 msgid "Unexpected error: %s"
 msgstr "Ootamatu viga: %s"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 45
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:44
 msgid "Error: No working directory specified"
 msgstr "Viga: Töötavat katalooge ei ole määratud"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 46
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:45
 msgid "Use: --workdir /path/to/directory"
 msgstr "Kasutage: --workdir /tee/kausta"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 51
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:50
 #, python-format
 msgid "Error: Directory does not exist: %s"
 msgstr "Viga: Kaust ei eksisteeri: %s"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 121
 # File: usr/share/jellyfix/cli/interactive.py, line: 141
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 59
+#. Scan library
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:300
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:320
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:58
-#. Scan library
 #, python-format
 msgid "Scanning: %s"
 msgstr "Skaneerimine: %s"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 148
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 65
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:112
@@ -138,267 +161,321 @@ msgstr "Skaneerimine: %s"
 #, python-format
 msgid "Found: %d videos, %d subtitles"
 msgstr "Leitud: %d videot, %d subtiitrit"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 153
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 70
+#. Plan operations
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:329
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:69
-#. Plan operations
 msgid "Planning operations..."
 msgstr "Planeerimise toimingud..."
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:74
 #, python-format
 msgid "%d operations planned"
 msgstr "%d operatsiooni planeeritud"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 78
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:77
 msgid "Nothing to do"
 msgstr "Midagi teha ei ole"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 85
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:129
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:86
 msgid "DRY-RUN mode: No changes will be made"
 msgstr "DRY-RUN režiim: Muudatusi ei tehta"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 87
 # File: usr/share/jellyfix/cli/interactive.py, line: 130
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:130
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:87
 msgid "Use --execute to apply changes"
 msgstr "Kasutage --execute muudatuste rakendamiseks"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 91
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:91
 #. Execute operations
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:91
 #, python-format
 msgid "Executing %d operations..."
 msgstr "Tehakse %d toimingut..."
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 95
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:96
 msgid "Execution completed:"
 msgstr "Täideviimine lõpetatud:"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 97
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:98
 #, python-format
 msgid "  Renamed: %d"
 msgstr "Nimetatud: %d"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 99
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:100
 #, python-format
 msgid "  Moved: %d"
 msgstr "Liikunud: %d"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:102
 #, python-format
 msgid "  Deleted: %d"
 msgstr "Kustutatud: %d"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:104
 #, python-format
 msgid "  Cleaned folders: %d"
 msgstr "Korrastatud kaustad: %d"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:106
 #, python-format
 msgid "  Failed: %d"
 msgstr "Eba: %d"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 107
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:108
 #, python-format
 msgid "  Skipped: %d"
 msgstr "Jätetud: %d"
+
 # File: usr/share/jellyfix/cli/non_interactive.py, line: 120
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/non_interactive.py:120
 msgid "Operations:"
 msgstr "Tegevused:"
+
 # File: usr/share/jellyfix/cli/display.py, line: 131
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:133
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:122
 msgid "No operations needed. Everything is already organized!"
 msgstr "Ei ole vajalikke operatsioone. Kõik on juba korraldatud!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 167
+#. Confirm
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:136
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:342
-#. Confirm
 msgid "Execute these operations?"
 msgstr "Kas need toimingud teostada?"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 173
 # File: usr/share/jellyfix/cli/interactive.py, line: 450
 # File: usr/share/jellyfix/cli/interactive.py, line: 478
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:142
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:345
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:690
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:706
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:734
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:692
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:708
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:736
 msgid "Operation cancelled"
 msgstr "Tegevus tühistatud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 177
+#. Execute
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:349
-#. Execute
 msgid "Executing operations..."
 msgstr "Tegevuste täitmine..."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 99
 # File: usr/share/jellyfix/cli/interactive.py, line: 421
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:161
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:653
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:654
 msgid "What would you like to do?"
 msgstr "Mida soovite teha?"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:163
 msgid "📂 Scan library"
 msgstr "📂 Skaneeri raamatukogu"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 102
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:164
 msgid "🔧 Settings"
 msgstr "🔧 Seaded"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:165
 msgid "🚀 Process files"
 msgstr "🚀 Töötle faile"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 109
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:166
 msgid "📥 Download subtitles"
 msgstr "📥 Laadi alla subtiitrid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 104
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:167
 msgid "ℹ️  Help"
 msgstr "ℹ️  Abi"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 105
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:168
 msgid "❌ Exit"
 msgstr "❌ Välja"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 108
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:171
 msgid "(Use arrow keys to navigate)"
 msgstr "(Kasuta nooleklahve navigeerimiseks)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:181
 msgid "Subliminal library not found!"
 msgstr "Subliminali teekonda ei leitud!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 125
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:182
 msgid "Please install 'subliminal' to use this feature."
 msgstr "Palun installige 'subliminal', et seda funktsiooni kasutada."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 135
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:192
 #, python-format
 msgid "Scanning for videos: %s"
 msgstr "Videote skaneerimine: %s"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 142
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:199
 msgid "No videos found!"
 msgstr "Videot ei leitud!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 160
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:217
 msgid "Select videos to download subtitles for:"
 msgstr "Valige videod, millele allalaadimiseks subtiitreid lisada:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 163
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:220
 msgid "(SPACE to select, ENTER to confirm)"
 msgstr "(SPACE valimiseks, ENTER kinnitamiseks)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
 #. Confirm
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
 msgid "Selected:"
 msgstr "Valitud:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:227
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1210
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1230
 msgid "videos"
 msgstr "videod"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 172
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:229
 msgid "Start download?"
 msgstr "Alusta allalaadimist?"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 193
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:261
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:367
 msgid "Downloading..."
 msgstr "Laadimine..."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 196
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:264
 #, python-brace-format
 msgid "Downloading for: {}"
 msgstr "Laadimine: {}"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 210
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:286
 #, python-brace-format
 msgid "Downloaded {} subtitles for {} videos"
 msgstr "Laaditud {} subtiitreid {} video jaoks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 212
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:288
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:337
 msgid "No subtitles found"
 msgstr "Subtiitreid ei leitud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 158
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:334
 msgid "No operations needed"
 msgstr "Ei ole vajalikke toiminguid."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 202
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:375
 msgid "📂 Directory Browser"
 msgstr "📂 Kaustiku Sirvija"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 203
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:376
 msgid "Current:"
 msgstr "Praegune:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:383
 #. Add option to select current
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:383
 msgid "✓ Select this directory"
 msgstr "✓ Valige see kaust"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:387
 msgid "⬆️  .. (go back)"
 msgstr "⬆️  .. (mine tagasi)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 229
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:395
 #. Add manual path entry
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:395
 msgid "⌨️  Type path manually"
 msgstr "⌨️  Sisestage tee käsitsi"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 235
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:398
 #. Add cancel option
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:398
 msgid "❌ Cancel"
 msgstr "❌ Tühista"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 241
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:401
 #. Ask
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:401
 msgid "Select directory:"
 msgstr "Vali kaust:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 253
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:410
 msgid "Enter full directory path:"
 msgstr "Sisestage täielik katalooge tee:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 255
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:411
 msgid "Path:"
 msgstr "Teekond:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 265
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:418
 msgid "Directory not found!"
 msgstr "Katalooge ei leitud!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 272
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:425
 msgid "Permission denied"
 msgstr "Luba keelatud"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 281
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 137
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:434
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:151
 msgid "Settings"
 msgstr "Seaded"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 287
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:437
 msgid "What would you like to configure?"
 msgstr "Mida soovite konfigureerida?"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 381
 # File: usr/share/jellyfix/cli/interactive.py, line: 392
 # File: usr/share/jellyfix/cli/interactive.py, line: 404
@@ -407,6 +484,7 @@ msgstr "Mida soovite konfigureerida?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:462
 msgid "Subtitle Options"
 msgstr "Subtiitri valikud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 382
 # File: usr/share/jellyfix/cli/interactive.py, line: 394
 # File: usr/share/jellyfix/cli/interactive.py, line: 468
@@ -415,6 +493,7 @@ msgstr "Subtiitri valikud"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:526
 msgid "Metadata Options"
 msgstr "Metaandmed valikud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 383
 # File: usr/share/jellyfix/cli/interactive.py, line: 396
 # File: usr/share/jellyfix/cli/interactive.py, line: 500
@@ -423,6 +502,7 @@ msgstr "Metaandmed valikud"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:558
 msgid "File Organization"
 msgstr "Faili korraldus"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 300
 # File: usr/share/jellyfix/cli/interactive.py, line: 306
 # File: usr/share/jellyfix/cli/interactive.py, line: 428
@@ -435,61 +515,73 @@ msgstr "Faili korraldus"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:540
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:569
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:575
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:663
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:669
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:664
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:670
 msgid "Back"
 msgstr "Tagasi"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 303
 # File: usr/share/jellyfix/cli/interactive.py, line: 431
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:445
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:481
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:537
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:572
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:666
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:667
 msgid "(Use ↑↓ and ENTER to select)"
 msgstr "(Use ↑↓ ja ENTER, et valida)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 284
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:464
 msgid "none"
 msgstr "none"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 409
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:467
 msgid "Subtitle settings:"
 msgstr "Subtiitri seaded:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 289
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:470
 msgid "Rename language variants (lang2→lang, lang3→lang)"
 msgstr "Nimeta keele variandid (lang2→lang, lang3→lang)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 290
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:472
 msgid "Remove duplicate variants (lang2, lang3)"
 msgstr "Eemalda dubleerivad variandid (lang2, lang3)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 291
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:473
 msgid "Add language code to subtitles"
 msgstr "Lisa keelekood subtiitritele"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 292
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:474
 msgid "Remove foreign subtitles"
 msgstr "Eemalda välismaised subtiitrid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 293
 # File: usr/share/jellyfix/cli/interactive.py, line: 398
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:475
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:625
 msgid "Kept languages:"
 msgstr "Hoidetud keeled:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 301
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:476
 msgid "Fix Mirabel files (.pt-BR.hi → .por)"
 msgstr "Paranda Mirabeli faile (.pt-BR.hi → .por)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 298
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:477
 msgid "Min Portuguese words:"
 msgstr "Min portugali keele sõnad:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 310
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:486
 msgid "Rename language variants"
 msgstr "Nimeta keelevariandid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 313
 # File: usr/share/jellyfix/cli/interactive.py, line: 318
 # File: usr/share/jellyfix/cli/interactive.py, line: 323
@@ -512,1168 +604,1263 @@ msgstr "Nimeta keelevariandid"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:596
 msgid "Setting saved"
 msgstr "Seaded salvestatud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 315
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:490
 msgid "Remove duplicate variants"
 msgstr "Eemalda duplikaadivariandid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 320
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:494
 msgid "Add language code"
 msgstr "Lisa keele kood"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 325
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:498
 msgid "Remove foreign"
 msgstr "Eemalda välismaine"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 330
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:502
 msgid "Kept languages"
 msgstr "Hoidetud keeled"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 192
 # File: usr/share/jellyfix/gui/windows/mirabel_dialog.py, line: 55
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:504
 msgid "Fix Mirabel files"
 msgstr "Paranda Mirabeli faile"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 353
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:508
 msgid "Min Portuguese words"
 msgstr "Min portugali keele sõnad"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 355
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:510
 msgid "Minimum number of Portuguese words:"
 msgstr "Minimaalne portugali keele sõnade arv:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 363
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:516
 msgid "Setting saved to ~/.jellyfix/config.json"
 msgstr "Seade salvestatud faili ~/.jellyfix/config.json"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 365
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:518
 msgid "Invalid value!"
 msgstr "Kehtetu väärtus!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 471
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:529
 msgid "Metadata settings:"
 msgstr "Metaandmete seaded:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 295
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:531
 msgid "Fetch metadata (TMDB/TVDB)"
 msgstr "Fetch metadata (TMDB/TVDB)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 296
 # File: usr/share/jellyfix/cli/interactive.py, line: 344
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:532
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:546
 msgid "Ask when multiple TMDB results"
 msgstr "Küsi, kui mitu TMDB tulemust on."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 299
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:533
 msgid "Configure APIs (TMDB/TVDB)"
 msgstr "Konfigureeri API-d (TMDB/TVDB)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 338
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:542
 msgid "Fetch metadata"
 msgstr "Hangi metaandmed"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 492
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:550
 msgid "Configure APIs"
 msgstr "Konfigureeri API-d"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 503
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:561
 msgid "File organization settings:"
 msgstr "Faili korralduse seaded:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 294
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:563
 msgid "Organize in folders (Season XX)"
 msgstr "Korrasta kaustadesse (Hooaeg XX)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 296
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:564
 msgid "Add quality tags (1080p, 720p, etc)"
 msgstr "Lisa kvaliteedi silte (1080p, 720p jne)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 297
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:565
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:585
 msgid "Use ffprobe for quality detection"
 msgstr "Kasutage ffprobe'i kvaliteedi tuvastamiseks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 299
 # File: usr/share/jellyfix/cli/interactive.py, line: 360
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:566
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:589
 msgid "Rename NFO files to match video"
 msgstr "NFO failide ümbernimetamine vastavusse viimiseks videoga"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 300
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:568
 msgid "Remove non-media files (keep only videos/subtitles)"
 msgstr "Eemalda mitte-meediafailid (jätka ainult videoid/pealkirju)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 333
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:577
 msgid "Organize in folders"
 msgstr "Korrastage kaustades"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 343
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:581
 msgid "Add quality tags"
 msgstr "Lisa kvaliteedi silte"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 366
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:593
 msgid "Remove non-media files"
 msgstr "Eemalda mitte-meediafailid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 375
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:602
 msgid "Language Selection"
 msgstr "Keele valik"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 376
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:603
 msgid "Select languages to KEEP (will NOT be removed)"
 msgstr "Valige keeled, mida HOIDA (ei eemaldata)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 377
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:604
 msgid "Use SPACE to check/uncheck, ENTER to confirm"
 msgstr "Kasutage SPACE'i, et märkida/maha võtta, ENTER, et kinnitada"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 390
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:617
 msgid "Select languages to KEEP:"
 msgstr "Valige keeled, mida HOIDA:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 393
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:620
 msgid "(SPACE = check/uncheck, ENTER = confirm)"
 msgstr "(SPACE = märgi/maha märgi, ENTER = kinnita)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 402
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:629
 msgid "Saved to ~/.jellyfix/config.json"
 msgstr "Salvestatud ~/.jellyfix/config.json"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 411
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 38
+#. Window properties
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:638
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:38
-#. Window properties
 msgid "API Configuration"
 msgstr "API konfiguratsioon"
-# File: usr/share/jellyfix/cli/interactive.py, line: 415
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:642
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:645
-msgid "Configured"
-msgstr "Konfigureeritud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 415
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:642
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:646
+msgid "Configured"
+msgstr "Konfigureeritud"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 415
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:642
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:647
 msgid "Not configured"
 msgstr "Ei ole konfigureeritud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 418
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:650
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:651
 msgid "Config file:"
 msgstr "Konfiguratsioonifail:"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 423
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 93
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 178
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:655
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:693
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:656
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:695
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:152
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:246
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:254
 msgid "Configure TMDB API Key"
 msgstr "Konfigureeri TMDB API võti"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 424
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:656
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:710
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:657
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:712
 msgid "View current key (TMDB)"
 msgstr "Vaata praegust võtit (TMDB)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 425
 # File: usr/share/jellyfix/cli/interactive.py, line: 482
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:657
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:738
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:658
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:740
 msgid "Test TMDB connection"
 msgstr "Testi TMDB ühendust"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 426
 # File: usr/share/jellyfix/cli/interactive.py, line: 466
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:658
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:722
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:659
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:724
 msgid "Remove TMDB key"
 msgstr "Eemalda TMDB võti"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 427
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:659
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:741
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:660
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:743
 msgid "How to get TMDB key"
 msgstr "Kuidas saada TMDB võtit"
-# File: usr/share/jellyfix/cli/interactive.py, line: 660
-# File: usr/share/jellyfix/cli/interactive.py, line: 672
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:660
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:672
-msgid "Configure OpenSubtitles login"
-msgstr "Konfigureeri OpenSubtitlesi sisselogimine"
-# File: usr/share/jellyfix/cli/interactive.py, line: 661
-# File: usr/share/jellyfix/cli/interactive.py, line: 675
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:661
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:675
-msgid "Test OpenSubtitles login"
-msgstr "Testi OpenSubtitles sisselogimine"
-# File: usr/share/jellyfix/cli/interactive.py, line: 662
-# File: usr/share/jellyfix/cli/interactive.py, line: 678
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:662
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:678
-msgid "Remove OpenSubtitles login"
-msgstr "Eemalda OpenSubtitlesi sisselogimine"
-# File: usr/share/jellyfix/cli/interactive.py, line: 680
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:680
-msgid "Remove stored OpenSubtitles login?"
-msgstr "Eemalda salvestatud OpenSubtitlesi sisselogimine?"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/cli/interactive.py, line: 688
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 358
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:688
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:358
-msgid "OpenSubtitles login removed"
-msgstr "OpenSubtitlesi sisselogimine eemaldatud"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 438
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:694
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:696
 msgid "Enter your TMDB API key:"
 msgstr "Sisestage oma TMDB API võti:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 447
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:703
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:705
 msgid "TMDB key saved to:"
 msgstr "TMDB võti salvestatud:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 460
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:716
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:718
 msgid "File:"
 msgstr "Fail:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 462
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:718
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:720
 msgid "No key configured"
 msgstr "Ei ole konfigureeritud võtit"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 468
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:724
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:726
 msgid "Are you sure you want to remove the TMDB key?"
 msgstr "Kas olete kindel, et soovite TMDB võtme eemaldada?"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 476
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:732
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:734
 msgid "TMDB key removed"
 msgstr "TMDB võti eemaldatud"
-# File: usr/share/jellyfix/cli/interactive.py, line: 746
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:746
-msgid "OpenSubtitles login (needed to download subtitles)."
-msgstr "OpenSubtitlesi sisselogimine (vajalik subtiitrite allalaadimiseks)."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 747
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:747
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:749
 msgid "Create a free account at https://www.opensubtitles.com/newuser"
 msgstr "Loo tasuta konto aadressil https://www.opensubtitles.com/newuser"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 748
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:748
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:750
 msgid "Use your USERNAME, not your e-mail address."
 msgstr "Kasutage oma KASUTAJANIME, mitte oma e-posti aadressi."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 750
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:750
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:752
 msgid "Username (not e-mail):"
 msgstr "Kasutajanimi (mitte e-post):"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 753
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:753
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:755
 msgid "Password:"
 msgstr "Parool:"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/cli/interactive.py, line: 762
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 329
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:762
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:329
-msgid "OpenSubtitles login saved"
-msgstr "OpenSubtitlesi sisselogimine salvestatud"
+#
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 764
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 232
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 331
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:764
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:274
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:331
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:768
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:449
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:338
 msgid "Username and password are both required"
 msgstr "Kasutajanimi ja parool on mõlemad vajalikud"
-# File: usr/share/jellyfix/cli/interactive.py, line: 772
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:772
-msgid "Testing OpenSubtitles login..."
-msgstr "Testimine OpenSubtitles'i sisselogimist..."
-# File: usr/share/jellyfix/cli/interactive.py, line: 776
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:776
-msgid "No OpenSubtitles login configured!"
-msgstr "OpenSubtitles'i sisselogimist ei ole konfigureeritud!"
-# File: usr/share/jellyfix/cli/interactive.py, line: 777
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:777
-msgid "Configure it first using 'Configure OpenSubtitles login'"
-msgstr "Konfigureeri see esmalt, kasutades 'Konfigureeri OpenSubtitlesi sisselogimine'"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
-# File: usr/share/jellyfix/cli/interactive.py, line: 787
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 384
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:787
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:384
-#, python-format
-msgid "Login failed: %s"
-msgstr "Sisselogimine ebaõnnestus: %s"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 492
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:795
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:805
 msgid "Testing TMDB connection..."
 msgstr "TMDB ühenduse testimine..."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 497
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:800
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:810
 msgid "No API key configured!"
 msgstr "API võtit ei ole konfigureeritud!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 498
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:801
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:811
 msgid "Configure a key first using 'Configure TMDB API Key'"
 msgstr "Konfigureeri esmalt võti, kasutades 'Konfigureeri TMDB API võti'"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 504
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:807
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:817
 #, python-format
 msgid "Invalid key! Has %d characters, should have 32."
 msgstr "Kehtetu võti! Sisaldab %d tähemärki, peaks olema 32."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 505
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:808
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:818
 msgid "You may have copied the Token instead of the API Key!"
 msgstr "Võib-olla olete kopeerinud Tokeni asemel API võtme!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 506
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:809
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:819
 msgid "See 'How to get TMDB key' for details"
 msgstr "Vaata 'Kuidas saada TMDB võtit' üksikasjade jaoks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 514
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:817
 #. Test with a simple search
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:827
 msgid "Making test request..."
 msgstr "Testi päringu tegemine..."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 523
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:826
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:836
 msgid "Connection successful!"
 msgstr "Ühendus õnnestus!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 524
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:827
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:837
 msgid "Valid and working API key"
 msgstr "Kehtiv ja toimiv API võti"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 525
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:828
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:838
 #, python-format
 msgid "Test search returned %d results"
 msgstr "Testiotsing tagastas %d tulemust"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 529
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:832
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:842
 msgid "Example:"
 msgstr "string to translate: Key"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 532
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:835
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:845
 msgid "Invalid API key!"
 msgstr "Kehtetu API võti!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 533
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:836
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:846
 msgid "The key was rejected by TMDB."
 msgstr "Võti lükati tagasi TMDB poolt."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 534
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:837
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:847
 msgid "Possible causes:"
 msgstr "Võimalikud põhjused:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 535
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:838
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:848
 msgid "You copied the Reading Token instead of the API Key"
 msgstr "Kopeerisite lugemise tokeni asemel API võtme."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 536
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:839
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:849
 msgid "The key is incorrect or has been revoked"
 msgstr "Võti on vale või on see tühistatud."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 537
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:840
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:850
 msgid "You copied only part of the key"
 msgstr "Sa kopeerisite ainult osa võtmest"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 538
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:841
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:851
 msgid "See 'How to get TMDB key' for detailed instructions"
 msgstr "Vaata 'Kuidas saada TMDB võtit' üksikasjalike juhiste jaoks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 541
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:844
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:854
 #, python-format
 msgid "Request error: HTTP %d"
 msgstr "Päringu viga: HTTP %d"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 544
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:847
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:857
 msgid "Timeout: Server did not respond in time"
 msgstr "Aeg: Server ei vastanud õigel ajal"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 545
 # File: usr/share/jellyfix/cli/interactive.py, line: 549
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:848
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:852
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:858
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:862
 msgid "Check your internet connection"
 msgstr "Kontrolli oma internetiühendust"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 548
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:851
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:861
 msgid "Connection error"
 msgstr "Ühenduse viga"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 560
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 154
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 320
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:863
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:873
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:213
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:510
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:526
 msgid "How to Get TMDB API Key"
 msgstr "Kuidas saada TMDB API võtme"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 562
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:865
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:875
 msgid "Access:"
 msgstr "Juurdepääs:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 565
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:868
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:878
 msgid "Login or create a FREE account"
 msgstr "Logi sisse või loo TASUTA konto"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 567
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:870
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:880
 msgid "Fill in your details"
 msgstr "Täida oma andmed"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 568
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:871
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:881
 msgid "Confirm email"
 msgstr "Kinnita e-post"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 570
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:873
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:883
 msgid "Request an API key:"
 msgstr "Küsi API võtme:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 571
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:874
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:884
 msgid "Access"
 msgstr "Juurdepääs"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 572
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:875
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:885
 msgid "Click 'Request an API Key'"
 msgstr "Klõpsa 'Taotle API võtme'"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 573
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:876
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:886
 msgid "Choose 'Developer' (personal use)"
 msgstr "Vali 'Arendaja' (isiklikuks kasutamiseks)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 574
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:877
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:887
 msgid "Fill in"
 msgstr "Täida sisse"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 578
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:881
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:891
 msgid "Accept terms of use"
 msgstr "Nõustun kasutustingimustega"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 580
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:883
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:893
 msgid "IMPORTANT - Which key to copy:"
 msgstr "OLULINE - Millist klahvi kopeerida:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 581
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:884
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:894
 msgid "You will see TWO keys on the page:"
 msgstr "Te näed lehe peal KAHT võtme."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 582
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:885
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:895
 msgid "API Read Access Token (long, starts with eyJ...)"
 msgstr "API lugemisõiguse token (pikk, algab eyJ...)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 583
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:886
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:896
 msgid "API Key (v3 auth) ← COPY THIS ONE!"
 msgstr "API võti (v3 autentimine) ← KOPI KEESEE!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 585
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:888
-msgid "The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
-msgstr "Õige võti sisaldab 32 tähemärki (nt: 611bc23b57add08a67b2e64ecb850be8)"
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:898
+msgid ""
+"The correct key has 32 characters (ex: 611bc23b57add08a67b2e64ecb850be8)"
+msgstr ""
+"Õige võti sisaldab 32 tähemärki (nt: 611bc23b57add08a67b2e64ecb850be8)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 587
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:890
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:900
 msgid "Configure in jellyfix:"
 msgstr "Konfigureeri jellyfixis:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 588
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:891
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:901
 msgid "Return to menu and choose 'Configure TMDB API Key'"
 msgstr "Tagasi menüüsse ja vali 'Konfigureeri TMDB API võti'"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 589
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:892
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:902
 msgid "Paste the API Key (32 characters)"
 msgstr "Kleebi kleepimine (32 tähemärki)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 590
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:893
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:903
 msgid "Use 'Test connection' to verify"
 msgstr "Kasutage 'Testi ühendust' kontrollimiseks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 592
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:895
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:905
 msgid "The key is free and does not expire!"
 msgstr "Ava on tasuta ja ei aegu!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 593
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:896
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:906
 msgid "Allows up to 40 requests per 10 seconds"
 msgstr "Lubab kuni 40 päringut 10 sekundi jooksul."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 594
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:897
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:907
 msgid "Enough to organize thousands of files!"
 msgstr "Piisavalt, et korraldada tuhandeid faile!"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 597
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:900
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:910
 msgid "How to Get TMDB Key"
 msgstr "Kuidas saada TMDB võtme"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 604
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:907
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:917
 msgid "Help - jellyfix v"
 msgstr "Aita - jellyfix v"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 606
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:909
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:919
 msgid "What jellyfix does:"
 msgstr "Mida jellyfix teeb:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 608
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:911
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:921
 msgid "Renames files"
 msgstr "Failide ümbernimetamine"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 608
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:911
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:921
 msgid "to Jellyfin standard"
 msgstr "Jellyfini standardile"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/interactive.py, line: 609
 # File: usr/share/jellyfix/cli/display.py, line: 76
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:76
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:912
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:922
 msgid "Movies"
 msgstr "Filmid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 609
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:912
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:922
 msgid "Movie Name (YYYY).mkv"
 msgstr "Filmi Nimi (YYYY).mkv"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 610
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:913
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:923
 msgid "Series"
 msgstr "Seeria"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 837
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:913
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:923
 msgid "Series Name - S01E01.mkv"
 msgstr "Seeria nimi - S01E01.mkv"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 612
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:915
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:925
 msgid "Organizes subtitles"
 msgstr "Korrastab subtiitreid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 612
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:915
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:925
 msgid "(ALL languages)"
 msgstr ""
 "key (kasutatakse konteksti jaoks): (KÕIK keeled)\n"
 "\n"
 "string to translate: (KÕIK keeled)"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 613
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:916
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:926
 msgid "Renames variants"
 msgstr "Muudab variantide nimesid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 614
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:917
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:927
 msgid "Adds language code"
 msgstr "Lisab keele kood"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 615
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:918
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:928
 msgid "Removes foreign subtitles"
 msgstr "Eemaldab võõrkeelsed subtiitrid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 615
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:918
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:928
 msgid "keeps por and eng by default"
 msgstr "hoiab por ja eng vaikimisi"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 616
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:919
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:929
 msgid "Option to remove duplicates"
 msgstr "Valik duplikaatide eemaldamiseks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 616
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:919
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:929
 msgid "when eng exists"
 msgstr "kui eng eksisteerib"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 617
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:920
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:930
 msgid "NEVER"
 msgstr "KUNAGI"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 617
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:920
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:930
 msgid "removes .forced.srt"
 msgstr "eemaldab .forced.srt"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 619
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:922
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:932
 msgid "Folder structure"
 msgstr "Kaustastruktuur"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 620
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:923
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:933
 msgid "Creates folders Season 01, Season 02, etc"
 msgstr "Loob kaustad Hooaeg 01, Hooaeg 02 jne."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 621
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:924
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:934
 msgid "Moves episodes to correct folders"
 msgstr "Liigutab episoode õigesse kausta"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 623
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:926
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:936
 msgid "Fetches metadata"
 msgstr "Toobib metaandmeid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 624
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:927
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:937
 msgid "Searches year and IDs via TMDB/TVDB"
 msgstr "Otsib aastat ja ID-sid TMDB/TVDB kaudu"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 625
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:928
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:938
 msgid "Adds IDs to folders [tmdbid-12345]"
 msgstr "Lisab ID-d kaustadele [tmdbid-12345]"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 627
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:930
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:940
 msgid "Quality detection"
 msgstr "Kvaliteedi tuvastamine"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 628
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:931
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:941
 msgid "Adds quality tags (1080p, 720p, etc) to filenames"
 msgstr "Lisab kvaliteedi silte (1080p, 720p jne) failinimedele"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 629
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:932
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:942
 msgid "Option to use ffprobe for accurate detection"
 msgstr "Valik ffprobe'i kasutamiseks täpseks tuvastamiseks"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 631
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:934
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:944
 msgid "Dry-Run Mode:"
 msgstr "Kuivjooksurežiim:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 632
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:935
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:945
 msgid "By default, jellyfix shows what will be done WITHOUT changing files."
 msgstr "Vaikimisi näitab jellyfix, mida tehakse FAILIDE muutmata jätmisel."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 633
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:936
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:946
 msgid "You can review changes before applying."
 msgstr "Saate muudatusi enne rakendamist üle vaadata."
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 635
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:938
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:948
 msgid "Tip:"
 msgstr "Näpunäide:"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 635
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:938
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:948
 msgid "Configure your TMDB key"
 msgstr "Konfigureeri oma TMDB võti"
+
 # File: usr/share/jellyfix/cli/display.py, line: 64
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:64
 msgid "Scan Results"
 msgstr "Skannimise tulemused"
+
 # File: usr/share/jellyfix/cli/display.py, line: 71
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:71
 msgid "Category"
 msgstr "Kategooria"
+
 # File: usr/share/jellyfix/cli/display.py, line: 72
 # File: usr/share/jellyfix/cli/display.py, line: 253
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:72
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:368
 msgid "Count"
 msgstr "Arv"
+
 # File: usr/share/jellyfix/cli/display.py, line: 75
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:75
 #. Video files
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:75
 msgid "Video files"
 msgstr "Videofailid"
+
 # File: usr/share/jellyfix/cli/display.py, line: 77
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:77
 msgid "Episodes"
 msgstr "Episoodid"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/display.py, line: 80
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
+#. Subtitles with breakdown
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:80
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:57
-#. Subtitles with breakdown
 msgid "Subtitles"
 msgstr "Subtiitrid"
+
 # File: usr/share/jellyfix/cli/display.py, line: 81
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:81
 msgid "Variants"
 msgstr "Variandid"
+
 # File: usr/share/jellyfix/cli/display.py, line: 82
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:82
 msgid "No language"
 msgstr "Ei keelt"
+
 # File: usr/share/jellyfix/cli/display.py, line: 83
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:83
 msgid "Foreign"
 msgstr "Väline"
+
 # File: usr/share/jellyfix/cli/display.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:84
 msgid "With language"
 msgstr "Keelega"
+
 # File: usr/share/jellyfix/cli/display.py, line: 87
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:87
 #. Images
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:87
 msgid "Images"
 msgstr "Pildid"
+
 # File: usr/share/jellyfix/cli/display.py, line: 90
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:90
 #. NFO files
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:90
 msgid "NFO files"
 msgstr "NFO failid"
+
 # File: usr/share/jellyfix/cli/display.py, line: 93
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:93
 #. Other files
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:93
 msgid "Other"
 msgstr "Muu"
+
 # File: usr/share/jellyfix/cli/display.py, line: 100
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:100
 msgid "Suggested actions:"
 msgstr "Soovitatud toimingud:"
+
 # File: usr/share/jellyfix/cli/display.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:103
 msgid "subtitle variants (.lang2, .lang3) can be processed"
 msgstr "subtiitrite variandid (.lang2, .lang3) saab töödelda"
+
 # File: usr/share/jellyfix/cli/display.py, line: 106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:106
 msgid "subtitles without language code"
 msgstr "subtiitrid ilma keelekoodita"
+
 # File: usr/share/jellyfix/cli/display.py, line: 109
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:109
 msgid "foreign subtitles can be removed"
 msgstr "võõrsubtiitrid saab eemaldada"
+
 # File: usr/share/jellyfix/cli/display.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:113
 msgid "Suggestions"
 msgstr "Soovitused"
+
 # File: usr/share/jellyfix/cli/display.py, line: 137
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:139
 #, python-brace-format
 msgid "Operation Preview ({} files)"
 msgstr "Toimingu eelvaade ({} faili)"
+
 # File: usr/share/jellyfix/cli/display.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:262
 #, python-brace-format
 msgid "and {} more groups"
 msgstr "ja {} rohkem rühmi"
+
 # File: usr/share/jellyfix/cli/display.py, line: 189
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:276
 msgid "Move + Rename:"
 msgstr "Liiguta + Nimeta ümber:"
+
 # File: usr/share/jellyfix/cli/display.py, line: 194
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:280
 msgid "Move:"
 msgstr "Liiguta:"
+
 # File: usr/share/jellyfix/cli/display.py, line: 199
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:282
 msgid "Rename:"
 msgstr "Nimeta:"
+
 # File: usr/share/jellyfix/cli/display.py, line: 204
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:284
 msgid "Remove:"
 msgstr "Eemalda:"
+
 # File: usr/share/jellyfix/cli/display.py, line: 208
 # File: usr/share/jellyfix/cli/display.py, line: 225
+#. Create summary
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:286
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:340
-#. Create summary
 msgid "Summary"
 msgstr "Kokkuvõte"
+
 # File: usr/share/jellyfix/cli/display.py, line: 230
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:345
 msgid "Move + Rename"
 msgstr "Liiguta + Nime muuda"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/display.py, line: 231
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 153
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:346
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:194
 #. Move (success)
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:346
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:195
 msgid "Move"
 msgstr "Liiguta"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/display.py, line: 232
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 147
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:347
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:186
 #. Rename (accent)
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:347
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:187
 msgid "Rename"
 msgstr "Nimeta"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/display.py, line: 233
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 159
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:348
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:202
 #. Delete (destructive)
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:348
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:203
 msgid "Delete"
 msgstr "Kustuta"
+
 # File: usr/share/jellyfix/cli/display.py, line: 251
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:366
 msgid "✅ Execution Results"
 msgstr "✅ Täitmise Tulemused"
+
 # File: usr/share/jellyfix/cli/display.py, line: 252
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:367
 msgid "Action"
 msgstr "Tegevus"
+
 # File: usr/share/jellyfix/cli/display.py, line: 256
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:371
 msgid "Renamed"
 msgstr "Nimetatud"
+
 # File: usr/share/jellyfix/cli/display.py, line: 258
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:373
 msgid "Moved"
 msgstr "Liikunud"
+
 # File: usr/share/jellyfix/cli/display.py, line: 260
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:375
 msgid "Deleted"
 msgstr "Kustutatud"
+
 # File: usr/share/jellyfix/cli/display.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:377
 msgid "Cleaned folders"
 msgstr "Puhastatud kaustad"
+
 # File: usr/share/jellyfix/cli/display.py, line: 264
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:379
 msgid "Failed"
 msgstr "Ebaõnnestus"
+
 # File: usr/share/jellyfix/cli/display.py, line: 266
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:381
 msgid "Skipped"
 msgstr "Jätetud"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 46
 # File: usr/share/jellyfix/gui/app.py, line: 122
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/app.py:142
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:55
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:105
 #. Window properties
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/app.py:142
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:56
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:203
 msgid "Jellyfix"
 msgstr "Jellyfix"
+
 # File: usr/share/jellyfix/gui/app.py, line: 131
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/app.py:151
 msgid "translator-credits"
 msgstr "tõlkija-krediidid"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 79
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:996
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
+#. Get release name (clean it up)
 #. Release name (cleaned up)
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1446
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:79
 msgid "Unknown release"
 msgstr "Tundmatu väljaanne"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 165
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
 #. Window properties
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:165
 msgid "Search Subtitles"
 msgstr "Otsi subtiitreid"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
 #. Download button in header
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:189
 msgid "Download"
 msgstr "Laadi alla"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:208
 msgid "Enter movie or show title..."
 msgstr "Sisesta filmi või saate pealkiri..."
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 216
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:216
 msgid "Season"
 msgstr "Hooaeg"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 221
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 246
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:221
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:246
 msgid "Episode"
 msgstr "Episood"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 176
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:176
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:241
 msgid "Movie"
 msgstr "Film"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 267
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:267
 msgid "Search for Subtitles"
 msgstr "Otsi subtiitreid"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 268
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:268
 msgid "Enter a title and click search"
 msgstr "Sisesta pealkiri ja kliki otsi."
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 258
+#. Update status
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:260
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:308
-#. Update status
 msgid "Searching..."
 msgstr "Otsimine..."
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 338
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:338
 msgid "No Results"
 msgstr "Ei tulemusi"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 339
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:339
 msgid "Try a different search term"
 msgstr "Proovi teistsugust otsinguterminit"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 342
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:342
 #, python-brace-format
 msgid "Found {} subtitles"
 msgstr "Leitud {} subtiitreid"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 350
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:333
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:350
 #, python-brace-format
 msgid "Error: {}"
 msgstr "Viga: {}"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 386
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:387
 #, python-brace-format
 msgid "Downloaded: {}"
 msgstr "Allalaaditud: {}"
+
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 395
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/subtitle_search_dialog.py:396
 msgid "Download failed"
 msgstr "Allalaadimine ebaõnnestus"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 63
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:63
 msgid "TMDB Configuration"
 msgstr "TMDB konfiguratsioon"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 64
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:64
 msgid "Configure The Movie Database API key"
 msgstr "Konfigureeri Filmi Andmebaasi API võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 200
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:273
 #. Update status
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:281
 msgid "✓ Configured"
 msgstr "✓ Konfigureeritud"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 289
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:69
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:357
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:246
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:365
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:497
 msgid "✗ Not configured"
 msgstr "✗ Ei ole konfigureeritud"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 71
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:71
 msgid "TMDB API Key"
 msgstr "TMDB API võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 79
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:79
 msgid "Config file"
 msgstr "Konfiguratsioonifail"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:88
 msgid "OpenSubtitles Login"
 msgstr "OpenSubtitlesi sisselogimine"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 89
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
-msgid "A free opensubtitles.com account is required to download subtitles (searching works without it)"
-msgstr "Tasuta opensubtitles.com konto on vajalik subtiitrite allalaadimiseks (otsimine töötab ilma selleta)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
-#, python-format
-msgid "✓ Configured (%s)"
-msgstr "✓ Konfigureeritud (%s)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
-msgid "Account"
-msgstr "Konto"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
-msgid "Configure OpenSubtitles Login"
-msgstr "Konfigureeri OpenSubtitlesi sisselogimine"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
-msgid "Enter your username and password"
-msgstr "Sisestage oma kasutajanimi ja parool"
+msgid ""
+"A free opensubtitles.com account is required to download subtitles "
+"(searching works without it)"
+msgstr ""
+"Tasuta opensubtitles.com konto on vajalik subtiitrite allalaadimiseks "
+"(otsimine töötab ilma selleta)"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
 msgid "Configure"
 msgstr "Konfigureeri"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
-msgid "Test OpenSubtitles Login"
-msgstr "Test OpenSubtitles Logi sisse"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
-msgid "Verify your credentials actually work"
-msgstr "Kinnita, et teie mandaadid tõeliselt töötavad."
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
 msgid "Test"
 msgstr "Test"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
-msgid "Remove OpenSubtitles Login"
-msgstr "Eemalda OpenSubtitlesi sisselogimine"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
-msgid "Delete stored credentials"
-msgstr "Kustuta salvestatud mandaadid"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:196
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:345
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:469
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:352
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
 msgid "Remove"
 msgstr "Eemalda"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 135
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:135
 msgid "Create a free account"
 msgstr "Loo tasuta konto"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 138
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:138
 msgid "Open"
 msgstr "Ava."
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 88
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:147
 msgid "Actions"
 msgstr "Tegevused"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:153
 msgid "Enter your TMDB API key"
 msgstr "Sisestage oma TMDB API võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 107
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:166
 msgid "View Current Key"
 msgstr "Vaata praegust võtit"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 108
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:167
 msgid "Show masked API key"
 msgstr "Näita varjatud API võtit"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 111
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:170
 msgid "View"
 msgstr "Vaade"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 120
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:179
 msgid "Test TMDB Connection"
 msgstr "Testi TMDB ühendus"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 121
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:180
 msgid "Verify API key is working"
 msgstr "Kontrolli, kas API võti töötab"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 133
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:192
 msgid "Remove TMDB Key"
 msgstr "Eemalda TMDB võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 134
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:193
 msgid "Delete stored API key"
 msgstr "Kustuta salvestatud API võti"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 149
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 188
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:208
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:182
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:280
 msgid "Help"
 msgstr "Abi"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 155
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:214
 msgid "Step-by-step tutorial"
 msgstr "Sammuti juhend"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 158
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
 msgid "Tutorial"
 msgstr "Juhend"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:255
 msgid "Enter your TMDB API key below"
 msgstr "Sisestage oma TMDB API võti allpool"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 184
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:252
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:260
 msgid "Paste API key here"
 msgstr "Kleebi API siia"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 188
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 282
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 329
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 371
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:256
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:311
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:344
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:468
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:521
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:553
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:264
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:316
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:351
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:484
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:172
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:233
 msgid "Cancel"
 msgstr "Tühista"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:257
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:312
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:265
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:317
 msgid "Save"
 msgstr "Salvesta"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 203
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:276
 #. Show toast
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:284
 msgid "API key saved successfully"
 msgstr "API võti salvestatud edukalt"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
-msgid ""
-"Enter your opensubtitles.com username and password.\n"
-"⚠ Use your USERNAME, not your e-mail address."
-msgstr ""
-"Sisestage oma opensubtitles.com kasutajanimi ja parool.  \n"
-"⚠ Kasutage oma KASUTAJANIME, mitte oma e-posti aadressi."
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:301
 msgid "Username (not e-mail)"
 msgstr "Kasutajanimi (mitte e-post)"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:299
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:305
 msgid "Password"
 msgstr "Parool"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:306
 #. Toggle password visibility
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:311
 msgid "Show password"
 msgstr "Näita parooli"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
-msgid "Remove OpenSubtitles Login?"
-msgstr "Eemalda OpenSubtitlesi sisselogimine?"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
-msgid ""
-"This will delete your stored credentials. You will not be able to download from opensubtitles.com "
-"until you configure it again."
-msgstr ""
-"See kustutab teie salvestatud mandaadid. Te ei saa opensubtitles.com-ist alla laadida, kuni te ei "
-"konfigureeri seda uuesti."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
-msgid "Configure your login first"
-msgstr "Konfigureeri oma sisselogimine esmalt"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
-msgid "Testing login…"
-msgstr "Sisselogimise testimine…"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
-#, python-format
-msgid "✓ Login OK (%s)"
-msgstr "✓ Sisselogimine OK (%s)"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:412
 msgid "Current TMDB API Key"
 msgstr "Praegune TMDB API võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:413
 msgid "Masked key"
 msgstr "Maskeeritud võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 221
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:397
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:413
 msgid "Full key stored in"
 msgstr "Täielik võti on salvestatud"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 226
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 241
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:402
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:417
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:433
 msgid "No API Key"
 msgstr "Ei API võti"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 227
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:403
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:419
 msgid "No TMDB API key configured yet"
 msgstr "TMDB API võtit pole veel konfigureeritud"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 230
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 244
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 272
@@ -1682,68 +1869,82 @@ msgstr "TMDB API võtit pole veel konfigureeritud"
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 163
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 232
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 431
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:177
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:251
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:408
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:406
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:420
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:458
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:513
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:806
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1126
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1171
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:180
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:257
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:417
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:422
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:436
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:474
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:529
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:933
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1253
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1298
 msgid "OK"
 msgstr "OK"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 242
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:418
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:434
 msgid "Please configure TMDB API key first"
 msgstr "Palun konfigureerige esmalt TMDB API võti."
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:432
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
 msgid "✓ Connection Successful"
 msgstr "✓ Ühendus edukas"
-# 
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 439
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:439
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
 msgid "TMDB API key is working correctly!"
 msgstr "TMDB API võti töötab korrektselt!"
-# 
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 441
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:441
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:457
 msgid "Test search returned:"
 msgstr "Testotsingu tulemus:"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 262
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:448
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:464
 msgid "⚠ Connection Failed"
 msgstr "⚠ Ühendus ebaõnnestus"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 263
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:449
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
 msgid "Could not fetch data from TMDB. Please check your API key."
-msgstr "Ei õnnestunud TMDB-st andmeid hankida. Palun kontrollige oma API võtit."
+msgstr ""
+"Ei õnnestunud TMDB-st andmeid hankida. Palun kontrollige oma API võtit."
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:454
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:470
 msgid "✗ Connection Error"
 msgstr "✗ Ühenduse viga"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 269
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:455
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:471
 #, python-brace-format
 msgid "Error testing connection: {}"
 msgstr "Viga ühenduse testimisel: {}"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 279
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:465
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:481
 msgid "Remove API Key?"
 msgstr "Eemalda API võti?"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 280
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:466
-msgid "This will delete your stored TMDB API key. You will need to configure it again."
-msgstr "See kustutab teie salvestatud TMDB API võtme. Peate selle uuesti seadistama."
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:482
+msgid ""
+"This will delete your stored TMDB API key. You will need to configure it "
+"again."
+msgstr ""
+"See kustutab teie salvestatud TMDB API võtme. Peate selle uuesti seadistama."
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:485
 #. Show toast
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:501
 msgid "API key removed"
 msgstr "API võti eemaldatud"
+
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 302
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:492
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:508
 msgid ""
 "How to Get TMDB API Key:\n"
 "\n"
@@ -1776,93 +1977,110 @@ msgstr ""
 "• Laadida alla plakateid ja taustapilte\n"
 "• Saada täpseid pealkirju ja väljaandmise kuupäevi\n"
 "• Korraldada oma raamatukogu TMDB ID-dega"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 228
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:280
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:35
 msgid "RENAME"
 msgstr "NIMETA"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 215
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:267
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:36
 msgid "MOVE"
 msgstr "LIIGUTA"
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 37
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:37
 msgid "MOVE+RENAME"
 msgstr "LIIGUTA+NIMETA"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:270
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:38
 msgid "DELETE"
 msgstr "KUSTUTA"
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 51
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:51
 msgid "Simulation — nothing will be changed"
 msgstr "Simulatsioon — midagi ei muutu"
-# 
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 58
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 267
-#: NEEDS WORK
+#. Simulação (dry-run): deixa conferir o que será feito SEM tocar nos
+#. arquivos. Fica ao lado do botão Aplicar, que é onde a dúvida aparece.
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:267
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:58
 msgid "Simulation"
 msgstr "Simulatsioon"
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 59
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:59
 msgid "Preview only — no file is touched"
 msgstr "Ainult eelvaade — faili ei muudetud"
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 93
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:93
 msgid "Nothing was changed on disk."
 msgstr "Kettagi ei muudetud."
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 94
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:94
 msgid "Turn off Simulation to apply for real."
 msgstr "Keera simuleerimine, et rakendada reaalselt."
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 101
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:101
 msgid "Close"
 msgstr "Sulge"
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 132
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:132
 msgid "operations"
 msgstr "operatsioonid"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 141
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:178
 #. All button (neutro)
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:179
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:159
 msgid "All"
 msgstr "Kõik"
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 212
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:212
 msgid "Nothing in this category"
 msgstr "Selles kategoorias ei ole midagi."
-# 
+
 # File: usr/share/jellyfix/gui/windows/simulation_window.py, line: 258
-#: NEEDS WORK
+#. Exclusão não tem destino: o que importa é o alerta
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/simulation_window.py:258
 msgid "This file will be permanently deleted"
 msgstr "See fail kustutatakse jäädavalt."
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 34
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:34
 #. Window properties
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:34
 msgid "Jellyfix Help"
 msgstr "Jellyfix Abi"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 69
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:69
 msgid "Version"
 msgstr "Versioon"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:75
 msgid "Intelligent Jellyfin Library Organizer"
 msgstr "Intelligent Jellyfin Raamatukogu Korraldaja"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:86
 msgid "What Jellyfix Does"
 msgstr "Mida Jellyfix teeb"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:88
 msgid ""
@@ -1883,10 +2101,12 @@ msgstr ""
 "• <b>Laeb metaandmeid</b> TMDB/TVDB-st\n"
 "• <b>Tuvastab ja lisab kvaliteedimärked</b> (1080p, 720p jne)\n"
 "• <b>Lisab pakkuja ID-d</b> kaustanimedesse ([tmdbid-12345])"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 96
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:102
 msgid "Examples"
 msgstr "Näited"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 104
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:104
 msgid ""
@@ -1917,10 +2137,12 @@ msgstr ""
 "  • Keelekoodide lisamine: subtiiter.srt → Film Nimi.por.srt\n"
 "  • Eemaldab võõrkeelsed (hoiab ainult konfigureeritud keeled)\n"
 "  • <b>MITTE KUNAGI</b> eemalda .forced.srt faile"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:123
 msgid "How to Use"
 msgstr "Kuidas kasutada"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:125
 msgid ""
@@ -1965,6 +2187,7 @@ msgstr ""
 "   Failid nimetatakse ümber ja korraldatakse\n"
 "\n"
 "<b>Ni =></b> Kontrollige alati eelvaadet enne käivitamist!"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 137
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:153
 msgid ""
@@ -1978,16 +2201,17 @@ msgid ""
 msgstr ""
 "Seadistage Jellyfiksi käitumine:\n"
 "\n"
-"• <b>Subtiitrite käsitlemine:</b> nimetage variante ümber, lisage keelekoodid, eemaldage "
-"võõrkeelsed\n"
+"• <b>Subtiitrite käsitlemine:</b> nimetage variante ümber, lisage keelekoodid, eemaldage võõrkeelsed\n"
 "• <b>Salvestatud keeled:</b> valige, milliseid subtiitrite keeli säilitada\n"
 "• <b>Metaandmed:</b> TMDB-laadimise lubamine/keelamine\n"
 "• <b>Kvaliteedimärked:</b> lisage failinimedesse eraldusvõime märked\n"
 "• <b>ffprobe:</b> kasutage ffprobe't täpse kvaliteedi tuvastamiseks"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 148
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:166
 msgid "Important Notes"
 msgstr "Olulised märkused"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 148
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:168
 msgid ""
@@ -2014,180 +2238,147 @@ msgstr ""
 "\n"
 "🌍 <b>Kohandage salvestatud keeled</b>\n"
 "Seadistage eelistustes, milliseid subtiitrite keeli säilitada."
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 167
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:187
 msgid "Links"
 msgstr "Lingid"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 172
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:192
 msgid "Homepage"
 msgstr "Avaleht"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 178
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:198
 msgid "Report Issues"
 msgstr "Teata probleeme"
+
 # File: usr/share/jellyfix/gui/windows/help_window.py, line: 184
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/help_window.py:204
 msgid "Get TMDB API Key"
 msgstr "Hangi TMDB API võtme saamiseks"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 182
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 44
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:176
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
 #. Window properties
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:274
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:47
 msgid "Preferences"
 msgstr "Eelistused"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 183
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:177
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:275
 msgid "Configure API Keys"
 msgstr "Konfigureeri API võtmed"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 189
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:183
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:281
 msgid "About Jellyfix"
 msgstr "Jellyfixist"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 193
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:187
 #. Quit
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:285
 msgid "Quit"
 msgstr "Välja"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:255
-#. Show scanning toast
-msgid "Scanning directory..."
-msgstr "Skaneerimine kataloogis..."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:367
-#. Show generating operations toast
-msgid "Generating operations..."
-msgstr "Operatsioonide genereerimine..."
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 301
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:392
 #. Show success toast
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:482
 #, python-brace-format
 msgid "{} operations ready"
 msgstr "{} toimingud valmis"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:518
-msgid "Apply Operations?"
-msgstr "Rakenda toimingud?"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 330
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:522
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:286
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:311
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:237
 msgid "Apply"
 msgstr "Rakenda"
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 552
-#: NEEDS WORK
-#, python-brace-format
-msgid "renamed: {}"
-msgstr "ümbernimetav: {}"
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 553
-#: NEEDS WORK
-#, python-brace-format
-msgid "moved: {}"
-msgstr "liigutatud: {}"
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 554
-#: NEEDS WORK
-#, python-brace-format
-msgid "moved and renamed: {}"
-msgstr "liigutatud ja ümber nimetatud: {}"
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 555
-#: NEEDS WORK
-#, python-brace-format
-msgid "DELETED: {}"
-msgstr "DELETED: {}"
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 560
-#: NEEDS WORK
-#, python-brace-format
-msgid "{} operations"
-msgstr "{} toimingud"
-# 
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 563
-#: NEEDS WORK
-msgid "Deletions cannot be undone."
-msgstr "Kustutusi ei saa tagasi võtta."
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:550
-msgid "Execute Operations?"
-msgstr "Teosta toimingud?"
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:554
-msgid "Execute"
-msgstr "Teosta"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 398
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:578
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:181
 #, python-brace-format
 msgid "{} operations completed"
 msgstr "{} toimingut lõpetatud"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 751
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:803
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:930
 msgid "Feature Unavailable"
 msgstr "Funktsioon pole saadaval"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 752
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:804
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:931
 msgid ""
 "The 'subliminal' library is not installed.\n"
 "Please install it to use this feature."
-msgstr "'subliminal' teekonda ei ole installitud. Palun installige see, et seda funktsiooni kasutada."
+msgstr ""
+"'subliminal' teekonda ei ole installitud. Palun installige see, et seda "
+"funktsiooni kasutada."
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 775
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:828
 #. Status Label
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:955
 msgid "Preparing..."
 msgstr "Valmistamine..."
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 863
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1023
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1150
 #, python-brace-format
 msgid "Searching subtitles ({}/{})"
 msgstr "Otsin subtiitreid ({}/{})"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/display.py, line: 80
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
 #. Determine message and options based on results
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1209
 msgid "subtitle"
 msgstr "subtiiter"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/cli/display.py, line: 80
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 54
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1082
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1209
 msgid "subtitles"
 msgstr "subtiitrid"
+
 # File: usr/share/jellyfix/cli/interactive.py, line: 170
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1083
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1103
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1210
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1230
 msgid "video"
 msgstr "video"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 992
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1086
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1213
 msgid "No Subtitles Found"
 msgstr "Subtiitreid ei leitud"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 993
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1087
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1214
 msgid ""
 "Could not find any subtitles automatically.\n"
 "Try manual search?"
 msgstr ""
 "Ei leitud automaatselt ühtegi subtiitrit.  \n"
 "Proovige käsitsi otsingut?"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 997
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1091
 #. Some languages missing
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1218
 msgid "Partial Success"
 msgstr "Osaline edu"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1005
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1099
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1226
 #, python-brace-format
 msgid ""
 "Downloaded {} {}.\n"
@@ -2199,8 +2390,9 @@ msgstr ""
 "\n"
 "Puuduvad keeled: {}\n"
 "Proovida käsitsi otsingut?"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1009
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1104
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1231
 #, python-brace-format
 msgid ""
 "Downloaded {} {} for {} of {} {}.\n"
@@ -2208,25 +2400,30 @@ msgid ""
 msgstr ""
 "Allalaetud {} {} {}-st {} {}-st.\n"
 "Proovida käsitsi otsingut puuduvate jaoks?"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 884
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1109
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1236
 msgid "Download Complete"
 msgstr "Allalaadimine lõpetatud"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1015
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1110
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1237
 #, python-brace-format
 msgid "Downloaded {} {} for {} {} (all languages)."
 msgstr "Allalaetud {} {} {} {} jaoks (kõik keeled)."
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1026
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1123
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1250
 msgid "Manual Search"
 msgstr "Käsitsi otsing"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 913
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1168
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1295
 msgid "Batch Error"
 msgstr "Partii viga"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 914
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1169
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1296
 #, python-brace-format
 msgid ""
 "An error occurred during batch download:\n"
@@ -2234,539 +2431,1040 @@ msgid ""
 msgstr ""
 "Tekkis viga masslaadimise ajal:  \n"
 "{}"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1146
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1225
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1352
 #, python-brace-format
 msgid "Subtitle downloaded: {}"
 msgstr "Subtiitrid allalaaditud: {}"
+
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1332
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1399
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:1526
 #, python-brace-format
 msgid "Updated: {title} ({year}) - applied to {count} episodes"
 msgstr "Uuendatud: {title} ({year}) - rakendatud {count} episoodile"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 60
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:63
 msgid "Subtitle Handling"
 msgstr "Subtiitrite haldamine"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 61
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:64
 msgid "Configure how subtitles are processed"
 msgstr "Konfigureeri, kuidas subtiitreid töödeldakse"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 66
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:69
 msgid "Rename Language Variants"
 msgstr "Nimeta keele variante"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 67
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:70
 msgid "Rename .por2.srt, .eng2.srt to .por.srt, .eng.srt"
 msgstr "Nimeta .por2.srt, .eng2.srt ümber .por.srt, .eng.srt-ks"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 75
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:78
 msgid "Remove Duplicate Variants"
 msgstr "Eemalda duplikaatvariandid"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 76
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:79
 msgid "Remove .lang2, .lang3 files after renaming"
 msgstr "Eemalda .lang2, .lang3 failid pärast ümbernimetamist"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 84
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:87
 msgid "Add Language Codes"
 msgstr "Lisa keelekoode"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 85
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:88
 msgid "Add language codes to subtitles without them"
 msgstr "Lisa keelekoode subtiitritele ilma nendeta"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 93
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:96
 msgid "Remove Foreign Subtitles"
 msgstr "Eemalda välismaised subtiitrid"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 94
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:97
 msgid "Remove subtitles not in kept languages list"
 msgstr "Eemalda subtiitrid, mis ei ole säilitamise keelte loendis"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 102
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:105
 msgid "Minimum Portuguese Words"
 msgstr "Minimaalne portugali sõnad"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 103
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:106
 msgid "Min words to detect Portuguese subtitles"
 msgstr "Min sõnad Portugali subtiitrite tuvastamiseks"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 112
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:115
 msgid "Kept Languages"
 msgstr "Hoidetud keeled"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 113
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:116
 msgid "Subtitles in these languages will be kept"
 msgstr "Need to translate the string."
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 134
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:137
 msgid "Video"
 msgstr "Video"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 140
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:143
 msgid "Video Handling"
 msgstr "Video töötlemine"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 141
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:144
 msgid "Configure how videos are processed"
 msgstr "Konfigureeri, kuidas videoid töödeldakse"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:149
 msgid "Organize in Folders"
 msgstr "Korrastage kaustades"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 147
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:150
 msgid "Organize TV episodes in Season folders"
 msgstr "Korrasta telesaateid hooaja kaustadesse"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 155
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:158
 msgid "Add Quality Tags"
 msgstr "Lisa kvaliteedi silte"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 156
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:159
 msgid "Add resolution tags (1080p, 720p, etc) to filenames"
 msgstr "Lisa eraldusvõime sildid (1080p, 720p jne) failinimedele"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 164
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:167
 msgid "Use ffprobe for Detection"
 msgstr "Kasutage ffprobe'i tuvastamiseks"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 165
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:168
 msgid "More accurate but slower quality detection"
 msgstr "Täpsem, kuid aeglasem kvaliteedi tuvastamine"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 177
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:180
 msgid "Metadata"
 msgstr "Metaandmed"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 183
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:186
 msgid "Metadata Fetching"
 msgstr "Metaandmete hankimine"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 184
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:187
 msgid "Configure metadata from TMDB"
 msgstr "Konfigureeri metaandmed TMDB-st"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 189
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:192
 msgid "Fetch Metadata"
 msgstr "Hangi metaandmed hankimine"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 190
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:193
 msgid "Download metadata and posters from TMDB"
 msgstr "Laadi allaolev teave ja plakatid TMDB-st"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 202
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:205
 msgid "General"
 msgstr "Üldine"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:211
 msgid "Application"
 msgstr "Rakendus"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 209
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:212
 msgid "General application settings"
 msgstr "Üldised rakenduse seaded"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 217
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:217
 msgid "Keep Recent Libraries"
 msgstr "Hoia hiljutisi teeke"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:218
 msgid "Remember recently scanned libraries between sessions"
 msgstr "Käivita hiljuti skaneeritud raamatukogud seansside vahel"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 228
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:228
 msgid "File Cleanup"
 msgstr "Faili puhastus"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 229
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:229
 msgid "Configure which files to remove"
 msgstr "Konfigureeri, millised failid eemaldada"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 234
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:234
 msgid "Remove Non-Media Files"
 msgstr "Eemalda mitte-meedia faile"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 235
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:235
 msgid "Remove all files that are not .srt or .mp4"
 msgstr "Eemalda kõik failid, mis ei ole .srt või .mp4"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 243
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:243
 msgid "Fix Mirabel Files"
 msgstr "Paranda Mirabeli faile"
+
 # File: usr/share/jellyfix/gui/windows/preferences_window.py, line: 244
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/preferences_window.py:244
 msgid "Rename .pt-BR.hi.srt, .br.hi.srt to .por.srt"
 msgstr "Nimeta .pt-BR.hi.srt, .br.hi.srt .por.srt-ks"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 130
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
 #. Dialog properties
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:131
 msgid "Search Title"
 msgstr "Otsingu pealkiri"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 159
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:159
 msgid "Enter movie or series name..."
 msgstr "Sisesta filmi või sarja nimi..."
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 163
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:163
 msgid "Search"
 msgstr "Otsi"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 181
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:181
 msgid "TV Series"
 msgstr "TV sariid"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 269
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:271
 msgid "TMDB not configured"
 msgstr "TMDB ei ole konfigureeritud"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 309
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:320
 msgid "No results found"
 msgstr "Ei tulemusi leitud"
+
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 312
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/search_dialog.py:323
 msgid "results"
 msgstr "tulemused"
+
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 68
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:73
 msgid "Select Directory to Scan"
 msgstr "Vali skannimiseks kataloog"
+
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 160
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:174
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:177
 msgid "Scan Failed"
 msgstr "Skannimine ebaõnnestus"
+
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 229
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:248
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:254
 msgid "Operation Generation Failed"
 msgstr "Operatsiooni genereerimine ebaõnnestus"
+
 # File: usr/share/jellyfix/gui/handlers/operations.py, line: 428
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:405
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/handlers/operations.py:414
 msgid "Execution Failed"
 msgstr "Täideviimine ebaõnnestus"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 65
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:65
 msgid "No Selection"
 msgstr "Ei valikut"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 66
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:66
 msgid "Select an item to preview"
 msgstr "Vali objekt eelvaateks"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:111
 msgid "Search title"
 msgstr "Otsingu pealkiri"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 110
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:114
 msgid "Wrong title? Click to search manually"
 msgstr "Vale pealkiri? Klõpsake, et otsida käsitsi."
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 121
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:123
 msgid "Download Subtitles"
 msgstr "Laadi alla subtiitrid"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 125
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:126
 msgid "Search and download subtitles automatically"
 msgstr "Otsi ja laadi subtiitreid automaatselt"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 115
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:154
 msgid "From:"
 msgstr "Alates:"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 147
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:186
 msgid "To:"
 msgstr "Kelle:"
+
 # File: usr/share/jellyfix/gui/widgets/preview_panel.py, line: 225
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/preview_panel.py:277
 msgid "MOVE + RENAME"
 msgstr "LIIGUTA + NIMETA ümber"
+
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-# 
+#
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 132
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 116
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:151
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:152
 msgid "Operations"
 msgstr "Tegevused"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 131
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:166
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:167
 msgid "Search..."
 msgstr "Otsi..."
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 196
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:215
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:216
 msgid "Download Subtitles for All"
 msgstr "Laadi alla subtiitrid kõigile"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 198
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:217
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:218
 msgid "Search and download subtitles for all listed videos"
 msgstr "Otsi ja laadi alla subtiitrid kõigi loetletud videote jaoks"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 180
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:237
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
 msgid "No Operations"
 msgstr "Ei toiminguid"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 181
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:238
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:239
 msgid "Scan a directory to generate operations"
 msgstr "Skaneeri katalooge operatsioonide genereerimiseks"
-# 
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 269
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 276
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:269
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:276
 msgid "Preview every change without touching any file"
 msgstr "Eelvaate iga muudatust ilma ühegi faili puudutamata"
-# 
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:311
 msgid "Simulate"
 msgstr "Simuleeri"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 304
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:452
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:495
 msgid "rename"
 msgstr "ümbernimeta"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 306
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:454
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:497
 msgid "move"
 msgstr "liiguta"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 308
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:456
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:499
 msgid "delete"
 msgstr "kustuta"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 311
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:459
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:502
 #, python-brace-format
 msgid "Showing {} of {} operations"
 msgstr "Kuvatakse {} {} operatsiooni"
+
 # File: usr/share/jellyfix/gui/widgets/operations_list.py, line: 313
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:461
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/operations_list.py:504
 #, python-brace-format
 msgid "Total: {} operations"
 msgstr "Kokku: {} toimingut"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 79
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:83
 msgid "Welcome to Jellyfix"
 msgstr "Tere tulemast Jellyfixi"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 107
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:111
 msgid "Drop a folder here"
 msgstr "Kanna kaust siia"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 108
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:112
 msgid "or click the button below"
 msgstr "või klõpsake alloleval nupul"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 115
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:119
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:128
 msgid "Add Library"
 msgstr "Lisa raamatukogu"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 146
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:150
 msgid "Recent Libraries"
 msgstr "Viimased raamatukogud"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 179
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:183
 msgid "Clear recent libraries"
 msgstr "Kustuta hiljutised raamatukogud"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 202
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:206
 msgid "weeks ago"
 msgstr "nädalat tagasi"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 204
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:208
 msgid "days ago"
 msgstr "päevad tagasi"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 206
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:210
 msgid "hours ago"
 msgstr "tunde tagasi"
+
 # File: usr/share/jellyfix/gui/widgets/dashboard.py, line: 208
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/widgets/dashboard.py:212
 msgid "Just now"
 msgstr "Just nüüd"
+
 # File: usr/share/jellyfix/core/image_manager.py, line: 101
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:102
 #, python-format
 msgid "Downloaded image: %s"
 msgstr "Allalaaditud pilt: %s"
+
 # File: usr/share/jellyfix/core/image_manager.py, line: 106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:107
 #, python-format
 msgid "Failed to download image: %s"
 msgstr "Pildi allalaadimine ebaõnnestus: %s"
+
 # File: usr/share/jellyfix/core/image_manager.py, line: 110
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:111
 #, python-format
 msgid "Unexpected error downloading image: %s"
 msgstr "Ootamatu viga pildi allalaadimisel: %s"
+
 # File: usr/share/jellyfix/core/image_manager.py, line: 216
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:217
 msgid "Clearing image cache..."
 msgstr "Puhastatakse pildivaru..."
+
 # File: usr/share/jellyfix/core/image_manager.py, line: 218
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/image_manager.py:219
 msgid "Image cache cleared"
 msgstr "Pildi vahemälu tühjendatud"
-# 
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 73
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:73
 #, python-format
 msgid "Subtitle session cache cleared (%s)"
 msgstr "Subtiitri seansi vahemälu tühjendatud (%s)"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:488
 msgid "Login OK — subtitles can be downloaded"
 msgstr "Sisselogimine OK — subtiitrid on allalaaditavad"
-# 
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 368
-#: NEEDS WORK
-msgid "opensubtitles.com is rate limiting logins (1 per second per IP). Wait a few seconds and test again."
-msgstr ""
-"opensubtitles.com piirab sisselogimisi (1 sekundis IP kohta). Oodake paar sekundit ja proovige "
-"uuesti."
-# 
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 374
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:498
 msgid ""
-"Username or password rejected by opensubtitles.com. Use the USERNAME (not the e-mail), check for a "
-"trailing space, and confirm the account e-mail was verified — a brand new account only works in the "
-"API after confirming the e-mail."
+"opensubtitles.com is rate limiting logins (1 per second per IP). Wait a few "
+"seconds and test again."
 msgstr ""
-"Kasutajanimi või parool lükati tagasi opensubtitles.com. Kasutage KASUTAJANIME (mitte e-posti), "
-"kontrollige lõpus olevat tühikut ja kinnitage, et konto e-post on kinnitatud — täiesti uus konto "
-"töötab API-s alles pärast e-posti kinnitamist."
+"opensubtitles.com piirab sisselogimisi (1 sekundis IP kohta). Oodake paar "
+"sekundit ja proovige uuesti."
+
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 374
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:504
+msgid ""
+"Username or password rejected by opensubtitles.com. Use the USERNAME (not "
+"the e-mail), check for a trailing space, and confirm the account e-mail was "
+"verified — a brand new account only works in the API after confirming the "
+"e-mail."
+msgstr ""
+"Kasutajanimi või parool lükati tagasi opensubtitles.com. Kasutage "
+"KASUTAJANIME (mitte e-posti), kontrollige lõpus olevat tühikut ja kinnitage,"
+" et konto e-post on kinnitatud — täiesti uus konto töötab API-s alles pärast"
+" e-posti kinnitamist."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 270
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:312
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:511
 msgid "Use your username, not your e-mail address."
 msgstr "Kasutage oma kasutajanime, mitte oma e-posti aadressi."
-# 
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:666
 msgid "Subtitle session cache cleared (stale session)"
 msgstr "Subtiitrite seansi vahemälu tühjendatud (aegunud seanss)"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:327
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:692
 msgid ""
 "opensubtitles.com requires a free account to download subtitles. Set "
-"opensubtitles_username/opensubtitles_password in ~/.jellyfix/config.json (or the "
-"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD environment variables)."
+"opensubtitles_username/opensubtitles_password in ~/.jellyfix/config.json (or"
+" the OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD environment variables)."
 msgstr ""
 "opensubtitles.com nõuab tasuta kontot subtiitrite allalaadimiseks. Määrake "
-"opensubtitles_username/opensubtitles_password failis ~/.jellyfix/config.json (või "
-"OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD keskkonnamuutujates)."
-# 
+"opensubtitles_username/opensubtitles_password failis ~/.jellyfix/config.json"
+" (või OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD keskkonnamuutujates)."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 478
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:708
 #, python-format
 msgid ""
-"opensubtitles.com daily download limit reached (%(used)s of %(allowed)s used). The subtitle WAS "
-"found, only the download was refused. Quota resets in %(reset)s."
+"opensubtitles.com daily download limit reached (%(used)s of %(allowed)s "
+"used). The subtitle WAS found, only the download was refused. Quota resets "
+"in %(reset)s."
 msgstr ""
-"opensubtitles.com igapäevane allalaadimise limiit on saavutatud (%(used)s %(allowed)s-st "
-"kasutatud). Subtiitrid LEITI, ainult allalaadimine keeldus. Kvoot taastub %(reset)s."
-# 
+"opensubtitles.com igapäevane allalaadimise limiit on saavutatud (%(used)s "
+"%(allowed)s-st kasutatud). Subtiitrid LEITI, ainult allalaadimine keeldus. "
+"Kvoot taastub %(reset)s."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 484
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:714
 msgid "less than 24 hours"
 msgstr "vähem kui 24 tundi"
-# 
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 489
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:719
 #, python-format
-msgid "Download refused by opensubtitles.com (%(remaining)s of %(allowed)s downloads left today)."
-msgstr "Laadimine keeldus opensubtitles.com (%(remaining)s %(allowed)s allalaadimist täna jäänud)."
-# 
+msgid ""
+"Download refused by opensubtitles.com (%(remaining)s of %(allowed)s "
+"downloads left today)."
+msgstr ""
+"Laadimine keeldus opensubtitles.com (%(remaining)s %(allowed)s allalaadimist"
+" täna jäänud)."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 493
-#: NEEDS WORK
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:723
 msgid "Download refused by opensubtitles.com. Check the login in Settings."
-msgstr "Laadimine keeldus opensubtitles.com. Kontrollige sisselogimist seadetes."
+msgstr ""
+"Laadimine keeldus opensubtitles.com. Kontrollige sisselogimist seadetes."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:833
 #, python-format
 msgid "Searching subtitles for: %s (Languages: %s)"
 msgstr "Otsin subtiitreid: %s (Keeled: %s)"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 183
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:397
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:843
 #, python-format
 msgid "Level 1 (hash) found: %s"
 msgstr "Tase 1 (hash) leitud: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 187
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:401
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:847
 #, python-format
 msgid "Missing languages: %s - trying TMDB title search"
 msgstr "Puuduvad keeled: %s - proovime TMDB pealkirja otsingut"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 208
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:422
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:868
 #, python-format
 msgid "Level 2 (TMDB) found: %s"
 msgstr "Tase 2 (TMDB) leitud: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 211
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:425
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:871
 #, python-format
 msgid "Still missing: %s (try manual search)"
 msgstr "Endiselt puudub: %s (proovi käsitsi otsingut)"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 91
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:428
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:874
 #, python-format
 msgid "No subtitles found for: %s"
 msgstr "Subtiitreid ei leitud: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 268
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:472
-#. Phase 1: Batch hash search — single pool for all videos
+#. Phase 1: group videos by missing languages so the batch provider call
+#. never requests a sidecar that already exists for one of them.
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:931
 #, python-format
 msgid "Batch Level 1: scanning %d videos by hash..."
 msgstr "Partii tase 1: skaneerimine %d videot hash'i järgi..."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 299
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:510
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:979
 #, python-format
 msgid "Level 1 (hash) found: %s for %s"
 msgstr "Tase 1 (hash) leitud: %s jaoks %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 313
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:524
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:993
 #, python-format
 msgid "Batch Level 2: title search for %d videos..."
 msgstr "Partii tase 2: pealkirja otsing %d video jaoks..."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 331
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:542
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1011
 #, python-format
 msgid "Level 2 (TMDB) found: %s for %s"
 msgstr "Tase 2 (TMDB) leitud: %s jaoks %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 525
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:567
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1037
 #, python-format
 msgid "Level 3 (fallback %s) found: %s for %s"
 msgstr "Tase 3 (varu %s) leitud: %s jaoks %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 238
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:599
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1069
 #, python-format
 msgid "Found %d subtitles by hash for: %s"
 msgstr "Leiti %d subtiitreid hash'i järgi: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 344
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:702
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1170
 #, python-format
 msgid "Found %d validated subtitles by title for: %s"
 msgstr "Leitud %d valideeritud subtiitreid pealkirja järgi: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 601
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:959
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1416
 #, python-format
 msgid "Manual search: %s"
 msgstr "Käsitsi otsing: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 923
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:975
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1432
 #, python-format
 msgid "No results from primary providers, trying: %s"
 msgstr "Peamiste pakkujate tulemusi ei leitud, proovime: %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1031
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1484
 #, python-format
 msgid "Found %d subtitles in manual search"
 msgstr "Leiti %d subtiitreid käsitsi otsingus."
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1531
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1612
 #, python-format
 msgid "Failed to download subtitle content. %s"
 msgstr "Subtiitri sisu allalaadimine ebaõnnestus. %s"
+
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1086
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1552
 #, python-format
 msgid "Downloaded subtitle: %s"
 msgstr "Allalaaditud subtiiter: %s"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:661
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:673
+msgid "Add OpenSubtitles account"
+msgstr "Lisa OpenSubtitles'i konto"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:662
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:676
+msgid "Test OpenSubtitles accounts"
+msgstr "Testi OpenSubtitles'i kontosid"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:663
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:679
+msgid "Remove OpenSubtitles accounts"
+msgstr "Eemalda OpenSubtitles'i kontod"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:681
+msgid "Remove all stored OpenSubtitles accounts?"
+msgstr "Eemaldada kõik salvestatud OpenSubtitles'i kontod?"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:690
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:366
+msgid "OpenSubtitles accounts removed"
+msgstr "OpenSubtitles'i kontod eemaldatud"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:748
+msgid "Add an OpenSubtitles account."
+msgstr "Lisa OpenSubtitles'i konto."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:766
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:336
+msgid "OpenSubtitles account saved"
+msgstr "OpenSubtitles'i konto salvestatud"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:776
+msgid "Testing OpenSubtitles accounts..."
+msgstr "OpenSubtitles'i kontode testimine..."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:780
+msgid "No OpenSubtitles account configured!"
+msgstr "Ühtegi OpenSubtitles'i kontot pole konfigureeritud!"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:781
+msgid "Add an OpenSubtitles account first"
+msgstr "Lisa esmalt OpenSubtitles'i konto"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:795
+#, python-format
+msgid "Account test failed: %(user)s: %(message)s"
+msgstr "Konto test ebaõnnestus: %(user)s: %(message)s"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:400
+#, python-format
+msgid "OpenSubtitles limit reached; switching to account: %s"
+msgstr "OpenSubtitles'i piirmäär saavutatud; lülitumine kontole: %s"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:704
+msgid "Download refused by all configured opensubtitles.com accounts."
+msgstr ""
+"Kõik konfigureeritud opensubtitles.com kontod keeldusid allalaadimisest."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:821
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:920
+#, python-format
+msgid "Subtitles already present for %(video)s: %(languages)s"
+msgstr "Subtiitrid on juba olemas %(video)s: %(languages)s jaoks"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1514
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1581
+#, python-format
+msgid "Subtitle already present; skipping download: %s"
+msgstr "Subtiiter on juba olemas; allalaadimine vahele jäetud: %s"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
+msgid "Accounts"
+msgstr "Kontod"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:293
+msgid "Add OpenSubtitles Account"
+msgstr "Lisa OpenSubtitles'i konto"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
+msgid "Accounts rotate automatically when a daily limit is reached"
+msgstr "Kontod vahetuvad automaatselt, kui päevane piirmäär on saavutatud"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
+msgid "Test OpenSubtitles Accounts"
+msgstr "Testi OpenSubtitles'i kontosid"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
+msgid "Verify all configured credentials"
+msgstr "Kontrolli kõik seadistatud mandaadid"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
+msgid "Remove OpenSubtitles Accounts"
+msgstr "Eemalda OpenSubtitles'i kontod"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
+msgid "Delete all stored credentials"
+msgstr "Kustuta kõik salvestatud mandaadid"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:248
+#, python-format
+msgid "✓ OpenSubtitles accounts: %(users)s"
+msgstr "✓ OpenSubtitles'i kontod: %(users)s"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
+msgid ""
+"Enter an opensubtitles.com username and password.\n"
+"⚠ Use your USERNAME, not your e-mail address."
+msgstr ""
+"Sisesta opensubtitles.com'i kasutajanimi ja parool.\n"
+"⚠ Kasuta oma KASUTAJANIME, mitte e-posti aadressi."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:347
+msgid "Remove All OpenSubtitles Accounts?"
+msgstr "Kas eemaldada kõik OpenSubtitles'i kontod?"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:348
+msgid ""
+"This will delete all stored credentials. You will not be able to download "
+"from opensubtitles.com until you configure it again."
+msgstr ""
+"See kustutab kõik salvestatud mandaadid. Te ei saa alla laadida "
+"opensubtitles.com'ist, kuni olete selle uuesti seadistanud."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:379
+msgid "Add an account first"
+msgstr "Lisa esmalt konto"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:382
+msgid "Testing accounts…"
+msgstr "Kontode testimine…"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
+msgid "✓ All OpenSubtitles accounts are valid"
+msgstr "✓ Kõik OpenSubtitles'i kontod on kehtivad"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:400
+#, python-format
+msgid "Account test failed: %s"
+msgstr "Konto test ebaõnnestus: %s"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:135
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:353
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:460
+msgid "Loading library…"
+msgstr "Raamatukogu laadimine…"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:140
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:354
+msgid "Scanning files…"
+msgstr "Failide skannimine…"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:179
+msgid "Changes applied successfully"
+msgstr "Muudatused rakendatud edukalt"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:461
+msgid "Preparing operations…"
+msgstr "Toimingute ettevalmistamine…"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:629
+msgid "Applying changes…"
+msgstr "Muudatuste rakendamine…"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/main_window.py:630
+msgid "Organizing files safely…"
+msgstr "Failide ohutu korrastamine…"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:33
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:40
+msgid "Review changes"
+msgstr "Vaata muudatusi üle"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:41
+msgid "Confirm what Jellyfix will do"
+msgstr "Kinnita, mida Jellyfix teeb"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:72
+msgid "Apply these changes?"
+msgstr "Rakendada need muudatused?"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:78
+msgid "Check the summary before Jellyfix organizes your files."
+msgstr "Kontrolli kokkuvõtet enne, kui Jellyfix su failid korrastab."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:91
+msgid "Planned operations"
+msgstr "Planeeritud toimingud"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:155
+msgid "Permanent deletions included"
+msgstr "Sisaldab püsivaid kustutamisi"
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:160
+msgid "Deleted files cannot be recovered."
+msgstr "Kustutatud faile ei saa taastada."
+
+#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/operation_confirmation_window.py:179
+msgid "Apply changes"
+msgstr "Rakenda muudatused"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 660
+# File: usr/share/jellyfix/cli/interactive.py, line: 672
+#~ msgid "Configure OpenSubtitles login"
+#~ msgstr "Konfigureeri OpenSubtitlesi sisselogimine"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 661
+# File: usr/share/jellyfix/cli/interactive.py, line: 675
+#~ msgid "Test OpenSubtitles login"
+#~ msgstr "Testi OpenSubtitles sisselogimine"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 662
+# File: usr/share/jellyfix/cli/interactive.py, line: 678
+#~ msgid "Remove OpenSubtitles login"
+#~ msgstr "Eemalda OpenSubtitlesi sisselogimine"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 680
+#~ msgid "Remove stored OpenSubtitles login?"
+#~ msgstr "Eemalda salvestatud OpenSubtitlesi sisselogimine?"
+
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+#
+# File: usr/share/jellyfix/cli/interactive.py, line: 688
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 358
+#~ msgid "OpenSubtitles login removed"
+#~ msgstr "OpenSubtitlesi sisselogimine eemaldatud"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 746
+#~ msgid "OpenSubtitles login (needed to download subtitles)."
+#~ msgstr "OpenSubtitlesi sisselogimine (vajalik subtiitrite allalaadimiseks)."
+
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+#
+# File: usr/share/jellyfix/cli/interactive.py, line: 762
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 329
+#~ msgid "OpenSubtitles login saved"
+#~ msgstr "OpenSubtitlesi sisselogimine salvestatud"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 772
+#~ msgid "Testing OpenSubtitles login..."
+#~ msgstr "Testimine OpenSubtitles'i sisselogimist..."
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 776
+#~ msgid "No OpenSubtitles login configured!"
+#~ msgstr "OpenSubtitles'i sisselogimist ei ole konfigureeritud!"
+
+# File: usr/share/jellyfix/cli/interactive.py, line: 777
+#~ msgid "Configure it first using 'Configure OpenSubtitles login'"
+#~ msgstr ""
+#~ "Konfigureeri see esmalt, kasutades 'Konfigureeri OpenSubtitlesi "
+#~ "sisselogimine'"
+
+# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
+#
+# File: usr/share/jellyfix/cli/interactive.py, line: 787
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 384
+#, python-format
+#~ msgid "Login failed: %s"
+#~ msgstr "Sisselogimine ebaõnnestus: %s"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
+#, python-format
+#~ msgid "✓ Configured (%s)"
+#~ msgstr "✓ Konfigureeritud (%s)"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
+#~ msgid "Account"
+#~ msgstr "Konto"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
+#~ msgid "Configure OpenSubtitles Login"
+#~ msgstr "Konfigureeri OpenSubtitlesi sisselogimine"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
+#~ msgid "Enter your username and password"
+#~ msgstr "Sisestage oma kasutajanimi ja parool"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
+#~ msgid "Test OpenSubtitles Login"
+#~ msgstr "Test OpenSubtitles Logi sisse"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
+#~ msgid "Verify your credentials actually work"
+#~ msgstr "Kinnita, et teie mandaadid tõeliselt töötavad."
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
+#~ msgid "Remove OpenSubtitles Login"
+#~ msgstr "Eemalda OpenSubtitlesi sisselogimine"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
+#~ msgid "Delete stored credentials"
+#~ msgstr "Kustuta salvestatud mandaadid"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
+#~ msgid ""
+#~ "Enter your opensubtitles.com username and password.\n"
+#~ "⚠ Use your USERNAME, not your e-mail address."
+#~ msgstr ""
+#~ "Sisestage oma opensubtitles.com kasutajanimi ja parool.  \n"
+#~ "⚠ Kasutage oma KASUTAJANIME, mitte oma e-posti aadressi."
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
+#~ msgid "Remove OpenSubtitles Login?"
+#~ msgstr "Eemalda OpenSubtitlesi sisselogimine?"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
+#~ msgid ""
+#~ "This will delete your stored credentials. You will not be able to download "
+#~ "from opensubtitles.com until you configure it again."
+#~ msgstr ""
+#~ "See kustutab teie salvestatud mandaadid. Te ei saa opensubtitles.com-ist "
+#~ "alla laadida, kuni te ei konfigureeri seda uuesti."
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
+#~ msgid "Configure your login first"
+#~ msgstr "Konfigureeri oma sisselogimine esmalt"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
+#~ msgid "Testing login…"
+#~ msgstr "Sisselogimise testimine…"
+
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
+#, python-format
+#~ msgid "✓ Login OK (%s)"
+#~ msgstr "✓ Sisselogimine OK (%s)"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 248
+#~ msgid "Scanning directory..."
+#~ msgstr "Skaneerimine kataloogis..."
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 276
+#~ msgid "Generating operations..."
+#~ msgstr "Operatsioonide genereerimine..."
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 326
+#~ msgid "Apply Operations?"
+#~ msgstr "Rakenda toimingud?"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 552
+#, python-brace-format
+#~ msgid "renamed: {}"
+#~ msgstr "ümbernimetav: {}"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 553
+#, python-brace-format
+#~ msgid "moved: {}"
+#~ msgstr "liigutatud: {}"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 554
+#, python-brace-format
+#~ msgid "moved and renamed: {}"
+#~ msgstr "liigutatud ja ümber nimetatud: {}"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 555
+#, python-brace-format
+#~ msgid "DELETED: {}"
+#~ msgstr "DELETED: {}"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 560
+#, python-brace-format
+#~ msgid "{} operations"
+#~ msgstr "{} toimingud"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 563
+#~ msgid "Deletions cannot be undone."
+#~ msgstr "Kustutusi ei saa tagasi võtta."
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 366
+#~ msgid "Execute Operations?"
+#~ msgstr "Teosta toimingud?"
+
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 372
+#~ msgid "Execute"
+#~ msgstr "Teosta"

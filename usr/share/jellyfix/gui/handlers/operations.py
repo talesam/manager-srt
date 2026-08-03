@@ -168,6 +168,9 @@ class OperationsHandler:
         Args:
             error: Error message
         """
+        if hasattr(self.window, "hide_loading"):
+            self.window.hide_loading()
+
         # Show error dialog
         dialog = Adw.MessageDialog(
             transient_for=self.window,
@@ -243,6 +246,9 @@ class OperationsHandler:
         Args:
             error: Error message
         """
+        if hasattr(self.window, "hide_loading"):
+            self.window.hide_loading()
+
         dialog = Adw.MessageDialog(
             transient_for=self.window,
             heading=_("Operation Generation Failed"),
@@ -400,6 +406,9 @@ class OperationsHandler:
         Args:
             error: Error message
         """
+        if hasattr(self.window, "hide_loading"):
+            self.window.hide_loading()
+
         dialog = Adw.MessageDialog(
             transient_for=self.window,
             heading=_("Execution Failed"),

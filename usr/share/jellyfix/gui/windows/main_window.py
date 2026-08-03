@@ -50,6 +50,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
 
         # Flag for background threads to bail out after window close
         self._destroyed = False
+        self._success_timeout_id = None
 
         # Window properties
         self.set_title(_("Jellyfix"))
@@ -90,10 +91,107 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         self.split_view.set_sidebar(self._build_sidebar())
         self.split_view.set_content(self._build_content())
 
-        # Toast overlay as outermost wrapper
+        # Blocking overlay keeps background work clear and prevents stale clicks.
+        self.busy_overlay = Gtk.Overlay()
+        self.busy_overlay.set_child(self.split_view)
+        self.loading_overlay = self._build_loading_overlay()
+        self.busy_overlay.add_overlay(self.loading_overlay)
+
+        # Toast overlay remains available for short completion notifications.
         self.toast_overlay = Adw.ToastOverlay()
-        self.toast_overlay.set_child(self.split_view)
+        self.toast_overlay.set_child(self.busy_overlay)
         self.set_content(self.toast_overlay)
+
+    def _build_loading_overlay(self):
+        """Build the full-window blocking loading state."""
+        overlay = Gtk.CenterBox()
+        overlay.set_hexpand(True)
+        overlay.set_vexpand(True)
+        overlay.set_halign(Gtk.Align.FILL)
+        overlay.set_valign(Gtk.Align.FILL)
+        overlay.set_can_target(True)
+        overlay.add_css_class("loading-overlay")
+
+        self.loading_card = Gtk.Box(
+            orientation=Gtk.Orientation.VERTICAL,
+            spacing=12,
+        )
+        self.loading_card.set_halign(Gtk.Align.CENTER)
+        self.loading_card.set_valign(Gtk.Align.CENTER)
+        self.loading_card.add_css_class("loading-card")
+
+        self.success_mark = Gtk.Label(label="✓")
+        self.success_mark.set_halign(Gtk.Align.CENTER)
+        self.success_mark.add_css_class("success-mark")
+        self.success_mark.set_visible(False)
+        self.loading_card.append(self.success_mark)
+
+        self.loading_spinner = Gtk.Spinner()
+        self.loading_spinner.set_halign(Gtk.Align.CENTER)
+        self.loading_spinner.set_size_request(48, 48)
+        self.loading_spinner.add_css_class("loading-spinner")
+        self.loading_card.append(self.loading_spinner)
+
+        self.loading_title = Gtk.Label(label=_("Loading library…"))
+        self.loading_title.add_css_class("title-2")
+        self.loading_title.set_halign(Gtk.Align.CENTER)
+        self.loading_card.append(self.loading_title)
+
+        self.loading_detail = Gtk.Label(label=_("Scanning files…"))
+        self.loading_detail.add_css_class("dim-label")
+        self.loading_detail.set_halign(Gtk.Align.CENTER)
+        self.loading_detail.set_wrap(True)
+        self.loading_card.append(self.loading_detail)
+
+        overlay.set_center_widget(self.loading_card)
+        overlay.set_visible(False)
+        return overlay
+
+    def show_loading(self, title, detail=""):
+        """Show a modal loading state over the complete window."""
+        self.hide_loading()
+        self.loading_card.remove_css_class("success-state")
+        self.success_mark.set_visible(False)
+        self.loading_spinner.set_visible(True)
+        self.loading_title.set_label(title)
+        self.loading_detail.set_label(detail)
+        self.loading_detail.set_visible(bool(detail))
+        self.loading_overlay.set_visible(True)
+        self.loading_spinner.start()
+
+    def hide_loading(self):
+        """Hide the modal loading state."""
+        if self._success_timeout_id is not None:
+            GLib.source_remove(self._success_timeout_id)
+            self._success_timeout_id = None
+        self.loading_spinner.stop()
+        self.loading_spinner.set_visible(False)
+        self.success_mark.set_visible(False)
+        self.loading_card.remove_css_class("success-state")
+        self.loading_overlay.set_visible(False)
+
+    def show_success(self, operation_count):
+        """Show a centered transient success state after execution."""
+        self.hide_loading()
+        self.loading_card.add_css_class("success-state")
+        self.success_mark.set_visible(True)
+        self.loading_spinner.set_visible(False)
+        self.loading_title.set_label(_("Changes applied successfully"))
+        self.loading_detail.set_label(
+            _("{} operations completed").format(operation_count)
+        )
+        self.loading_detail.set_visible(True)
+        self.loading_overlay.set_visible(True)
+        self._success_timeout_id = GLib.timeout_add(
+            3000,
+            self._dismiss_success,
+        )
+
+    def _dismiss_success(self):
+        """Dismiss the success state after its display interval."""
+        self._success_timeout_id = None
+        self.hide_loading()
+        return False
 
     def _build_sidebar(self):
         """Build the work area sidebar: Dashboard + Operations list (left)."""
@@ -251,11 +349,10 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         if hasattr(self.dashboard, 'refresh_recent_libraries'):
             self.dashboard.refresh_recent_libraries()
 
-        # Show scanning toast
-        toast = Adw.Toast(title=_("Scanning directory..."))
-        toast.set_timeout(0)  # Indefinite
-        self.toast_overlay.add_toast(toast)
-        self.current_scan_toast = toast
+        self.show_loading(
+            _("Loading library…"),
+            _("Scanning files…"),
+        )
 
         # Scan directory
         self.operations_handler.scan_directory(
@@ -338,10 +435,6 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         Args:
             files: ScanResult from scan
         """
-        # Dismiss scanning toast
-        if hasattr(self, 'current_scan_toast'):
-            self.current_scan_toast.dismiss()
-
         # Apply folder/file filtering if selected
         has_folders = hasattr(self, 'selected_folders') and self.selected_folders
         has_files = hasattr(self, 'selected_files') and self.selected_files
@@ -363,11 +456,10 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
 
         self.logger.success(f"Scan found {total_files} files")
 
-        # Show generating operations toast
-        toast = Adw.Toast(title=_("Generating operations..."))
-        toast.set_timeout(0)  # Indefinite
-        self.toast_overlay.add_toast(toast)
-        self.current_gen_toast = toast
+        self.show_loading(
+            _("Loading library…"),
+            _("Preparing operations…"),
+        )
 
         # Generate operations with filtered scan result
         self.operations_handler.generate_operations(
@@ -382,9 +474,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         Args:
             operations: List of generated operations
         """
-        # Dismiss generating toast
-        if hasattr(self, 'current_gen_toast'):
-            self.current_gen_toast.dismiss()
+        self.hide_loading()
 
         self.logger.success(f"{len(operations)} operations generated")
 
@@ -520,49 +610,28 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             )
             return
 
-        # Show confirmation dialog
-        dialog = Adw.MessageDialog(
-            transient_for=self,
-            heading=_("Apply Operations?"),
-            body=self._describe_operations(operations),
+        self._show_operation_confirmation(operations)
+
+    def _show_operation_confirmation(self, operations):
+        """Present the rich operation summary before changing files."""
+        from .operation_confirmation_window import OperationConfirmationWindow
+
+        OperationConfirmationWindow(
+            parent=self,
+            operations=operations,
+            on_confirm=self._execute_operations_with_loading,
+        ).present()
+
+    def _execute_operations_with_loading(self):
+        """Execute planned operations under the blocking loading state."""
+        self.logger.info("Executing operations")
+        self.show_loading(
+            _("Applying changes…"),
+            _("Organizing files safely…"),
         )
-        dialog.add_response("cancel", _("Cancel"))
-        dialog.add_response("apply", _("Apply"))
-        dialog.set_response_appearance("apply", Adw.ResponseAppearance.SUGGESTED)
-
-        def on_response(dialog, response):
-            if response == "apply":
-                self.logger.info("Executing operations")
-                self.operations_handler.execute_operations(complete_callback=self.on_execution_complete)
-
-        dialog.connect("response", on_response)
-        dialog.present()
-
-    def _describe_operations(self, operations) -> str:
-        """Resumo honesto do que vai acontecer, por tipo de operação.
-
-        "Isso vai renomear N arquivos" escondia as EXCLUSÕES no meio do lote —
-        que é justamente o que o usuário precisa ver antes de confirmar.
-        """
-        counts = {}
-        for op in operations:
-            counts[op.operation_type] = counts.get(op.operation_type, 0) + 1
-
-        rotulos = [
-            ("rename", _("renamed: {}")),
-            ("move", _("moved: {}")),
-            ("move_rename", _("moved and renamed: {}")),
-            ("delete", _("DELETED: {}")),
-        ]
-        linhas = [texto.format(counts[tipo]) for tipo, texto in rotulos if counts.get(tipo)]
-
-        resumo = "\n".join(f"• {linha}" for linha in linhas)
-        total = _("{} operations").format(len(operations))
-
-        if counts.get("delete"):
-            aviso = _("Deletions cannot be undone.")
-            return f"{total}\n\n{resumo}\n\n⚠ {aviso}"
-        return f"{total}\n\n{resumo}"
+        self.operations_handler.execute_operations(
+            complete_callback=self.on_execution_complete
+        )
 
     def on_process_files(self, widget=None):
         """
@@ -586,23 +655,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             )
             return
 
-        # Show confirmation dialog
-        dialog = Adw.MessageDialog(
-            transient_for=self,
-            heading=_("Execute Operations?"),
-            body=self._describe_operations(self.operations_handler.operations),
-        )
-        dialog.add_response("cancel", _("Cancel"))
-        dialog.add_response("execute", _("Execute"))
-        dialog.set_response_appearance("execute", Adw.ResponseAppearance.SUGGESTED)
-
-        def on_response(dialog, response):
-            if response == "execute":
-                self.logger.info("Executing operations")
-                self.operations_handler.execute_operations(complete_callback=self.on_execution_complete)
-
-        dialog.connect("response", on_response)
-        dialog.present()
+        self._show_operation_confirmation(self.operations_handler.operations)
 
     def on_execution_complete(self, results, dry_run=False):
         """
@@ -612,6 +665,8 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             results: Execution results
             dry_run: Whether this was a dry run
         """
+        self.hide_loading()
+
         if dry_run:
             self.logger.info(f"Dry-run complete: {len(results)} operations previewed")
             # Janela dedicada: mostra arquivo por arquivo o que sai e o que
@@ -627,12 +682,6 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
             return
         else:
             self.logger.success(f"Execution complete: {len(results)} operations")
-            toast_msg = _("{} operations completed").format(len(results))
-
-        # Show success toast
-        toast = Adw.Toast(title=toast_msg)
-        toast.set_timeout(5)  # 5 seconds
-        self.toast_overlay.add_toast(toast)
 
         # Trabalho concluído: os caminhos em memória já não existem mais no
         # disco. Manter a lista carregada dava a impressão de que ainda havia
@@ -640,6 +689,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         # foram movidos. Volta para a tela inicial, pronta para um novo scan.
         if not dry_run:
             self._reset_to_welcome()
+            self.show_success(len(results))
 
     def _reset_to_welcome(self):
         """Volta a janela ao estado inicial depois de organizar.
@@ -648,6 +698,8 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         overlay de progresso ainda aberto e o estado do handler, e mostra de
         novo a tela de boas-vindas com as bibliotecas recentes atualizadas.
         """
+        self.hide_loading()
+
         # Encerra qualquer diálogo/progresso de lote que tenha ficado aberto
         bp = getattr(self, "batch_progress", None)
         if bp:
@@ -674,9 +726,9 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
 
         if hasattr(self, "preview_panel"):
             try:
-                self.preview_panel.current_operation = None
-            except Exception:
-                pass
+                self.preview_panel.clear()
+            except Exception as e:
+                self.logger.debug(f"Could not clear preview panel: {e}")
 
         # Limpa filtros de seleção de pastas/arquivos do scan anterior
         self.selected_folders = []
@@ -714,11 +766,14 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         manual do usuário). Diferente de _try_fetch_poster, não re-pesquisa
         pelo nome do arquivo — usa diretamente metadata.poster_path/tmdb_id.
         """
+        expected_operation = self.preview_panel.current_operation
         if not self.operations_handler.image_manager:
             return
         if not getattr(metadata, 'poster_path', None) or not getattr(metadata, 'tmdb_id', None):
-            # Sem poster — limpa a imagem para não mostrar o anterior errado
-            GLib.idle_add(self.preview_panel.poster_image.set_visible, False)
+            GLib.idle_add(
+                self._hide_poster_if_current,
+                expected_operation,
+            )
             return
 
         def fetch_task():
@@ -729,11 +784,27 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
                     metadata, size='medium'
                 )
                 if poster_path and not self._destroyed:
-                    GLib.idle_add(self.preview_panel.load_poster, poster_path)
+                    GLib.idle_add(
+                        self._load_poster_if_current,
+                        poster_path,
+                        expected_operation,
+                    )
             except Exception as e:
                 self.logger.error(f"Erro ao baixar poster: {e}")
 
         threading.Thread(target=fetch_task, daemon=True).start()
+
+    def _hide_poster_if_current(self, expected_operation):
+        """Hide a poster only if its preview is still selected."""
+        if self.preview_panel.current_operation is expected_operation:
+            self.preview_panel.poster_image.set_visible(False)
+        return False
+
+    def _load_poster_if_current(self, poster_path, expected_operation):
+        """Ignore a poster that completed after its preview was cleared."""
+        if self.preview_panel.current_operation is expected_operation:
+            self.preview_panel.load_poster(poster_path)
+        return False
 
     def _try_fetch_poster(self, operation):
         """
@@ -819,7 +890,11 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
                         )
                         if poster_path and not self._destroyed:
                             self.logger.info(f"Poster downloaded: {poster_path}")
-                            GLib.idle_add(self.preview_panel.load_poster, poster_path)
+                            GLib.idle_add(
+                                self._load_poster_if_current,
+                                poster_path,
+                                operation,
+                            )
                         elif not poster_path:
                             self.logger.warning("Poster download returned None")
                     else:
