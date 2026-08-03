@@ -831,8 +831,8 @@ msgstr "Config file:"
 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 655
-# File: usr/share/jellyfix/cli/interactive.py, line: 693
+# File: usr/share/jellyfix/cli/interactive.py, line: 656
+# File: usr/share/jellyfix/cli/interactive.py, line: 695
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 152
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 246
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:656
@@ -1051,7 +1051,7 @@ msgstr "Connection error"
 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 863
+# File: usr/share/jellyfix/cli/interactive.py, line: 873
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 213
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 510
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:873
@@ -1199,7 +1199,7 @@ msgstr "to Jellyfin standard"
 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 912
+# File: usr/share/jellyfix/cli/interactive.py, line: 922
 # File: usr/share/jellyfix/cli/display.py, line: 76
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/display.py:76
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:922
@@ -1846,10 +1846,10 @@ msgstr "Paste API key here"
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 311
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 344
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 468
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 264
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 316
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 351
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 484
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 529
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 595
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 233
@@ -1922,10 +1922,10 @@ msgstr "No TMDB API key configured yet"
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 406
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 420
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 458
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 513
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 422
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 436
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 474
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 529
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 858
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1178
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1223
