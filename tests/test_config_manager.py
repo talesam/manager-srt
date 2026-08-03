@@ -55,6 +55,35 @@ class TestApiKeys:
         config_manager.set_tvdb_api_key("xyz")
         assert config_manager.get_tvdb_api_key() == "xyz"
 
+    def test_opensubtitles_accounts_append_and_update(self, config_manager):
+        config_manager.set_opensubtitles_credentials("first", "one")
+        config_manager.set_opensubtitles_credentials("second", "two")
+        config_manager.set_opensubtitles_credentials("FIRST", "updated")
+
+        assert config_manager.get_opensubtitles_accounts() == [
+            {"username": "FIRST", "password": "updated"},
+            {"username": "second", "password": "two"},
+        ]
+        assert config_manager.get_opensubtitles_credentials() == ("FIRST", "updated")
+
+    def test_opensubtitles_legacy_login_is_migrated(self, config_manager):
+        config_manager.save({
+            "opensubtitles_username": "legacy",
+            "opensubtitles_password": "secret",
+        })
+
+        assert config_manager.get_opensubtitles_accounts() == [
+            {"username": "legacy", "password": "secret"},
+        ]
+
+    def test_remove_opensubtitles_accounts_removes_legacy_keys(self, config_manager):
+        config_manager.set_opensubtitles_credentials("first", "one")
+        config_manager.set_opensubtitles_credentials("second", "two")
+
+        config_manager.remove_opensubtitles_credentials()
+
+        assert config_manager.get_opensubtitles_accounts() == []
+
 
 class TestRecentLibraries:
     def test_empty_initially(self, config_manager):
@@ -159,3 +188,16 @@ class TestConfigPersistentSettings:
         config.load_persistent_settings()
 
         assert config.kept_languages == ["por-pt", "por", "eng"]
+
+    def test_opensubtitles_accounts_are_loaded(self, config_manager):
+        config_manager.set_opensubtitles_credentials("first", "one")
+        config_manager.set_opensubtitles_credentials("second", "two")
+
+        config = Config()
+        config.load_persistent_settings()
+
+        assert config.opensubtitles_accounts == [
+            {"username": "first", "password": "one"},
+            {"username": "second", "password": "two"},
+        ]
+        assert config.opensubtitles_username == "first"

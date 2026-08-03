@@ -641,9 +641,10 @@ class InteractiveCLI:
             tmdb_key = self.config_manager.get_tmdb_api_key()
             tmdb_status = "[green]✓ " + _("Configured") + "[/green]" if tmdb_key else "[red]✗ " + _("Not configured") + "[/red]"
 
-            os_user, os_pass = self.config_manager.get_opensubtitles_credentials()
-            os_status = ("[green]✓ " + _("Configured") + f" ({os_user})[/green]"
-                         if (os_user and os_pass) else "[red]✗ " + _("Not configured") + "[/red]")
+            os_accounts = self.config_manager.get_opensubtitles_accounts()
+            os_users = ", ".join(account['username'] for account in os_accounts)
+            os_status = ("[green]✓ " + _("Configured") + f" ({os_users})[/green]"
+                         if os_accounts else "[red]✗ " + _("Not configured") + "[/red]")
 
             console.print(f"[bold]TMDB API Key:[/bold] {tmdb_status}")
             console.print(f"[bold]OpenSubtitles:[/bold] {os_status}")
@@ -657,9 +658,9 @@ class InteractiveCLI:
                     "✓ " + _("Test TMDB connection"),
                     "🗑️  " + _("Remove TMDB key"),
                     "ℹ️  " + _("How to get TMDB key"),
-                    "🎬 " + _("Configure OpenSubtitles login"),
-                    "🔌 " + _("Test OpenSubtitles login"),
-                    "🗑️  " + _("Remove OpenSubtitles login"),
+                    "🎬 " + _("Add OpenSubtitles account"),
+                    "🔌 " + _("Test OpenSubtitles accounts"),
+                    "🗑️  " + _("Remove OpenSubtitles accounts"),
                     "← " + _("Back")
                 ],
                 style=custom_style,
@@ -669,23 +670,24 @@ class InteractiveCLI:
             if not choice or _("Back") in choice:
                 break
 
-            elif _("Configure OpenSubtitles login") in choice:
+            elif _("Add OpenSubtitles account") in choice:
                 self._configure_opensubtitles_login()
 
-            elif _("Test OpenSubtitles login") in choice:
+            elif _("Test OpenSubtitles accounts") in choice:
                 self._test_opensubtitles_login()
 
-            elif _("Remove OpenSubtitles login") in choice:
+            elif _("Remove OpenSubtitles accounts") in choice:
                 confirm = questionary.confirm(
-                    _("Remove stored OpenSubtitles login?"),
+                    _("Remove all stored OpenSubtitles accounts?"),
                     default=False,
                     style=custom_style
                 ).ask()
                 if confirm:
                     self.config_manager.remove_opensubtitles_credentials()
+                    self.config.opensubtitles_accounts = []
                     self.config.opensubtitles_username = ""
                     self.config.opensubtitles_password = ""
-                    show_success(_("OpenSubtitles login removed"))
+                    show_success(_("OpenSubtitles accounts removed"))
                 else:
                     show_warning(_("Operation cancelled"))
                 questionary.press_any_key_to_continue().ask()
@@ -742,8 +744,8 @@ class InteractiveCLI:
                 self._show_tmdb_help()
 
     def _configure_opensubtitles_login(self):
-        """Prompt for and store opensubtitles.com credentials."""
-        console.print("\n[cyan]" + _("OpenSubtitles login (needed to download subtitles).") + "[/cyan]")
+        """Prompt for and add opensubtitles.com credentials."""
+        console.print("\n[cyan]" + _("Add an OpenSubtitles account.") + "[/cyan]")
         console.print("[dim]" + _("Create a free account at https://www.opensubtitles.com/newuser") + "[/dim]")
         console.print("[yellow]⚠ " + _("Use your USERNAME, not your e-mail address.") + "[/yellow]\n")
 
@@ -757,34 +759,42 @@ class InteractiveCLI:
         username = username.strip()
         if username and password:
             self.config_manager.set_opensubtitles_credentials(username, password)
-            self.config.opensubtitles_username = username
-            self.config.opensubtitles_password = password
-            show_success(_("OpenSubtitles login saved"))
+            accounts = self.config_manager.get_opensubtitles_accounts()
+            self.config.opensubtitles_accounts = accounts
+            self.config.opensubtitles_username = accounts[0]['username']
+            self.config.opensubtitles_password = accounts[0]['password']
+            show_success(_("OpenSubtitles account saved"))
         else:
             show_warning(_("Username and password are both required"))
 
         questionary.press_any_key_to_continue().ask()
 
     def _test_opensubtitles_login(self):
-        """Log in to opensubtitles.com to confirm the stored credentials work."""
+        """Log in to every opensubtitles.com account to verify it."""
         console.clear()
         show_banner()
-        console.print("\n[bold cyan]🔌 " + _("Testing OpenSubtitles login...") + "[/bold cyan]\n")
+        console.print("\n[bold cyan]🔌 " + _("Testing OpenSubtitles accounts...") + "[/bold cyan]\n")
 
-        user, pw = self.config_manager.get_opensubtitles_credentials()
-        if not (user and pw):
-            show_error(_("No OpenSubtitles login configured!"))
-            console.print("\n[yellow]" + _("Configure it first using 'Configure OpenSubtitles login'") + "[/yellow]")
+        accounts = self.config_manager.get_opensubtitles_accounts()
+        if not accounts:
+            show_error(_("No OpenSubtitles account configured!"))
+            console.print("\n[yellow]" + _("Add an OpenSubtitles account first") + "[/yellow]")
             questionary.press_any_key_to_continue().ask()
             return
 
         from ..core.subtitle_manager import SubtitleManager
-        ok, message = SubtitleManager().test_opensubtitles_login(user, pw)
-
-        if ok:
-            show_success(message + f" ({user})")
-        else:
-            show_error(_("Login failed: %s") % message)
+        manager = SubtitleManager()
+        for account in accounts:
+            ok, message = manager.test_opensubtitles_login(
+                account['username'], account['password']
+            )
+            if ok:
+                show_success(message + f" ({account['username']})")
+            else:
+                show_error(
+                    _("Account test failed: %(user)s: %(message)s")
+                    % {'user': account['username'], 'message': message}
+                )
 
         questionary.press_any_key_to_continue().ask()
 

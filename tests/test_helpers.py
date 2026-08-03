@@ -11,6 +11,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "usr" / "share")
 from jellyfix.utils.helpers import (
     calculate_subtitle_quality,
     clean_filename,
+    detect_subtitle_language,
+    extract_subtitle_dialogue,
     extract_quality_tag,
     extract_season_episode,
     extract_year,
@@ -343,6 +345,103 @@ class TestIsPortugueseSubtitle:
         f = tmp_path / "test.txt"
         f.write_text("Você não pode fazer isso")
         assert is_portuguese_subtitle(f) is False
+
+
+# ─── content-based subtitle language detection ──────────────────
+
+LANGUAGE_SAMPLES = {
+    "por": (
+        "Você não pode fazer isso agora, porque ainda temos muito trabalho. "
+        "Ela vai para casa quando terminar, mas ele também quer falar sobre tudo. "
+        "Como foi o seu dia e onde estão as pessoas que chegaram com você?"
+    ),
+    "eng": (
+        "You cannot leave this place right now because we still have important work to do. "
+        "She will return home when everything is finished, and he wants to speak with everyone. "
+        "Where did you find these people and why are they waiting outside the building?"
+    ),
+    "fre": (
+        "Vous ne pouvez pas quitter cet endroit maintenant parce que nous avons encore du travail. "
+        "Elle rentrera chez elle quand tout sera terminé et il souhaite parler avec tout le monde. "
+        "Pourquoi ces personnes attendent-elles toujours devant le bâtiment ce soir ?"
+    ),
+    "spa": (
+        "No puedes salir de este lugar ahora porque todavía tenemos mucho trabajo por hacer. "
+        "Ella volverá a casa cuando todo termine y él quiere hablar con todas las personas. "
+        "Por qué siguen esperando afuera del edificio durante toda la noche?"
+    ),
+}
+
+
+def _srt(text):
+    return (
+        "1\n00:00:01,000 --> 00:00:03,000\n"
+        f"<i>{text}</i>\n"
+    )
+
+
+@pytest.mark.parametrize("language", ["por", "eng", "fre", "spa"])
+def test_detects_untagged_srt_language(tmp_path, language):
+    subtitle = tmp_path / "Movie.srt"
+    subtitle.write_text(_srt(LANGUAGE_SAMPLES[language]), encoding="utf-8")
+
+    assert detect_subtitle_language(subtitle) == language
+
+
+def test_extracts_dialogue_from_ass_and_vtt(tmp_path):
+    ass = tmp_path / "Movie.ass"
+    ass.write_text(
+        "[Script Info]\nTitle: Example\n[Events]\n"
+        "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
+        "Dialogue: 0,0:00:01.00,0:00:04.00,Default,,0,0,0,,"
+        f"{{\\i1}}{LANGUAGE_SAMPLES['eng']}{{\\i0}}\n",
+        encoding="utf-8",
+    )
+    vtt = tmp_path / "Movie.vtt"
+    vtt.write_text(
+        "WEBVTT\n\n00:00:01.000 --> 00:00:04.000\n"
+        f"<v Speaker>{LANGUAGE_SAMPLES['fre']}</v>\n",
+        encoding="utf-8",
+    )
+
+    assert "Dialogue:" not in extract_subtitle_dialogue(ass)
+    assert detect_subtitle_language(ass) == "eng"
+    assert detect_subtitle_language(vtt) == "fre"
+
+
+def test_detects_textual_microdvd_sub_but_not_binary_sub(tmp_path):
+    textual = tmp_path / "Movie.sub"
+    textual.write_text(
+        f"{{1}}{{80}}{LANGUAGE_SAMPLES['spa']}",
+        encoding="utf-8",
+    )
+    binary = tmp_path / "Movie-binary.sub"
+    binary.write_bytes(b"VobSub\x00\x01\x02" + b"binary data" * 20)
+
+    assert detect_subtitle_language(textual) == "spa"
+    assert extract_subtitle_dialogue(binary) == ""
+    assert detect_subtitle_language(binary) is None
+
+
+def test_short_or_ambiguous_subtitle_remains_unknown(tmp_path):
+    subtitle = tmp_path / "Movie.srt"
+    subtitle.write_text(_srt("Yes. No. Okay."), encoding="utf-8")
+
+    assert detect_subtitle_language(subtitle) is None
+
+
+def test_markup_and_accessibility_cues_do_not_drive_detection(tmp_path):
+    subtitle = tmp_path / "Movie.srt"
+    subtitle.write_text(
+        "1\n00:00:01,000 --> 00:00:03,000\n"
+        f"[DOOR SLAMS] <font color=\"white\">{LANGUAGE_SAMPLES['por']}</font> ♪\n",
+        encoding="utf-8",
+    )
+
+    dialogue = extract_subtitle_dialogue(subtitle)
+    assert "DOOR SLAMS" not in dialogue
+    assert "font" not in dialogue
+    assert detect_subtitle_language(subtitle) == "por"
 
 
 # ─── parse_subtitle_filename ─────────────────────────────────────────

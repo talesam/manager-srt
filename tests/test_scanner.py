@@ -105,6 +105,33 @@ class TestScanSubtitleFiles:
         # .forced subtitles should NOT be classified as foreign
         assert len(result.foreign_subtitles) == 0
 
+    def test_untagged_kept_language_is_detected(self, scanner, tmp_path):
+        srt = tmp_path / "movie.srt"
+        srt.write_text(
+            "1\n00:00:01,000 --> 00:00:04,000\n"
+            "You cannot leave this place right now because we still have important work to do. "
+            "She will return home when everything is finished, and he wants to speak with everyone. "
+            "Where did you find these people and why are they waiting outside the building?\n"
+        )
+
+        result = scanner.scan(tmp_path)
+
+        assert result.no_lang_subtitles == [srt]
+
+    def test_untagged_foreign_language_stays_safe(self, scanner, tmp_path):
+        srt = tmp_path / "movie.srt"
+        srt.write_text(
+            "1\n00:00:01,000 --> 00:00:04,000\n"
+            "Vous ne pouvez pas quitter cet endroit maintenant parce que nous avons encore du travail. "
+            "Elle rentrera chez elle quand tout sera terminé et il souhaite parler avec tout le monde. "
+            "Pourquoi ces personnes attendent-elles toujours devant le bâtiment ce soir ?\n"
+        )
+
+        result = scanner.scan(tmp_path)
+
+        assert result.foreign_subtitles == []
+        assert result.other_files == [srt]
+
 
 class TestScanOtherFiles:
     def test_nfo_files(self, scanner, tmp_path):

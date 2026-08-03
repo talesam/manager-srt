@@ -90,18 +90,18 @@ class APIConfigDialog(Adw.Window):
                          "download subtitles (searching works without it)")
         )
 
-        os_user, os_pass = self.config_manager.get_opensubtitles_credentials()
-        os_status = _("✓ Configured (%s)") % os_user if (os_user and os_pass) else _("✗ Not configured")
+        os_accounts = self.config_manager.get_opensubtitles_accounts()
+        os_status = self._opensubtitles_status(os_accounts)
         self.os_status_row = Adw.ActionRow(
-            title=_("Account"),
+            title=_("Accounts"),
             subtitle=os_status
         )
         os_group.add(self.os_status_row)
 
         # Configure login button
         os_configure_row = Adw.ActionRow(
-            title=_("Configure OpenSubtitles Login"),
-            subtitle=_("Enter your username and password")
+            title=_("Add OpenSubtitles Account"),
+            subtitle=_("Accounts rotate automatically when a daily limit is reached")
         )
         os_configure_button = Gtk.Button(label=_("Configure"), valign=Gtk.Align.CENTER)
         os_configure_button.add_css_class("suggested-action")
@@ -111,8 +111,8 @@ class APIConfigDialog(Adw.Window):
 
         # Test login button
         os_test_row = Adw.ActionRow(
-            title=_("Test OpenSubtitles Login"),
-            subtitle=_("Verify your credentials actually work")
+            title=_("Test OpenSubtitles Accounts"),
+            subtitle=_("Verify all configured credentials")
         )
         os_test_button = Gtk.Button(label=_("Test"), valign=Gtk.Align.CENTER)
         os_test_button.connect("clicked", self._on_test_opensubtitles)
@@ -121,8 +121,8 @@ class APIConfigDialog(Adw.Window):
 
         # Remove login button
         os_remove_row = Adw.ActionRow(
-            title=_("Remove OpenSubtitles Login"),
-            subtitle=_("Delete stored credentials")
+            title=_("Remove OpenSubtitles Accounts"),
+            subtitle=_("Delete all stored credentials")
         )
         os_remove_button = Gtk.Button(label=_("Remove"), valign=Gtk.Align.CENTER)
         os_remove_button.add_css_class("destructive-action")
@@ -239,6 +239,14 @@ class APIConfigDialog(Adw.Window):
         """Show a toast inside this dialog."""
         self.toast_overlay.add_toast(Adw.Toast(title=message))
 
+    @staticmethod
+    def _opensubtitles_status(accounts):
+        """Build a compact account summary without exposing passwords."""
+        if not accounts:
+            return _("✗ Not configured")
+        usernames = ", ".join(account['username'] for account in accounts)
+        return _("✓ OpenSubtitles accounts: %(users)s") % {'users': usernames}
+
     def _on_configure_clicked(self, button):
         """Handle configure button click"""
         dialog = Adw.MessageDialog(
@@ -282,24 +290,21 @@ class APIConfigDialog(Adw.Window):
         """Handle OpenSubtitles login configuration"""
         dialog = Adw.MessageDialog(
             transient_for=self,
-            heading=_("Configure OpenSubtitles Login"),
-            body=_("Enter your opensubtitles.com username and password.\n"
+            heading=_("Add OpenSubtitles Account"),
+            body=_("Enter an opensubtitles.com username and password.\n"
                    "⚠ Use your USERNAME, not your e-mail address.")
         )
 
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8)
-        cur_user, cur_pass = self.config_manager.get_opensubtitles_credentials()
 
         user_entry = Gtk.Entry()
         user_entry.set_placeholder_text(_("Username (not e-mail)"))
-        user_entry.set_text(cur_user)
         box.append(user_entry)
 
         pass_entry = Gtk.Entry()
         pass_entry.set_placeholder_text(_("Password"))
         pass_entry.set_visibility(False)
         pass_entry.set_input_purpose(Gtk.InputPurpose.PASSWORD)
-        pass_entry.set_text(cur_pass)
         box.append(pass_entry)
 
         # Toggle password visibility
@@ -322,11 +327,13 @@ class APIConfigDialog(Adw.Window):
                     # Update the in-memory config singleton
                     from ...utils.config import get_config
                     config = get_config()
-                    config.opensubtitles_username = username
-                    config.opensubtitles_password = password
+                    accounts = self.config_manager.get_opensubtitles_accounts()
+                    config.opensubtitles_accounts = accounts
+                    config.opensubtitles_username = accounts[0]['username']
+                    config.opensubtitles_password = accounts[0]['password']
 
-                    self.os_status_row.set_subtitle(_("✓ Configured (%s)") % username)
-                    self._toast(_("OpenSubtitles login saved"))
+                    self.os_status_row.set_subtitle(self._opensubtitles_status(accounts))
+                    self._toast(_("OpenSubtitles account saved"))
                 else:
                     self._toast(_("Username and password are both required"))
 
@@ -337,8 +344,8 @@ class APIConfigDialog(Adw.Window):
         """Handle OpenSubtitles login removal"""
         dialog = Adw.MessageDialog(
             transient_for=self,
-            heading=_("Remove OpenSubtitles Login?"),
-            body=_("This will delete your stored credentials. You will not be "
+            heading=_("Remove All OpenSubtitles Accounts?"),
+            body=_("This will delete all stored credentials. You will not be "
                    "able to download from opensubtitles.com until you configure it again.")
         )
         dialog.add_response("cancel", _("Cancel"))
@@ -351,11 +358,12 @@ class APIConfigDialog(Adw.Window):
 
                 from ...utils.config import get_config
                 config = get_config()
+                config.opensubtitles_accounts = []
                 config.opensubtitles_username = ""
                 config.opensubtitles_password = ""
 
                 self.os_status_row.set_subtitle(_("✗ Not configured"))
-                self._toast(_("OpenSubtitles login removed"))
+                self._toast(_("OpenSubtitles accounts removed"))
 
         dialog.connect("response", on_response)
         dialog.present()
@@ -365,23 +373,31 @@ class APIConfigDialog(Adw.Window):
         Gtk.show_uri(self, "https://www.opensubtitles.com/newuser", 0)
 
     def _on_test_opensubtitles(self, button):
-        """Actually log in to opensubtitles.com to confirm the credentials work."""
-        user, pw = self.config_manager.get_opensubtitles_credentials()
-        if not (user and pw):
-            self._toast(_("Configure your login first"))
+        """Log in to every opensubtitles.com account to verify it."""
+        accounts = self.config_manager.get_opensubtitles_accounts()
+        if not accounts:
+            self._toast(_("Add an account first"))
             return
 
-        self._toast(_("Testing login…"))
+        self._toast(_("Testing accounts…"))
 
         from ...core.subtitle_manager import SubtitleManager
-        ok, message = SubtitleManager().test_opensubtitles_login(user, pw)
+        manager = SubtitleManager()
+        failures = []
+        for account in accounts:
+            ok, message = manager.test_opensubtitles_login(
+                account['username'], account['password']
+            )
+            if not ok:
+                failures.append(f"{account['username']}: {message}")
 
-        if ok:
-            self.os_status_row.set_subtitle(_("✓ Login OK (%s)") % user)
-            self._toast("✓ " + message)
+        if not failures:
+            self.os_status_row.set_subtitle(self._opensubtitles_status(accounts))
+            self._toast(_("✓ All OpenSubtitles accounts are valid"))
         else:
-            self.logger.error(f"OpenSubtitles login test failed: {message}")
-            self._toast("✗ " + (_("Login failed: %s") % message))
+            message = "; ".join(failures)
+            self.logger.error(f"OpenSubtitles account test failed: {message}")
+            self._toast("✗ " + (_("Account test failed: %s") % message))
 
     def _on_view_clicked(self, button):
         """Handle view button click"""

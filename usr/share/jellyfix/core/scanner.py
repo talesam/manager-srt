@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import List
 from dataclasses import dataclass, field
 from ..utils.helpers import (
-    is_video_file, is_subtitle_file, is_image_file, is_portuguese_subtitle,
+    detect_subtitle_language, is_video_file, is_subtitle_file, is_image_file,
     is_extras_path, is_jellyfin_image, parse_subtitle_name
 )
 from ..utils.config import get_config
@@ -184,10 +184,13 @@ class LibraryScanner:
             else:
                 result.foreign_subtitles.append(file_path)
         else:
-            # Sem código de idioma: tenta detectar português pelo conteúdo
-            if file_path.suffix.lower() == '.srt' and is_portuguese_subtitle(
-                file_path, self.config.min_pt_words
-            ):
+            # Untagged subtitles are only actionable when content detection is
+            # confident and the language is configured to be kept.
+            detected_language = detect_subtitle_language(
+                file_path,
+                min_portuguese_words=self.config.min_pt_words,
+            )
+            if detected_language in self.config.kept_languages:
                 result.no_lang_subtitles.append(file_path)
             else:
                 # Sem código e sem detecção: idioma DESCONHECIDO, não

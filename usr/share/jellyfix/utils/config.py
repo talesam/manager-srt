@@ -6,7 +6,7 @@ from typing import Optional
 import os
 
 # Application version
-APP_VERSION = "2.10.1"
+APP_VERSION = "2.10.2"
 
 
 @dataclass
@@ -79,6 +79,7 @@ class Config:
     opensubtitles_username: str = ""
     opensubtitles_password: str = ""
     opensubtitles_apikey: str = ""
+    opensubtitles_accounts: list = field(default_factory=list)
 
     # Subtitle languages to KEEP (will NOT be removed)
     # Default: Portuguese and English
@@ -203,6 +204,10 @@ class Config:
             if saved_value is not None:
                 setattr(self, key, saved_value)
 
+        saved_accounts = config_mgr.get_opensubtitles_accounts()
+        if saved_accounts and not self.opensubtitles_accounts:
+            self.opensubtitles_accounts = saved_accounts
+
         if not self.opensubtitles_username:
             self.opensubtitles_username = (
                 config_mgr.get('opensubtitles_username')
@@ -218,6 +223,27 @@ class Config:
                 config_mgr.get('opensubtitles_apikey')
                 or os.getenv("OPENSUBTITLES_APIKEY", "")
             )
+
+        # Environment/legacy credentials remain a valid first account.
+        if self.opensubtitles_username and self.opensubtitles_password:
+            legacy_account = {
+                'username': self.opensubtitles_username,
+                'password': self.opensubtitles_password,
+            }
+            if self.opensubtitles_apikey:
+                legacy_account['apikey'] = self.opensubtitles_apikey
+            if not any(
+                str(account.get('username', '')).casefold()
+                == self.opensubtitles_username.casefold()
+                for account in self.opensubtitles_accounts
+                if isinstance(account, dict)
+            ):
+                self.opensubtitles_accounts.insert(0, legacy_account)
+
+        if self.opensubtitles_accounts:
+            primary = self.opensubtitles_accounts[0]
+            self.opensubtitles_username = str(primary.get('username') or '')
+            self.opensubtitles_password = str(primary.get('password') or '')
 
 
 # Configuração global (singleton pattern)

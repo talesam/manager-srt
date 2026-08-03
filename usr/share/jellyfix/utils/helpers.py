@@ -2,6 +2,7 @@
 
 import logging
 import re
+from functools import lru_cache
 from pathlib import Path
 from typing import Optional
 
@@ -239,6 +240,17 @@ _RE_SE_ALT_PATTERNS = [
 # Detecção de português por PALAVRA INTEIRA (\b). Substring dava falso
 # positivo em inglês ("por" em "important", "ele" em "element"...).
 _RE_PT_WORDS = re.compile(r"\b(?:" + "|".join(PORTUGUESE_WORDS) + r")\b")
+_RE_SUBTITLE_TIMING = re.compile(
+    r"^\s*(?:\d{1,2}:)?\d{1,2}:\d{1,2}[,.]\d{1,3}\s+-->"
+)
+_RE_SUBTITLE_HTML = re.compile(r"<[^>]+>")
+_RE_SUBTITLE_ASS_TAG = re.compile(r"\{\\[^}]*\}")
+_RE_SUBTITLE_MICRODVD = re.compile(r"^\{\d+\}\{\d+\}")
+_RE_SUBTITLE_SDH_CUE = re.compile(r"\[[^\]\n]{1,80}\]")
+
+LANGUAGE_DETECTION_MIN_CHARS = 80
+LANGUAGE_DETECTION_MIN_CONFIDENCE = 0.85
+LANGUAGE_DETECTION_MIN_MARGIN = 0.20
 
 # Subtitle quality scoring weights
 _QUALITY_BLOCK_WEIGHT = 10
@@ -336,35 +348,147 @@ def calculate_subtitle_quality(file_path: Path, file_size: Optional[int] = None)
         return 0.0
 
 
+def extract_subtitle_dialogue(file_path: Path) -> str:
+    """Return dialogue text with subtitle markup and timing removed.
+
+    Supports textual SRT, ASS/SSA, VTT and MicroDVD SUB files. Binary SUB
+    files remain unknown; treating their bytes as text produces confident but
+    meaningless language guesses.
+    """
+    if not file_path.exists() or file_path.suffix.lower() not in SUBTITLE_EXTENSIONS:
+        return ""
+
+    if file_path.suffix.lower() == '.sub':
+        try:
+            with open(file_path, 'rb') as subtitle_file:
+                if b'\0' in subtitle_file.read(4096):
+                    return ""
+        except OSError:
+            return ""
+
+    try:
+        content = read_subtitle_text(file_path)
+    except (OSError, UnicodeDecodeError):
+        return ""
+
+    dialogue = []
+    for raw_line in content.splitlines():
+        line = raw_line.strip().lstrip('\ufeff')
+        if not line or line.isdigit() or _RE_SUBTITLE_TIMING.match(line):
+            continue
+
+        upper = line.upper()
+        if upper in {'WEBVTT', '[SCRIPT INFO]', '[V4+ STYLES]', '[EVENTS]'}:
+            continue
+        if upper.startswith(('NOTE ', 'STYLE ', 'REGION ', 'FORMAT:', 'COMMENT:')):
+            continue
+        if upper.startswith(('TITLE:', 'SCRIPT TYPE:', 'PLAYRESX:', 'PLAYRESY:', 'WRAPSTYLE:')):
+            continue
+
+        if upper.startswith('DIALOGUE:'):
+            fields = line.split(',', 9)
+            if len(fields) < 10:
+                continue
+            line = fields[-1]
+
+        line = _RE_SUBTITLE_MICRODVD.sub('', line)
+        line = _RE_SUBTITLE_ASS_TAG.sub('', line)
+        line = _RE_SUBTITLE_HTML.sub('', line)
+        line = _RE_SUBTITLE_SDH_CUE.sub('', line)
+        line = line.replace(r'\N', ' ').replace(r'\n', ' ').replace('♪', ' ')
+        line = re.sub(r'\s+', ' ', line).strip(' -–—')
+        if line:
+            dialogue.append(line)
+
+    return '\n'.join(dialogue)
+
+
+@lru_cache(maxsize=512)
+def _detect_subtitle_language_cached(
+    path: str,
+    file_size: int,
+    modified_ns: int,
+    min_confidence: float,
+    min_margin: float,
+    min_chars: int,
+    min_portuguese_words: int,
+) -> Optional[str]:
+    """Cached implementation keyed by file identity and detector settings."""
+    del file_size, modified_ns  # Values form the cache key.
+    text = extract_subtitle_dialogue(Path(path))
+    alphabetic_chars = sum(character.isalpha() for character in text)
+    if alphabetic_chars < min_chars:
+        return None
+
+    try:
+        from langdetect import DetectorFactory, detect_langs
+        from langdetect.lang_detect_exception import LangDetectException
+
+        DetectorFactory.seed = 0
+        try:
+            probabilities = detect_langs(text)
+        except LangDetectException:
+            return None
+
+        if not probabilities:
+            return None
+        best = probabilities[0]
+        runner_up = probabilities[1].prob if len(probabilities) > 1 else 0.0
+        if best.prob < min_confidence or best.prob - runner_up < min_margin:
+            return None
+
+        language = normalize_language_code(best.lang)
+        if language not in KNOWN_LANGUAGE_CODES:
+            return None
+        if language == 'por':
+            portuguese_words = len(set(_RE_PT_WORDS.findall(text.lower())))
+            if portuguese_words < min_portuguese_words:
+                return None
+        return language
+    except ImportError:
+        # Compatibility fallback for installations not updated yet.
+        words = len(set(_RE_PT_WORDS.findall(text.lower())))
+        return 'por' if words >= min_portuguese_words else None
+
+
+def detect_subtitle_language(
+    file_path: Path,
+    min_confidence: float = LANGUAGE_DETECTION_MIN_CONFIDENCE,
+    min_margin: float = LANGUAGE_DETECTION_MIN_MARGIN,
+    min_chars: int = LANGUAGE_DETECTION_MIN_CHARS,
+    min_portuguese_words: int = 5,
+) -> Optional[str]:
+    """Detect an untagged textual subtitle language with confidence gates."""
+    try:
+        stat = file_path.stat()
+    except OSError:
+        return None
+    return _detect_subtitle_language_cached(
+        str(file_path.resolve()),
+        stat.st_size,
+        stat.st_mtime_ns,
+        float(min_confidence),
+        float(min_margin),
+        int(min_chars),
+        int(min_portuguese_words),
+    )
+
+
 def is_portuguese_subtitle(file_path: Path, min_words: int = 5) -> bool:
     """
-    Detecta se um arquivo SRT é uma legenda em português.
+    Detecta se uma legenda textual é uma legenda em português.
 
     Args:
-        file_path: Caminho para o arquivo SRT
+        file_path: Caminho para o arquivo de legenda
         min_words: Número mínimo de palavras portuguesas para considerar português
 
     Returns:
         True se for detectado como português
     """
-    if not file_path.exists() or file_path.suffix.lower() != '.srt':
-        return False
-
-    try:
-        # Lê o arquivo INTEIRO (até 512KB) com detecção de encoding.
-        # Antes lia só 100 linhas com utf-8/ignore: legendas Latin-1 perdiam
-        # os acentos e arquivos que começam com créditos/nomes próprios não
-        # acumulavam palavras suficientes → português não era detectado.
-        content = read_subtitle_text(file_path).lower()
-
-        # Conta palavras portuguesas DISTINTAS, por palavra inteira (\b).
-        word_count = len(set(_RE_PT_WORDS.findall(content)))
-
-        return word_count >= min_words
-
-    except (OSError, UnicodeDecodeError) as e:
-        _log.debug("is_portuguese_subtitle(%s) failed: %s", file_path, e)
-        return False
+    return detect_subtitle_language(
+        file_path,
+        min_portuguese_words=min_words,
+    ) == 'por'
 
 
 def clean_filename(name: str) -> str:
@@ -705,6 +829,15 @@ def normalize_language_code(lang_code: str) -> str:
         'id': 'ind',  # Indonesian
         'ms': 'may',  # Malay
         'tl': 'fil',  # Filipino
+        'bg': 'bul',  # Bulgarian
+        'ca': 'cat',  # Catalan
+        'hr': 'hrv',  # Croatian
+        'lt': 'lit',  # Lithuanian
+        'lv': 'lav',  # Latvian
+        'sk': 'slo',  # Slovak
+        'sl': 'slv',  # Slovenian
+        'ta': 'tam',  # Tamil
+        'te': 'tel',  # Telugu
     }
 
     # Se já está no formato de 3 letras, retorna normalizado

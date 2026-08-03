@@ -8,7 +8,7 @@ import shutil
 
 from ..utils.helpers import (
     clean_filename, normalize_spaces, extract_year,
-    format_season_folder, is_extras_path, is_portuguese_subtitle,
+    detect_subtitle_language, format_season_folder, is_extras_path,
     parse_subtitle_name, build_subtitle_name,
     is_video_file, is_subtitle_file, calculate_subtitle_quality, extract_quality_tag, detect_video_resolution
 )
@@ -825,10 +825,15 @@ class Renamer:
                 is_forced = info['forced']
                 is_hearing_impaired = info['hearing_impaired']
 
-                # Sem código de idioma explícito: detecta português pelo conteúdo
+                # Forced subtitles do not enter variant processing, so attach a
+                # confidently detected kept language here.
                 if lang_code_base is None and is_forced and self.config.rename_no_lang:
-                    if is_portuguese_subtitle(subtitle_path, self.config.min_pt_words):
-                        lang_code_base = 'por'
+                    detected_language = detect_subtitle_language(
+                        subtitle_path,
+                        min_portuguese_words=self.config.min_pt_words,
+                    )
+                    if detected_language in self.config.kept_languages:
+                        lang_code_base = detected_language
 
             # Procura vídeo correspondente (primeiro tenta match exato, depois normalizado)
             matching_video_op = video_operations.get(subtitle_base)
@@ -866,12 +871,13 @@ class Renamer:
 
                     # Se não tem código de idioma, verifica se vai receber um
                     if not lang_code_base:
-                        # Verifica se é legenda portuguesa e deve adicionar código
-                        if self.config.rename_no_lang and is_portuguese_subtitle(subtitle_path, self.config.min_pt_words):
-                            # Esta legenda receberia código .por — não processa aqui,
-                            # deixa para _plan_subtitle_variants comparar qualidade
-                            # com .por2.srt, .por3.srt, etc. Não marca como processada
-                            # para que _plan_subtitle_variants a veja.
+                        detected_language = detect_subtitle_language(
+                            subtitle_path,
+                            min_portuguese_words=self.config.min_pt_words,
+                        )
+                        if self.config.rename_no_lang and detected_language in self.config.kept_languages:
+                            # Defer confidently detected subtitles so variant
+                            # quality comparison can include .lang2/.lang3.
                             continue
 
                     processed_subtitles.append(subtitle_path)
@@ -961,14 +967,19 @@ class Renamer:
                 grouped[key].append((info['variant'], file_path))
                 continue
 
-            # .srt sem código de idioma que é português → candidata a .por.srt
-            if (
-                info['language'] is None
-                and self.config.rename_no_lang
-                and file_path.suffix.lower() == '.srt'
-                and is_portuguese_subtitle(file_path, self.config.min_pt_words)
-            ):
-                key = (file_path.parent, info['base_name'], 'por', file_path.suffix)
+            detected_language = None
+            if info['language'] is None and self.config.rename_no_lang:
+                detected_language = detect_subtitle_language(
+                    file_path,
+                    min_portuguese_words=self.config.min_pt_words,
+                )
+            if detected_language in self.config.kept_languages:
+                key = (
+                    file_path.parent,
+                    info['base_name'],
+                    detected_language,
+                    file_path.suffix,
+                )
                 # Usa 0 como número para ter prioridade sobre variantes
                 grouped[key].append((0, file_path))
                 continue
@@ -1201,12 +1212,14 @@ class Renamer:
 
         # 3. Adiciona código de idioma a legendas sem código
         if self.config.rename_no_lang and lang_code is None:
-            # Verifica se é português
-            if is_portuguese_subtitle(file_path, self.config.min_pt_words):
-                # Adiciona .por preservando os flags já presentes no nome
+            detected_language = detect_subtitle_language(
+                file_path,
+                min_portuguese_words=self.config.min_pt_words,
+            )
+            if detected_language in self.config.kept_languages:
                 new_name = build_subtitle_name(
                     info['base_name'],
-                    'por',
+                    detected_language,
                     file_path.suffix,
                     forced=info['forced'],
                     hearing_impaired=info['hearing_impaired'],
@@ -1218,7 +1231,10 @@ class Renamer:
                         source=file_path,
                         destination=new_path,
                         operation_type='rename',
-                        reason="Adicionar código de idioma português (.por)"
+                        reason=(
+                            "Adicionar código de idioma detectado "
+                            f"(.{detected_language})"
+                        )
                     ))
 
     def _plan_extra_files(self, directory: Path, video_files: List[Path], scan_result=None):

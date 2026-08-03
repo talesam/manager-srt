@@ -37,7 +37,7 @@ makepkg -si
 
 ```bash
 # Install dependencies
-pip install rich questionary requests
+pip install -r requirements.txt
 
 # Install Jellyfix
 sudo cp -r usr/share/jellyfix /usr/share/
@@ -107,7 +107,7 @@ Get your free API key at [themoviedb.org](https://www.themoviedb.org/settings/ap
 
 - Python 3.8+
 - GTK4, libadwaita (GUI only)
-- python-rich, python-questionary, python-requests
+- python-rich, python-questionary, python-requests, python-langdetect
 
 ## 📄 License
 

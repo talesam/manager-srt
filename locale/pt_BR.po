@@ -2488,3 +2488,100 @@ msgstr "Erro ao iniciar o aplicativo"
 #, python-brace-format
 msgid "Failed to start Jellyfix: {0}"
 msgstr "Falha ao iniciar o Jellyfix: {0}"
+
+# OpenSubtitles multi-account and missing-sidecar workflow
+msgid "Accounts"
+msgstr "Contas"
+
+msgid "Accounts rotate automatically when a daily limit is reached"
+msgstr "As contas alternam automaticamente quando o limite diário é atingido"
+
+msgid "Add OpenSubtitles Account"
+msgstr "Adicionar conta do OpenSubtitles"
+
+msgid "Add OpenSubtitles account"
+msgstr "Adicionar conta do OpenSubtitles"
+
+msgid "Test OpenSubtitles Accounts"
+msgstr "Testar contas do OpenSubtitles"
+
+msgid "Test OpenSubtitles accounts"
+msgstr "Testar contas do OpenSubtitles"
+
+msgid "Verify all configured credentials"
+msgstr "Verificar todas as credenciais configuradas"
+
+msgid "Remove OpenSubtitles Accounts"
+msgstr "Remover contas do OpenSubtitles"
+
+msgid "Remove OpenSubtitles accounts"
+msgstr "Remover contas do OpenSubtitles"
+
+msgid "Delete all stored credentials"
+msgstr "Excluir todas as credenciais armazenadas"
+
+#, python-format
+msgid "✓ OpenSubtitles accounts: %(users)s"
+msgstr "✓ Contas do OpenSubtitles: %(users)s"
+
+msgid "Enter an opensubtitles.com username and password.\n⚠ Use your USERNAME, not your e-mail address."
+msgstr "Insira um nome de usuário e senha do opensubtitles.com.\n⚠ Use seu NOME DE USUÁRIO, não seu endereço de e-mail."
+
+msgid "OpenSubtitles account saved"
+msgstr "Conta do OpenSubtitles salva"
+
+msgid "Remove All OpenSubtitles Accounts?"
+msgstr "Remover todas as contas do OpenSubtitles?"
+
+msgid "Remove all stored OpenSubtitles accounts?"
+msgstr "Remover todas as contas salvas do OpenSubtitles?"
+
+msgid "This will delete all stored credentials. You will not be able to download from opensubtitles.com until you configure it again."
+msgstr "Isso excluirá todas as credenciais armazenadas. Você não poderá baixar do opensubtitles.com até configurá-lo novamente."
+
+msgid "OpenSubtitles accounts removed"
+msgstr "Contas do OpenSubtitles removidas"
+
+msgid "Add an account first"
+msgstr "Adicione primeiro uma conta"
+
+msgid "Add an OpenSubtitles account first"
+msgstr "Adicione primeiro uma conta do OpenSubtitles"
+
+msgid "Add an OpenSubtitles account."
+msgstr "Adicione uma conta do OpenSubtitles."
+
+msgid "Testing accounts…"
+msgstr "Testando contas…"
+
+msgid "Testing OpenSubtitles accounts..."
+msgstr "Testando contas do OpenSubtitles..."
+
+msgid "✓ All OpenSubtitles accounts are valid"
+msgstr "✓ Todas as contas do OpenSubtitles são válidas"
+
+#, python-format
+msgid "Account test failed: %s"
+msgstr "Falha no teste da conta: %s"
+
+#, python-format
+msgid "Account test failed: %(user)s: %(message)s"
+msgstr "Falha no teste da conta %(user)s: %(message)s"
+
+msgid "No OpenSubtitles account configured!"
+msgstr "Nenhuma conta do OpenSubtitles configurada!"
+
+#, python-format
+msgid "OpenSubtitles limit reached; switching to account: %s"
+msgstr "Limite do OpenSubtitles atingido; alternando para a conta: %s"
+
+msgid "Download refused by all configured opensubtitles.com accounts."
+msgstr "Download recusado por todas as contas configuradas do opensubtitles.com."
+
+#, python-format
+msgid "Subtitles already present for %(video)s: %(languages)s"
+msgstr "Legendas já existentes para %(video)s: %(languages)s"
+
+#, python-format
+msgid "Subtitle already present; skipping download: %s"
+msgstr "Legenda já existente; ignorando o download: %s"

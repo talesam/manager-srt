@@ -224,9 +224,11 @@ class SubtitleManager:
         self.logger = get_logger()
         self.config = get_config()
 
-        # Cota consultada no máximo uma vez por execução (evita bater na API a
-        # cada legenda que falha).
-        self._quota_cache: Optional[Dict[str, Any]] = None
+        self._opensubtitles_accounts = self._configured_opensubtitles_accounts()
+        self._opensubtitles_account_index = 0
+        self._exhausted_opensubtitles_accounts: Set[int] = set()
+        # Quota queried at most once per account and execution.
+        self._quota_cache: Dict[str, Optional[Dict[str, Any]]] = {}
         # A sessão só é descartada uma vez por execução
         self._token_reset_done = False
 
@@ -235,7 +237,7 @@ class SubtitleManager:
         else:
             _patch_opensubtitlescom_languages()
             _configure_subliminal_cache(
-                getattr(self.config, 'opensubtitles_username', '') or ''
+                self._active_opensubtitles_account().get('username', '')
             )
 
     def is_available(self) -> bool:
@@ -350,6 +352,56 @@ class SubtitleManager:
         """Fallback providers, queried only when the primaries find nothing."""
         return list(getattr(self.config, 'subtitle_extra_providers', None) or DEFAULT_EXTRA_PROVIDERS)
 
+    def _configured_opensubtitles_accounts(self) -> List[Dict[str, str]]:
+        """Normalize multi-account config and retain legacy compatibility."""
+        accounts: List[Dict[str, str]] = []
+        seen = set()
+        for raw in getattr(self.config, 'opensubtitles_accounts', None) or []:
+            if not isinstance(raw, dict):
+                continue
+            username = str(raw.get('username') or '').strip()
+            password = str(raw.get('password') or '')
+            if not (username and password) or username.casefold() in seen:
+                continue
+            account = {'username': username, 'password': password}
+            apikey = str(raw.get('apikey') or '').strip()
+            if apikey:
+                account['apikey'] = apikey
+            accounts.append(account)
+            seen.add(username.casefold())
+
+        username = str(getattr(self.config, 'opensubtitles_username', '') or '').strip()
+        password = str(getattr(self.config, 'opensubtitles_password', '') or '')
+        if username and password and username.casefold() not in seen:
+            account = {'username': username, 'password': password}
+            apikey = str(getattr(self.config, 'opensubtitles_apikey', '') or '').strip()
+            if apikey:
+                account['apikey'] = apikey
+            accounts.insert(0, account)
+        return accounts
+
+    def _active_opensubtitles_account(self) -> Dict[str, str]:
+        """Return the account currently used by the provider."""
+        if not self._opensubtitles_accounts:
+            return {}
+        return self._opensubtitles_accounts[self._opensubtitles_account_index]
+
+    def _activate_opensubtitles_account(self, index: int) -> None:
+        """Switch account and invalidate the provider token cache."""
+        if index == self._opensubtitles_account_index:
+            return
+        self._opensubtitles_account_index = index
+        try:
+            from subliminal.cache import region
+            region.invalidate(hard=True)
+        except Exception as e:
+            self.logger.debug(f"Could not invalidate OpenSubtitles session: {e}")
+        username = self._active_opensubtitles_account().get('username', '')
+        self.logger.info(_("OpenSubtitles limit reached; switching to account: %s") % username)
+        # The API permits one login per second per IP. Account switches require
+        # a fresh login, so leave a small margin before the provider retry.
+        time.sleep(1.1)
+
     def _get_provider_configs(self) -> Dict[str, Dict[str, Any]]:
         """Build per-provider tuning passed to subliminal.
 
@@ -366,9 +418,14 @@ class SubtitleManager:
             'max_result_pages': max_pages,
             'timeout': timeout,
         }
-        username = getattr(self.config, 'opensubtitles_username', '') or ''
-        password = getattr(self.config, 'opensubtitles_password', '') or ''
-        apikey = getattr(self.config, 'opensubtitles_apikey', '') or ''
+        account = self._active_opensubtitles_account()
+        username = account.get('username', '')
+        password = account.get('password', '')
+        apikey = (
+            account.get('apikey', '')
+            or getattr(self.config, 'opensubtitles_apikey', '')
+            or ''
+        )
         if username and password:
             oscom['username'] = username
             oscom['password'] = password
@@ -379,10 +436,7 @@ class SubtitleManager:
 
     def _has_opensubtitles_login(self) -> bool:
         """Whether opensubtitles.com credentials are configured."""
-        return bool(
-            (getattr(self.config, 'opensubtitles_username', '') or '')
-            and (getattr(self.config, 'opensubtitles_password', '') or '')
-        )
+        return bool(self._opensubtitles_accounts)
 
     def test_opensubtitles_login(self, username: str, password: str) -> Tuple[bool, str]:
         """Verify opensubtitles.com credentials, returning (ok, message).
@@ -461,7 +515,7 @@ class SubtitleManager:
             return False, str(e)
 
     def get_opensubtitles_quota(self) -> Optional[Dict[str, Any]]:
-        """Consulta a cota diária de downloads da conta opensubtitles.com.
+        """Query the daily quota for the active opensubtitles.com account.
 
         Contas gratuitas têm um limite baixo (20 downloads/dia). Ao estourar,
         a busca continua funcionando e o download passa a falhar — subliminal
@@ -472,13 +526,14 @@ class SubtitleManager:
             dict com ``remaining``, ``allowed``, ``used`` e ``reset_in``,
             ou None se não der para consultar. Nunca lança.
         """
-        if self._quota_cache is not None:
-            return self._quota_cache
-
-        username = getattr(self.config, 'opensubtitles_username', '') or ''
-        password = getattr(self.config, 'opensubtitles_password', '') or ''
+        account = self._active_opensubtitles_account()
+        username = account.get('username', '')
+        password = account.get('password', '')
         if not (username and password):
             return None
+        cache_key = username.casefold()
+        if cache_key in self._quota_cache:
+            return self._quota_cache[cache_key]
 
         try:
             import requests
@@ -490,7 +545,11 @@ class SubtitleManager:
             except Exception:
                 default_key, user_agent = 'mij33pjc3kOlup1qOKxnWWxvle2kFbMH', 'Subliminal'
 
-            apikey = (getattr(self.config, 'opensubtitles_apikey', '') or '') or default_key
+            apikey = (
+                account.get('apikey', '')
+                or getattr(self.config, 'opensubtitles_apikey', '')
+                or default_key
+            )
             timeout = int(getattr(self.config, 'subtitle_timeout', 15) or 15)
             headers = {
                 'Api-Key': apikey,
@@ -505,6 +564,7 @@ class SubtitleManager:
                 headers=headers, timeout=timeout,
             )
             if login.status_code != 200:
+                self._quota_cache[cache_key] = None
                 return None
 
             headers['Authorization'] = f"Bearer {login.json().get('token')}"
@@ -513,21 +573,69 @@ class SubtitleManager:
                 headers=headers, timeout=timeout,
             )
             if info.status_code != 200:
+                self._quota_cache[cache_key] = None
                 return None
 
             data = info.json().get('data', {})
-            self._quota_cache = {
+            quota = {
                 'remaining': data.get('remaining_downloads'),
                 'allowed': data.get('allowed_downloads'),
                 'used': data.get('downloads_count'),
                 'reset_in': data.get('reset_time'),
                 'vip': data.get('vip'),
             }
-            return self._quota_cache
+            self._quota_cache[cache_key] = quota
+            return quota
 
         except Exception as e:
             self.logger.debug(f"Não foi possível consultar a cota do OpenSubtitles: {e}")
+            self._quota_cache[cache_key] = None
             return None
+
+    def _retry_with_next_opensubtitles_account(self, sub: Any) -> bool:
+        """Retry an empty OpenSubtitles download with each remaining account."""
+        if getattr(sub, 'provider_name', '') != 'opensubtitlescom':
+            return False
+        account_count = len(self._opensubtitles_accounts)
+        if account_count < 2:
+            return False
+
+        current = self._opensubtitles_account_index
+        # The current account already failed after a fresh-session retry. Do
+        # not spend another API call on it for every subtitle in this run.
+        self._exhausted_opensubtitles_accounts.add(current)
+
+        tried = {current}
+        from subliminal import download_subtitles as subliminal_download
+
+        while len(tried) < account_count:
+            next_index = next(
+                (
+                    (current + offset) % account_count
+                    for offset in range(1, account_count + 1)
+                    if (current + offset) % account_count not in tried
+                    and (current + offset) % account_count
+                    not in self._exhausted_opensubtitles_accounts
+                ),
+                None,
+            )
+            if next_index is None:
+                break
+
+            tried.add(next_index)
+            self._activate_opensubtitles_account(next_index)
+            current = next_index
+            sub.content = None
+            try:
+                subliminal_download([sub], provider_configs=self._get_provider_configs())
+            except Exception as e:
+                self.logger.debug(f"OpenSubtitles account retry failed: {e}")
+            if sub.content:
+                return True
+
+            self._exhausted_opensubtitles_accounts.add(next_index)
+
+        return False
 
     def _retry_after_token_reset(self, sub: Any, provider_configs: Dict) -> bool:
         """Descarta a sessão guardada e tenta baixar de novo (uma vez).
@@ -542,7 +650,10 @@ class SubtitleManager:
 
         cota = self.get_opensubtitles_quota()
         if cota and cota.get('remaining') == 0:
-            return False  # é limite mesmo, não adianta relogar
+            self._exhausted_opensubtitles_accounts.add(
+                self._opensubtitles_account_index
+            )
+            return False  # quota exhausted; relogging cannot help
 
         self._token_reset_done = True
 
@@ -586,6 +697,12 @@ class SubtitleManager:
 
         # Com login configurado, a causa mais comum é a cota diária estourada.
         quota = self.get_opensubtitles_quota()
+        if len(self._exhausted_opensubtitles_accounts) >= len(
+            self._opensubtitles_accounts
+        ) > 1:
+            return _(
+                "Download refused by all configured opensubtitles.com accounts."
+            )
         if quota and quota.get('remaining') == 0:
             return _(
                 "opensubtitles.com daily download limit reached "
@@ -604,6 +721,47 @@ class SubtitleManager:
             ) % {'remaining': quota.get('remaining'), 'allowed': quota.get('allowed')}
 
         return _("Download refused by opensubtitles.com. Check the login in Settings.")
+
+    @staticmethod
+    def _normalize_requested_languages(languages: List[str]) -> List[str]:
+        """Normalize and deduplicate requested language codes in order."""
+        from ..utils.helpers import normalize_language_code
+
+        normalized = []
+        for language in languages:
+            code = normalize_language_code(str(language))
+            if code and code not in normalized:
+                normalized.append(code)
+        return normalized
+
+    def _existing_subtitle_languages(self, video_path: Path) -> Dict[str, List[Path]]:
+        """Find language-tagged sidecars belonging to one video."""
+        from ..utils.helpers import (
+            SUBTITLE_EXTENSIONS, detect_subtitle_language, parse_subtitle_name,
+        )
+
+        existing: Dict[str, List[Path]] = {}
+        try:
+            candidates = video_path.parent.iterdir()
+        except OSError:
+            return existing
+
+        video_stem = video_path.stem.casefold()
+        for candidate in candidates:
+            if not candidate.is_file() or candidate.suffix.lower() not in SUBTITLE_EXTENSIONS:
+                continue
+            parsed = parse_subtitle_name(candidate.stem)
+            language = parsed['language']
+            if parsed['forced'] or parsed['base_name'].casefold() != video_stem:
+                continue
+            if not language:
+                language = detect_subtitle_language(
+                    candidate,
+                    min_portuguese_words=getattr(self.config, 'min_pt_words', 5),
+                )
+            if language:
+                existing.setdefault(language, []).append(candidate)
+        return existing
 
     def download_subtitles(self, video_path: Path, languages: Optional[List[str]] = None, 
                            providers: Optional[List[str]] = None,
@@ -652,14 +810,28 @@ class SubtitleManager:
             else:
                 languages = ['por', 'eng']
 
+        languages = self._normalize_requested_languages(languages)
+        existing = self._existing_subtitle_languages(video_path)
+        satisfied = set(languages) & set(existing)
+        missing_langs = set(languages) - satisfied
+        all_results: Dict[str, List[Path]] = {language: [] for language in satisfied}
+
+        if satisfied:
+            self.logger.info(
+                _("Subtitles already present for %(video)s: %(languages)s")
+                % {
+                    'video': video_path.name,
+                    'languages': ', '.join(sorted(satisfied)),
+                }
+            )
+        if not missing_langs:
+            return all_results
+
         # Convert to set of Language objects (see _build_languages for pt-BR handling)
-        langs = self._build_languages(languages)
+        langs = self._build_languages(list(missing_langs))
 
         self.logger.info(_("Searching subtitles for: %s (Languages: %s)") %
                          (video_path.name, ", ".join(languages)))
-
-        all_results = {}
-        missing_langs = set(languages)  # Track languages we still need
 
         # Level 1: Search by hash
         result = self._search_by_hash(video_path, langs, providers, min_score)
@@ -734,17 +906,33 @@ class SubtitleManager:
 
         if not languages:
             languages = self.config.kept_languages or ["por", "eng"]
-
-        langs = self._build_languages(languages)
+        languages = self._normalize_requested_languages(languages)
 
         use_providers = providers or self._get_providers()
-        provider_configs = self._get_provider_configs()
         all_results: Dict[Path, Dict[str, List[Path]]] = {}
+        missing_by_video: Dict[Path, Set[str]] = {}
+        for video_path in video_paths:
+            existing = self._existing_subtitle_languages(video_path)
+            satisfied = set(languages) & set(existing)
+            if satisfied:
+                all_results[video_path] = {language: [] for language in satisfied}
+                self.logger.info(
+                    _("Subtitles already present for %(video)s: %(languages)s")
+                    % {
+                        'video': video_path.name,
+                        'languages': ', '.join(sorted(satisfied)),
+                    }
+                )
+            missing_by_video[video_path] = set(languages) - satisfied
         total = len(video_paths)
 
-        # Phase 1: Batch hash search — single pool for all videos
+        # Phase 1: group videos by missing languages so the batch provider call
+        # never requests a sidecar that already exists for one of them.
         self.logger.info(_("Batch Level 1: scanning %d videos by hash...") % total)
-        existing_videos = [vpath for vpath in video_paths if vpath.exists()]
+        existing_videos = [
+            vpath for vpath in video_paths
+            if vpath.exists() and missing_by_video[vpath]
+        ]
         scanned: Dict[Path, Any] = {}
         if existing_videos:
             # ffprobe/hashing is I/O-bound — parallelize across cores
@@ -759,13 +947,20 @@ class SubtitleManager:
                     except Exception as e:
                         self.logger.info(f"scan_video failed for {vp.name}: {e}")
 
-        if scanned:
+        grouped_paths: Dict[frozenset, List[Path]] = {}
+        for video_path in scanned:
+            grouped_paths.setdefault(
+                frozenset(missing_by_video[video_path]), []
+            ).append(video_path)
+
+        for missing_languages, group_paths in grouped_paths.items():
+            group_scanned = {path: scanned[path] for path in group_paths}
             try:
                 hash_results = download_best_subtitles(
-                    set(scanned.values()),
-                    langs,
+                    set(group_scanned.values()),
+                    self._build_languages(list(missing_languages)),
                     providers=use_providers,
-                    provider_configs=provider_configs,
+                    provider_configs=self._get_provider_configs(),
                     pool_class=AsyncProviderPool,
                     min_score=min_score,
                 )
@@ -774,13 +969,13 @@ class SubtitleManager:
                 hash_results = {}
 
             # Map results back to paths and save subtitles
-            video_to_path = {v: p for p, v in scanned.items()}
+            video_to_path = {v: p for p, v in group_scanned.items()}
             for video_obj, subs in hash_results.items():
                 vpath = video_to_path.get(video_obj)
                 if vpath and subs:
                     saved = self._save_subtitles(video_obj, vpath, subs)
                     if saved:
-                        all_results[vpath] = saved
+                        all_results.setdefault(vpath, {}).update(saved)
                         self.logger.info(_("Level 1 (hash) found: %s for %s") % (", ".join(saved.keys()), vpath.name))
 
         # Phase 2: Level 2 fallback for videos still missing languages
@@ -815,16 +1010,17 @@ class SubtitleManager:
                     all_results[vpath] = existing
                     self.logger.info(_("Level 2 (TMDB) found: %s for %s") % (", ".join(result2.keys()), vpath.name))
 
-        # Phase 3: fallback to extra providers for videos that found nothing at all
+        # Phase 3: fallback providers only for languages still missing.
         extra_providers = [p for p in self._get_extra_providers() if p not in use_providers]
         if extra_providers:
             for vpath in video_paths:
-                if all_results.get(vpath):
-                    continue  # already found something
+                need_langs = set(languages) - set(all_results.get(vpath, {}))
+                if not need_langs:
+                    continue
                 info = meta.get(vpath)
                 if not info or not info.get("title"):
                     continue
-                lang_objs = self._build_languages(languages)
+                lang_objs = self._build_languages(list(need_langs))
                 result3 = self._search_by_title(
                     video_path=vpath,
                     title=info["title"],
@@ -837,7 +1033,7 @@ class SubtitleManager:
                     min_score=min_score,
                 )
                 if result3:
-                    all_results[vpath] = result3
+                    all_results.setdefault(vpath, {}).update(result3)
                     self.logger.info(_("Level 3 (fallback %s) found: %s for %s")
                                      % (", ".join(extra_providers), ", ".join(result3.keys()), vpath.name))
 
@@ -1312,9 +1508,22 @@ class SubtitleManager:
         try:
             sub = subtitle_result.subtitle_obj
 
+            existing = self._existing_subtitle_languages(video_path)
+            if subtitle_result.language in existing:
+                self.logger.info(
+                    _("Subtitle already present; skipping download: %s")
+                    % existing[subtitle_result.language][0].name
+                )
+                return existing[subtitle_result.language][0]
+
             # Download subtitle content (pass provider_configs so login/quota apply)
             from subliminal import download_subtitles
             download_subtitles([sub], provider_configs=self._get_provider_configs())
+
+            if not sub.content:
+                self._retry_after_token_reset(sub, self._get_provider_configs())
+            if not sub.content:
+                self._retry_with_next_opensubtitles_account(sub)
             
             if not sub.content:
                 hint = self._download_failure_hint(subtitle_result.provider)
@@ -1360,21 +1569,37 @@ class SubtitleManager:
         """
         from subliminal import download_subtitles as subliminal_download
 
-        provider_configs = self._get_provider_configs()
         result = {}
+        existing_languages = self._existing_subtitle_languages(video_path)
 
         for sub in downloaded_subs:
             try:
+                lang_alpha3 = self._subtitle_language_code(sub)
+                if lang_alpha3 in existing_languages:
+                    result.setdefault(lang_alpha3, [])
+                    self.logger.info(
+                        _("Subtitle already present; skipping download: %s")
+                        % existing_languages[lang_alpha3][0].name
+                    )
+                    continue
+
                 # Download subtitle content if not already downloaded
                 if not sub.content:
-                    subliminal_download([sub], provider_configs=provider_configs)
+                    subliminal_download(
+                        [sub], provider_configs=self._get_provider_configs()
+                    )
 
                 if not sub.content:
                     # Conteúdo vazio SEM erro é a assinatura de token velho.
                     # Se ainda há cota, o problema não é limite: descarta a
                     # sessão guardada e tenta uma vez mais com login novo.
-                    if self._retry_after_token_reset(sub, provider_configs):
+                    if self._retry_after_token_reset(
+                        sub, self._get_provider_configs()
+                    ):
                         pass
+
+                if not sub.content:
+                    self._retry_with_next_opensubtitles_account(sub)
 
                 if not sub.content:
                     # Diz POR QUE falhou (cota estourada é de longe o motivo
@@ -1391,8 +1616,6 @@ class SubtitleManager:
                     continue
                 
                 # Keep 3-letter codes, preserving pt-PT as Jellyfix's por-pt.
-                lang_alpha3 = self._subtitle_language_code(sub)
-
                 if lang_alpha3 not in result:
                     result[lang_alpha3] = []
 

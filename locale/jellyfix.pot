@@ -3076,3 +3076,101 @@ msgstr  ""
 #, python-format
 msgid   "Downloaded subtitle: %s"
 msgstr  ""
+
+#
+# OpenSubtitles multi-account and missing-sidecar workflow
+msgid "Accounts"
+msgstr ""
+
+msgid "Accounts rotate automatically when a daily limit is reached"
+msgstr ""
+
+msgid "Add OpenSubtitles Account"
+msgstr ""
+
+msgid "Add OpenSubtitles account"
+msgstr ""
+
+msgid "Test OpenSubtitles Accounts"
+msgstr ""
+
+msgid "Test OpenSubtitles accounts"
+msgstr ""
+
+msgid "Verify all configured credentials"
+msgstr ""
+
+msgid "Remove OpenSubtitles Accounts"
+msgstr ""
+
+msgid "Remove OpenSubtitles accounts"
+msgstr ""
+
+msgid "Delete all stored credentials"
+msgstr ""
+
+#, python-format
+msgid "✓ OpenSubtitles accounts: %(users)s"
+msgstr ""
+
+msgid "Enter an opensubtitles.com username and password.\n⚠ Use your USERNAME, not your e-mail address."
+msgstr ""
+
+msgid "OpenSubtitles account saved"
+msgstr ""
+
+msgid "Remove All OpenSubtitles Accounts?"
+msgstr ""
+
+msgid "Remove all stored OpenSubtitles accounts?"
+msgstr ""
+
+msgid "This will delete all stored credentials. You will not be able to download from opensubtitles.com until you configure it again."
+msgstr ""
+
+msgid "OpenSubtitles accounts removed"
+msgstr ""
+
+msgid "Add an account first"
+msgstr ""
+
+msgid "Add an OpenSubtitles account first"
+msgstr ""
+
+msgid "Add an OpenSubtitles account."
+msgstr ""
+
+msgid "Testing accounts…"
+msgstr ""
+
+msgid "Testing OpenSubtitles accounts..."
+msgstr ""
+
+msgid "✓ All OpenSubtitles accounts are valid"
+msgstr ""
+
+#, python-format
+msgid "Account test failed: %s"
+msgstr ""
+
+#, python-format
+msgid "Account test failed: %(user)s: %(message)s"
+msgstr ""
+
+msgid "No OpenSubtitles account configured!"
+msgstr ""
+
+#, python-format
+msgid "OpenSubtitles limit reached; switching to account: %s"
+msgstr ""
+
+msgid "Download refused by all configured opensubtitles.com accounts."
+msgstr ""
+
+#, python-format
+msgid "Subtitles already present for %(video)s: %(languages)s"
+msgstr ""
+
+#, python-format
+msgid "Subtitle already present; skipping download: %s"
+msgstr ""

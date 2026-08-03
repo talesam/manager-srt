@@ -124,20 +124,63 @@ class ConfigManager:
         self.remove('tvdb_api_key')
 
     def get_opensubtitles_credentials(self) -> tuple:
-        """Return (username, password) for opensubtitles.com, or ('', '')."""
-        return (self.get('opensubtitles_username') or '',
-                self.get('opensubtitles_password') or '')
+        """Return the first configured opensubtitles.com account."""
+        accounts = self.get_opensubtitles_accounts()
+        if accounts:
+            return accounts[0]['username'], accounts[0]['password']
+        return '', ''
+
+    def get_opensubtitles_accounts(self) -> list:
+        """Return normalized accounts, migrating the legacy single login."""
+        config = self.load()
+        accounts = []
+        seen = set()
+        for account in config.get('opensubtitles_accounts') or []:
+            if not isinstance(account, dict):
+                continue
+            username = str(account.get('username') or '').strip()
+            password = str(account.get('password') or '')
+            if not (username and password) or username.casefold() in seen:
+                continue
+            normalized = {'username': username, 'password': password}
+            apikey = str(account.get('apikey') or '').strip()
+            if apikey:
+                normalized['apikey'] = apikey
+            accounts.append(normalized)
+            seen.add(username.casefold())
+
+        legacy_user = str(config.get('opensubtitles_username') or '').strip()
+        legacy_password = str(config.get('opensubtitles_password') or '')
+        if legacy_user and legacy_password and legacy_user.casefold() not in seen:
+            accounts.insert(0, {
+                'username': legacy_user,
+                'password': legacy_password,
+            })
+        return accounts
 
     def set_opensubtitles_credentials(self, username: str, password: str):
-        """Persist opensubtitles.com login (needed to download subtitles)."""
+        """Add or update an opensubtitles.com account."""
+        username = username.strip()
         config = self.load()
-        config['opensubtitles_username'] = username
-        config['opensubtitles_password'] = password
+        accounts = self.get_opensubtitles_accounts()
+        replacement = {'username': username, 'password': password}
+        for index, account in enumerate(accounts):
+            if account['username'].casefold() == username.casefold():
+                accounts[index] = replacement
+                break
+        else:
+            accounts.append(replacement)
+
+        config['opensubtitles_accounts'] = accounts
+        # Keep legacy keys for older Jellyfix versions and external tooling.
+        config['opensubtitles_username'] = accounts[0]['username']
+        config['opensubtitles_password'] = accounts[0]['password']
         self.save(config)
 
     def remove_opensubtitles_credentials(self):
-        """Delete stored opensubtitles.com login."""
+        """Delete all stored opensubtitles.com accounts."""
         config = self.load()
+        config.pop('opensubtitles_accounts', None)
         config.pop('opensubtitles_username', None)
         config.pop('opensubtitles_password', None)
         self.save(config)
@@ -249,5 +292,4 @@ class ConfigManager:
     def set_last_directory(self, path: str):
         """Set last opened directory for file chooser"""
         self.set('last_directory', path)
-
 
