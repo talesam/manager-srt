@@ -696,36 +696,37 @@ msgstr "Fjarlægðu TMDB lykilinn"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:741
 msgid "How to get TMDB key"
 msgstr "Hvernig á að fá TMDB lykil"
-# File: usr/share/jellyfix/cli/interactive.py, line: 660
-# File: usr/share/jellyfix/cli/interactive.py, line: 672
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:660
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:672
-msgid "Configure OpenSubtitles login"
-msgstr "Stilltu OpenSubtitles innskráningu"
+# 
 # File: usr/share/jellyfix/cli/interactive.py, line: 661
-# File: usr/share/jellyfix/cli/interactive.py, line: 675
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:661
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:675
-msgid "Test OpenSubtitles login"
-msgstr "Prófaðu OpenSubtitles innskráningu"
+# File: usr/share/jellyfix/cli/interactive.py, line: 673
+#: NEEDS WORK
+msgid "Add OpenSubtitles account"
+msgstr "Bæta við OpenSubtitles reikningi"
+# 
 # File: usr/share/jellyfix/cli/interactive.py, line: 662
-# File: usr/share/jellyfix/cli/interactive.py, line: 678
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:662
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:678
-msgid "Remove OpenSubtitles login"
-msgstr "Fjarlægðu OpenSubtitles innskráningu"
-# File: usr/share/jellyfix/cli/interactive.py, line: 680
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:680
-msgid "Remove stored OpenSubtitles login?"
-msgstr "Fjarlægja geymt OpenSubtitles innskráningu?"
+# File: usr/share/jellyfix/cli/interactive.py, line: 676
+#: NEEDS WORK
+msgid "Test OpenSubtitles accounts"
+msgstr "Prófa OpenSubtitles reikninga"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 663
+# File: usr/share/jellyfix/cli/interactive.py, line: 679
+#: NEEDS WORK
+msgid "Remove OpenSubtitles accounts"
+msgstr "Fjarlægja OpenSubtitles reikninga"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 681
+#: NEEDS WORK
+msgid "Remove all stored OpenSubtitles accounts?"
+msgstr "Ertu að fjarlægja öll geymd OpenSubtitles reikninga?"
+# 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/interactive.py, line: 688
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 358
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:688
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:358
-msgid "OpenSubtitles login removed"
-msgstr "OpenSubtitles innskráning fjarlægð"
+# File: usr/share/jellyfix/cli/interactive.py, line: 690
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 366
+#: NEEDS WORK
+msgid "OpenSubtitles accounts removed"
+msgstr "OpenSubtitles reikningar fjarlægðir"
 # File: usr/share/jellyfix/cli/interactive.py, line: 438
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:694
 msgid "Enter your TMDB API key:"
@@ -750,10 +751,11 @@ msgstr "Ertu viss um að þú viljir fjarlægja TMDB lykilinn?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:732
 msgid "TMDB key removed"
 msgstr "TMDB lykill fjarlægður"
-# File: usr/share/jellyfix/cli/interactive.py, line: 746
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:746
-msgid "OpenSubtitles login (needed to download subtitles)."
-msgstr "OpenSubtitles innskráning (nauðsynleg til að hlaða niður undirtextum)."
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 748
+#: NEEDS WORK
+msgid "Add an OpenSubtitles account."
+msgstr "Bættu við OpenSubtitles reikningi."
 # File: usr/share/jellyfix/cli/interactive.py, line: 747
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:747
 msgid "Create a free account at https://www.opensubtitles.com/newuser"
@@ -770,14 +772,14 @@ msgstr "Notendanafn (ekki tölvupóstur):"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:753
 msgid "Password:"
 msgstr "Lykilorð:"
+# 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/interactive.py, line: 762
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 329
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:762
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:329
-msgid "OpenSubtitles login saved"
-msgstr "OpenSubtitles innskráning vistuð"
+# File: usr/share/jellyfix/cli/interactive.py, line: 766
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 336
+#: NEEDS WORK
+msgid "OpenSubtitles account saved"
+msgstr "OpenSubtitles reikningur vistaður"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
@@ -790,27 +792,27 @@ msgstr "OpenSubtitles innskráning vistuð"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:331
 msgid "Username and password are both required"
 msgstr "Notendanafn og lykilorð eru bæði nauðsynleg."
-# File: usr/share/jellyfix/cli/interactive.py, line: 772
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:772
-msgid "Testing OpenSubtitles login..."
-msgstr "Prófun OpenSubtitles innskriftar..."
-# File: usr/share/jellyfix/cli/interactive.py, line: 776
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:776
-msgid "No OpenSubtitles login configured!"
-msgstr "Engin OpenSubtitles ekki stillt!"
-# File: usr/share/jellyfix/cli/interactive.py, line: 777
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:777
-msgid "Configure it first using 'Configure OpenSubtitles login'"
-msgstr "Stilltu það fyrst með 'Stilltu OpenSubtitles innskráningu'"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/interactive.py, line: 787
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 384
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:787
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:384
+# File: usr/share/jellyfix/cli/interactive.py, line: 776
+#: NEEDS WORK
+msgid "Testing OpenSubtitles accounts..."
+msgstr "Prófun OpenSubtitles reikninga..."
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 780
+#: NEEDS WORK
+msgid "No OpenSubtitles account configured!"
+msgstr "Engin OpenSubtitles ekki stillt!"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 781
+#: NEEDS WORK
+msgid "Add an OpenSubtitles account first"
+msgstr "Bættu fyrst við OpenSubtitles reikningi"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 795
+#: NEEDS WORK
 #, python-format
-msgid "Login failed: %s"
-msgstr "Innskráning mistókst: %s"
+msgid "Account test failed: %(user)s: %(message)s"
+msgstr "Reikningstestur mistókst: %(user)s: %(message)s"
 # File: usr/share/jellyfix/cli/interactive.py, line: 492
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:795
 msgid "Testing TMDB connection..."
@@ -1451,53 +1453,52 @@ msgstr "OpenSubtitles Innihald"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:89
 msgid "A free opensubtitles.com account is required to download subtitles (searching works without it)"
 msgstr "Þú þarft ókeypis opensubtitles.com reikning til að hlaða niður textum (leit virkar án þess)."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
-#, python-format
-msgid "✓ Configured (%s)"
-msgstr "✓ Stillt (%s)"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
-msgid "Account"
-msgstr "Reikningur"
+#: NEEDS WORK
+msgid "Accounts"
+msgstr "Reikningar"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
-msgid "Configure OpenSubtitles Login"
-msgstr "Stillir OpenSubtitles innskráningu"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
+#: NEEDS WORK
+msgid "Add OpenSubtitles Account"
+msgstr "Bæta við OpenSubtitles reikningi"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
-msgid "Enter your username and password"
-msgstr "Sláðu inn notendanafn og lykilorð þitt"
+#: NEEDS WORK
+msgid "Accounts rotate automatically when a daily limit is reached"
+msgstr "Reikningar snúast sjálfkrafa þegar daglegur takmarkan er náð."
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
 msgid "Configure"
 msgstr "Sniðganga"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
-msgid "Test OpenSubtitles Login"
-msgstr "Prófaðu OpenSubtitles Inngang"
+#: NEEDS WORK
+msgid "Test OpenSubtitles Accounts"
+msgstr "Prófa OpenSubtitles reikninga"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
-msgid "Verify your credentials actually work"
-msgstr "Staðfestu að auðkenni þín virki í raun."
+#: NEEDS WORK
+msgid "Verify all configured credentials"
+msgstr "Staðfesta allar stilltar auðkenningar"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
 msgid "Test"
 msgstr "Próf"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
-msgid "Remove OpenSubtitles Login"
-msgstr "Fjarlægja OpenSubtitles innskráningu"
+#: NEEDS WORK
+msgid "Remove OpenSubtitles Accounts"
+msgstr "Fjarlægja OpenSubtitles reikninga"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
-msgid "Delete stored credentials"
-msgstr "Eyða geymdum auðkennum"
+#: NEEDS WORK
+msgid "Delete all stored credentials"
+msgstr "Eyða öllum geymdum auðkennum"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
@@ -1566,6 +1567,12 @@ msgstr "Skref-fyrir-skref leiðbeiningar"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
 msgid "Tutorial"
 msgstr "Kennsluefni"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 248
+#: NEEDS WORK
+#, python-format
+msgid "✓ OpenSubtitles accounts: %(users)s"
+msgstr "✓ OpenSubtitles reikningar: %(users)s"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
 msgid "Enter your TMDB API key below"
@@ -1599,14 +1606,15 @@ msgstr "Vista"
 #. Show toast
 msgid "API key saved successfully"
 msgstr "API lykill vistaður með góðum árangri"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
+#: NEEDS WORK
 msgid ""
-"Enter your opensubtitles.com username and password.\n"
+"Enter an opensubtitles.com username and password.\n"
 "⚠ Use your USERNAME, not your e-mail address."
 msgstr ""
-"Sláðu inn notendanafn og lykilorð þitt á opensubtitles.com.  \n"
-"⚠ Notaðu NOTENDANAFN þitt, ekki netfangið þitt."
+"Sláðu inn opensubtitles.com notandanafn og lykilorð.  \n"
+"⚠ Notaðu notandanafn þitt, ekki netfangið þitt."
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
 msgid "Username (not e-mail)"
@@ -1620,31 +1628,41 @@ msgstr "Lykilorð"
 #. Toggle password visibility
 msgid "Show password"
 msgstr "Sýna lykilorð"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
-msgid "Remove OpenSubtitles Login?"
-msgstr "Fjarlægja OpenSubtitles innskráningu?"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 347
+#: NEEDS WORK
+msgid "Remove All OpenSubtitles Accounts?"
+msgstr "Fjarlægja allar OpenSubtitles reikninga?"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 348
+#: NEEDS WORK
 msgid ""
-"This will delete your stored credentials. You will not be able to download from opensubtitles.com "
+"This will delete all stored credentials. You will not be able to download from opensubtitles.com "
 "until you configure it again."
 msgstr ""
-"Þetta mun eyða skráðri auðkennum þínum. Þú munt ekki geta hlaðið niður frá opensubtitles.com fyrr "
+"Þetta mun eyða öllum geymdum auðkennum. Þú munt ekki geta hlaðið niður frá opensubtitles.com fyrr "
 "en þú stillir það aftur."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
-msgid "Configure your login first"
-msgstr "Stilltu fyrst innskráningu þína"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
-msgid "Testing login…"
-msgstr "Prófun innskráningar…"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 379
+#: NEEDS WORK
+msgid "Add an account first"
+msgstr "Fyrstðu að bæta við reikningi"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 382
+#: NEEDS WORK
+msgid "Testing accounts…"
+msgstr "Prófunareikningar…"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 396
+#: NEEDS WORK
+msgid "✓ All OpenSubtitles accounts are valid"
+msgstr "✓ Öll OpenSubtitles reikningar eru gild."
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 400
+#: NEEDS WORK
 #, python-format
-msgid "✓ Login OK (%s)"
-msgstr "✓ Innskráning OK (%s)"
+msgid "Account test failed: %s"
+msgstr "Prófun reiknings mistókst: %s"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
 msgid "Current TMDB API Key"
@@ -2608,6 +2626,12 @@ msgstr "Myndaskynding hreinsaður"
 #, python-format
 msgid "Subtitle session cache cleared (%s)"
 msgstr "Skilaboðasafn aðgerða hreinsað (%s)"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 400
+#: NEEDS WORK
+#, python-format
+msgid "OpenSubtitles limit reached; switching to account: %s"
+msgstr "OpenSubtitles takmörk náð; skipt er yfir í reikning: %s"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2648,6 +2672,11 @@ msgstr ""
 "opensubtitles_username/opensubtitles_password í ~/.jellyfix/config.json (eða "
 "OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD umhverfisbreytunum)."
 # 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 704
+#: NEEDS WORK
+msgid "Download refused by all configured opensubtitles.com accounts."
+msgstr "Niðurhal hafnað af öllum stilltum opensubtitles.com reikningum."
+# 
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 478
 #: NEEDS WORK
 #, python-format
@@ -2673,6 +2702,13 @@ msgstr "Niðurhal hafnað af opensubtitles.com (%(remaining)s af %(allowed)s ni�
 #: NEEDS WORK
 msgid "Download refused by opensubtitles.com. Check the login in Settings."
 msgstr "Niðurhal hafnað af opensubtitles.com. Athugaðu innskráninguna í Stillingum."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 821
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 920
+#: NEEDS WORK
+#, python-format
+msgid "Subtitles already present for %(video)s: %(languages)s"
+msgstr "Undirskriftir þegar fyrir %(video)s: %(languages)s"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
 #, python-format
@@ -2754,6 +2790,13 @@ msgstr "Engin niðurstöður frá aðalveitum, reyni: %s"
 #, python-format
 msgid "Found %d subtitles in manual search"
 msgstr "Fundin %d undirskriftir í handvirkri leit"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1514
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1581
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle already present; skipping download: %s"
+msgstr "Undirskrift þegar hún er þegar til; sleppa niðurhalinu: %s"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
 #, python-format

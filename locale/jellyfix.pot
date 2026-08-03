@@ -7,7 +7,7 @@
 msgid   ""
 msgstr  "Project-Id-Version: jellyfix\n"
         "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2026-07-31 18:59+0000\n"
+        "POT-Creation-Date: 2026-08-03 00:41+0000\n"
         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
         "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,7 +113,7 @@ msgstr  ""
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
 # File: usr/share/jellyfix/cli/app.py, line: 67
-# File: usr/share/jellyfix/cli/interactive.py, line: 855
+# File: usr/share/jellyfix/cli/interactive.py, line: 865
 #, python-format
 msgid   "Unexpected error: %s"
 msgstr  ""
@@ -263,9 +263,9 @@ msgstr  ""
 #
 # File: usr/share/jellyfix/cli/interactive.py, line: 142
 # File: usr/share/jellyfix/cli/interactive.py, line: 345
-# File: usr/share/jellyfix/cli/interactive.py, line: 690
-# File: usr/share/jellyfix/cli/interactive.py, line: 706
-# File: usr/share/jellyfix/cli/interactive.py, line: 734
+# File: usr/share/jellyfix/cli/interactive.py, line: 692
+# File: usr/share/jellyfix/cli/interactive.py, line: 708
+# File: usr/share/jellyfix/cli/interactive.py, line: 736
 msgid   "Operation cancelled"
 msgstr  ""
 
@@ -277,7 +277,7 @@ msgstr  ""
 
 #
 # File: usr/share/jellyfix/cli/interactive.py, line: 161
-# File: usr/share/jellyfix/cli/interactive.py, line: 653
+# File: usr/share/jellyfix/cli/interactive.py, line: 654
 msgid   "What would you like to do?"
 msgstr  ""
 
@@ -497,8 +497,8 @@ msgstr  ""
 # File: usr/share/jellyfix/cli/interactive.py, line: 540
 # File: usr/share/jellyfix/cli/interactive.py, line: 569
 # File: usr/share/jellyfix/cli/interactive.py, line: 575
-# File: usr/share/jellyfix/cli/interactive.py, line: 663
-# File: usr/share/jellyfix/cli/interactive.py, line: 669
+# File: usr/share/jellyfix/cli/interactive.py, line: 664
+# File: usr/share/jellyfix/cli/interactive.py, line: 670
 msgid   "Back"
 msgstr  ""
 
@@ -507,7 +507,7 @@ msgstr  ""
 # File: usr/share/jellyfix/cli/interactive.py, line: 481
 # File: usr/share/jellyfix/cli/interactive.py, line: 537
 # File: usr/share/jellyfix/cli/interactive.py, line: 572
-# File: usr/share/jellyfix/cli/interactive.py, line: 666
+# File: usr/share/jellyfix/cli/interactive.py, line: 667
 msgid   "(Use ↑↓ and ENTER to select)"
 msgstr  ""
 
@@ -741,147 +741,147 @@ msgstr  ""
 
 #
 # File: usr/share/jellyfix/cli/interactive.py, line: 642
-# File: usr/share/jellyfix/cli/interactive.py, line: 645
+# File: usr/share/jellyfix/cli/interactive.py, line: 646
 msgid   "Configured"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/cli/interactive.py, line: 642
-# File: usr/share/jellyfix/cli/interactive.py, line: 646
+# File: usr/share/jellyfix/cli/interactive.py, line: 647
 msgid   "Not configured"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 650
+# File: usr/share/jellyfix/cli/interactive.py, line: 651
 msgid   "Config file:"
 msgstr  ""
 
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 655
-# File: usr/share/jellyfix/cli/interactive.py, line: 693
+# File: usr/share/jellyfix/cli/interactive.py, line: 656
+# File: usr/share/jellyfix/cli/interactive.py, line: 695
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 152
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 246
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 254
 msgid   "Configure TMDB API Key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 656
-# File: usr/share/jellyfix/cli/interactive.py, line: 710
+# File: usr/share/jellyfix/cli/interactive.py, line: 657
+# File: usr/share/jellyfix/cli/interactive.py, line: 712
 msgid   "View current key (TMDB)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 657
-# File: usr/share/jellyfix/cli/interactive.py, line: 738
+# File: usr/share/jellyfix/cli/interactive.py, line: 658
+# File: usr/share/jellyfix/cli/interactive.py, line: 740
 msgid   "Test TMDB connection"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 658
-# File: usr/share/jellyfix/cli/interactive.py, line: 722
+# File: usr/share/jellyfix/cli/interactive.py, line: 659
+# File: usr/share/jellyfix/cli/interactive.py, line: 724
 msgid   "Remove TMDB key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 659
-# File: usr/share/jellyfix/cli/interactive.py, line: 741
+# File: usr/share/jellyfix/cli/interactive.py, line: 660
+# File: usr/share/jellyfix/cli/interactive.py, line: 743
 msgid   "How to get TMDB key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 660
-# File: usr/share/jellyfix/cli/interactive.py, line: 672
-msgid   "Configure OpenSubtitles login"
-msgstr  ""
-
-#
 # File: usr/share/jellyfix/cli/interactive.py, line: 661
-# File: usr/share/jellyfix/cli/interactive.py, line: 675
-msgid   "Test OpenSubtitles login"
+# File: usr/share/jellyfix/cli/interactive.py, line: 673
+msgid   "Add OpenSubtitles account"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/cli/interactive.py, line: 662
-# File: usr/share/jellyfix/cli/interactive.py, line: 678
-msgid   "Remove OpenSubtitles login"
+# File: usr/share/jellyfix/cli/interactive.py, line: 676
+msgid   "Test OpenSubtitles accounts"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 680
-msgid   "Remove stored OpenSubtitles login?"
+# File: usr/share/jellyfix/cli/interactive.py, line: 663
+# File: usr/share/jellyfix/cli/interactive.py, line: 679
+msgid   "Remove OpenSubtitles accounts"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/cli/interactive.py, line: 681
+msgid   "Remove all stored OpenSubtitles accounts?"
 msgstr  ""
 
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 688
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 358
-msgid   "OpenSubtitles login removed"
+# File: usr/share/jellyfix/cli/interactive.py, line: 690
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 366
+msgid   "OpenSubtitles accounts removed"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 694
+# File: usr/share/jellyfix/cli/interactive.py, line: 696
 msgid   "Enter your TMDB API key:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 703
+# File: usr/share/jellyfix/cli/interactive.py, line: 705
 msgid   "TMDB key saved to:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 716
+# File: usr/share/jellyfix/cli/interactive.py, line: 718
 msgid   "File:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 718
+# File: usr/share/jellyfix/cli/interactive.py, line: 720
 msgid   "No key configured"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 724
+# File: usr/share/jellyfix/cli/interactive.py, line: 726
 msgid   "Are you sure you want to remove the TMDB key?"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 732
+# File: usr/share/jellyfix/cli/interactive.py, line: 734
 msgid   "TMDB key removed"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 746
-msgid   "OpenSubtitles login (needed to download subtitles)."
+# File: usr/share/jellyfix/cli/interactive.py, line: 748
+msgid   "Add an OpenSubtitles account."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 747
+# File: usr/share/jellyfix/cli/interactive.py, line: 749
 msgid   "Create a free account at https://www.opensubtitles.com/newuser"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 748
+# File: usr/share/jellyfix/cli/interactive.py, line: 750
 msgid   "Use your USERNAME, not your e-mail address."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 750
+# File: usr/share/jellyfix/cli/interactive.py, line: 752
 msgid   "Username (not e-mail):"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 753
+# File: usr/share/jellyfix/cli/interactive.py, line: 755
 msgid   "Password:"
 msgstr  ""
 
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 762
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 329
-msgid   "OpenSubtitles login saved"
+# File: usr/share/jellyfix/cli/interactive.py, line: 766
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 336
+msgid   "OpenSubtitles account saved"
 msgstr  ""
 
 #
@@ -889,435 +889,432 @@ msgstr  ""
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 764
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 331
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 395
+# File: usr/share/jellyfix/cli/interactive.py, line: 768
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 338
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 449
 msgid   "Username and password are both required"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 772
-msgid   "Testing OpenSubtitles login..."
-msgstr  ""
-
-#
 # File: usr/share/jellyfix/cli/interactive.py, line: 776
-msgid   "No OpenSubtitles login configured!"
+msgid   "Testing OpenSubtitles accounts..."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 777
-msgid   "Configure it first using 'Configure OpenSubtitles login'"
+# File: usr/share/jellyfix/cli/interactive.py, line: 780
+msgid   "No OpenSubtitles account configured!"
 msgstr  ""
 
 #
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
-#
-# File: usr/share/jellyfix/cli/interactive.py, line: 787
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 384
-#, python-format
-msgid   "Login failed: %s"
+# File: usr/share/jellyfix/cli/interactive.py, line: 781
+msgid   "Add an OpenSubtitles account first"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/cli/interactive.py, line: 795
+#, python-format
+msgid   "Account test failed: %(user)s: %(message)s"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/cli/interactive.py, line: 805
 msgid   "Testing TMDB connection..."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 800
+# File: usr/share/jellyfix/cli/interactive.py, line: 810
 msgid   "No API key configured!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 801
+# File: usr/share/jellyfix/cli/interactive.py, line: 811
 msgid   "Configure a key first using 'Configure TMDB API Key'"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 807
+# File: usr/share/jellyfix/cli/interactive.py, line: 817
 #, python-format
 msgid   "Invalid key! Has %d characters, should have 32."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 808
+# File: usr/share/jellyfix/cli/interactive.py, line: 818
 msgid   "You may have copied the Token instead of the API Key!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 809
+# File: usr/share/jellyfix/cli/interactive.py, line: 819
 msgid   "See 'How to get TMDB key' for details"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 817
+# File: usr/share/jellyfix/cli/interactive.py, line: 827
 msgid   "Making test request..."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 826
+# File: usr/share/jellyfix/cli/interactive.py, line: 836
 msgid   "Connection successful!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 827
+# File: usr/share/jellyfix/cli/interactive.py, line: 837
 msgid   "Valid and working API key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 828
+# File: usr/share/jellyfix/cli/interactive.py, line: 838
 #, python-format
 msgid   "Test search returned %d results"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 832
+# File: usr/share/jellyfix/cli/interactive.py, line: 842
 msgid   "Example:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 835
+# File: usr/share/jellyfix/cli/interactive.py, line: 845
 msgid   "Invalid API key!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 836
+# File: usr/share/jellyfix/cli/interactive.py, line: 846
 msgid   "The key was rejected by TMDB."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 837
+# File: usr/share/jellyfix/cli/interactive.py, line: 847
 msgid   "Possible causes:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 838
+# File: usr/share/jellyfix/cli/interactive.py, line: 848
 msgid   "You copied the Reading Token instead of the API Key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 839
+# File: usr/share/jellyfix/cli/interactive.py, line: 849
 msgid   "The key is incorrect or has been revoked"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 840
+# File: usr/share/jellyfix/cli/interactive.py, line: 850
 msgid   "You copied only part of the key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 841
+# File: usr/share/jellyfix/cli/interactive.py, line: 851
 msgid   "See 'How to get TMDB key' for detailed instructions"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 844
+# File: usr/share/jellyfix/cli/interactive.py, line: 854
 #, python-format
 msgid   "Request error: HTTP %d"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 847
+# File: usr/share/jellyfix/cli/interactive.py, line: 857
 msgid   "Timeout: Server did not respond in time"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 848
-# File: usr/share/jellyfix/cli/interactive.py, line: 852
+# File: usr/share/jellyfix/cli/interactive.py, line: 858
+# File: usr/share/jellyfix/cli/interactive.py, line: 862
 msgid   "Check your internet connection"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 851
+# File: usr/share/jellyfix/cli/interactive.py, line: 861
 msgid   "Connection error"
 msgstr  ""
 
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 863
+# File: usr/share/jellyfix/cli/interactive.py, line: 873
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 213
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 510
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 526
 msgid   "How to Get TMDB API Key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 865
+# File: usr/share/jellyfix/cli/interactive.py, line: 875
 msgid   "Access:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 868
+# File: usr/share/jellyfix/cli/interactive.py, line: 878
 msgid   "Login or create a FREE account"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 870
+# File: usr/share/jellyfix/cli/interactive.py, line: 880
 msgid   "Fill in your details"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 871
+# File: usr/share/jellyfix/cli/interactive.py, line: 881
 msgid   "Confirm email"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 873
+# File: usr/share/jellyfix/cli/interactive.py, line: 883
 msgid   "Request an API key:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 874
+# File: usr/share/jellyfix/cli/interactive.py, line: 884
 msgid   "Access"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 875
+# File: usr/share/jellyfix/cli/interactive.py, line: 885
 msgid   "Click 'Request an API Key'"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 876
+# File: usr/share/jellyfix/cli/interactive.py, line: 886
 msgid   "Choose 'Developer' (personal use)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 877
+# File: usr/share/jellyfix/cli/interactive.py, line: 887
 msgid   "Fill in"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 881
+# File: usr/share/jellyfix/cli/interactive.py, line: 891
 msgid   "Accept terms of use"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 883
+# File: usr/share/jellyfix/cli/interactive.py, line: 893
 msgid   "IMPORTANT - Which key to copy:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 884
+# File: usr/share/jellyfix/cli/interactive.py, line: 894
 msgid   "You will see TWO keys on the page:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 885
+# File: usr/share/jellyfix/cli/interactive.py, line: 895
 msgid   "API Read Access Token (long, starts with eyJ...)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 886
+# File: usr/share/jellyfix/cli/interactive.py, line: 896
 msgid   "API Key (v3 auth) ← COPY THIS ONE!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 888
+# File: usr/share/jellyfix/cli/interactive.py, line: 898
 msgid   "The correct key has 32 characters (ex: "
         "611bc23b57add08a67b2e64ecb850be8)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 890
+# File: usr/share/jellyfix/cli/interactive.py, line: 900
 msgid   "Configure in jellyfix:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 891
+# File: usr/share/jellyfix/cli/interactive.py, line: 901
 msgid   "Return to menu and choose 'Configure TMDB API Key'"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 892
+# File: usr/share/jellyfix/cli/interactive.py, line: 902
 msgid   "Paste the API Key (32 characters)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 893
+# File: usr/share/jellyfix/cli/interactive.py, line: 903
 msgid   "Use 'Test connection' to verify"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 895
+# File: usr/share/jellyfix/cli/interactive.py, line: 905
 msgid   "The key is free and does not expire!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 896
+# File: usr/share/jellyfix/cli/interactive.py, line: 906
 msgid   "Allows up to 40 requests per 10 seconds"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 897
+# File: usr/share/jellyfix/cli/interactive.py, line: 907
 msgid   "Enough to organize thousands of files!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 900
+# File: usr/share/jellyfix/cli/interactive.py, line: 910
 msgid   "How to Get TMDB Key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 907
+# File: usr/share/jellyfix/cli/interactive.py, line: 917
 msgid   "Help - jellyfix v"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 909
+# File: usr/share/jellyfix/cli/interactive.py, line: 919
 msgid   "What jellyfix does:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 911
+# File: usr/share/jellyfix/cli/interactive.py, line: 921
 msgid   "Renames files"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 911
+# File: usr/share/jellyfix/cli/interactive.py, line: 921
 msgid   "to Jellyfin standard"
 msgstr  ""
 
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 912
+# File: usr/share/jellyfix/cli/interactive.py, line: 922
 # File: usr/share/jellyfix/cli/display.py, line: 76
 msgid   "Movies"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 912
+# File: usr/share/jellyfix/cli/interactive.py, line: 922
 msgid   "Movie Name (YYYY).mkv"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 913
+# File: usr/share/jellyfix/cli/interactive.py, line: 923
 msgid   "Series"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 913
+# File: usr/share/jellyfix/cli/interactive.py, line: 923
 msgid   "Series Name - S01E01.mkv"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 915
+# File: usr/share/jellyfix/cli/interactive.py, line: 925
 msgid   "Organizes subtitles"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 915
+# File: usr/share/jellyfix/cli/interactive.py, line: 925
 msgid   "(ALL languages)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 916
+# File: usr/share/jellyfix/cli/interactive.py, line: 926
 msgid   "Renames variants"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 917
+# File: usr/share/jellyfix/cli/interactive.py, line: 927
 msgid   "Adds language code"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 918
+# File: usr/share/jellyfix/cli/interactive.py, line: 928
 msgid   "Removes foreign subtitles"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 918
+# File: usr/share/jellyfix/cli/interactive.py, line: 928
 msgid   "keeps por and eng by default"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 919
+# File: usr/share/jellyfix/cli/interactive.py, line: 929
 msgid   "Option to remove duplicates"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 919
+# File: usr/share/jellyfix/cli/interactive.py, line: 929
 msgid   "when eng exists"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 920
+# File: usr/share/jellyfix/cli/interactive.py, line: 930
 msgid   "NEVER"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 920
+# File: usr/share/jellyfix/cli/interactive.py, line: 930
 msgid   "removes .forced.srt"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 922
+# File: usr/share/jellyfix/cli/interactive.py, line: 932
 msgid   "Folder structure"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 923
+# File: usr/share/jellyfix/cli/interactive.py, line: 933
 msgid   "Creates folders Season 01, Season 02, etc"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 924
+# File: usr/share/jellyfix/cli/interactive.py, line: 934
 msgid   "Moves episodes to correct folders"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 926
+# File: usr/share/jellyfix/cli/interactive.py, line: 936
 msgid   "Fetches metadata"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 927
+# File: usr/share/jellyfix/cli/interactive.py, line: 937
 msgid   "Searches year and IDs via TMDB/TVDB"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 928
+# File: usr/share/jellyfix/cli/interactive.py, line: 938
 msgid   "Adds IDs to folders [tmdbid-12345]"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 930
+# File: usr/share/jellyfix/cli/interactive.py, line: 940
 msgid   "Quality detection"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 931
+# File: usr/share/jellyfix/cli/interactive.py, line: 941
 msgid   "Adds quality tags (1080p, 720p, etc) to filenames"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 932
+# File: usr/share/jellyfix/cli/interactive.py, line: 942
 msgid   "Option to use ffprobe for accurate detection"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 934
+# File: usr/share/jellyfix/cli/interactive.py, line: 944
 msgid   "Dry-Run Mode:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 935
+# File: usr/share/jellyfix/cli/interactive.py, line: 945
 msgid   "By default, jellyfix shows what will be done WITHOUT changing files."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 936
+# File: usr/share/jellyfix/cli/interactive.py, line: 946
 msgid   "You can review changes before applying."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 938
+# File: usr/share/jellyfix/cli/interactive.py, line: 948
 msgid   "Tip:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/cli/interactive.py, line: 938
+# File: usr/share/jellyfix/cli/interactive.py, line: 948
 msgid   "Configure your TMDB key"
 msgstr  ""
 
@@ -1540,7 +1537,7 @@ msgstr  ""
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
 # File: usr/share/jellyfix/gui/windows/subtitle_search_dialog.py, line: 79
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1250
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1446
 msgid   "Unknown release"
 msgstr  ""
 
@@ -1644,15 +1641,15 @@ msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 273
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 281
 msgid   "✓ Configured"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 69
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 357
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 481
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 246
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 365
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 497
 msgid   "✗ Not configured"
 msgstr  ""
 
@@ -1678,26 +1675,19 @@ msgid   "A free opensubtitles.com account is required to download subtitles "
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
-#, python-format
-msgid   "✓ Configured (%s)"
-msgstr  ""
-
-#
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
-msgid   "Account"
+msgid   "Accounts"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
-msgid   "Configure OpenSubtitles Login"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
+msgid   "Add OpenSubtitles Account"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
-msgid   "Enter your username and password"
+msgid   "Accounts rotate automatically when a daily limit is reached"
 msgstr  ""
 
 #
@@ -1708,12 +1698,12 @@ msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
-msgid   "Test OpenSubtitles Login"
+msgid   "Test OpenSubtitles Accounts"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
-msgid   "Verify your credentials actually work"
+msgid   "Verify all configured credentials"
 msgstr  ""
 
 #
@@ -1724,19 +1714,19 @@ msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-msgid   "Remove OpenSubtitles Login"
+msgid   "Remove OpenSubtitles Accounts"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
-msgid   "Delete stored credentials"
+msgid   "Delete all stored credentials"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 127
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 196
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 345
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 469
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 352
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 485
 msgid   "Remove"
 msgstr  ""
 
@@ -1814,12 +1804,18 @@ msgid   "Tutorial"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 247
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 248
+#, python-format
+msgid   "✓ OpenSubtitles accounts: %(users)s"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 255
 msgid   "Enter your TMDB API key below"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 252
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 260
 msgid   "Paste API key here"
 msgstr  ""
 
@@ -1828,10 +1824,10 @@ msgstr  ""
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 256
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 311
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 344
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 468
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 264
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 316
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 351
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 484
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 529
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 595
 # File: usr/share/jellyfix/gui/windows/search_dialog.py, line: 233
@@ -1839,87 +1835,92 @@ msgid   "Cancel"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 257
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 312
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 265
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 317
 msgid   "Save"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 276
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 284
 msgid   "API key saved successfully"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
-msgid   "Enter your opensubtitles.com username and password.\n"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
+msgid   "Enter an opensubtitles.com username and password.\n"
         "⚠ Use your USERNAME, not your e-mail address."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 301
 msgid   "Username (not e-mail)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 299
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 305
 msgid   "Password"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 306
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 311
 msgid   "Show password"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
-msgid   "Remove OpenSubtitles Login?"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 347
+msgid   "Remove All OpenSubtitles Accounts?"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
-msgid   "This will delete your stored credentials. You will not be able to "
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 348
+msgid   "This will delete all stored credentials. You will not be able to "
         "download from opensubtitles.com until you configure it again."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
-msgid   "Configure your login first"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 379
+msgid   "Add an account first"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
-msgid   "Testing login…"
-msgstr  ""
-
-#
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
-#, python-format
-msgid   "✓ Login OK (%s)"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 382
+msgid   "Testing accounts…"
 msgstr  ""
 
 #
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 396
+msgid   "✓ All OpenSubtitles accounts are valid"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 400
+#, python-format
+msgid   "Account test failed: %s"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 412
 msgid   "Current TMDB API Key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 397
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 413
 msgid   "Masked key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 397
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 413
 msgid   "Full key stored in"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 402
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 417
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 418
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 433
 msgid   "No API Key"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 403
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 419
 msgid   "No TMDB API key configured yet"
 msgstr  ""
 
@@ -1928,10 +1929,10 @@ msgstr  ""
 #
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 406
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 420
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 458
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 513
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 422
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 436
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 474
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 529
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 858
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1178
 # File: usr/share/jellyfix/gui/windows/main_window.py, line: 1223
@@ -1942,64 +1943,64 @@ msgid   "OK"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 418
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 434
 msgid   "Please configure TMDB API key first"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 432
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 448
 msgid   "✓ Connection Successful"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 439
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 455
 msgid   "TMDB API key is working correctly!"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 441
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 457
 msgid   "Test search returned:"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 448
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 464
 msgid   "⚠ Connection Failed"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 449
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 465
 msgid   "Could not fetch data from TMDB. Please check your API key."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 454
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 470
 msgid   "✗ Connection Error"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 455
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 471
 #, python-brace-format
 msgid   "Error testing connection: {}"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 465
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 481
 msgid   "Remove API Key?"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 466
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 482
 msgid   "This will delete your stored TMDB API key. You will need to "
         "configure it again."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 485
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 501
 msgid   "API key removed"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 492
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 508
 msgid   "How to Get TMDB API Key:\n"
         "\n"
         "1. Go to https://www.themoviedb.org/signup\n"
@@ -2907,18 +2908,24 @@ msgid   "Subtitle session cache cleared (%s)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 434
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 400
+#, python-format
+msgid   "OpenSubtitles limit reached; switching to account: %s"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 488
 msgid   "Login OK — subtitles can be downloaded"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 444
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 498
 msgid   "opensubtitles.com is rate limiting logins (1 per second per IP). "
         "Wait a few seconds and test again."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 450
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 504
 msgid   "Username or password rejected by opensubtitles.com. Use the USERNAME "
         "(not the e-mail), check for a trailing space, and confirm the "
         "account e-mail was verified — a brand new account only works in the "
@@ -2926,17 +2933,17 @@ msgid   "Username or password rejected by opensubtitles.com. Use the USERNAME "
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 457
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 511
 msgid   "Use your username, not your e-mail address."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 555
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 666
 msgid   "Subtitle session cache cleared (stale session)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 581
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 692
 msgid   "opensubtitles.com requires a free account to download subtitles. Set "
         "opensubtitles_username/opensubtitles_password in ~/.jellyfix/"
         "config.json (or the OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD "
@@ -2944,7 +2951,12 @@ msgid   "opensubtitles.com requires a free account to download subtitles. Set "
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 591
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 704
+msgid   "Download refused by all configured opensubtitles.com accounts."
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 708
 #, python-format
 msgid   "opensubtitles.com daily download limit reached (%(used)s of "
         "%(allowed)s used). The subtitle WAS found, only the download was "
@@ -2952,225 +2964,141 @@ msgid   "opensubtitles.com daily download limit reached (%(used)s of "
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 597
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 714
 msgid   "less than 24 hours"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 602
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 719
 #, python-format
 msgid   "Download refused by opensubtitles.com (%(remaining)s of %(allowed)s "
         "downloads left today)."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 606
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 723
 msgid   "Download refused by opensubtitles.com. Check the login in Settings."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 658
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 821
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 920
+#, python-format
+msgid   "Subtitles already present for %(video)s: %(languages)s"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 833
 #, python-format
 msgid   "Searching subtitles for: %s (Languages: %s)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 671
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 843
 #, python-format
 msgid   "Level 1 (hash) found: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 675
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 847
 #, python-format
 msgid   "Missing languages: %s - trying TMDB title search"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 696
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 868
 #, python-format
 msgid   "Level 2 (TMDB) found: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 699
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 871
 #, python-format
 msgid   "Still missing: %s (try manual search)"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 702
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 874
 #, python-format
 msgid   "No subtitles found for: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 746
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 931
 #, python-format
 msgid   "Batch Level 1: scanning %d videos by hash..."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 784
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 979
 #, python-format
 msgid   "Level 1 (hash) found: %s for %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 798
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 993
 #, python-format
 msgid   "Batch Level 2: title search for %d videos..."
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 816
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1011
 #, python-format
 msgid   "Level 2 (TMDB) found: %s for %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 841
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1037
 #, python-format
 msgid   "Level 3 (fallback %s) found: %s for %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 873
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1069
 #, python-format
 msgid   "Found %d subtitles by hash for: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 974
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1170
 #, python-format
 msgid   "Found %d validated subtitles by title for: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1220
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1416
 #, python-format
 msgid   "Manual search: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1236
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1432
 #, python-format
 msgid   "No results from primary providers, trying: %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1288
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1484
 #, python-format
 msgid   "Found %d subtitles in manual search"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1322
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1387
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1514
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1581
+#, python-format
+msgid   "Subtitle already present; skipping download: %s"
+msgstr  ""
+
+#
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1531
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1612
 #, python-format
 msgid   "Failed to download subtitle content. %s"
 msgstr  ""
 
 #
-# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1343
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1552
 #, python-format
 msgid   "Downloaded subtitle: %s"
 msgstr  ""
-
-#
-# OpenSubtitles multi-account and missing-sidecar workflow
-msgid "Accounts"
-msgstr ""
-
-msgid "Accounts rotate automatically when a daily limit is reached"
-msgstr ""
-
-msgid "Add OpenSubtitles Account"
-msgstr ""
-
-msgid "Add OpenSubtitles account"
-msgstr ""
-
-msgid "Test OpenSubtitles Accounts"
-msgstr ""
-
-msgid "Test OpenSubtitles accounts"
-msgstr ""
-
-msgid "Verify all configured credentials"
-msgstr ""
-
-msgid "Remove OpenSubtitles Accounts"
-msgstr ""
-
-msgid "Remove OpenSubtitles accounts"
-msgstr ""
-
-msgid "Delete all stored credentials"
-msgstr ""
-
-#, python-format
-msgid "✓ OpenSubtitles accounts: %(users)s"
-msgstr ""
-
-msgid "Enter an opensubtitles.com username and password.\n⚠ Use your USERNAME, not your e-mail address."
-msgstr ""
-
-msgid "OpenSubtitles account saved"
-msgstr ""
-
-msgid "Remove All OpenSubtitles Accounts?"
-msgstr ""
-
-msgid "Remove all stored OpenSubtitles accounts?"
-msgstr ""
-
-msgid "This will delete all stored credentials. You will not be able to download from opensubtitles.com until you configure it again."
-msgstr ""
-
-msgid "OpenSubtitles accounts removed"
-msgstr ""
-
-msgid "Add an account first"
-msgstr ""
-
-msgid "Add an OpenSubtitles account first"
-msgstr ""
-
-msgid "Add an OpenSubtitles account."
-msgstr ""
-
-msgid "Testing accounts…"
-msgstr ""
-
-msgid "Testing OpenSubtitles accounts..."
-msgstr ""
-
-msgid "✓ All OpenSubtitles accounts are valid"
-msgstr ""
-
-#, python-format
-msgid "Account test failed: %s"
-msgstr ""
-
-#, python-format
-msgid "Account test failed: %(user)s: %(message)s"
-msgstr ""
-
-msgid "No OpenSubtitles account configured!"
-msgstr ""
-
-#, python-format
-msgid "OpenSubtitles limit reached; switching to account: %s"
-msgstr ""
-
-msgid "Download refused by all configured opensubtitles.com accounts."
-msgstr ""
-
-#, python-format
-msgid "Subtitles already present for %(video)s: %(languages)s"
-msgstr ""
-
-#, python-format
-msgid "Subtitle already present; skipping download: %s"
-msgstr ""

@@ -699,36 +699,37 @@ msgstr "Eliminar clave TMDB"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:741
 msgid "How to get TMDB key"
 msgstr "Cómo obtener la clave de TMDB"
-# File: usr/share/jellyfix/cli/interactive.py, line: 660
-# File: usr/share/jellyfix/cli/interactive.py, line: 672
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:660
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:672
-msgid "Configure OpenSubtitles login"
-msgstr "Configurar inicio de sesión de OpenSubtitles"
+# 
 # File: usr/share/jellyfix/cli/interactive.py, line: 661
-# File: usr/share/jellyfix/cli/interactive.py, line: 675
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:661
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:675
-msgid "Test OpenSubtitles login"
-msgstr "Probar inicio de sesión en OpenSubtitles"
+# File: usr/share/jellyfix/cli/interactive.py, line: 673
+#: NEEDS WORK
+msgid "Add OpenSubtitles account"
+msgstr "Agregar cuenta de OpenSubtitles"
+# 
 # File: usr/share/jellyfix/cli/interactive.py, line: 662
-# File: usr/share/jellyfix/cli/interactive.py, line: 678
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:662
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:678
-msgid "Remove OpenSubtitles login"
-msgstr "Eliminar inicio de sesión de OpenSubtitles"
-# File: usr/share/jellyfix/cli/interactive.py, line: 680
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:680
-msgid "Remove stored OpenSubtitles login?"
-msgstr "¿Eliminar el inicio de sesión de OpenSubtitles guardado?"
+# File: usr/share/jellyfix/cli/interactive.py, line: 676
+#: NEEDS WORK
+msgid "Test OpenSubtitles accounts"
+msgstr "Probar cuentas de OpenSubtitles"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 663
+# File: usr/share/jellyfix/cli/interactive.py, line: 679
+#: NEEDS WORK
+msgid "Remove OpenSubtitles accounts"
+msgstr "Eliminar cuentas de OpenSubtitles"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 681
+#: NEEDS WORK
+msgid "Remove all stored OpenSubtitles accounts?"
+msgstr "¿Eliminar todas las cuentas de OpenSubtitles almacenadas?"
+# 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/interactive.py, line: 688
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 358
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:688
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:358
-msgid "OpenSubtitles login removed"
-msgstr "Inicio de sesión de OpenSubtitles eliminado"
+# File: usr/share/jellyfix/cli/interactive.py, line: 690
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 366
+#: NEEDS WORK
+msgid "OpenSubtitles accounts removed"
+msgstr "Cuentas de OpenSubtitles eliminadas"
 # File: usr/share/jellyfix/cli/interactive.py, line: 438
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:694
 msgid "Enter your TMDB API key:"
@@ -753,10 +754,11 @@ msgstr "¿Estás seguro de que deseas eliminar la clave TMDB?"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:732
 msgid "TMDB key removed"
 msgstr "Clave de TMDB eliminada"
-# File: usr/share/jellyfix/cli/interactive.py, line: 746
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:746
-msgid "OpenSubtitles login (needed to download subtitles)."
-msgstr "Inicio de sesión de OpenSubtitles (necesario para descargar subtítulos)."
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 748
+#: NEEDS WORK
+msgid "Add an OpenSubtitles account."
+msgstr "Añadir una cuenta de OpenSubtitles."
 # File: usr/share/jellyfix/cli/interactive.py, line: 747
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:747
 msgid "Create a free account at https://www.opensubtitles.com/newuser"
@@ -773,14 +775,14 @@ msgstr "Nombre de usuario (no correo electrónico):"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:753
 msgid "Password:"
 msgstr "Contraseña:"
+# 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/interactive.py, line: 762
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 329
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:762
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:329
-msgid "OpenSubtitles login saved"
-msgstr "Inicio de sesión de OpenSubtitles guardado"
+# File: usr/share/jellyfix/cli/interactive.py, line: 766
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 336
+#: NEEDS WORK
+msgid "OpenSubtitles account saved"
+msgstr "Cuenta de OpenSubtitles guardada"
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
 # #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
@@ -793,27 +795,27 @@ msgstr "Inicio de sesión de OpenSubtitles guardado"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:331
 msgid "Username and password are both required"
 msgstr "Se requieren tanto el nombre de usuario como la contraseña."
-# File: usr/share/jellyfix/cli/interactive.py, line: 772
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:772
-msgid "Testing OpenSubtitles login..."
-msgstr "Probando inicio de sesión en OpenSubtitles..."
-# File: usr/share/jellyfix/cli/interactive.py, line: 776
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:776
-msgid "No OpenSubtitles login configured!"
-msgstr "¡No hay una configuración de inicio de sesión de OpenSubtitles!"
-# File: usr/share/jellyfix/cli/interactive.py, line: 777
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:777
-msgid "Configure it first using 'Configure OpenSubtitles login'"
-msgstr "Configúralo primero usando 'Configurar inicio de sesión de OpenSubtitles'"
-# #-#-#-#-#  jellyfix.pot (jellyfix)  #-#-#-#-#
 # 
-# File: usr/share/jellyfix/cli/interactive.py, line: 787
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 384
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:787
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:384
+# File: usr/share/jellyfix/cli/interactive.py, line: 776
+#: NEEDS WORK
+msgid "Testing OpenSubtitles accounts..."
+msgstr "Probando cuentas de OpenSubtitles..."
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 780
+#: NEEDS WORK
+msgid "No OpenSubtitles account configured!"
+msgstr "¡No hay ninguna cuenta de OpenSubtitles configurada!"
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 781
+#: NEEDS WORK
+msgid "Add an OpenSubtitles account first"
+msgstr "Primero, añade una cuenta de OpenSubtitles."
+# 
+# File: usr/share/jellyfix/cli/interactive.py, line: 795
+#: NEEDS WORK
 #, python-format
-msgid "Login failed: %s"
-msgstr "Error de inicio de sesión: %s"
+msgid "Account test failed: %(user)s: %(message)s"
+msgstr "La prueba de la cuenta falló: %(user)s: %(message)s"
 # File: usr/share/jellyfix/cli/interactive.py, line: 492
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/cli/interactive.py:795
 msgid "Testing TMDB connection..."
@@ -1456,53 +1458,52 @@ msgid "A free opensubtitles.com account is required to download subtitles (searc
 msgstr ""
 "Se requiere una cuenta gratuita de opensubtitles.com para descargar subtítulos (la búsqueda "
 "funciona sin ella)"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 94
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 328
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:94
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:328
-#, python-format
-msgid "✓ Configured (%s)"
-msgstr "✓ Configurado (%s)"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 96
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:96
-msgid "Account"
-msgstr "Cuenta"
+#: NEEDS WORK
+msgid "Accounts"
+msgstr "Cuentas"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 103
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 285
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:103
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:285
-msgid "Configure OpenSubtitles Login"
-msgstr "Configurar inicio de sesión de OpenSubtitles"
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 293
+#: NEEDS WORK
+msgid "Add OpenSubtitles Account"
+msgstr "Agregar cuenta de OpenSubtitles"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 104
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:104
-msgid "Enter your username and password"
-msgstr "Introduce tu nombre de usuario y contraseña"
+#: NEEDS WORK
+msgid "Accounts rotate automatically when a daily limit is reached"
+msgstr "Las cuentas rotan automáticamente cuando se alcanza un límite diario."
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 97
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:106
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:156
 msgid "Configure"
 msgstr "Configurar"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 114
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:114
-msgid "Test OpenSubtitles Login"
-msgstr "Prueba de inicio de sesión en OpenSubtitles"
+#: NEEDS WORK
+msgid "Test OpenSubtitles Accounts"
+msgstr "Probar cuentas de OpenSubtitles"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 115
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:115
-msgid "Verify your credentials actually work"
-msgstr "Verifica que tus credenciales realmente funcionen"
+#: NEEDS WORK
+msgid "Verify all configured credentials"
+msgstr "Verificar todas las credenciales configuradas"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:117
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:183
 msgid "Test"
 msgstr "Prueba"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 124
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:124
-msgid "Remove OpenSubtitles Login"
-msgstr "Eliminar inicio de sesión de OpenSubtitles"
+#: NEEDS WORK
+msgid "Remove OpenSubtitles Accounts"
+msgstr "Eliminar cuentas de OpenSubtitles"
+# 
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 125
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:125
-msgid "Delete stored credentials"
-msgstr "Eliminar credenciales almacenadas"
+#: NEEDS WORK
+msgid "Delete all stored credentials"
+msgstr "Eliminar todas las credenciales almacenadas"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 137
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 283
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:127
@@ -1571,6 +1572,12 @@ msgstr "Tutorial paso a paso"
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:217
 msgid "Tutorial"
 msgstr "Tutorial"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 248
+#: NEEDS WORK
+#, python-format
+msgid "✓ OpenSubtitles accounts: %(users)s"
+msgstr "✓ Cuentas de OpenSubtitles: %(users)s"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 179
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:247
 msgid "Enter your TMDB API key below"
@@ -1604,13 +1611,14 @@ msgstr "Guardar"
 #. Show toast
 msgid "API key saved successfully"
 msgstr "Clave de API guardada con éxito"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 286
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:286
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
+#: NEEDS WORK
 msgid ""
-"Enter your opensubtitles.com username and password.\n"
+"Enter an opensubtitles.com username and password.\n"
 "⚠ Use your USERNAME, not your e-mail address."
 msgstr ""
-"Introduce tu nombre de usuario y contraseña de opensubtitles.com.  \n"
+"Introduce un nombre de usuario y una contraseña de opensubtitles.com.  \n"
 "⚠ Usa tu NOMBRE DE USUARIO, no tu dirección de correo electrónico."
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 294
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:294
@@ -1625,31 +1633,41 @@ msgstr "Contraseña"
 #. Toggle password visibility
 msgid "Show password"
 msgstr "Mostrar contraseña"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 340
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:340
-msgid "Remove OpenSubtitles Login?"
-msgstr "¿Eliminar inicio de sesión de OpenSubtitles?"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 341
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:341
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 347
+#: NEEDS WORK
+msgid "Remove All OpenSubtitles Accounts?"
+msgstr "¿Eliminar todas las cuentas de OpenSubtitles?"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 348
+#: NEEDS WORK
 msgid ""
-"This will delete your stored credentials. You will not be able to download from opensubtitles.com "
+"This will delete all stored credentials. You will not be able to download from opensubtitles.com "
 "until you configure it again."
 msgstr ""
-"Esto eliminará tus credenciales almacenadas. No podrás descargar de opensubtitles.com hasta que lo "
-"configures de nuevo."
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 371
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:371
-msgid "Configure your login first"
-msgstr "Configura tu inicio de sesión primero"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 374
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:374
-msgid "Testing login…"
-msgstr "Probando inicio de sesión…"
-# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 380
-#: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:380
+"Esto eliminará todas las credenciales almacenadas. No podrás descargar de opensubtitles.com hasta "
+"que lo configures nuevamente."
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 379
+#: NEEDS WORK
+msgid "Add an account first"
+msgstr "Agrega primero una cuenta"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 382
+#: NEEDS WORK
+msgid "Testing accounts…"
+msgstr "Probando cuentas…"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 396
+#: NEEDS WORK
+msgid "✓ All OpenSubtitles accounts are valid"
+msgstr "✓ Todas las cuentas de OpenSubtitles son válidas"
+# 
+# File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 400
+#: NEEDS WORK
 #, python-format
-msgid "✓ Login OK (%s)"
-msgstr "✓ Inicio de sesión correcto (%s)"
+msgid "Account test failed: %s"
+msgstr "La prueba de la cuenta falló: %s"
 # File: usr/share/jellyfix/gui/windows/api_config_dialog.py, line: 220
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/gui/windows/api_config_dialog.py:396
 msgid "Current TMDB API Key"
@@ -2617,6 +2635,12 @@ msgstr "Caché de imágenes vaciado"
 #, python-format
 msgid "Subtitle session cache cleared (%s)"
 msgstr "Cache de sesión de subtítulos borrado (%s)"
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 400
+#: NEEDS WORK
+#, python-format
+msgid "OpenSubtitles limit reached; switching to account: %s"
+msgstr "Límite de OpenSubtitles alcanzado; cambiando a la cuenta: %s"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 262
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:304
 msgid "Login OK — subtitles can be downloaded"
@@ -2660,6 +2684,11 @@ msgstr ""
 "opensubtitles_username/opensubtitles_password en ~/.jellyfix/config.json (o las variables de "
 "entorno OPENSUBTITLES_USERNAME/OPENSUBTITLES_PASSWORD)."
 # 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 704
+#: NEEDS WORK
+msgid "Download refused by all configured opensubtitles.com accounts."
+msgstr "Descarga rechazada por todas las cuentas de opensubtitles.com configuradas."
+# 
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 478
 #: NEEDS WORK
 #, python-format
@@ -2685,6 +2714,13 @@ msgstr "Descarga rechazada por opensubtitles.com (%(remaining)s de %(allowed)s d
 #: NEEDS WORK
 msgid "Download refused by opensubtitles.com. Check the login in Settings."
 msgstr "Descarga rechazada por opensubtitles.com. Verifica el inicio de sesión en Configuración."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 821
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 920
+#: NEEDS WORK
+#, python-format
+msgid "Subtitles already present for %(video)s: %(languages)s"
+msgstr "Subtítulos ya presentes para %(video)s: %(languages)s"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 80
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:384
 #, python-format
@@ -2766,6 +2802,13 @@ msgstr "No hay resultados de los proveedores principales, intentando: %s"
 #, python-format
 msgid "Found %d subtitles in manual search"
 msgstr "Se encontraron %d subtítulos en la búsqueda manual."
+# 
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1514
+# File: usr/share/jellyfix/core/subtitle_manager.py, line: 1581
+#: NEEDS WORK
+#, python-format
+msgid "Subtitle already present; skipping download: %s"
+msgstr "Subtítulo ya presente; omitiendo descarga: %s"
 # File: usr/share/jellyfix/core/subtitle_manager.py, line: 1013
 #: /home/talesam/Servidor/GitHub/talesam/jellyfix/usr/share/jellyfix/core/subtitle_manager.py:1065
 #, python-format
