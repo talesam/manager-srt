@@ -2,7 +2,7 @@
 
 /* ===== Full-window loading state ===== */
 .loading-overlay {
-    background-color: rgba(0, 0, 0, 0.72);
+    background-color: rgba(0, 0, 0, 0.82);
 }
 
 .loading-card {
@@ -28,9 +28,9 @@
 }
 
 .success-mark {
-    min-width: 58px;
-    min-height: 58px;
-    padding: 4px 10px;
+    min-width: 68px;
+    min-height: 68px;
+    padding: 0;
     border-radius: 999px;
     border: 2px solid alpha(@success_color, 0.95);
     color: @success_color;

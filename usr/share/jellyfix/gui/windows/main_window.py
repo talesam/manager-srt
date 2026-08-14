@@ -33,6 +33,9 @@ from ..widgets.operations_list import OperationsListView
 from ..widgets.preview_panel import PreviewPanel
 
 
+SUCCESS_DISPLAY_DURATION_MS = 1200
+
+
 class JellyfixMainWindow(Adw.ApplicationWindow):
     """Main application window"""
 
@@ -183,7 +186,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         self.loading_detail.set_visible(True)
         self.loading_overlay.set_visible(True)
         self._success_timeout_id = GLib.timeout_add(
-            3000,
+            SUCCESS_DISPLAY_DURATION_MS,
             self._dismiss_success,
         )
 
