@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jellyfix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:26+0000\n"
+"POT-Creation-Date: 2026-08-17 19:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1317,7 +1317,13 @@ msgid "Subtitle downloaded: {}"
 msgstr "Subtitle downloaded: {}"
 
 #
-# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1529
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1502
+#, python-brace-format
+msgid "Could not apply \"{}\" to {}"
+msgstr "Could not apply \"{}\" to {}"
+
+#
+# File: usr/share/jellyfix/gui/windows/main_window.py, line: 1537
 #, python-brace-format
 msgid "Updated: {title} ({year}) - applied to {count} episodes"
 msgstr "Updated: {title} ({year}) - applied to {count} episodes"
