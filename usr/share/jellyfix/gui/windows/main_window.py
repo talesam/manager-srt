@@ -1417,6 +1417,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         new_operations = renamer.replan_for_video_with_metadata(
             video_path=video_source,
             metadata=metadata,
+            work_dir=getattr(self.operations_handler, "current_directory", None),
         )
 
         if not new_operations:
@@ -1495,6 +1496,13 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
 
         new_operations = self._replan_video_ops(operations, video_source, metadata, renamer)
         if not new_operations:
+            # Caso típico: usuário marcou como série um arquivo sem SxxExx no nome,
+            # então não há como montar o nome do episódio.
+            toast = Adw.Toast(
+                title=_("Could not apply \"{}\" to {}").format(metadata.title, video_source.name)
+            )
+            toast.set_timeout(4)
+            self.toast_overlay.add_toast(toast)
             return
 
         # SÉRIE: propaga a escolha para os demais episódios da mesma série.

@@ -98,7 +98,9 @@ class MediaInfo:
 
     def __repr__(self):
         if self.is_tvshow():
-            return f"MediaInfo({self.title} S{self.season:02d}E{self.episode_start:02d}, type={self.media_type.value})"
+            season = f"S{self.season:02d}" if self.season is not None else "S??"
+            episode = f"E{self.episode_start:02d}" if self.episode_start is not None else "E??"
+            return f"MediaInfo({self.title} {season}{episode}, type={self.media_type.value})"
         else:
             return f"MediaInfo({self.title}, type={self.media_type.value})"
 

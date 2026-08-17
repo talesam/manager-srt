@@ -124,6 +124,12 @@ class TestExtractSeasonEpisode:
     def test_two_digit_season(self):
         assert extract_season_episode("Show S12E01") == (12, 1, 1)
 
+    def test_episode_only_marker_defaults_to_season_one(self):
+        # Marcador solto de episódio não informa temporada; antes "Ep 3"
+        # virava S03E03 e "Cap 5" virava S05E05.
+        assert extract_season_episode("Dark Ep 3") == (1, 3, 3)
+        assert extract_season_episode("Dark Cap 5") == (1, 5, 5)
+
 
 # ─── is_video_file / is_subtitle_file / is_image_file ────────────────
 

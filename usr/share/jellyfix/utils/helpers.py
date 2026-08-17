@@ -752,8 +752,14 @@ def extract_season_episode(name: str) -> Optional[tuple]:
                 # Pode ser parte de um ano maior
                 continue
 
-            season = int(match.group(1))
-            episode = int(match.group(2)) if len(match.groups()) > 1 else int(match.group(1))
+            if len(match.groups()) > 1 and match.group(2) is not None:
+                season = int(match.group(1))
+                episode = int(match.group(2))
+            else:
+                # Marcador só de episódio ("Cap 5", "Ep 3"): temporada não foi
+                # informada, então assume 1 — antes virava S05E05/S03E03.
+                season = 1
+                episode = int(match.group(1))
             return (season, episode, episode)
 
     return None

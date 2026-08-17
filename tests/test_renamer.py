@@ -84,3 +84,86 @@ def test_untagged_detected_foreign_subtitle_is_not_deleted(tmp_path):
     renamer._plan_subtitle_other_operations(subtitle)
 
     assert renamer.operations == []
+
+
+class _FakeTvMetadata:
+    """Metadata escolhido manualmente no SearchDialog (media_type explícito)."""
+
+    title = "Dark"
+    original_title = "Dark"
+    year = 2017
+    tmdb_id = 70523
+    tvdb_id = None
+    imdb_id = None
+    media_type = "tvshow"
+
+
+def _tv_renamer(tmp_path: Path) -> Renamer:
+    renamer = _renamer(tmp_path)
+    renamer.config.organize_folders = True
+    renamer.config.add_quality_tag = False
+    renamer.config.use_ffprobe = False
+    renamer.config.rename_nfo = False
+    renamer.config.remove_non_media = False
+    renamer.config.rename_no_lang = False
+    renamer.config.remove_foreign_subs = False
+    renamer.config.kept_languages = ["por", "eng"]
+    return renamer
+
+
+def test_manual_tvshow_without_episode_pattern_does_not_crash(tmp_path):
+    """Marcar como série um arquivo sem SxxExx não deve estourar TypeError."""
+    video = tmp_path / "Dark 2017 1080p.mkv"
+    video.write_bytes(b"x")
+
+    renamer = _tv_renamer(tmp_path)
+    ops = renamer.replan_for_video_with_metadata(
+        video_path=video, metadata=_FakeTvMetadata(), work_dir=tmp_path
+    )
+
+    assert ops == []
+
+
+def test_manual_tvshow_infers_episode_from_loose_marker(tmp_path):
+    video = tmp_path / "Dark Ep 3.mkv"
+    video.write_bytes(b"x")
+
+    renamer = _tv_renamer(tmp_path)
+    ops = renamer.replan_for_video_with_metadata(
+        video_path=video, metadata=_FakeTvMetadata(), work_dir=tmp_path
+    )
+
+    assert ops[0].destination == (
+        tmp_path / "Dark (2017) [tmdbid-70523]" / "Season 01" / "Dark - S01E03.mkv"
+    )
+
+
+def test_manual_tvshow_infers_season_from_season_folder(tmp_path):
+    video = tmp_path / "Season 02" / "Dark 05.mkv"
+    video.parent.mkdir()
+    video.write_bytes(b"x")
+
+    renamer = _tv_renamer(tmp_path)
+    ops = renamer.replan_for_video_with_metadata(
+        video_path=video, metadata=_FakeTvMetadata(), work_dir=tmp_path
+    )
+
+    assert ops[0].destination == (
+        tmp_path / "Dark (2017) [tmdbid-70523]" / "Season 02" / "Dark - S02E05.mkv"
+    )
+
+
+def test_manual_tvshow_keeps_series_folder_beside_old_one(tmp_path):
+    """Sem work_dir a pasta nova era criada DENTRO da pasta de temporada."""
+    video = tmp_path / "Dark Antiga (2017)" / "Season 03" / "Dark S03E07.mkv"
+    video.parent.mkdir(parents=True)
+    video.write_bytes(b"x")
+
+    renamer = _tv_renamer(tmp_path)
+    ops = renamer.replan_for_video_with_metadata(
+        video_path=video, metadata=_FakeTvMetadata(), work_dir=tmp_path
+    )
+
+    assert ops[0].destination == (
+        tmp_path / "Dark (2017) [tmdbid-70523]" / "Season 03" / "Dark - S03E07.mkv"
+    )

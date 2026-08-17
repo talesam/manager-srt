@@ -137,7 +137,9 @@ class Renamer:
 
         return self.operations
 
-    def replan_for_video_with_metadata(self, video_path: Path, metadata) -> List[RenameOperation]:
+    def replan_for_video_with_metadata(
+        self, video_path: Path, metadata, work_dir: Optional[Path] = None
+    ) -> List[RenameOperation]:
         """
         Re-planeja operações para um vídeo específico usando novo metadata fornecido manualmente.
         Retorna lista de novas operações que devem substituir as antigas.
@@ -145,6 +147,9 @@ class Renamer:
         Args:
             video_path: Caminho do arquivo de vídeo original
             metadata: Novo metadata selecionado manualmente (objeto Metadata)
+            work_dir: Raiz da biblioteca (mesma usada no plano original). Sem ela,
+                um episódio dentro de "Season 01/" acabava recriando a pasta da
+                série DENTRO da pasta de temporada.
 
         Returns:
             Lista de novas operações (vídeo + legendas + extras) que substituirão as antigas
@@ -156,7 +161,7 @@ class Renamer:
         self.operations = []
         self.planned_destinations = set()
         self.video_operations_map = {}
-        self.work_dir = video_path.parent.resolve()
+        self.work_dir = Path(work_dir).resolve() if work_dir else video_path.parent.resolve()
 
         # Detecta tipo de mídia pelo nome do arquivo (fallback)
         media_info = detect_media_type(video_path)
@@ -415,11 +420,85 @@ class Renamer:
 
         return None
 
+    def _resolve_season_episode(self, file_path: Path, media_info):
+        """
+        Resolve (season, episode_start, episode_end) para um episódio.
+
+        Necessário porque, na escolha manual pelo SearchDialog, o usuário pode
+        marcar como série um arquivo cujo nome não tem padrão SxxExx — aí
+        media_info.season/episode_start vêm None. Tenta pasta de temporada e
+        padrões soltos (Ep 5, Cap. 5, E05) antes de desistir.
+
+        Returns:
+            Tupla (season, ep_start, ep_end) ou None se não for possível deduzir.
+        """
+        season = media_info.season if media_info else None
+        ep_start = media_info.episode_start if media_info else None
+        ep_end = media_info.episode_end if media_info else None
+
+        stem = file_path.stem
+
+        # Temporada pela pasta pai ("Season 02", "Temporada 2")
+        if season is None:
+            for folder in (file_path.parent, file_path.parent.parent):
+                name = folder.name.lower()
+                if name.startswith(('season', 'temporada')):
+                    match = re.search(r'(\d+)', name)
+                    if match:
+                        season = int(match.group(1))
+                        break
+
+        # Episódio por padrões soltos, sem número de temporada no nome
+        if ep_start is None:
+            loose = re.search(
+                r'(?:^|[\s._\-\[(])'
+                r'(?:e|ep|epis[oó]dio|episode|cap|cap[ií]tulo)\s*\.?\s*'
+                r'(\d{1,3})(?:\s*[\-–]\s*(?:e|ep)?\s*(\d{1,3}))?'
+                r'(?=$|[\s._\-\])])',
+                stem,
+                re.IGNORECASE,
+            )
+            if loose:
+                ep_start = int(loose.group(1))
+                ep_end = int(loose.group(2)) if loose.group(2) else ep_start
+
+        # Último recurso: número solto no nome, só quando o arquivo já está numa
+        # pasta de temporada (contexto suficiente para confiar no número).
+        if ep_start is None and file_path.parent.name.lower().startswith(('season', 'temporada')):
+            candidates = [
+                int(n) for n in re.findall(r'(?<!\d)(\d{1,3})(?!\d)', stem)
+                if not (1900 <= int(n) <= 2099)
+            ]
+            if candidates:
+                ep_start = candidates[0]
+                ep_end = ep_start
+
+        if ep_start is None:
+            return None
+
+        # Sem temporada explícita, assume 1 — convenção do Jellyfin para séries
+        # de temporada única.
+        if season is None:
+            season = 1
+        if ep_end is None or ep_end < ep_start:
+            ep_end = ep_start
+
+        return (season, ep_start, ep_end)
+
     def _plan_tvshow_rename_with_metadata(self, file_path: Path, media_info, metadata) -> Optional[RenameOperation]:
         """
         Planeja renomeação de série usando metadata fornecido (não busca TMDB).
         Retorna a operação planejada ou None.
         """
+        se_info = self._resolve_season_episode(file_path, media_info)
+        if se_info is None:
+            self.logger.warning(
+                f"✗ Não foi possível identificar temporada/episódio em '{file_path.name}'; "
+                "renomeação de série ignorada"
+            )
+            return None
+        season, episode_start, episode_end = se_info
+
         title = clean_filename(metadata.title)
         year = metadata.year
 
@@ -433,15 +512,15 @@ class Renamer:
             folder_suffix = f" [imdbid-{metadata.imdb_id}]"
 
         # Format episode part
-        if media_info.episode_end and media_info.episode_end != media_info.episode_start:
-            episode_part = f"S{media_info.season:02d}E{media_info.episode_start:02d}-E{media_info.episode_end:02d}"
+        if episode_end != episode_start:
+            episode_part = f"S{season:02d}E{episode_start:02d}-E{episode_end:02d}"
         else:
-            episode_part = f"S{media_info.season:02d}E{media_info.episode_start:02d}"
+            episode_part = f"S{season:02d}E{episode_start:02d}"
 
         new_name = f"{title} - {episode_part}{file_path.suffix}"
 
         # Determine series folder structure
-        season_folder_name = format_season_folder(media_info.season)
+        season_folder_name = format_season_folder(season)
 
         # Find series folder
         if file_path.parent.name.lower().startswith('season'):
