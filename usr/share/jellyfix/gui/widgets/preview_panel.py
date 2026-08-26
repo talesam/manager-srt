@@ -245,7 +245,14 @@ class PreviewPanel(Gtk.Box):
         """
         # Store current operation for search callback
         self.current_operation = operation
-        
+
+        # Descarta o poster do item anterior. Sem isso a capa antiga continuava
+        # na tela enquanto a nova carregava — e ficava ali para sempre quando o
+        # item novo não tinha capa (legenda, .nfo, exclusão), fazendo parecer
+        # que o poster errado pertencia ao arquivo selecionado.
+        self.poster_image.set_paintable(None)
+        self.poster_image.set_visible(False)
+
         # Hide empty state, show content
         self.empty_state.set_visible(False)
         self.preview_content.set_visible(True)

@@ -93,8 +93,14 @@ class ImageManager:
         try:
             self.logger.debug(f"Downloading image: {url}")
 
+            # Sessão compartilhada: baixar vários posters seguidos (biblioteca
+            # grande, "Baixar Legendas para Todos") reaproveita a conexão com o
+            # CDN em vez de refazer o handshake TLS a cada imagem.
             from ..utils.config import get_config
-            response = requests.get(url, timeout=get_config().image_download_timeout)
+            from ..utils.http import get_session
+
+            session = get_session('tmdb-images', timeout=get_config().image_download_timeout)
+            response = session.get(url)
             response.raise_for_status()
 
             # Save to cache

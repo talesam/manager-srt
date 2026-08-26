@@ -54,6 +54,8 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         # Flag for background threads to bail out after window close
         self._destroyed = False
         self._success_timeout_id = None
+        # Contador de buscas de poster: descarta resultados de seleções antigas
+        self._poster_generation = 0
 
         # Window properties
         self.set_title(_("Jellyfix"))
@@ -821,6 +823,31 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         from ...core.detector import MediaType, detect_media_type
         from ...utils.helpers import clean_filename, extract_year
 
+        # Cada clique invalida as buscas anteriores que ainda estejam na fila:
+        # sem isso, clicar rápido em vários itens empilhava threads que se
+        # serializavam no rate limit do TMDB, e o poster do item atual ficava
+        # esperando atrás dos anteriores.
+        self._poster_generation += 1
+        generation = self._poster_generation
+
+        # Try to extract TMDB ID from destination path
+        tmdb_id = None
+        tmdb_match = re.search(r'\[tmdbid-(\d+)\]', str(operation.destination))
+        if tmdb_match:
+            tmdb_id = int(tmdb_match.group(1))
+            self.logger.debug(f"Found TMDB ID: {tmdb_id}")
+
+        # ATALHO: o cache de imagem é indexado por tmdb_id, que já está no
+        # destino planejado. Se o poster está em disco, mostra na hora — antes
+        # cada clique pagava um GET no TMDB só para redescobrir poster_path
+        # (~0,3-0,5s, ou pendurado se a API estivesse lenta).
+        image_manager = self.operations_handler.image_manager
+        if tmdb_id and image_manager:
+            cached_poster = image_manager.get_cached_images(tmdb_id).get('poster')
+            if cached_poster:
+                self.preview_panel.load_poster(Path(cached_poster))
+                return
+
         # Check if metadata fetcher is available
         if not self.operations_handler.metadata_fetcher:
             self.logger.debug("No metadata fetcher available")
@@ -840,17 +867,10 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
         year = media_info.year or extract_year(operation.source.stem)
         self.logger.debug(f"Fetching poster for: {title} ({year})")
 
-        # Try to extract TMDB ID from destination path
-        tmdb_id = None
-        tmdb_match = re.search(r'\[tmdbid-(\d+)\]', str(operation.destination))
-        if tmdb_match:
-            tmdb_id = int(tmdb_match.group(1))
-            self.logger.debug(f"Found TMDB ID: {tmdb_id}")
-
         def fetch_task():
             """Background poster fetch"""
             try:
-                if self._destroyed:
+                if self._destroyed or generation != self._poster_generation:
                     return
                 metadata = None
                 is_movie = media_info.media_type == MediaType.MOVIE
@@ -881,7 +901,7 @@ class JellyfixMainWindow(Adw.ApplicationWindow):
                         self.logger.info(f"Searching TV show: {title}")
                         metadata = self.operations_handler.metadata_fetcher.search_tvshow(title, year)
 
-                if self._destroyed:
+                if self._destroyed or generation != self._poster_generation:
                     return
 
                 if metadata:

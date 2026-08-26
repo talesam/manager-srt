@@ -42,6 +42,10 @@ class MetadataFetcher:
         self._interactive_choices_cache = {}
         # Cache de buscas sem resultado para evitar re-pesquisa
         self._failed_searches: set = set()
+        # Cache de buscas por ID. A GUI chama get_*_by_id a cada clique no
+        # preview; sem isso cada clique pagava uma ida ao TMDB (+ rate limit)
+        # para redescobrir dados que não mudam durante a execução.
+        self._id_cache: dict = {}
         # Matches de baixa confiança registrados nesta execução (revisão manual)
         self._low_confidence: list = []
         # Rate limiting: TMDB free tier = 40 req / 10 sec
@@ -257,15 +261,25 @@ class MetadataFetcher:
         try:
             from tmdbv3api import TMDb, Movie, TV, Search
 
-            tmdb = TMDb()
+            from ..utils.http import get_session
+
+            # obj_cached=False + session compartilhada: no caminho "cacheado" o
+            # tmdbv3api chama requests.request() direto, SEM keep-alive, pagando
+            # um handshake TLS (~0,35s) por requisição. Com a sessão ele usa
+            # keep-alive (~0,17s) e ganha timeout — o cache de respostas que
+            # abrimos mão aqui é substituído pelo nosso _id_cache, que é por ID
+            # e não por URL.
+            session = get_session('tmdb-api', timeout=self.config.api_timeout)
+
+            tmdb = TMDb(obj_cached=False, session=session)
             tmdb.api_key = self.config.tmdb_api_key
             tmdb.language = 'pt-BR'
 
             self._tmdb = {
                 'client': tmdb,
-                'movie': Movie(),
-                'tv': TV(),
-                'search': Search()
+                'movie': Movie(obj_cached=False, session=session),
+                'tv': TV(obj_cached=False, session=session),
+                'search': Search(obj_cached=False, session=session)
             }
             return self._tmdb
 
@@ -286,6 +300,10 @@ class MetadataFetcher:
         Returns:
             Metadata ou None se não encontrado
         """
+        cache_key = ('movie', tmdb_id)
+        if cache_key in self._id_cache:
+            return self._id_cache[cache_key]
+
         tmdb = self._init_tmdb()
         if not tmdb:
             return None
@@ -297,6 +315,7 @@ class MetadataFetcher:
 
             if not movie:
                 self.logger.debug(f"Filme não encontrado com ID: {tmdb_id}")
+                self._id_cache[cache_key] = None
                 return None
 
             # Extrai ano do release_date
@@ -314,7 +333,7 @@ class MetadataFetcher:
             poster_url = f"{base_url}/w500{poster_path}" if poster_path else None
             backdrop_url = f"{base_url}/w1280{backdrop_path}" if backdrop_path else None
 
-            return Metadata(
+            metadata = Metadata(
                 title=movie.title,
                 year=movie_year,
                 tmdb_id=movie.id,
@@ -326,6 +345,8 @@ class MetadataFetcher:
                 poster_url=poster_url,
                 backdrop_url=backdrop_url
             )
+            self._id_cache[cache_key] = metadata
+            return metadata
 
         except Exception as e:
             self.logger.error(f"Erro ao buscar filme por ID {tmdb_id}: {e}")
@@ -341,6 +362,10 @@ class MetadataFetcher:
         Returns:
             Metadata ou None se não encontrado
         """
+        cache_key = ('tv', tmdb_id)
+        if cache_key in self._id_cache:
+            return self._id_cache[cache_key]
+
         tmdb = self._init_tmdb()
         if not tmdb:
             return None
@@ -352,6 +377,7 @@ class MetadataFetcher:
 
             if not show:
                 self.logger.debug(f"Série não encontrada com ID: {tmdb_id}")
+                self._id_cache[cache_key] = None
                 return None
 
             # Extrai ano
@@ -369,7 +395,7 @@ class MetadataFetcher:
             poster_url = f"{base_url}/w500{poster_path}" if poster_path else None
             backdrop_url = f"{base_url}/w1280{backdrop_path}" if backdrop_path else None
 
-            return Metadata(
+            metadata = Metadata(
                 title=show.name,
                 year=show_year,
                 tmdb_id=show.id,
@@ -380,6 +406,8 @@ class MetadataFetcher:
                 poster_url=poster_url,
                 backdrop_url=backdrop_url
             )
+            self._id_cache[cache_key] = metadata
+            return metadata
 
         except Exception as e:
             self.logger.error(f"Erro ao buscar série por ID {tmdb_id}: {e}")

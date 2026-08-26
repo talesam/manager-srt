@@ -6,7 +6,7 @@ from typing import Optional
 import os
 
 # Application version
-APP_VERSION = "2.11.2"
+APP_VERSION = "2.11.3"
 
 
 @dataclass
@@ -38,6 +38,7 @@ class Config:
 
     # Network / API tunables
     image_download_timeout: int = 10  # seconds for poster/backdrop HTTP requests
+    api_timeout: int = 15  # seconds for TMDB API requests (requests has no default)
     max_search_results: int = 10  # max TMDB/subtitle results shown in pickers
     title_similarity_threshold: float = 0.5  # min ratio for fuzzy title matching
     # Confiança mínima (similaridade de título PT/original x proximidade de ano)
@@ -190,7 +191,7 @@ class Config:
         # Carrega valores numéricos ajustáveis
         for key in ['min_pt_words', 'match_confidence_threshold',
                     'title_similarity_threshold', 'min_subtitle_bytes',
-                    'image_download_timeout', 'max_search_results']:
+                    'image_download_timeout', 'api_timeout', 'max_search_results']:
             if key in explicit:
                 continue
             saved_value = config_mgr.get(key)
