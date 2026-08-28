@@ -13,6 +13,9 @@ _RE_TITLE_BOOK_VOL = re.compile(
     r"^(.+?)\s*(?:Book|Volume|Vol|Part|Season|Temporada|Cap\.?|Ep\.?)\s*\d{1,2}",
     re.IGNORECASE,
 )
+_RE_TITLE_DASH_NUM = re.compile(
+    r"^(.+?)\s-\s(?!(?:19|20)\d{2}(?!\d))\d{2,4}(?:v\d)?(?![\dpPkKiI])"
+)
 _RE_DIGITS = re.compile(r"(\d+)")
 
 
@@ -68,8 +71,15 @@ class MediaInfo:
                     if match:
                         self.title = match.group(1).strip()
                     else:
-                        # Fallback: use filename without extension
-                        self.title = filename
+                        # Numeração absoluta de anime ("Título - 01 [tags]"):
+                        # sem isso o título ficava sendo o nome inteiro do
+                        # arquivo e a busca no TMDB casava com qualquer coisa.
+                        match = _RE_TITLE_DASH_NUM.search(filename)
+                        if match:
+                            self.title = match.group(1).strip()
+                        else:
+                            # Fallback: use filename without extension
+                            self.title = filename
         else:
             # Check if folder structure indicates a TV show
             parent_folder = self.file_path.parent.name.lower()

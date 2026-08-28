@@ -139,6 +139,16 @@ class TestTVShowDetection:
         info = MediaInfo(f)
         assert info.title == "Friends"
 
+    def test_anime_absolute_numbering_is_a_tvshow(self, tmp_path):
+        """Regressão: release de anime virava filme e o título era o arquivo inteiro."""
+        f = tmp_path / "[Elite] Serial Experiments Lain - 01 [BD 1080p AAC-FLAC] [DUAL] [419E776F].mkv"
+        f.touch()
+        info = MediaInfo(f)
+        assert info.is_tvshow()
+        assert info.season == 1
+        assert info.episode_start == 1
+        assert info.title == "[Elite] Serial Experiments Lain"
+
 
 class TestEdgeCases:
     """Edge cases and tricky filenames."""

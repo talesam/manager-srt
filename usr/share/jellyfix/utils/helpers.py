@@ -130,7 +130,10 @@ _RE_RELEASE_GROUP_HYPHEN = re.compile(r"-([A-Za-z0-9]{2,})\s*$")
 _RE_SPACE_BEFORE_PUNCT = re.compile(r"\s+([,\.!?;:])")
 _RE_TRAILING_JUNK = re.compile(r"[\s\-\.]+$")
 _RE_LEADING_JUNK = re.compile(r"^[\s\-\.]+")
-_RE_YEAR = re.compile(r"[\(\[]?(19\d{2}|20\d{2})[\)\]]?")
+# O ano não pode estar colado em outro dígito/letra: o CRC32 que os grupos de
+# anime põem no nome ("[75012039]") contém "2039" e virava ano, envenenando a
+# busca no TMDB. Separadores ( ) [ ] . _ - e espaço continuam valendo.
+_RE_YEAR = re.compile(r"(?<![0-9A-Za-z])(19\d{2}|20\d{2})(?![0-9A-Za-z])")
 _RE_SXXEXX = re.compile(r"[Ss](\d{1,2})[Ee](\d{1,2})(?:-?[Ee](\d{1,2}))?")
 _RE_NxNN = re.compile(r"\b(\d{1,2})x(\d{1,2})\b")
 
@@ -234,6 +237,14 @@ _RE_SE_ALT_PATTERNS = [
     # (720p/480p) nem ano (2015): não seguido de p/k/i nem de mais dígitos,
     # e não precedido por dígito (parte de número maior).
     re.compile(r"(?<!\d)[-\s](\d)(\d{2})(?![\dpPkKiI])(?:\D|$)"),
+    # Numeração absoluta de anime: "[Grupo] Título - 01 [tags]", "Título - 12v2".
+    # Sem isso cada episódio virava um FILME e todos casavam com o mesmo título
+    # no TMDB, indo parar no mesmo destino. Só episódio (1 grupo) => temporada 1.
+    # Exige " - " com espaços e 2+ dígitos zero-padded: sequência de filme se
+    # escreve "Blade 2", não "Blade - 02". A guarda [\dpPkKiI] descarta
+    # resolução ("Filme - 720p") e o lookahead descarta ano ("Filme - 2015"),
+    # sem perder anime de 4 dígitos ("One Piece - 1015").
+    re.compile(r"\s-\s(?!(?:19|20)\d{2}(?!\d))(\d{2,4})(?:v\d)?(?![\dpPkKiI])"),
 ]
 
 

@@ -124,6 +124,41 @@ class TestExtractSeasonEpisode:
     def test_two_digit_season(self):
         assert extract_season_episode("Show S12E01") == (12, 1, 1)
 
+    @pytest.mark.parametrize("name", [
+        # CRC32 dos grupos de anime contém "2039"/"1999" e virava ano,
+        # envenenando a busca no TMDB (série de 1998 procurada como 2039).
+        "[Elite] Serial Experiments Lain - 10 [BD 1080p AAC-FLAC] [DUAL] [75012039]",
+        "[Grupo] Show - 05 [19991234]",
+        "Show [ABC2019X]",
+    ])
+    def test_hash_do_release_nao_e_ano(self, name):
+        assert extract_year(name) is None
+
+    @pytest.mark.parametrize("name,expected", [
+        ("[Elite] Serial Experiments Lain - 01 [BD 1080p AAC-FLAC] [DUAL] [419E776F]", (1, 1, 1)),
+        ("[SubsPlease] Frieren - 12v2 (1080p)", (1, 12, 12)),
+        ("Naruto - 07", (1, 7, 7)),
+        # Anime longo: episódio de 4 dígitos ainda é episódio
+        ("One Piece - 1015 [1080p]", (1, 1015, 1015)),
+    ])
+    def test_anime_absolute_numbering(self, name, expected):
+        """Regressão: 'Título - 01' virava FILME e todo episódio caía no mesmo destino."""
+        assert extract_season_episode(name) == expected
+
+    @pytest.mark.parametrize("name", [
+        "Mad Max - 2",              # sequência de filme, 1 dígito
+        "Filme - 720p",             # resolução
+        "Filme - 1080p",
+        "Blade Runner 2049 - 2160p",
+        "Filme - 2015",             # ano
+        "Filme - 2015 [1080p]",
+        "Show - 2015-01-15",        # data
+        "Spider-Man.2002.1080p.BluRay.x264-RARBG",
+        "Movie.2019.720p.WEB-DL-GalaxyRG",
+    ])
+    def test_anime_pattern_does_not_catch_movies(self, name):
+        assert extract_season_episode(name) is None
+
     def test_episode_only_marker_defaults_to_season_one(self):
         # Marcador solto de episódio não informa temporada; antes "Ep 3"
         # virava S03E03 e "Cap 5" virava S05E05.

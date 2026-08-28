@@ -167,3 +167,50 @@ def test_manual_tvshow_keeps_series_folder_beside_old_one(tmp_path):
     assert ops[0].destination == (
         tmp_path / "Dark (2017) [tmdbid-70523]" / "Season 03" / "Dark - S03E07.mkv"
     )
+
+
+def test_dois_videos_para_o_mesmo_destino_nao_viram_duas_operacoes(tmp_path):
+    """
+    Regressão: um match errado do TMDB mandava N vídeos para o MESMO caminho.
+    A prévia mostrava N operações, mas na execução só a primeira roda (as outras
+    são puladas por will_overwrite) — a prévia mentia sobre o resultado.
+    """
+    primeiro = tmp_path / "The Matrix 1999.mkv"
+    segundo = tmp_path / "The.Matrix.1999.mkv"
+    primeiro.write_bytes(b"x")
+    segundo.write_bytes(b"x")
+
+    renamer = _renamer(tmp_path)
+    renamer.config.fetch_metadata = False
+    renamer.config.organize_folders = True
+    renamer.config.add_quality_tag = False
+    renamer.config.use_ffprobe = False
+    renamer.metadata_fetcher = None
+
+    renamer._plan_video_rename(primeiro)
+    renamer._plan_video_rename(segundo)
+
+    destinos = [op.destination for op in renamer.operations]
+    assert len(destinos) == len(set(destinos)), "dois vídeos reservaram o mesmo destino"
+    assert len(renamer.operations) == 1
+    assert renamer.operations[0].source == primeiro
+
+
+def test_episodios_distintos_nao_conflitam(tmp_path):
+    """O guard de conflito não pode barrar episódios legítimos da mesma série."""
+    renamer = _tv_renamer(tmp_path)
+    renamer.config.fetch_metadata = False
+    renamer.metadata_fetcher = None
+
+    episodios = []
+    for ep in range(1, 14):
+        f = tmp_path / f"[Grupo] Serial Experiments Lain - {ep:02d} [BD 1080p].mkv"
+        f.write_bytes(b"x")
+        episodios.append(f)
+        renamer._plan_video_rename(f)
+
+    assert len(renamer.operations) == 13
+    destinos = [op.destination for op in renamer.operations]
+    assert len(set(destinos)) == 13
+    assert destinos[0].name == "Serial Experiments Lain - S01E01.mkv"
+    assert destinos[0].parent.name == "Season 01"

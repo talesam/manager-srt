@@ -39,11 +39,38 @@ class Renamer:
         self.config = get_config()
         self.logger = get_logger()
         self.operations: List[RenameOperation] = []
+        # Também inicializados por plan_operations/replan; aqui para que chamar
+        # um planejador isolado (testes, GUI) nunca esbarre em atributo ausente.
+        self.planned_destinations: set = set()
+        self.video_operations_map: Dict[str, RenameOperation] = {}
         # Usa o metadata_fetcher fornecido (com cache de escolhas) ou cria novo
         if metadata_fetcher:
             self.metadata_fetcher = metadata_fetcher
         else:
             self.metadata_fetcher = MetadataFetcher() if self.config.fetch_metadata else None
+
+    def _claim_video_destination(self, file_path: Path, new_path: Path) -> bool:
+        """
+        Reserva o destino de um vídeo, recusando se outro vídeo já o reservou.
+
+        Os planejadores de legenda já faziam isso; os de vídeo não, então um
+        match errado do TMDB podia mandar N episódios para o MESMO caminho e a
+        prévia mostrava N operações como se todas fossem acontecer — na
+        execução só a primeira roda e as demais são puladas por will_overwrite.
+        Recusar aqui mantém os arquivos em conflito intocados e visíveis.
+
+        Returns:
+            True se o destino foi reservado; False se já estava em uso.
+        """
+        if new_path in self.planned_destinations:
+            self.logger.warning(
+                f"Conflito de destino: {file_path.name} → {new_path.name} "
+                "(destino já reservado por outro vídeo; mantendo arquivo como está)"
+            )
+            return False
+
+        self.planned_destinations.add(new_path)
+        return True
 
     def _is_workdir_media_folder(self, *titles: str) -> bool:
         """Check if work_dir name matches any of the given titles (not a generic container).
@@ -409,6 +436,9 @@ class Renamer:
             else:
                 op_type = 'rename'
 
+            if not self._claim_video_destination(file_path, new_path):
+                return None
+
             op = RenameOperation(
                 source=file_path,
                 destination=new_path,
@@ -572,6 +602,9 @@ class Renamer:
             else:
                 reason = f"Atualização manual: {file_path.name} → {new_name}"
 
+            if not self._claim_video_destination(file_path, new_path):
+                return None
+
             op = RenameOperation(
                 source=file_path,
                 destination=new_path,
@@ -721,6 +754,9 @@ class Renamer:
             else:
                 op_type = 'rename'
 
+            if not self._claim_video_destination(file_path, new_path):
+                return
+
             self.operations.append(RenameOperation(
                 source=file_path,
                 destination=new_path,
@@ -847,6 +883,9 @@ class Renamer:
                 reason = f"Organizar com metadados: {series_folder.name} → {expected_series_folder}"
             else:
                 reason = f"Padronizar episódio: {file_path.name} → {new_name}"
+
+            if not self._claim_video_destination(file_path, new_path):
+                return
 
             self.operations.append(RenameOperation(
                 source=file_path,
